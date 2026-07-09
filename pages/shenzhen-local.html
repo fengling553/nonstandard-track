@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>深圳本地生活 - 非标赛道</title>
+  <meta name="description" content="深圳本地免费场馆、公益课程和自然空间，让孩子在真实体验中增长见识、提升综合能力">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* 页面intro区 */
+    .page-intro {
+      background: linear-gradient(135deg, var(--color-green) 0%, var(--color-green-light) 100%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-intro::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(56,161,105,0.25) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .page-intro::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -5%;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(237,137,54,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .page-intro .intro-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #C6F6D5;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .page-intro .intro-text {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Tab描述 */
+    .tab-desc {
+      background: var(--color-bg-white);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      border: 1px solid var(--color-border-light);
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 活动卡片 */
+    .activity-card {
+      background: var(--color-bg-white);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      margin-bottom: 20px;
+      border: 1px solid var(--color-border-light);
+      border-left: 5px solid var(--color-green);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+    }
+    .activity-card:hover {
+      border-color: var(--color-green);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    /* 公益营地卡片用绿色左边框 */
+    .activity-card.camp-card {
+      border-left: 5px solid #2F855A;
+    }
+    .activity-card.camp-card:hover {
+      border-color: #2F855A;
+    }
+
+    /* 卡片顶部：名称+标签 */
+    .activity-card .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .activity-card .activity-name {
+      font-size: 1.3rem;
+      color: var(--color-primary);
+      font-weight: 800;
+      flex: 1;
+      min-width: 200px;
+    }
+    .activity-card .tag-capsules {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .activity-card .tag-capsule {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .tag-capsule.tag-science {
+      background: #EBF8FF;
+      color: #2B6CB0;
+    }
+    .tag-capsule.tag-reading {
+      background: #FAF5FF;
+      color: #6B46C1;
+    }
+    .tag-capsule.tag-tech {
+      background: #E6FFFA;
+      color: #2C7A7B;
+    }
+    .tag-capsule.tag-nature {
+      background: #F0FFF4;
+      color: var(--color-green-dark);
+    }
+    .tag-capsule.tag-camp {
+      background: #FFFAF0;
+      color: #975A16;
+    }
+    .tag-capsule.tag-default {
+      background: #EDF2F7;
+      color: var(--color-text-light);
+    }
+
+    /* 基本信息 */
+    .activity-card .basic-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      margin-bottom: 16px;
+      font-size: 0.88rem;
+      color: var(--color-text-light);
+    }
+    .activity-card .basic-info .info-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .activity-card .basic-info .info-item .info-label {
+      font-weight: 600;
+      color: var(--color-text-secondary);
+    }
+    /* 免费价格高亮 */
+    .activity-card .basic-info .price-free {
+      color: var(--color-green);
+      font-weight: 700;
+    }
+
+    /* 卡片各区块 */
+    .activity-card .card-section {
+      margin-bottom: 14px;
+    }
+    .activity-card .card-section:last-of-type {
+      margin-bottom: 0;
+    }
+    .activity-card .section-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .activity-card .section-content {
+      font-size: 0.92rem;
+      color: var(--color-text-secondary);
+      line-height: 1.75;
+    }
+
+    /* 亮点区块 */
+    .activity-card .highlight-block {
+      background: linear-gradient(135deg, #F0FFF4 0%, #F7FAFC 100%);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      border-left: 3px solid var(--color-green);
+    }
+
+    /* 能力标签 */
+    .ability-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .ability-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #E6FFFA, #EBF8FF);
+      color: #2C7A7B;
+      border: 1px solid #B2F5EA;
+      white-space: nowrap;
+    }
+
+    /* 底部来源链接区 */
+    .activity-card .card-footer {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--color-border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .activity-card .card-footer .activity-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 16px;
+      background: transparent;
+      color: var(--color-green);
+      border: 1.5px solid var(--color-green);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+    .activity-card .card-footer .activity-link-btn:hover {
+      background: var(--color-green);
+      color: #fff;
+    }
+
+    /* 更新信息 */
+    .update-info {
+      text-align: right;
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--color-border-light);
+    }
+
+    /* 响应式 */
+    @media (min-width: 768px) {
+      .page-intro {
+        padding: 40px 36px;
+      }
+      .page-intro .intro-text {
+        font-size: 1.3rem;
+      }
+      .activity-card {
+        padding: 32px;
+      }
+      .activity-card .activity-name {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">🧭</span>
+        <span>非标赛道</span>
+      </a>
+      <ul class="navbar-links">
+        <li><a href="paths.html">路径情报站</a></li>
+        <li><a href="training.html">全科训练场</a></li>
+        <li><a href="vocational.html">职高赛道</a></li>
+        <li><a href="assessment.html">学科测评</a></li>
+        <li><a href="parent-growth.html">家长认知提升</a></li>
+        <li><a href="underlying-logic.html">底层逻辑</a></li>
+        <li><a href="projects.html">项目化学习</a></li>
+        <li><a href="ai-tools.html">AI工具箱</a></li>
+        <li><a href="innovative-schools.html">创新学校</a></li>
+        <li><a href="shenzhen-local.html" class="active">深圳生活</a></li>
+        <li><a href="assessment.html" class="btn-primary" style="padding:8px 16px;font-size:0.85rem;">开始测评</a></li>
+      </ul>
+      <button class="navbar-toggle" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 移动端菜单 -->
+  <div class="mobile-menu">
+    <a href="paths.html">🗺️ 路径情报站</a>
+    <a href="training.html">💪 全科训练场</a>
+    <a href="vocational.html">🏭 职高赛道</a>
+    <a href="assessment.html">🎯 学科测评</a>
+    <a href="parent-growth.html">🧠 家长认知提升</a>
+    <a href="underlying-logic.html">🔍 底层逻辑</a>
+    <a href="projects.html">🚀 项目化学习</a>
+    <a href="ai-tools.html">🤖 AI工具箱</a>
+    <a href="innovative-schools.html">🏫 创新学校</a>
+    <a href="shenzhen-local.html">🏠 深圳生活</a>
+    <a href="assessment.html" style="color:var(--color-green);font-weight:600;">开始测评</a>
+  </div>
+
+  <!-- 页面内容 -->
+  <main class="page-content">
+    <div class="container">
+      <!-- 面包屑 -->
+      <div class="breadcrumb">
+        <a href="../index.html">首页</a>
+        <span class="separator">›</span>
+        <span class="current">深圳本地生活</span>
+      </div>
+
+      <!-- 页面标题 -->
+      <div class="page-title">
+        <h1>🏠 深圳本地生活</h1>
+        <p>周末和假期，带孩子去哪里长见识、练本领</p>
+      </div>
+
+      <!-- Intro区 -->
+      <div class="page-intro">
+        <div class="intro-label">💡 为什么整理这份清单</div>
+        <div class="intro-text">
+          不是每个周末都要去商场。深圳有大量免费或低价的科普场馆、公益课程和自然空间，让孩子在真实体验中增长见识、提升综合能力。这里只收录真正值得一去的地方——要么免费，要么性价比高，要么在同类中独一份。
+        </div>
+      </div>
+
+      <!-- Tab导航 -->
+      <div class="tab-nav" id="activity-tab-nav">
+        <button class="tab-btn active" data-tab="all">🌐 全部（18个）</button>
+        <button class="tab-btn" data-tab="science">🔬 科普探索（4）</button>
+        <button class="tab-btn" data-tab="reading">📚 阅读人文（3）</button>
+        <button class="tab-btn" data-tab="tech">🤖 科技实践（3）</button>
+        <button class="tab-btn" data-tab="nature">🌿 自然户外（3）</button>
+        <button class="tab-btn" data-tab="camp">🏕️ 公益营地（5）</button>
+      </div>
+
+      <!-- Tab内容 -->
+      <div id="activity-content">
+
+        <!-- ==================== Tab: 全部 ==================== -->
+        <div class="tab-content active" id="tab-all">
+
+          <!-- 深圳科学技术馆（光明新馆） -->
+          <div class="activity-card" data-category="science">
+            <div class="card-top">
+              <div class="activity-name">深圳科学技术馆（光明新馆）</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-science">室内</span>
+                <span class="tag-capsule tag-science">互动装置</span>
+                <span class="tag-capsule tag-science">数字文明</span>
+                <span class="tag-capsule tag-science">宇宙探索</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>光明区</span>
+              <span class="info-item"><span class="info-label">价格：</span>50元</span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>3-15岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">全球第一间数字文明创新科技馆，体量大、科技感强，数字文明、宇宙探索、机器人、深海奥秘等主题展区适合各年龄段开眼界</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">光明区光辉大道与光明大道交汇处</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">6号线光明站C/D口步行500米</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">10:00-17:00</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「深圳科学技术馆」公众号预约</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">科学思维</span>
+                <span class="ability-tag">探索欲</span>
+                <span class="ability-tag">前沿认知</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.szstm.com/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 深圳科学馆（福田老馆） -->
+          <div class="activity-card" data-category="science">
+            <div class="card-top">
+              <div class="activity-name">深圳科学馆（福田老馆）</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-science">室内</span>
+                <span class="tag-capsule tag-science">物理实验</span>
+                <span class="tag-capsule tag-science">创客空间</span>
+                <span class="tag-capsule tag-science">科普秀</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>福田区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>4-12岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">老牌科普馆，物理实验、数学模型、电磁原理直观展示。每周有主题活动和创客空间（科学实验+工程搭建），3D/4D影院需预约</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">福田区上步中路1003号</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">1/6号线科学馆站A口</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">周三至周五10:00-15:00，周末9:30-17:00（周一周二闭馆）</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「深圳市科学馆」小程序预约</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">动手能力</span>
+                <span class="ability-tag">科学启蒙</span>
+                <span class="ability-tag">逻辑思维</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="http://www.szstm.org.cn/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 深圳红立方科技馆 -->
+          <div class="activity-card" data-category="science">
+            <div class="card-top">
+              <div class="activity-name">深圳红立方科技馆</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-science">室内</span>
+                <span class="tag-capsule tag-science">宇宙太空</span>
+                <span class="tag-capsule tag-science">互动装置</span>
+                <span class="tag-capsule tag-science">4D影院</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>龙岗区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>4-14岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">龙岗亲子热门馆，B1层「寰宇之梦」太阳系模型人气最高，4楼有数学交互装置和单车体验，拍照也好看</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">龙岗区龙翔大道8028号</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">3号线龙城广场站D口步行10分钟</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">周二至周四9:30-18:00，周五至周日9:30-21:30</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「深圳红立方」公众号预约</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">空间想象</span>
+                <span class="ability-tag">科学兴趣</span>
+                <span class="ability-tag">体验学习</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.szredcube.com/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 宝安科技馆 -->
+          <div class="activity-card" data-category="science">
+            <div class="card-top">
+              <div class="activity-name">宝安科技馆</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-science">室内</span>
+                <span class="tag-capsule tag-science">机器人</span>
+                <span class="tag-capsule tag-science">4D影院</span>
+                <span class="tag-capsule tag-science">光影展</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>宝安区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>4-12岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">互动性好，有机器人展示、机械齿轮墙、4D影院和光影展，宝安本地遛娃首选</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">宝安区龙井二路95号</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">12号线新安公园站</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">周二至周日10:00-18:00（周一闭馆）</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">免预约，部分活动需在公众号预约</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">科技认知</span>
+                <span class="ability-tag">动手体验</span>
+                <span class="ability-tag">观察能力</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.bast.szba.gov.cn/kjg/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 深圳博物馆 -->
+          <div class="activity-card" data-category="reading">
+            <div class="card-top">
+              <div class="activity-name">深圳博物馆</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-reading">室内</span>
+                <span class="tag-capsule tag-reading">深圳历史</span>
+                <span class="tag-capsule tag-reading">改革开放</span>
+                <span class="tag-capsule tag-reading">亲子研学</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>福田区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>5-15岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">国家一级博物馆，了解深圳从渔村到特区的历程。「大潮起珠江」改革开放展+定期亲子研学活动（地标探索+模型搭建），孩子能理解城市与时代的关系</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">福田区金田路4001号（历史民俗馆）/ 福田区同心路6号（古代艺术馆）</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">2/4号线市民中心站 / 9号线红岭南站</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">10:00-18:00（周一闭馆）</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「深圳博物馆」小程序预约</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">历史认知</span>
+                <span class="ability-tag">城市理解</span>
+                <span class="ability-tag">思辨能力</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.shenzhenmuseum.com/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 深圳市当代艺术与城市规划馆 -->
+          <div class="activity-card" data-category="reading">
+            <div class="card-top">
+              <div class="activity-name">深圳市当代艺术与城市规划馆</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-reading">室内</span>
+                <span class="tag-capsule tag-reading">城市规划</span>
+                <span class="tag-capsule tag-reading">当代艺术</span>
+                <span class="tag-capsule tag-reading">建筑美学</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>福田区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>6-15岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">建筑本身就是一件艺术品，科技感+金属感极强。城市规划馆常设展+「大潮起珠江」展值得带孩子看，讲城市故事大人也有感触</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">福田区福中路184号</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">3/4号线少年宫站</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">10:00-18:00（周一闭馆）</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">免预约，部分展览收费</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">审美素养</span>
+                <span class="ability-tag">空间认知</span>
+                <span class="ability-tag">城市思维</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.mocaup.org.cn/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 深圳图书馆「暑期缤纷季」 -->
+          <div class="activity-card" data-category="reading">
+            <div class="card-top">
+              <div class="activity-name">深圳图书馆「暑期缤纷季」</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-reading">室内</span>
+                <span class="tag-capsule tag-reading">阅读</span>
+                <span class="tag-capsule tag-reading">公益课程</span>
+                <span class="tag-capsule tag-reading">AI训练营</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>全市（福田中心馆+龙华北馆）</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>5-16岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">每年暑假近300场活动：公益培训课8大类69节（语言朗诵/创意美术/魔方/科创实验/职业体验等），AI训练营教大模型实操+AI绘画编程，「走读深圳」人文研学走出门读城市</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">福田区福中一路2001号（中心馆）/ 龙华区腾龙路30号（北馆）</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">3/4号线少年宫站 / 4/6号线红山站</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">暑期7-8月，具体见公众号</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「深圳图书馆」公众号活动预约中心报名</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">阅读能力</span>
+                <span class="ability-tag">表达力</span>
+                <span class="ability-tag">AI素养</span>
+                <span class="ability-tag">综合素养</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.szlib.org.cn/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 深圳市少年宫 -->
+          <div class="activity-card" data-category="tech">
+            <div class="card-top">
+              <div class="activity-name">深圳市少年宫（少儿科技馆）</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-tech">室内</span>
+                <span class="tag-capsule tag-tech">科普大篷车</span>
+                <span class="tag-capsule tag-tech">小小科学家</span>
+                <span class="tag-capsule tag-tech">宫校共建</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>福田区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>4-14岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">深圳少先队核心阵地。「小小科学家」探访营（国家基因库+梧桐山野外科考）、科普大篷车进社区、「宫校共建」非遗课堂（黄梅戏等），正在建设5大主题科学馆</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">福田区福中一路2002号</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">3/4号线少年宫站</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">周三至周日9:30-17:00</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「深圳市少年宫」公众号预约</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">科学实践</span>
+                <span class="ability-tag">文化素养</span>
+                <span class="ability-tag">动手能力</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="http://www.szcp.com/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 深圳市青少年活动中心 -->
+          <div class="activity-card" data-category="tech">
+            <div class="card-top">
+              <div class="activity-name">深圳市青少年活动中心</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-tech">室内</span>
+                <span class="tag-capsule tag-tech">AI体验</span>
+                <span class="tag-capsule tag-tech">机器人竞赛</span>
+                <span class="tag-capsule tag-tech">创客</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>福田区</span>
+              <span class="info-item"><span class="info-label">价格：</span>公益免费/低价</span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>7-15岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">青少年科技体验空间全年更新前沿科技产品（双臂拉花机器人/AI下棋机器人/3D打印机）。每年举办「小小科学家」寒暑假研学营（双职工家庭优先，7-12岁，免费），青少年机器人竞赛市赛固定举办地</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">福田区红荔路1001号</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">3/9号线红岭站</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">活动为主，关注公众号获取排期</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「青春深圳」或「深圳市青少年活动中心」公众号报名</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">科技素养</span>
+                <span class="ability-tag">竞赛经验</span>
+                <span class="ability-tag">创新思维</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.szqsn.com/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 宝安青少年宫·AI人工智能营 -->
+          <div class="activity-card" data-category="tech">
+            <div class="card-top">
+              <div class="activity-name">宝安青少年宫·AI人工智能营</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-tech">室内</span>
+                <span class="tag-capsule tag-tech">3D打印</span>
+                <span class="tag-capsule tag-tech">AI智慧农场</span>
+                <span class="tag-capsule tag-tech">编程</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>宝安区</span>
+              <span class="info-item"><span class="info-label">价格：</span>公益免费/低价</span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>7-14岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">宝安区青少年服务中心运营，AI人工智能寒假营持续火爆。3D打印、智能机器人体验，AI智慧农场课程、AI工程师暑期研学营。行业年增速25%-30%，课程质量不断提升</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">宝安区宝安大道与罗田路交汇处</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">1号线宝安中心站</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">寒暑假为主，关注公众号排期</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「宝安青少年宫」公众号报名</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">AI素养</span>
+                <span class="ability-tag">编程思维</span>
+                <span class="ability-tag">科技实践</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.baoan.gov.cn/bayouth/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 仙湖植物园 -->
+          <div class="activity-card" data-category="nature">
+            <div class="card-top">
+              <div class="activity-name">仙湖植物园</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-nature">户外</span>
+                <span class="tag-capsule tag-nature">植物科普</span>
+                <span class="tag-capsule tag-nature">弘法寺</span>
+                <span class="tag-capsule tag-nature">恐龙化石</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>罗湖区</span>
+              <span class="info-item"><span class="info-label">价格：</span>15元（8点前免费）</span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>3-15岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">深圳性价比最高的自然课。天上人间大草坪放电、桫椤湖喂鱼、仙人掌多肉温室探沙漠、弘法寺喂鸽子。园内桫椤是恐龙时代的活化石，科普价值极高</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">罗湖区仙湖路160号</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">2/8号线仙湖路站</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">6:00-21:30（8:00-18:00收费，其余时段免费）</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「仙湖植物园」公众号预约</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">自然观察</span>
+                <span class="ability-tag">生命认知</span>
+                <span class="ability-tag">户外体能</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.szbg.ac.cn/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 大鹏半岛国家地质公园博物馆 -->
+          <div class="activity-card" data-category="nature">
+            <div class="card-top">
+              <div class="activity-name">大鹏半岛国家地质公园博物馆</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-nature">室内+户外</span>
+                <span class="tag-capsule tag-nature">火山地貌</span>
+                <span class="tag-capsule tag-nature">矿石</span>
+                <span class="tag-capsule tag-nature">地质科普</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>大鹏新区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>5-15岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">深圳唯一地质主题博物馆，火山地貌、岩石矿物和地球科学。可搭配大鹏户外一日游，先馆内学知识再出去看实景，理解效果翻倍</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">大鹏新区地质公园路1号</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">建议自驾，E11路到大鹏中心转公交</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">9:00-17:00（周一闭馆）</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「大鹏半岛国家地质公园」公众号预约</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">地球科学</span>
+                <span class="ability-tag">观察力</span>
+                <span class="ability-tag">户外探索</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.szgeopark.com/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 深圳市天文台 -->
+          <div class="activity-card" data-category="nature">
+            <div class="card-top">
+              <div class="activity-name">深圳市天文台</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-nature">户外</span>
+                <span class="tag-capsule tag-nature">天文观测</span>
+                <span class="tag-capsule tag-nature">气象科普</span>
+                <span class="tag-capsule tag-nature">海景</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>大鹏新区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>6-15岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">山顶天文台+绝美海景，深圳最有仪式感的天文课。观星、太阳黑子观测、气象知识讲解，让孩子直观感受宇宙的尺度</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">大鹏新区南澳街道西涌</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">建议自驾，或E11路到南澳</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">周六及节假日开放夜观，具体见公众号</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「深圳市天文台」公众号预约</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">天文认知</span>
+                <span class="ability-tag">科学思维</span>
+                <span class="ability-tag">想象力</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.szmb.gov.cn/tianwentai/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 「共青团·伙伴计划」小小科学家研学营 -->
+          <div class="activity-card camp-card" data-category="camp">
+            <div class="card-top">
+              <div class="activity-name">「共青团·伙伴计划」小小科学家研学营</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-camp">寒暑假</span>
+                <span class="tag-capsule tag-camp">全日制托管</span>
+                <span class="tag-capsule tag-camp">科技实践</span>
+                <span class="tag-capsule tag-camp">双职工优先</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>全市各级党群服务中心</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>7-12岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">市委组织部+团市委官方项目，每周一至周五9:00-18:00，含午餐。科技实践+智慧生活+素养成长+安全守护四大板块24项课程，重点面向双职工家庭，市级示范+各区联动，寒暑假各开7期</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">深圳市党群服务中心/各区党群中心/青少年活动中心</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">就近选择</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">寒暑假（1-2月/7-8月）</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「青春深圳」公众号报名</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">综合素养</span>
+                <span class="ability-tag">科技实践</span>
+                <span class="ability-tag">社交能力</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.szqsn.com/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 宝安「四免」公益体育培训 -->
+          <div class="activity-card camp-card" data-category="camp">
+            <div class="card-top">
+              <div class="activity-name">宝安「四免」公益体育培训</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-camp">寒暑假</span>
+                <span class="tag-capsule tag-camp">体育技能</span>
+                <span class="tag-capsule tag-camp">篮球足球游泳</span>
+                <span class="tag-capsule tag-camp">体质测试</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>宝安区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>6-16岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">宝安区公共文化体育服务中心运营，十年品牌。免费培训（篮球/足球/羽毛球/游泳等）+免费开放场馆+免费体质测试+免费业训保障，每期名额秒光</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">宝安体育中心（宝安区新安街道）</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">1号线宝安中心站/5号线翻身站</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">寒暑假+周末</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「宝安体育中心」公众号报名</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">体能</span>
+                <span class="ability-tag">运动技能</span>
+                <span class="ability-tag">团队协作</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.baoan.gov.cn/baty/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 南山「小小蒲公英」环保志愿者 -->
+          <div class="activity-card camp-card" data-category="camp">
+            <div class="card-top">
+              <div class="activity-name">南山「小小蒲公英」环保志愿者</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-camp">暑期</span>
+                <span class="tag-capsule tag-camp">志愿者</span>
+                <span class="tag-capsule tag-camp">环保</span>
+                <span class="tag-capsule tag-camp">讲解培训</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>南山区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>10-15岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">南山区城管局+教育局指导，10岁以上中小学生可报。志愿者培训（环保知识+讲解技巧+手工创作）→考核→上岗导览，获志愿者证书+服务时长。零门槛，全程免费</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">南山区各环保教育场馆</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">就近安排</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">7月培训，8月考核，9月至次年4月上岗</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「美丽大南山」公众号报名</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">表达能力</span>
+                <span class="ability-tag">环保意识</span>
+                <span class="ability-tag">服务精神</span>
+                <span class="ability-tag">社交力</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.szns.gov.cn/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 深圳图书馆·青少年AI训练营 -->
+          <div class="activity-card camp-card" data-category="camp">
+            <div class="card-top">
+              <div class="activity-name">深圳图书馆·青少年AI训练营</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-camp">暑期</span>
+                <span class="tag-capsule tag-camp">AI实操</span>
+                <span class="tag-capsule tag-camp">大模型</span>
+                <span class="tag-capsule tag-camp">编程</span>
+                <span class="tag-capsule tag-camp">智能体</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>福田区/龙华区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>10-16岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">深图暑期特色项目。从AI发展脉络到拆解大模型底层逻辑，再到智能体实操比拼，涵盖AI绘画/视频生成/文字创作/编程工具。不是看演示，是让孩子亲手用</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">深圳图书馆中心馆/北馆</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">3/4号线少年宫站 / 4/6号线红山站</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">7-8月，具体见公众号</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「深圳图书馆」活动预约中心报名</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">AI素养</span>
+                <span class="ability-tag">编程思维</span>
+                <span class="ability-tag">数字创造力</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.szlib.org.cn/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <!-- 福永街道「爱心课堂」 -->
+          <div class="activity-card camp-card" data-category="camp">
+            <div class="card-top">
+              <div class="activity-name">福永街道「爱心课堂」</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-camp">周末/暑期</span>
+                <span class="tag-capsule tag-camp">跆拳道</span>
+                <span class="tag-capsule tag-camp">书法</span>
+                <span class="tag-capsule tag-camp">舞蹈</span>
+                <span class="tag-capsule tag-camp">非遗</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">区属：</span>宝安区</span>
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>5-14岁</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">✨ 亮点</div>
+              <div class="highlight-block section-content">宝安福永十年公益品牌，文化部全国基层文化志愿服务典型案例。19类课程（跆拳道/葫芦丝/书法/街舞/围棋/舞蹈等），17家培训机构志愿者授课，累计为劳务工家庭省培训费700余万</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📍 地址</div>
+              <div class="section-content">宝安区福永街道7个社区</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🚇 交通</div>
+              <div class="section-content">1号线后瑞站/11号线福永站</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🕐 开放时间</div>
+              <div class="section-content">6-7月+寒暑假</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 预约方式</div>
+              <div class="section-content">「福永街道」公众号或社区通知</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🎯 能力标签</div>
+              <div class="ability-tags">
+                <span class="ability-tag">多元兴趣</span>
+                <span class="ability-tag">文化传承</span>
+                <span class="ability-tag">社交能力</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.baoan.gov.cn/fuyong/" target="_blank" rel="noopener" class="activity-link-btn">🔗 官方网站 ↗</a>
+            </div>
+          </div>
+
+          <div class="update-info">📅 最近更新：2026-07-09</div>
+        </div>
+
+        <!-- ==================== Tab: 科普探索 ==================== -->
+        <div class="tab-content" id="tab-science">
+          <div class="tab-desc">
+            🔬 免费或低价的科普场馆，让孩子动手做实验、看展品、开眼界——比课本有趣100倍的科学课
+          </div>
+          <!-- 卡片由JS动态显示 -->
+        </div>
+
+        <!-- ==================== Tab: 阅读人文 ==================== -->
+        <div class="tab-content" id="tab-reading">
+          <div class="tab-desc">
+            📚 博物馆、图书馆、艺术馆——在文化空间里理解城市、拓宽视野、培养思辨力
+          </div>
+        </div>
+
+        <!-- ==================== Tab: 科技实践 ==================== -->
+        <div class="tab-content" id="tab-tech">
+          <div class="tab-desc">
+            🤖 少年宫、青少年活动中心——AI、机器人、编程、创客，让孩子亲手接触前沿科技
+          </div>
+        </div>
+
+        <!-- ==================== Tab: 自然户外 ==================== -->
+        <div class="tab-content" id="tab-nature">
+          <div class="tab-desc">
+            🌿 植物园、地质公园、天文台——在真实自然中观察生命、感受宇宙、锻炼体能
+          </div>
+        </div>
+
+        <!-- ==================== Tab: 公益营地 ==================== -->
+        <div class="tab-content" id="tab-camp">
+          <div class="tab-desc">
+            🏕️ 官方公益项目，免费托管、免费课程、免费培训——双职工家庭的暑期救星，零门槛零费用
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>🧭 非标赛道</h3>
+        <p>面向创新型学校1-12年级学生家庭的综合教育导航平台。</p>
+      </div>
+      <div class="footer-links">
+        <h4>核心模块</h4>
+        <a href="paths.html">路径情报站</a>
+        <a href="training.html">全科训练场</a>
+        <a href="vocational.html">职高赛道</a>
+        <a href="assessment.html">学科测评</a>
+        <a href="parent-growth.html">家长认知提升</a>
+        <a href="underlying-logic.html">底层逻辑</a>
+      </div>
+      <div class="footer-links">
+        <h4>更多模块</h4>
+        <a href="projects.html">项目化学习</a>
+        <a href="ai-tools.html">AI工具箱</a>
+        <a href="innovative-schools.html">创新学校</a>
+        <a href="shenzhen-local.html">深圳生活</a>
+      </div>
+    </div>
+    <div class="footer-source">
+      <strong>📊 数据来源说明</strong><br>
+      活动信息来自各场馆官网、公众号、深圳市文化广电旅游体育局等公开渠道，仅供参考。具体开放时间和预约方式以官方最新公告为准。如发现信息有误，欢迎反馈。
+    </div>
+    <div class="footer-bottom">
+      © 2026 非标赛道 · 仅供教育参考，不构成升学建议
+    </div>
+  </footer>
+
+  <!-- AI浮动按钮 -->
+  <button class="ai-fab" aria-label="AI教育顾问">🤖</button>
+  <div class="ai-fab-tooltip">
+    <strong>AI教育顾问</strong><br>
+    即将上线！届时可实时咨询教育路径问题。
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // 初始化Tab切换
+    initTabs('#activity-tab-nav', 'tab-');
+
+    // 非全部Tab：只显示对应category的卡片
+    (function() {
+      var tabNav = document.querySelector('#activity-tab-nav');
+      if (!tabNav) return;
+      var allCards = document.querySelectorAll('#tab-all .activity-card');
+      var updateInfo = document.querySelector('#tab-all .update-info');
+      var tabDescs = {
+        science: '🔬 免费或低价的科普场馆，让孩子动手做实验、看展品、开眼界——比课本有趣100倍的科学课',
+        reading: '📚 博物馆、图书馆、艺术馆——在文化空间里理解城市、拓宽视野、培养思辨力',
+        tech: '🤖 少年宫、青少年活动中心——AI、机器人、编程、创客，让孩子亲手接触前沿科技',
+        nature: '🌿 植物园、地质公园、天文台——在真实自然中观察生命、感受宇宙、锻炼体能',
+        camp: '🏕️ 官方公益项目，免费托管、免费课程、免费培训——双职工家庭的暑期救星，零门槛零费用'
+      };
+
+      tabNav.querySelectorAll('.tab-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var tabId = this.getAttribute('data-tab');
+          if (tabId === 'all') return; // 全部Tab由initTabs处理
+
+          var targetTab = document.getElementById('tab-' + tabId);
+          if (!targetTab) return;
+
+          // 清空目标tab内容（保留desc）
+          var desc = targetTab.querySelector('.tab-desc');
+          targetTab.innerHTML = '';
+          if (desc) {
+            targetTab.appendChild(desc);
+          } else {
+            var newDesc = document.createElement('div');
+            newDesc.className = 'tab-desc';
+            newDesc.textContent = tabDescs[tabId] || '';
+            targetTab.appendChild(newDesc);
+          }
+
+          // 复制对应category的卡片
+          allCards.forEach(function(card) {
+            if (card.getAttribute('data-category') === tabId) {
+              var clone = card.cloneNode(true);
+              targetTab.appendChild(clone);
+            }
+          });
+
+          // 添加更新信息
+          if (updateInfo) {
+            var updateClone = updateInfo.cloneNode(true);
+            targetTab.appendChild(updateClone);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
