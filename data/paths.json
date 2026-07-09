@@ -548,6 +548,5 @@
         }
       ]
     }
-  ],
-  "_git_push_e2e_test": "verifying push from script context"
+  ]
 }
