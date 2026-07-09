@@ -10,11 +10,31 @@
       "coreThreshold": "五大学科竞赛需在读高中生学籍；白名单科创/CTF/Kaggle无学籍要求",
       "timeline": "预赛3-5月 → 省级赛9-10月 → 国赛11-12月 → 国际赛次年7月",
       "keyNodes": [
-        {"time": "3-5月", "event": "五大学科竞赛预赛报名", "detail": "需通过所在高中统一报名，社会考生无学籍无法参加"},
-        {"time": "9-10月", "event": "省级赛区选拔", "detail": "省级一等奖及以上可获得强基计划破格资格（政策收紧中）"},
-        {"time": "11-12月", "event": "全国决赛（CMO/CChO/CPhO/CBO/NOI）", "detail": "国家集训队成员可获保送资格"},
-        {"time": "全年", "event": "白名单科创竞赛", "detail": "教育部认证47项，部分允许个人/机构报名"},
-        {"time": "全年", "event": "CTF/Kaggle竞赛", "detail": "无需学籍，线上参与，以实际能力说话"}
+        {
+          "time": "3-5月",
+          "event": "五大学科竞赛预赛报名",
+          "detail": "需通过所在高中统一报名，社会考生无学籍无法参加"
+        },
+        {
+          "time": "9-10月",
+          "event": "省级赛区选拔",
+          "detail": "省级一等奖及以上可获得强基计划破格资格（政策收紧中）"
+        },
+        {
+          "time": "11-12月",
+          "event": "全国决赛（CMO/CChO/CPhO/CBO/NOI）",
+          "detail": "国家集训队成员可获保送资格"
+        },
+        {
+          "time": "全年",
+          "event": "白名单科创竞赛",
+          "detail": "教育部认证47项，部分允许个人/机构报名"
+        },
+        {
+          "time": "全年",
+          "event": "CTF/Kaggle竞赛",
+          "detail": "无需学籍，线上参与，以实际能力说话"
+        }
       ],
       "sections": [
         {
@@ -108,9 +128,21 @@
       ],
       "starterGuide": "1. 确认所在学校是否有竞赛教练和报名渠道\n2. 如无学籍，优先考虑白名单科创竞赛和CTF/Kaggle\n3. 从省赛级别的难度开始训练，逐步提升\n4. 关注每年3-5月的预赛报名时间窗口",
       "resources": [
-        {"name": "自主选拔在线", "url": "https://www.zizhuan.net/", "description": "竞赛政策与报名信息汇总"},
-        {"name": "Art of Problem Solving", "url": "https://artofproblemsolving.com/", "description": "数学竞赛社区与在线课程"},
-        {"name": "Kaggle", "url": "https://www.kaggle.com/", "description": "数据科学竞赛平台"}
+        {
+          "name": "自主选拔在线",
+          "url": "https://www.zizhuan.net/",
+          "description": "竞赛政策与报名信息汇总"
+        },
+        {
+          "name": "Art of Problem Solving",
+          "url": "https://artofproblemsolving.com/",
+          "description": "数学竞赛社区与在线课程"
+        },
+        {
+          "name": "Kaggle",
+          "url": "https://www.kaggle.com/",
+          "description": "数据科学竞赛平台"
+        }
       ]
     },
     {
@@ -122,10 +154,26 @@
       "coreThreshold": "技术能力评估为主，部分项目有年龄限制，不要求学籍",
       "timeline": "各项目招募周期不同，多为每年1-2次集中招募",
       "keyNodes": [
-        {"time": "每年3月", "event": "吉利跨时代跃迁计划招募", "detail": "面向高中毕业生，CEO+首席科学家+AI专家三导师"},
-        {"time": "每年夏季", "event": "腾讯青科实训营", "detail": "13-18岁，全国200人报名录10人，录取率5%"},
-        {"time": "全年滚动", "event": "字节Top Seed", "detail": "每年30名16-18岁全职预备研究员"},
-        {"time": "长期合作", "event": "华为天才少年（中学延伸）", "detail": "提前联合培养模式，主力仍是博士"}
+        {
+          "time": "每年3月",
+          "event": "吉利跨时代跃迁计划招募",
+          "detail": "面向高中毕业生，CEO+首席科学家+AI专家三导师"
+        },
+        {
+          "time": "每年夏季",
+          "event": "腾讯青科实训营",
+          "detail": "13-18岁，全国200人报名录10人，录取率5%"
+        },
+        {
+          "time": "全年滚动",
+          "event": "字节Top Seed",
+          "detail": "每年30名16-18岁全职预备研究员"
+        },
+        {
+          "time": "长期合作",
+          "event": "华为天才少年（中学延伸）",
+          "detail": "提前联合培养模式，主力仍是博士"
+        }
       ],
       "sections": [
         {
@@ -177,9 +225,21 @@
       ],
       "starterGuide": "1. 关注各大厂官方公众号获取招募信息\n2. 提前准备个人技术项目作品集\n3. 练习技术面试和表达能力\n4. 重要：这些项目不替代大学教育，可考虑并行推进",
       "resources": [
-        {"name": "吉利汽车官方", "url": "", "description": "跃迁人才培养计划信息发布"},
-        {"name": "腾讯青少年科技", "url": "", "description": "青科实训营招募信息"},
-        {"name": "字节跳动招聘", "url": "", "description": "Top Seed计划信息"}
+        {
+          "name": "吉利汽车官方",
+          "url": "",
+          "description": "跃迁人才培养计划信息发布"
+        },
+        {
+          "name": "腾讯青少年科技",
+          "url": "",
+          "description": "青科实训营招募信息"
+        },
+        {
+          "name": "字节跳动招聘",
+          "url": "",
+          "description": "Top Seed计划信息"
+        }
       ]
     },
     {
@@ -191,11 +251,31 @@
       "coreThreshold": "需要持续关注政策更新，提前规划",
       "timeline": "4月强基计划简章发布 → 5月报名 → 6月高考 → 7月校测 → 8月录取",
       "keyNodes": [
-        {"time": "4月", "event": "强基计划招生简章发布", "detail": "各高校破格条件差异大，需逐校研究"},
-        {"time": "5月", "event": "强基计划报名", "detail": "限报1所高校，破格资格需提前确认"},
-        {"time": "6月", "event": "高考", "detail": "强基综合成绩=高考85%+校测15%"},
-        {"time": "7月", "event": "强基校测", "detail": "笔试+面试，部分学校有体测"},
-        {"time": "8月", "event": "录取公示", "detail": "强基录取在提前批之前，不影响常规志愿"}
+        {
+          "time": "4月",
+          "event": "强基计划招生简章发布",
+          "detail": "各高校破格条件差异大，需逐校研究"
+        },
+        {
+          "time": "5月",
+          "event": "强基计划报名",
+          "detail": "限报1所高校，破格资格需提前确认"
+        },
+        {
+          "time": "6月",
+          "event": "高考",
+          "detail": "强基综合成绩=高考85%+校测15%"
+        },
+        {
+          "time": "7月",
+          "event": "强基校测",
+          "detail": "笔试+面试，部分学校有体测"
+        },
+        {
+          "time": "8月",
+          "event": "录取公示",
+          "detail": "强基录取在提前批之前，不影响常规志愿"
+        }
       ],
       "sections": [
         {
@@ -252,8 +332,16 @@
       ],
       "starterGuide": "1. 关注4月各高校强基计划简章，逐校核对破格条件\n2. 如有竞赛奖项，确认是否仍满足目标院校破格要求\n3. 数学特长生关注「单科破格」新通道\n4. 校测准备不可忽视，15%权重杠杆效应大",
       "resources": [
-        {"name": "阳光高考信息平台", "url": "https://gaokao.chsi.com.cn/", "description": "强基计划官方报名入口"},
-        {"name": "自主选拔在线", "url": "https://www.zizhuan.net/", "description": "强基政策解读与院校对比"}
+        {
+          "name": "阳光高考信息平台",
+          "url": "https://gaokao.chsi.com.cn/",
+          "description": "强基计划官方报名入口"
+        },
+        {
+          "name": "自主选拔在线",
+          "url": "https://www.zizhuan.net/",
+          "description": "强基政策解读与院校对比"
+        }
       ]
     },
     {
@@ -265,9 +353,21 @@
       "coreThreshold": "英语能力+经济基础+自我管理能力，不同路径门槛差异大",
       "timeline": "因路径不同而异，社区大学全年可申请，竞赛按赛季，在线学位滚动招生",
       "keyNodes": [
-        {"time": "全年", "event": "社区大学申请", "detail": "无需高考/托福，高中毕业即可申请，2年后转学四年制大学"},
-        {"time": "按赛季", "event": "海外竞赛（AMC/AIME/USACO等）", "detail": "不要求学籍，任何人均可注册参赛"},
-        {"time": "滚动招生", "event": "在线学位项目", "detail": "如Minerva大学、University of the People等"}
+        {
+          "time": "全年",
+          "event": "社区大学申请",
+          "detail": "无需高考/托福，高中毕业即可申请，2年后转学四年制大学"
+        },
+        {
+          "time": "按赛季",
+          "event": "海外竞赛（AMC/AIME/USACO等）",
+          "detail": "不要求学籍，任何人均可注册参赛"
+        },
+        {
+          "time": "滚动招生",
+          "event": "在线学位项目",
+          "detail": "如Minerva大学、University of the People等"
+        }
       ],
       "sections": [
         {
@@ -337,9 +437,21 @@
       ],
       "starterGuide": "1. 评估英语水平和经济预算\n2. 如预算有限，优先考虑社区大学2+2路径\n3. 如数学/编程能力强，先参加AMC/USACO积累成绩\n4. 在线学位适合自律性极强的学生",
       "resources": [
-        {"name": "AMC官网", "url": "https://www.maa.org/math-competitions", "description": "美国数学竞赛报名与信息"},
-        {"name": "USACO官网", "url": "https://usaco.org/", "description": "美国计算机奥林匹克"},
-        {"name": "Common App", "url": "https://www.commonapp.org/", "description": "美国大学通用申请系统"}
+        {
+          "name": "AMC官网",
+          "url": "https://www.maa.org/math-competitions",
+          "description": "美国数学竞赛报名与信息"
+        },
+        {
+          "name": "USACO官网",
+          "url": "https://usaco.org/",
+          "description": "美国计算机奥林匹克"
+        },
+        {
+          "name": "Common App",
+          "url": "https://www.commonapp.org/",
+          "description": "美国大学通用申请系统"
+        }
       ]
     },
     {
@@ -351,10 +463,26 @@
       "coreThreshold": "需要可验证的技术能力或产品，而非空想",
       "timeline": "无固定时间线，但建议先积累技术/人脉再启动",
       "keyNodes": [
-        {"time": "阶段一", "event": "技术积累期", "detail": "在竞赛/项目中磨练技术，建立个人能力标签"},
-        {"time": "阶段二", "event": "项目验证期", "detail": "开发MVP，获取真实用户反馈"},
-        {"time": "阶段三", "event": "资源对接期", "detail": "参加创业大赛/孵化器，获取启动资金"},
-        {"time": "持续", "event": "成长迭代", "detail": "持续产品迭代，拓展用户和市场"}
+        {
+          "time": "阶段一",
+          "event": "技术积累期",
+          "detail": "在竞赛/项目中磨练技术，建立个人能力标签"
+        },
+        {
+          "time": "阶段二",
+          "event": "项目验证期",
+          "detail": "开发MVP，获取真实用户反馈"
+        },
+        {
+          "time": "阶段三",
+          "event": "资源对接期",
+          "detail": "参加创业大赛/孵化器，获取启动资金"
+        },
+        {
+          "time": "持续",
+          "event": "成长迭代",
+          "detail": "持续产品迭代，拓展用户和市场"
+        }
       ],
       "sections": [
         {
@@ -408,9 +536,18 @@
       ],
       "starterGuide": "1. 先打磨核心技术能力（编程/算法/产品）\n2. 大学期间是创业试错的最佳时期\n3. 从小项目开始，获取真实用户比获奖更重要\n4. 理性看待成功案例——幸存者偏差严重",
       "resources": [
-        {"name": "Y Combinator", "url": "https://www.ycombinator.com/", "description": "全球顶级创业孵化器"},
-        {"name": "奇绩创坛", "url": "https://www.miracleplus.com/", "description": "中国版YC，陆奇博士创办"}
+        {
+          "name": "Y Combinator",
+          "url": "https://www.ycombinator.com/",
+          "description": "全球顶级创业孵化器"
+        },
+        {
+          "name": "奇绩创坛",
+          "url": "https://www.miracleplus.com/",
+          "description": "中国版YC，陆奇博士创办"
+        }
       ]
     }
-  ]
+  ],
+  "_test_git_push": "test"
 }
