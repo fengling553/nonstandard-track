@@ -6,6 +6,263 @@
   <title>AI工具箱 - 非标赛道</title>
   <meta name="description" content="精选AI学习和创作工具，让技术成为你的超级杠杆">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* 页面intro区 */
+    .page-intro {
+      background: linear-gradient(135deg, var(--color-green) 0%, var(--color-green-light) 100%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-intro::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(56,161,105,0.25) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .page-intro::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -5%;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(237,137,54,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .page-intro .intro-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #C6F6D5;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .page-intro .intro-text {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Tab描述 */
+    .tab-desc {
+      background: var(--color-bg-white);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      border: 1px solid var(--color-border-light);
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 工具卡片 */
+    .tool-card {
+      background: var(--color-bg-white);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      margin-bottom: 20px;
+      border: 1px solid var(--color-border-light);
+      border-left: 5px solid var(--color-green);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+    }
+    .tool-card:hover {
+      border-color: var(--color-green);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    /* 卡片顶部：名称+标签 */
+    .tool-card .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .tool-card .tool-name {
+      font-size: 1.3rem;
+      color: var(--color-primary);
+      font-weight: 800;
+      flex: 1;
+      min-width: 200px;
+    }
+    .tool-card .tag-capsules {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .tool-card .tag-capsule {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .tag-capsule.tag-free {
+      background: #F0FFF4;
+      color: var(--color-green-dark);
+    }
+    .tag-capsule.tag-feature {
+      background: #EBF8FF;
+      color: #2B6CB0;
+    }
+    .tag-capsule.tag-highlight {
+      background: #FFFAF0;
+      color: #975A16;
+    }
+    .tag-capsule.tag-default {
+      background: #EDF2F7;
+      color: var(--color-text-light);
+    }
+
+    /* 基本信息 */
+    .tool-card .basic-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      margin-bottom: 16px;
+      font-size: 0.88rem;
+      color: var(--color-text-light);
+    }
+    .tool-card .basic-info .info-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .tool-card .basic-info .info-item .info-label {
+      font-weight: 600;
+      color: var(--color-text-secondary);
+    }
+    /* 免费价格高亮 */
+    .tool-card .basic-info .price-free {
+      color: var(--color-green);
+      font-weight: 700;
+    }
+    /* 付费价格橙色 */
+    .tool-card .basic-info .price-paid {
+      color: var(--color-orange);
+      font-weight: 700;
+    }
+
+    /* 卡片各区块 */
+    .tool-card .card-section {
+      margin-bottom: 14px;
+    }
+    .tool-card .card-section:last-of-type {
+      margin-bottom: 0;
+    }
+    .tool-card .section-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tool-card .section-content {
+      font-size: 0.92rem;
+      color: var(--color-text-secondary);
+      line-height: 1.75;
+    }
+
+    /* 详细介绍区块 */
+    .tool-card .detail-block {
+      background: linear-gradient(135deg, #F0FFF4 0%, #F7FAFC 100%);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      border-left: 3px solid var(--color-green);
+    }
+
+    /* 功能标签 */
+    .tool-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .tool-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #E6FFFA, #EBF8FF);
+      color: #2C7A7B;
+      border: 1px solid #B2F5EA;
+      white-space: nowrap;
+    }
+
+    /* 底部链接区 */
+    .tool-card .card-footer {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--color-border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .tool-card .card-footer .tool-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 16px;
+      background: transparent;
+      color: var(--color-green);
+      border: 1.5px solid var(--color-green);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+    .tool-card .card-footer .tool-link-btn:hover {
+      background: var(--color-green);
+      color: #fff;
+    }
+
+    /* 更新信息 */
+    .update-info {
+      text-align: right;
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--color-border-light);
+    }
+
+    /* 响应式 */
+    @media (min-width: 768px) {
+      .page-intro {
+        padding: 40px 36px;
+      }
+      .page-intro .intro-text {
+        font-size: 1.3rem;
+      }
+      .tool-card {
+        padding: 32px;
+      }
+      .tool-card .tool-name {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -24,8 +281,8 @@
         <li><a href="parent-growth.html">家长认知提升</a></li>
         <li><a href="projects.html">项目化学习</a></li>
         <li><a href="ai-tools.html" class="active">AI工具箱</a></li>
-        <li><a href="underlying-logic.html">底层逻辑</a>
-        <li><a href="innovative-schools.html">创新学校</a>
+        <li><a href="underlying-logic.html">底层逻辑</a></li>
+        <li><a href="innovative-schools.html">创新学校</a></li>
         <li><a href="shenzhen-local.html">深圳生活</a></li>
       </ul>
       <button class="navbar-toggle" aria-label="菜单">
@@ -49,45 +306,603 @@
 
   <main class="page-content">
     <div class="container">
+      <!-- 面包屑 -->
       <div class="breadcrumb">
         <a href="../index.html">首页</a>
         <span class="separator">›</span>
         <span class="current">AI工具箱</span>
       </div>
 
-      <div class="placeholder-page">
-        <div class="placeholder-icon">🤖</div>
-        <h2>AI工具箱 · 二期上线</h2>
-        <p>精选AI学习和创作工具，让技术成为你的超级杠杆。工具评测与推荐正在整理中。</p>
+      <!-- 页面标题 -->
+      <div class="page-title">
+        <h1>🤖 AI工具箱</h1>
+        <p>15个精选AI工具，让技术成为你的超级杠杆</p>
+      </div>
 
-        <div class="feature-preview">
-          <div class="feature-item">
-            <span class="feature-icon">🧠</span>
-            <span class="feature-text">AI学习助手推荐与评测</span>
+      <!-- Intro区 -->
+      <div class="page-intro">
+        <div class="intro-label">💡 为什么整理这份工具箱</div>
+        <div class="intro-text">
+          不是用AI代写作业，而是让AI成为你的超级杠杆。这里精选的工具，每一个都经过验证：免费或低价、入门门槛低、真正能提升学习效率和创作能力。
+        </div>
+      </div>
+
+      <!-- Tab导航 -->
+      <div class="tab-nav" id="tool-tab-nav">
+        <button class="tab-btn active" data-tab="learning">📚 学习助手（4）</button>
+        <button class="tab-btn" data-tab="creative">🎨 创作工具（4）</button>
+        <button class="tab-btn" data-tab="coding">💻 编程开发（4）</button>
+        <button class="tab-btn" data-tab="research">🔬 研究分析（3）</button>
+      </div>
+
+      <!-- Tab内容 -->
+      <div id="tool-content">
+
+        <!-- ==================== Tab: 学习助手 ==================== -->
+        <div class="tab-content active" id="tab-learning">
+          <div class="tab-desc">📚 用AI加速理解、拆解知识、辅助练习——让AI当你的学习搭子，而不是替你写作业</div>
+
+          <!-- Khan Academy -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">Khan Academy（可汗学院）</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费</span>
+                <span class="tag-capsule tag-feature">全科</span>
+                <span class="tag-capsule tag-highlight">AI导学</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>6-18岁</span>
+              <span class="info-item"><span class="info-label">难度：</span>零基础可用</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">免费全科学习平台，AI助手Khanmigo可苏格拉底式提问引导思考</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">覆盖数学/科学/编程/人文等学科，Khanmigo不会直接给答案而是通过追问帮学生自己想明白，符合"教人钓鱼"而非"给人鱼"的理念。全免费，无需注册即可浏览</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费</span>
+                <span class="tool-tag">全科</span>
+                <span class="tool-tag">AI导学</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.khanacademy.org/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">✍️</span>
-            <span class="feature-text">AI创作工具使用指南</span>
+
+          <!-- 扣子 Coze -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">扣子（Coze）</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费起步</span>
+                <span class="tag-capsule tag-feature">自定义AI</span>
+                <span class="tag-capsule tag-highlight">零代码</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-paid">免费基础版 / 199元月旗舰版</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>10岁+</span>
+              <span class="info-item"><span class="info-label">难度：</span>初级（拖拽式操作）</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">搭建自己的AI智能体，零代码创建学习助手</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">可以按自己的学习需求创建专属AI助手——比如数学错题分析、英语对话练习、古诗文解读。免费版即可使用，个人旗舰版199元/月提供更多积分。你的"舜舜阅读与感想小助手"就是用扣子做的</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费起步</span>
+                <span class="tool-tag">自定义AI</span>
+                <span class="tool-tag">零代码</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.coze.cn/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">💻</span>
-            <span class="feature-text">编程辅助工具精选</span>
+
+          <!-- DeepSeek -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">DeepSeek</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费</span>
+                <span class="tag-capsule tag-feature">推理强</span>
+                <span class="tag-capsule tag-highlight">国产</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>10岁+</span>
+              <span class="info-item"><span class="info-label">难度：</span>零基础可用</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">国产大模型，数学推理和代码能力突出，免费额度充足</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">DeepSeek-R1推理模型在数学和编程任务上表现接近GPT-4级别，且完全免费。适合用来：理解复杂概念、验证解题思路、学习编程。中文理解能力强，不需要翻墙</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费</span>
+                <span class="tool-tag">推理强</span>
+                <span class="tool-tag">国产</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.deepseek.com/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">📊</span>
-            <span class="feature-text">数据分析AI工具入门</span>
+
+          <!-- Quizlet + AI -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">Quizlet + AI</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费起步</span>
+                <span class="tag-capsule tag-feature">记忆辅助</span>
+                <span class="tag-capsule tag-highlight">AI出题</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-paid">免费基础版 / 35元月Plus版</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>8-18岁</span>
+              <span class="info-item"><span class="info-label">难度：</span>零基础可用</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">AI自动生成闪卡和练习题，高效记忆和复习</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">输入学习内容，AI自动生成闪卡、练习题和测试。支持多种学习模式（闪卡/拼写/测试/配对），AI还能根据错误模式推荐薄弱点练习，适合背诵类学科</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费起步</span>
+                <span class="tool-tag">记忆辅助</span>
+                <span class="tool-tag">AI出题</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.quizlet.com/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">🎨</span>
-            <span class="feature-text">AI绘画与设计工具</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">📖</span>
-            <span class="feature-text">按年龄和学科精准推荐</span>
-          </div>
+
+          <div class="update-info">📅 数据更新于 2026-07-09</div>
         </div>
 
-        <a href="training.html" class="btn-primary">先去训练场看看 →</a>
+        <!-- ==================== Tab: 创作工具 ==================== -->
+        <div class="tab-content" id="tab-creative">
+          <div class="tab-desc">🎨 用AI绘画、写作、做视频，释放创造力——不用会画画也能做出好看的东西</div>
+
+          <!-- Leonardo AI -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">Leonardo AI</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费</span>
+                <span class="tag-capsule tag-feature">绘画</span>
+                <span class="tag-capsule tag-highlight">易上手</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费（每天150积分）</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>8岁+</span>
+              <span class="info-item"><span class="info-label">难度：</span>初级</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">免费AI绘画平台，每天150积分，作品质量高</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">被公认最适合青少年的AI绘画入门工具。免费版每天150积分够画5-10张图，界面友好，有预设风格模板，无需复杂提示词即可出图。适合做PPT配图、公众号插图、创意表达</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费</span>
+                <span class="tool-tag">绘画</span>
+                <span class="tool-tag">易上手</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://leonardo.ai/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
+          </div>
+
+          <!-- Canva AI -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">Canva AI</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费</span>
+                <span class="tag-capsule tag-feature">设计</span>
+                <span class="tag-capsule tag-highlight">中文</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费基础版</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>10岁+</span>
+              <span class="info-item"><span class="info-label">难度：</span>初级</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">设计+AI一体化，海报/课件/PPT一站式创作</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">不是专业设计工具，而是"普通人也能做好看的东西"的工具。AI功能可一键生成海报、PPT、社交媒体图片，中文界面友好，免费版功能已够日常使用</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费</span>
+                <span class="tool-tag">设计</span>
+                <span class="tool-tag">中文</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.canva.com/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
+          </div>
+
+          <!-- 即梦AI -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">即梦AI</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费</span>
+                <span class="tag-capsule tag-feature">中文</span>
+                <span class="tag-capsule tag-highlight">绘画+视频</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费（每日额度）</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>10岁+</span>
+              <span class="info-item"><span class="info-label">难度：</span>初级</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">字节跳动出品，中文AI绘画+视频生成</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">国内使用最方便的AI绘画工具之一，中文提示词效果好，支持图片和短视频生成。免费额度每日更新，适合做创意海报和短视频素材</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费</span>
+                <span class="tool-tag">中文</span>
+                <span class="tool-tag">绘画+视频</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://jimeng.jianying.com/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
+          </div>
+
+          <!-- 灵光 -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">灵光</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费</span>
+                <span class="tag-capsule tag-feature">创意</span>
+                <span class="tag-capsule tag-highlight">头脑风暴</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费额度</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>12岁+</span>
+              <span class="info-item"><span class="info-label">难度：</span>初级</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">专注创意头脑风暴，批量生成选题和故事框架</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">单一对话内可批量生成数十个选题、故事框架、设计构思，交互轻量化，零基础无需复杂提示词。适合写作卡壳时打破思维僵局，免费额度满足日常短篇创作</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费</span>
+                <span class="tool-tag">创意</span>
+                <span class="tool-tag">头脑风暴</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="update-info">📅 数据更新于 2026-07-09</div>
+        </div>
+
+        <!-- ==================== Tab: 编程开发 ==================== -->
+        <div class="tab-content" id="tab-coding">
+          <div class="tab-desc">💻 从图形化编程到Python，AI辅助编程学习——不是让AI替你写代码，而是让AI教你写代码</div>
+
+          <!-- Scratch -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">Scratch</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费</span>
+                <span class="tag-capsule tag-feature">图形化</span>
+                <span class="tag-capsule tag-highlight">入门必备</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>7-12岁</span>
+              <span class="info-item"><span class="info-label">难度：</span>零基础</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">MIT开发的图形化编程，7岁+零基础入门首选</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">全球最成熟的少儿编程平台，拖拽彩色代码块创建互动故事、游戏和动画，教授基本编程概念。免费、无需安装、中文界面完整，社区有数百万项目可参考。虽然不是AI工具，但它是所有AI编程学习的必备基础</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费</span>
+                <span class="tool-tag">图形化</span>
+                <span class="tool-tag">入门必备</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://scratch.mit.edu/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
+          </div>
+
+          <!-- 扣子编程 Coze Code -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">扣子编程（Coze Code）</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费</span>
+                <span class="tag-capsule tag-feature">AI编程</span>
+                <span class="tag-capsule tag-highlight">网页应用</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费基础版</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>12岁+</span>
+              <span class="info-item"><span class="info-label">难度：</span>中级（需基本编程概念）</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">AI辅助编程环境，描述需求就能生成网页应用</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">扣子旗下AI编程平台，用自然语言描述需求就能生成可运行的网页应用。适合已有Python/HTML基础的学生快速做出实际作品，无需从零写每一行代码。免费版有充足额度</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费</span>
+                <span class="tool-tag">AI编程</span>
+                <span class="tool-tag">网页应用</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://code.coze.cn/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
+          </div>
+
+          <!-- Python + AI助手 -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">Python + AI助手</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费</span>
+                <span class="tag-capsule tag-feature">Python</span>
+                <span class="tag-capsule tag-highlight">AI辅助</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费（VS Code + Codeium）</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>10岁+</span>
+              <span class="info-item"><span class="info-label">难度：</span>中级</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">学Python的最佳方式：自己写+AI实时指导</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">不是让AI替你写代码，而是用AI当编程导师：写代码时遇到bug问AI、理解不了的概念让AI解释、做完项目让AI审查代码质量。推荐组合：VS Code + Codeium/Copilot免费版 + DeepSeek。10岁左右从Scratch过渡到Python正好</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费</span>
+                <span class="tool-tag">Python</span>
+                <span class="tool-tag">AI辅助</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://codeium.com/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
+          </div>
+
+          <!-- 西瓜创客 -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">西瓜创客</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-highlight">体系课</span>
+                <span class="tag-capsule tag-feature">全链路</span>
+                <span class="tag-capsule" style="background:#FFF5F5;color:#C53030;">付费</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-paid">约3000元/学期</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>7-15岁</span>
+              <span class="info-item"><span class="info-label">难度：</span>零基础到进阶</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">Scratch→Python→C++全链路少儿编程课程</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">从图形化创意编程（7-12岁）到Python代码编程再到C++算法竞赛，课程体系完整。有AI辅助学习功能，适合需要系统学习路径而非自学的学生</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">体系课</span>
+                <span class="tool-tag">全链路</span>
+                <span class="tool-tag">付费</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.xiguacity.cn/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
+          </div>
+
+          <div class="update-info">📅 数据更新于 2026-07-09</div>
+        </div>
+
+        <!-- ==================== Tab: 研究分析 ==================== -->
+        <div class="tab-content" id="tab-research">
+          <div class="tab-desc">🔬 AI驱动的学术搜索、文献分析和知识管理——高中以上做研究性学习必备</div>
+
+          <!-- Semantic Scholar -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">Semantic Scholar</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费</span>
+                <span class="tag-capsule tag-feature">学术搜索</span>
+                <span class="tag-capsule tag-highlight">AI摘要</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>15岁+</span>
+              <span class="info-item"><span class="info-label">难度：</span>中级</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">免费学术搜索引擎，AI自动生成论文摘要</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">由Allen AI研究所开发，完全免费的学术搜索工具。AI自动提取论文核心发现、方法、引用关系，比Google Scholar多了智能摘要和语义关联推荐。高中以上做研究性学习必备</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费</span>
+                <span class="tool-tag">学术搜索</span>
+                <span class="tool-tag">AI摘要</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.semanticscholar.org/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
+          </div>
+
+          <!-- Elicit -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">Elicit</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费起步</span>
+                <span class="tag-capsule tag-feature">文献分析</span>
+                <span class="tag-capsule tag-highlight">研究辅助</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费（每天额度）</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>15岁+</span>
+              <span class="info-item"><span class="info-label">难度：</span>中级</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">AI研究助理，用自然语言搜索论文并提取关键信息</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">用自然语言描述研究问题，自动搜索相关论文并提取方法、结果、结论等结构化信息。免费版每天有额度限制，适合做研究性学习和文献综述入门</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费起步</span>
+                <span class="tool-tag">文献分析</span>
+                <span class="tool-tag">研究辅助</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://elicit.com/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
+          </div>
+
+          <!-- Consensus -->
+          <div class="tool-card">
+            <div class="card-top">
+              <div class="tool-name">Consensus</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-free">免费起步</span>
+                <span class="tag-capsule tag-feature">AI问答</span>
+                <span class="tag-capsule tag-highlight">循证</span>
+              </div>
+            </div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">价格：</span><span class="price-free">免费基础版</span></span>
+              <span class="info-item"><span class="info-label">适合年龄：</span>15岁+</span>
+              <span class="info-item"><span class="info-label">难度：</span>中级</span>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📝 简介</div>
+              <div class="section-content">AI学术搜索引擎，直接回答"研究表明了什么"</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">📖 详细介绍</div>
+              <div class="detail-block section-content">不同于关键词搜索，Consensus用AI直接回答研究问题（如"冥想对焦虑有效吗"），给出yes/no/possibly结论并附上支持论文。适合快速了解某个问题的研究现状</div>
+            </div>
+            <div class="card-section">
+              <div class="section-title">🏷️ 功能标签</div>
+              <div class="tool-tags">
+                <span class="tool-tag">免费起步</span>
+                <span class="tool-tag">AI问答</span>
+                <span class="tool-tag">循证</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://consensus.app/" target="_blank" rel="noopener" class="tool-link-btn">🌐 访问官网</a>
+            </div>
+          </div>
+
+          <div class="update-info">📅 数据更新于 2026-07-09</div>
+        </div>
+
       </div>
     </div>
   </main>
@@ -105,6 +920,8 @@
         <a href="vocational.html">职高赛道</a>
         <a href="assessment.html">学科测评</a>
         <a href="parent-growth.html">家长认知提升</a>
+        <a href="projects.html">项目化学习</a>
+        <a href="ai-tools.html">AI工具箱</a>
         <a href="underlying-logic.html">底层逻辑</a>
         <a href="innovative-schools.html">创新学校</a>
         <a href="shenzhen-local.html">深圳生活</a>
@@ -117,7 +934,7 @@
     </div>
     <div class="footer-source">
       <strong>📊 数据来源说明</strong><br>
-      AI工具信息来自各工具官网及应用商店，上线后将在本区域标注详细来源。
+      AI工具信息来自各工具官网及应用商店，价格与功能信息更新于2026年7月。
     </div>
     <div class="footer-bottom">© 2026 非标赛道 · 仅供教育参考，不构成升学建议</div>
   </footer>
@@ -126,5 +943,9 @@
   <div class="ai-fab-tooltip"><strong>AI教育顾问</strong><br>即将上线！届时可实时咨询教育路径问题。</div>
 
   <script src="../js/main.js"></script>
+  <script>
+    // 初始化Tab切换
+    initTabs('#tool-tab-nav', 'tab-');
+  </script>
 </body>
 </html>
