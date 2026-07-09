@@ -48,8 +48,9 @@
       "name": "语文",
       "icon": "📖",
       "description": "阅读写作与人文素养的深度培养",
-      "available": false,
-      "comingSoon": "即将上线"
+      "available": true,
+      "levels": 5,
+      "resourceCount": 36
     },
     {
       "id": "english",
