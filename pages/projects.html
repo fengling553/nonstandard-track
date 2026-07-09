@@ -3,9 +3,309 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>项目化学习 - 非标赛道</title>
-  <meta name="description" content="用真实项目替代刷题，在解决问题中积累可展示的能力成果">
+  <title>🛠️ 项目化学习 - 非标赛道</title>
+  <meta name="description" content="用真实项目替代刷题，4类11个项目化学习方案，每个项目5级难度，做中学比刷题管用">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* 页面intro区 */
+    .page-intro {
+      background: linear-gradient(135deg, var(--color-green) 0%, var(--color-green-light) 100%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-intro::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(56,161,105,0.25) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .page-intro::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -5%;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(237,137,54,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .page-intro .intro-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #C6F6D5;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .page-intro .intro-text {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Tab描述 */
+    .tab-desc {
+      background: var(--color-bg-white);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      border: 1px solid var(--color-border-light);
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 项目卡片 */
+    .project-card {
+      background: var(--color-bg-white);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      margin-bottom: 20px;
+      border: 1px solid var(--color-border-light);
+      border-left: 5px solid var(--color-green);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+    }
+    .project-card:hover {
+      border-color: var(--color-green);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    /* 卡片顶部 */
+    .project-card .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .project-card .project-name {
+      font-size: 1.3rem;
+      color: var(--color-primary);
+      font-weight: 800;
+      flex: 1;
+      min-width: 200px;
+    }
+    .project-card .tag-capsules {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .project-card .tag-capsule {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .tag-capsule.tag-skill {
+      background: #E6FFFA;
+      color: #2C7A7B;
+      border: 1px solid #B2F5EA;
+    }
+
+    /* 项目描述 */
+    .project-card .project-desc {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    /* 基本信息 */
+    .project-card .basic-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin-bottom: 16px;
+      font-size: 0.88rem;
+      color: var(--color-text-light);
+    }
+    .project-card .basic-info .info-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .project-card .basic-info .info-label {
+      font-weight: 700;
+      color: var(--color-text-secondary);
+    }
+    /* 免费价格高亮 */
+    .project-card .basic-info .price-free {
+      color: var(--color-green);
+      font-weight: 700;
+    }
+
+    /* 工具标签 */
+    .project-card .tools-section {
+      margin-bottom: 16px;
+    }
+    .project-card .tools-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 6px;
+    }
+    .project-card .tool-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .project-card .tool-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 3px 12px;
+      border-radius: 16px;
+      font-weight: 600;
+      background: #EDF2F7;
+      color: var(--color-text-secondary);
+      border: 1px solid var(--color-border);
+    }
+
+    /* 展开按钮 */
+    .expand-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      background: transparent;
+      color: var(--color-green);
+      border: 1.5px solid var(--color-green);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      margin-top: 4px;
+    }
+    .expand-btn:hover {
+      background: var(--color-green);
+      color: #fff;
+    }
+    .expand-btn .arrow {
+      display: inline-block;
+      transition: transform var(--transition);
+      font-size: 0.8rem;
+    }
+    .expand-btn.expanded .arrow {
+      transform: rotate(180deg);
+    }
+
+    /* 层级面板 */
+    .levels-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, margin-top 0.3s ease;
+      margin-top: 0;
+    }
+    .levels-panel.open {
+      max-height: 2000px;
+      margin-top: 20px;
+    }
+
+    /* 层级条目 */
+    .level-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 18px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+      border: 1px solid transparent;
+      transition: all var(--transition);
+    }
+    .level-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* L1-L5颜色渐变 */
+    .level-item.level-L1 {
+      background: #F0FFF4;
+      border-color: #C6F6D5;
+    }
+    .level-item.level-L2 {
+      background: #E6FFFA;
+      border-color: #B2F5EA;
+    }
+    .level-item.level-L3 {
+      background: #EBF8FF;
+      border-color: #BEE3F8;
+    }
+    .level-item.level-L4 {
+      background: #E9D8FD;
+      border-color: #D6BCFA;
+    }
+    .level-item.level-L5 {
+      background: #FFF5F5;
+      border-color: #FED7D7;
+    }
+
+    .level-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 42px;
+      height: 28px;
+      border-radius: 14px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+      padding: 0 10px;
+    }
+    .level-L1 .level-badge { background: #68D391; }
+    .level-L2 .level-badge { background: #4FD1C5; }
+    .level-L3 .level-badge { background: #63B3ED; }
+    .level-L4 .level-badge { background: #9F7AEA; }
+    .level-L5 .level-badge { background: #FC8181; }
+
+    .level-content {
+      font-size: 0.92rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      padding-top: 2px;
+    }
+
+    /* 更新信息 */
+    .update-info {
+      text-align: right;
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--color-border-light);
+    }
+
+    /* 响应式 */
+    @media (min-width: 768px) {
+      .page-intro {
+        padding: 40px 36px;
+      }
+      .page-intro .intro-text {
+        font-size: 1.3rem;
+      }
+      .project-card {
+        padding: 32px;
+      }
+      .project-card .project-name {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -24,9 +324,10 @@
         <li><a href="parent-growth.html">家长认知提升</a></li>
         <li><a href="projects.html" class="active">项目化学习</a></li>
         <li><a href="ai-tools.html">AI工具箱</a></li>
-        <li><a href="underlying-logic.html">底层逻辑</a>
-        <li><a href="innovative-schools.html">创新学校</a>
+        <li><a href="underlying-logic.html">底层逻辑</a></li>
+        <li><a href="innovative-schools.html">创新学校</a></li>
         <li><a href="shenzhen-local.html">深圳生活</a></li>
+        <li><a href="assessment.html" class="btn-primary" style="padding:8px 16px;font-size:0.85rem;">开始测评</a></li>
       </ul>
       <button class="navbar-toggle" aria-label="菜单">
         <span></span><span></span><span></span>
@@ -34,64 +335,674 @@
     </div>
   </nav>
 
+  <!-- 移动端菜单 -->
   <div class="mobile-menu">
     <a href="paths.html">🗺️ 路径情报站</a>
     <a href="training.html">💪 全科训练场</a>
     <a href="vocational.html">🏭 职高赛道</a>
     <a href="assessment.html">🎯 学科测评</a>
     <a href="parent-growth.html">🧠 家长认知提升</a>
-    <a href="projects.html">🚀 项目化学习</a>
+    <a href="projects.html">🛠️ 项目化学习</a>
     <a href="ai-tools.html">🤖 AI工具箱</a>
     <a href="underlying-logic.html">🔍 底层逻辑</a>
     <a href="innovative-schools.html">🏫 创新学校</a>
     <a href="shenzhen-local.html">🏠 深圳生活</a>
+    <a href="assessment.html" style="color:var(--color-green);font-weight:600;">开始测评</a>
   </div>
 
   <main class="page-content">
     <div class="container">
+      <!-- 面包屑 -->
       <div class="breadcrumb">
         <a href="../index.html">首页</a>
         <span class="separator">›</span>
         <span class="current">项目化学习</span>
       </div>
 
-      <div class="placeholder-page">
-        <div class="placeholder-icon">🚀</div>
-        <h2>项目化学习 · 二期上线</h2>
-        <p>用真实项目替代刷题，在解决问题中积累可展示的能力成果。项目库正在建设中，敬请期待。</p>
+      <!-- 页面标题 -->
+      <div class="page-title">
+        <h1>🛠️ 项目化学习</h1>
+        <p>用真实项目替代刷题，在解决问题中积累可展示的能力成果</p>
+      </div>
 
-        <div class="feature-preview">
-          <div class="feature-item">
-            <span class="feature-icon">🔬</span>
-            <span class="feature-text">跨学科真实项目库</span>
+      <!-- Intro区 -->
+      <div class="page-intro">
+        <div class="intro-label">💡 做中学的方法论</div>
+        <div class="intro-text">
+          用真实项目替代刷题。选一个你感兴趣的项目→拆解需要什么学科知识→缺什么补什么→完成项目→更新能力图谱。做中学，比做100张卷子管用。
+        </div>
+      </div>
+
+      <!-- Tab导航 -->
+      <div class="tab-nav" id="project-tab-nav">
+        <button class="tab-btn active" data-tab="all">🌐 全部（11个）</button>
+        <button class="tab-btn" data-tab="maker">🔧 创客工程（3）</button>
+        <button class="tab-btn" data-tab="creative-writing">✍️ 内容创作（3）</button>
+        <button class="tab-btn" data-tab="research">🔬 研究项目（3）</button>
+        <button class="tab-btn" data-tab="business">💡 商业实践（2）</button>
+      </div>
+
+      <!-- Tab内容 -->
+      <div id="project-content">
+
+        <!-- ==================== Tab: 全部 ==================== -->
+        <div class="tab-content active" id="tab-all">
+
+          <!-- ===== 创客工程 ===== -->
+
+          <!-- 智能浇花器 -->
+          <div class="project-card" data-category="maker">
+            <div class="card-top">
+              <div class="project-name">智能浇花器</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-skill">编程</span>
+                <span class="tag-capsule tag-skill">物理(电路)</span>
+                <span class="tag-capsule tag-skill">生物(植物)</span>
+                <span class="tag-capsule tag-skill">数据分析</span>
+              </div>
+            </div>
+            <div class="project-desc">用土壤湿度传感器+Arduino+水泵，做自动浇花系统</div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">⏱ 预计时长：</span>1-4周</span>
+              <span class="info-item"><span class="info-label">💰 费用：</span>套件约50-150元</span>
+            </div>
+            <div class="tools-section">
+              <div class="tools-label">🛠 需要工具</div>
+              <div class="tool-tags">
+                <span class="tool-tag">Arduino</span>
+                <span class="tool-tag">土壤湿度传感器</span>
+                <span class="tool-tag">水泵模块</span>
+              </div>
+            </div>
+            <button class="expand-btn" onclick="toggleLevels(this)">
+              <span>查看5级难度</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="levels-panel">
+              <div class="level-item level-L1">
+                <span class="level-badge">L1</span>
+                <div class="level-content">用现成套件拼装，理解传感器基本概念</div>
+              </div>
+              <div class="level-item level-L2">
+                <span class="level-badge">L2</span>
+                <div class="level-content">自己写简单逻辑：湿度低于阈值就浇水</div>
+              </div>
+              <div class="level-item level-L3">
+                <span class="level-badge">L3</span>
+                <div class="level-content">加入手机远程控制和数据记录</div>
+              </div>
+              <div class="level-item level-L4">
+                <span class="level-badge">L4</span>
+                <div class="level-content">多传感器联动+机器学习预测浇水时间</div>
+              </div>
+              <div class="level-item level-L5">
+                <span class="level-badge">L5</span>
+                <div class="level-content">设计完整智慧农业系统，论文级项目</div>
+              </div>
+            </div>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">👨‍🏫</span>
-            <span class="feature-text">项目导师匹配与指导</span>
+
+          <!-- AI垃圾分类器 -->
+          <div class="project-card" data-category="maker">
+            <div class="card-top">
+              <div class="project-name">AI垃圾分类器</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-skill">编程</span>
+                <span class="tag-capsule tag-skill">AI/机器学习</span>
+                <span class="tag-capsule tag-skill">工程</span>
+                <span class="tag-capsule tag-skill">环保</span>
+              </div>
+            </div>
+            <div class="project-desc">用摄像头+AI模型识别垃圾类型并自动分类</div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">⏱ 预计时长：</span>2-8周</span>
+              <span class="info-item"><span class="info-label">💰 费用：</span>硬件约100-300元</span>
+            </div>
+            <div class="tools-section">
+              <div class="tools-label">🛠 需要工具</div>
+              <div class="tool-tags">
+                <span class="tool-tag">摄像头</span>
+                <span class="tool-tag">树莓派/Arduino</span>
+                <span class="tool-tag">TensorFlow Lite</span>
+              </div>
+            </div>
+            <button class="expand-btn" onclick="toggleLevels(this)">
+              <span>查看5级难度</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="levels-panel">
+              <div class="level-item level-L1">
+                <span class="level-badge">L1</span>
+                <div class="level-content">用现成APP拍照识别，理解AI分类概念</div>
+              </div>
+              <div class="level-item level-L2">
+                <span class="level-badge">L2</span>
+                <div class="level-content">用Scratch/Python调用现成API做分类器</div>
+              </div>
+              <div class="level-item level-L3">
+                <span class="level-badge">L3</span>
+                <div class="level-content">训练自己的分类模型，提高识别准确率</div>
+              </div>
+              <div class="level-item level-L4">
+                <span class="level-badge">L4</span>
+                <div class="level-content">加上机械臂自动分拣，软硬结合</div>
+              </div>
+              <div class="level-item level-L5">
+                <span class="level-badge">L5</span>
+                <div class="level-content">优化模型到可部署水平，参加科创竞赛</div>
+              </div>
+            </div>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">🏆</span>
-            <span class="feature-text">项目成果展示与竞赛对接</span>
+
+          <!-- 个人气象站 -->
+          <div class="project-card" data-category="maker">
+            <div class="card-top">
+              <div class="project-name">个人气象站</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-skill">编程</span>
+                <span class="tag-capsule tag-skill">物理(热学)</span>
+                <span class="tag-capsule tag-skill">数学(统计)</span>
+                <span class="tag-capsule tag-skill">数据可视化</span>
+              </div>
+            </div>
+            <div class="project-desc">搭建气象数据采集站，长期记录分析天气数据</div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">⏱ 预计时长：</span>持续项目，2周搭建+长期运行</span>
+              <span class="info-item"><span class="info-label">💰 费用：</span>约80-200元</span>
+            </div>
+            <div class="tools-section">
+              <div class="tools-label">🛠 需要工具</div>
+              <div class="tool-tags">
+                <span class="tool-tag">温湿度传感器</span>
+                <span class="tool-tag">Arduino/树莓派</span>
+                <span class="tool-tag">Python</span>
+              </div>
+            </div>
+            <button class="expand-btn" onclick="toggleLevels(this)">
+              <span>查看5级难度</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="levels-panel">
+              <div class="level-item level-L1">
+                <span class="level-badge">L1</span>
+                <div class="level-content">用温度计和本子记录，学会观察和数据记录</div>
+              </div>
+              <div class="level-item level-L2">
+                <span class="level-badge">L2</span>
+                <div class="level-content">用传感器自动采集温湿度，存储到电脑</div>
+              </div>
+              <div class="level-item level-L3">
+                <span class="level-badge">L3</span>
+                <div class="level-content">搭建Web页面实时展示数据，学数据可视化</div>
+              </div>
+              <div class="level-item level-L4">
+                <span class="level-badge">L4</span>
+                <div class="level-content">用历史数据做天气预报模型</div>
+              </div>
+              <div class="level-item level-L5">
+                <span class="level-badge">L5</span>
+                <div class="level-content">与专业气象数据对比验证，写成研究报告</div>
+              </div>
+            </div>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">🤝</span>
-            <span class="feature-text">组队协作与社区交流</span>
+
+          <!-- ===== 内容创作 ===== -->
+
+          <!-- 个人公众号/博客 -->
+          <div class="project-card" data-category="creative-writing">
+            <div class="card-top">
+              <div class="project-name">个人公众号/博客</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-skill">写作</span>
+                <span class="tag-capsule tag-skill">逻辑思维</span>
+                <span class="tag-capsule tag-skill">读者心理</span>
+                <span class="tag-capsule tag-skill">排版设计</span>
+              </div>
+            </div>
+            <div class="project-desc">从0开始运营一个内容账号，选题→写作→排版→发布</div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">⏱ 预计时长：</span>持续项目，至少3个月</span>
+              <span class="info-item"><span class="info-label">💰 费用：</span><span class="price-free">免费</span></span>
+            </div>
+            <div class="tools-section">
+              <div class="tools-label">🛠 需要工具</div>
+              <div class="tool-tags">
+                <span class="tool-tag">微信公众号/Notion/博客平台</span>
+                <span class="tool-tag">Markdown编辑器</span>
+              </div>
+            </div>
+            <button class="expand-btn" onclick="toggleLevels(this)">
+              <span>查看5级难度</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="levels-panel">
+              <div class="level-item level-L1">
+                <span class="level-badge">L1</span>
+                <div class="level-content">每周写一篇短文，培养输出习惯</div>
+              </div>
+              <div class="level-item level-L2">
+                <span class="level-badge">L2</span>
+                <div class="level-content">学会选题和结构化写作，文章有清晰逻辑</div>
+              </div>
+              <div class="level-item level-L3">
+                <span class="level-badge">L3</span>
+                <div class="level-content">研究读者需求，做选题规划，持续稳定更新</div>
+              </div>
+              <div class="level-item level-L4">
+                <span class="level-badge">L4</span>
+                <div class="level-content">形成个人风格，内容有独到见解，吸引固定读者</div>
+              </div>
+              <div class="level-item level-L5">
+                <span class="level-badge">L5</span>
+                <div class="level-content">内容有影响力，获得行业认可或商业合作</div>
+              </div>
+            </div>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">📝</span>
-            <span class="feature-text">项目作品集自动生成</span>
+
+          <!-- AI辅助播客 -->
+          <div class="project-card" data-category="creative-writing">
+            <div class="card-top">
+              <div class="project-name">AI辅助播客</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-skill">写作</span>
+                <span class="tag-capsule tag-skill">口语表达</span>
+                <span class="tag-capsule tag-skill">音频制作</span>
+                <span class="tag-capsule tag-skill">内容策划</span>
+              </div>
+            </div>
+            <div class="project-desc">用AI工具制作播客节目，从选题到发布全流程</div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">⏱ 预计时长：</span>1-2周做出第一期</span>
+              <span class="info-item"><span class="info-label">💰 费用：</span><span class="price-free">免费起步</span></span>
+            </div>
+            <div class="tools-section">
+              <div class="tools-label">🛠 需要工具</div>
+              <div class="tool-tags">
+                <span class="tool-tag">AI播客生成工具</span>
+                <span class="tool-tag">录音设备</span>
+                <span class="tool-tag">音频编辑软件</span>
+              </div>
+            </div>
+            <button class="expand-btn" onclick="toggleLevels(this)">
+              <span>查看5级难度</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="levels-panel">
+              <div class="level-item level-L1">
+                <span class="level-badge">L1</span>
+                <div class="level-content">用AI生成播客脚本，录一段3分钟音频</div>
+              </div>
+              <div class="level-item level-L2">
+                <span class="level-badge">L2</span>
+                <div class="level-content">自己写脚本+AI辅助润色，学会音频剪辑</div>
+              </div>
+              <div class="level-item level-L3">
+                <span class="level-badge">L3</span>
+                <div class="level-content">做系列播客，每期一个主题，持续输出</div>
+              </div>
+              <div class="level-item level-L4">
+                <span class="level-badge">L4</span>
+                <div class="level-content">加入采访、讨论环节，提升内容深度</div>
+              </div>
+              <div class="level-item level-L5">
+                <span class="level-badge">L5</span>
+                <div class="level-content">播客有稳定听众，内容有行业影响力</div>
+              </div>
+            </div>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">🎓</span>
-            <span class="feature-text">项目经历与路径匹配</span>
+
+          <!-- 纪录片/短视频 -->
+          <div class="project-card" data-category="creative-writing">
+            <div class="card-top">
+              <div class="project-name">纪录片/短视频</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-skill">叙事能力</span>
+                <span class="tag-capsule tag-skill">视觉表达</span>
+                <span class="tag-capsule tag-skill">剪辑</span>
+                <span class="tag-capsule tag-skill">采访沟通</span>
+              </div>
+            </div>
+            <div class="project-desc">拍摄制作一条3-5分钟的短片，讲一个真实的故事</div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">⏱ 预计时长：</span>1-4周</span>
+              <span class="info-item"><span class="info-label">💰 费用：</span><span class="price-free">免费（手机拍摄）</span></span>
+            </div>
+            <div class="tools-section">
+              <div class="tools-label">🛠 需要工具</div>
+              <div class="tool-tags">
+                <span class="tool-tag">手机/相机</span>
+                <span class="tool-tag">剪映/CapCut</span>
+                <span class="tool-tag">AI辅助脚本</span>
+              </div>
+            </div>
+            <button class="expand-btn" onclick="toggleLevels(this)">
+              <span>查看5级难度</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="levels-panel">
+              <div class="level-item level-L1">
+                <span class="level-badge">L1</span>
+                <div class="level-content">用手机拍一段vlog，学会基本拍摄和剪辑</div>
+              </div>
+              <div class="level-item level-L2">
+                <span class="level-badge">L2</span>
+                <div class="level-content">做一条有主题的短视频，有开头中间结尾</div>
+              </div>
+              <div class="level-item level-L3">
+                <span class="level-badge">L3</span>
+                <div class="level-content">做一条迷你纪录片，有采访、有叙事、有观点</div>
+              </div>
+              <div class="level-item level-L4">
+                <span class="level-badge">L4</span>
+                <div class="level-content">系统化创作系列内容，形成个人风格</div>
+              </div>
+              <div class="level-item level-L5">
+                <span class="level-badge">L5</span>
+                <div class="level-content">作品参加青少年影像节/竞赛</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== 研究项目 ===== -->
+
+          <!-- 社区调研报告 -->
+          <div class="project-card" data-category="research">
+            <div class="card-top">
+              <div class="project-name">社区调研报告</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-skill">社会观察</span>
+                <span class="tag-capsule tag-skill">问卷设计</span>
+                <span class="tag-capsule tag-skill">数据分析</span>
+                <span class="tag-capsule tag-skill">报告写作</span>
+              </div>
+            </div>
+            <div class="project-desc">选择一个社区问题，做调研、分析、提出解决方案</div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">⏱ 预计时长：</span>2-6周</span>
+              <span class="info-item"><span class="info-label">💰 费用：</span><span class="price-free">免费</span></span>
+            </div>
+            <div class="tools-section">
+              <div class="tools-label">🛠 需要工具</div>
+              <div class="tool-tags">
+                <span class="tool-tag">问卷星/腾讯问卷</span>
+                <span class="tool-tag">Excel/Python</span>
+                <span class="tool-tag">Word/飞书文档</span>
+              </div>
+            </div>
+            <button class="expand-btn" onclick="toggleLevels(this)">
+              <span>查看5级难度</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="levels-panel">
+              <div class="level-item level-L1">
+                <span class="level-badge">L1</span>
+                <div class="level-content">设计5道简单问卷，采访5个人，写1页总结</div>
+              </div>
+              <div class="level-item level-L2">
+                <span class="level-badge">L2</span>
+                <div class="level-content">设计结构化问卷，采访20人，用图表展示数据</div>
+              </div>
+              <div class="level-item level-L3">
+                <span class="level-badge">L3</span>
+                <div class="level-content">做完整的调研报告，有问题分析+数据支撑+解决方案</div>
+              </div>
+              <div class="level-item level-L4">
+                <span class="level-badge">L4</span>
+                <div class="level-content">调研报告有学术规范，引用文献，结论有创新性</div>
+              </div>
+              <div class="level-item level-L5">
+                <span class="level-badge">L5</span>
+                <div class="level-content">报告达到可发表水平，参加社科类竞赛</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI+学科探究 -->
+          <div class="project-card" data-category="research">
+            <div class="card-top">
+              <div class="project-name">AI+学科探究</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-skill">研究方法</span>
+                <span class="tag-capsule tag-skill">AI工具应用</span>
+                <span class="tag-capsule tag-skill">学术写作</span>
+                <span class="tag-capsule tag-skill">批判性思维</span>
+              </div>
+            </div>
+            <div class="project-desc">用AI工具辅助研究一个学科问题，产出研究论文</div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">⏱ 预计时长：</span>4-12周</span>
+              <span class="info-item"><span class="info-label">💰 费用：</span><span class="price-free">免费</span></span>
+            </div>
+            <div class="tools-section">
+              <div class="tools-label">🛠 需要工具</div>
+              <div class="tool-tags">
+                <span class="tool-tag">Semantic Scholar/Elicit</span>
+                <span class="tool-tag">Python</span>
+                <span class="tool-tag">LaTeX/Word</span>
+              </div>
+            </div>
+            <button class="expand-btn" onclick="toggleLevels(this)">
+              <span>查看5级难度</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="levels-panel">
+              <div class="level-item level-L1">
+                <span class="level-badge">L1</span>
+                <div class="level-content">用AI搜索资料，写一篇500字的小论文</div>
+              </div>
+              <div class="level-item level-L2">
+                <span class="level-badge">L2</span>
+                <div class="level-content">用AI辅助文献检索，写一篇有引用的论文</div>
+              </div>
+              <div class="level-item level-L3">
+                <span class="level-badge">L3</span>
+                <div class="level-content">用AI分析数据/做实验，写有方法论的论文</div>
+              </div>
+              <div class="level-item level-L4">
+                <span class="level-badge">L4</span>
+                <div class="level-content">独立设计实验/调研，AI仅做辅助工具，论文有创新发现</div>
+              </div>
+              <div class="level-item level-L5">
+                <span class="level-badge">L5</span>
+                <div class="level-content">论文参加科技创新大赛/少年科学院评审</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 科创竞赛项目 -->
+          <div class="project-card" data-category="research">
+            <div class="card-top">
+              <div class="project-name">科创竞赛项目</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-skill">创新思维</span>
+                <span class="tag-capsule tag-skill">项目管理</span>
+                <span class="tag-capsule tag-skill">展示表达</span>
+                <span class="tag-capsule tag-skill">抗压能力</span>
+              </div>
+            </div>
+            <div class="project-desc">从发现真问题到做出可展示成果，完整参赛流程</div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">⏱ 预计时长：</span>3-12个月</span>
+              <span class="info-item"><span class="info-label">💰 费用：</span><span class="price-free">免费（参赛无费用）</span></span>
+            </div>
+            <div class="tools-section">
+              <div class="tools-label">🛠 需要工具</div>
+              <div class="tool-tags">
+                <span class="tool-tag">根据项目方向选择</span>
+                <span class="tool-tag">PPT/海报</span>
+                <span class="tool-tag">论文写作工具</span>
+              </div>
+            </div>
+            <button class="expand-btn" onclick="toggleLevels(this)">
+              <span>查看5级难度</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="levels-panel">
+              <div class="level-item level-L1">
+                <span class="level-badge">L1</span>
+                <div class="level-content">参加学校科技节，做一个小展示</div>
+              </div>
+              <div class="level-item level-L2">
+                <span class="level-badge">L2</span>
+                <div class="level-content">参加区级科技创新大赛，有完整项目展示</div>
+              </div>
+              <div class="level-item level-L3">
+                <span class="level-badge">L3</span>
+                <div class="level-content">参加市级竞赛，项目有技术创新点</div>
+              </div>
+              <div class="level-item level-L4">
+                <span class="level-badge">L4</span>
+                <div class="level-content">参加省级/全国竞赛，项目有学术论文支撑</div>
+              </div>
+              <div class="level-item level-L5">
+                <span class="level-badge">L5</span>
+                <div class="level-content">参加ISEF/国际竞赛级别</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== 商业实践 ===== -->
+
+          <!-- 校园/社区小店 -->
+          <div class="project-card" data-category="business">
+            <div class="card-top">
+              <div class="project-name">校园/社区小店</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-skill">财务意识</span>
+                <span class="tag-capsule tag-skill">沟通表达</span>
+                <span class="tag-capsule tag-skill">规划能力</span>
+                <span class="tag-capsule tag-skill">抗风险</span>
+              </div>
+            </div>
+            <div class="project-desc">策划运营一个微型商业项目，从选品到盈亏</div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">⏱ 预计时长：</span>1天-2个月</span>
+              <span class="info-item"><span class="info-label">💰 费用：</span>启动资金50-200元</span>
+            </div>
+            <div class="tools-section">
+              <div class="tools-label">🛠 需要工具</div>
+              <div class="tool-tags">
+                <span class="tool-tag">记账本/Excel</span>
+                <span class="tool-tag">微信支付/支付宝</span>
+                <span class="tool-tag">海报设计工具</span>
+              </div>
+            </div>
+            <button class="expand-btn" onclick="toggleLevels(this)">
+              <span>查看5级难度</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="levels-panel">
+              <div class="level-item level-L1">
+                <span class="level-badge">L1</span>
+                <div class="level-content">摆一次跳蚤市场摊位，理解买卖基本概念</div>
+              </div>
+              <div class="level-item level-L2">
+                <span class="level-badge">L2</span>
+                <div class="level-content">策划一个小型义卖活动，计算成本和利润</div>
+              </div>
+              <div class="level-item level-L3">
+                <span class="level-badge">L3</span>
+                <div class="level-content">运营一个持续1个月的微型店铺，做财务记录和分析</div>
+              </div>
+              <div class="level-item level-L4">
+                <span class="level-badge">L4</span>
+                <div class="level-content">设计产品/服务，做市场调研和定价策略</div>
+              </div>
+              <div class="level-item level-L5">
+                <span class="level-badge">L5</span>
+                <div class="level-content">参加创业大赛，写商业计划书</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 数字产品开发 -->
+          <div class="project-card" data-category="business">
+            <div class="card-top">
+              <div class="project-name">数字产品开发</div>
+              <div class="tag-capsules">
+                <span class="tag-capsule tag-skill">产品思维</span>
+                <span class="tag-capsule tag-skill">编程</span>
+                <span class="tag-capsule tag-skill">用户调研</span>
+                <span class="tag-capsule tag-skill">迭代思维</span>
+              </div>
+            </div>
+            <div class="project-desc">设计并开发一个简单的数字产品（APP/小程序/网页）</div>
+            <div class="basic-info">
+              <span class="info-item"><span class="info-label">⏱ 预计时长：</span>2-8周</span>
+              <span class="info-item"><span class="info-label">💰 费用：</span><span class="price-free">免费</span></span>
+            </div>
+            <div class="tools-section">
+              <div class="tools-label">🛠 需要工具</div>
+              <div class="tool-tags">
+                <span class="tool-tag">扣子编程/Figma</span>
+                <span class="tool-tag">VS Code</span>
+                <span class="tool-tag">用户调研工具</span>
+              </div>
+            </div>
+            <button class="expand-btn" onclick="toggleLevels(this)">
+              <span>查看5级难度</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="levels-panel">
+              <div class="level-item level-L1">
+                <span class="level-badge">L1</span>
+                <div class="level-content">画产品原型图，理解"产品"是什么</div>
+              </div>
+              <div class="level-item level-L2">
+                <span class="level-badge">L2</span>
+                <div class="level-content">用扣子编程/NoCode工具做一个可用的MVP</div>
+              </div>
+              <div class="level-item level-L3">
+                <span class="level-badge">L3</span>
+                <div class="level-content">开发一个完整的网页应用，有用户反馈</div>
+              </div>
+              <div class="level-item level-L4">
+                <span class="level-badge">L4</span>
+                <div class="level-content">迭代优化产品，积累真实用户，分析使用数据</div>
+              </div>
+              <div class="level-item level-L5">
+                <span class="level-badge">L5</span>
+                <div class="level-content">产品有商业模式，参加创业竞赛</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="update-info">📅 最近更新：2026-07-09</div>
+        </div>
+
+        <!-- ==================== Tab: 创客工程 ==================== -->
+        <div class="tab-content" id="tab-maker">
+          <div class="tab-desc">
+            🔧 动手做东西，工程思维+物理+编程——从传感器到AI模型，在造东西的过程中学知识
           </div>
         </div>
 
-        <a href="paths.html" class="btn-primary">先看看路径情报 →</a>
+        <!-- ==================== Tab: 内容创作 ==================== -->
+        <div class="tab-content" id="tab-creative-writing">
+          <div class="tab-desc">
+            ✍️ 写文章、做播客、做视频，输出倒逼输入——最好的学习方式是教会别人
+          </div>
+        </div>
+
+        <!-- ==================== Tab: 研究项目 ==================== -->
+        <div class="tab-content" id="tab-research">
+          <div class="tab-desc">
+            🔬 像学者一样研究问题，论文/报告/竞赛——训练发现问题和解决问题的能力
+          </div>
+        </div>
+
+        <!-- ==================== Tab: 商业实践 ==================== -->
+        <div class="tab-content" id="tab-business">
+          <div class="tab-desc">
+            💡 从卖柠檬水到做产品，商业思维从小练——理解价值创造和资源配置
+          </div>
+        </div>
+
       </div>
     </div>
   </main>
 
+  <!-- 底部 -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
@@ -106,25 +1017,86 @@
         <a href="assessment.html">学科测评</a>
         <a href="parent-growth.html">家长认知提升</a>
         <a href="underlying-logic.html">底层逻辑</a>
-        <a href="innovative-schools.html">创新学校</a>
-        <a href="shenzhen-local.html">深圳生活</a>
       </div>
       <div class="footer-links">
-        <h4>关于我们</h4>
-        <a href="#">关于非标赛道</a>
-        <a href="#">联系方式</a>
+        <h4>更多模块</h4>
+        <a href="projects.html">项目化学习</a>
+        <a href="ai-tools.html">AI工具箱</a>
+        <a href="innovative-schools.html">创新学校</a>
+        <a href="shenzhen-local.html">深圳生活</a>
       </div>
     </div>
     <div class="footer-source">
       <strong>📊 数据来源说明</strong><br>
-      项目化学习模块正在建设中，上线后将在本区域标注项目来源。
+      项目化学习方案基于公开的教育实践案例和竞赛信息整理，难度层级仅供参考。具体实施请结合学生实际情况调整。
     </div>
     <div class="footer-bottom">© 2026 非标赛道 · 仅供教育参考，不构成升学建议</div>
   </footer>
 
+  <!-- AI浮动按钮 -->
   <button class="ai-fab" aria-label="AI教育顾问">🤖</button>
   <div class="ai-fab-tooltip"><strong>AI教育顾问</strong><br>即将上线！届时可实时咨询教育路径问题。</div>
 
   <script src="../js/main.js"></script>
+  <script>
+    // 初始化Tab切换
+    initTabs('#project-tab-nav', 'tab-');
+
+    // 非全部Tab：只显示对应category的卡片
+    (function() {
+      var tabNav = document.querySelector('#project-tab-nav');
+      if (!tabNav) return;
+      var allCards = document.querySelectorAll('#tab-all .project-card');
+      var updateInfo = document.querySelector('#tab-all .update-info');
+
+      tabNav.querySelectorAll('.tab-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var tabId = this.getAttribute('data-tab');
+          if (tabId === 'all') return;
+
+          var targetTab = document.getElementById('tab-' + tabId);
+          if (!targetTab) return;
+
+          // 保留desc，移除旧卡片
+          var desc = targetTab.querySelector('.tab-desc');
+          targetTab.innerHTML = '';
+          if (desc) {
+            targetTab.appendChild(desc);
+          }
+
+          // 复制对应category的卡片
+          allCards.forEach(function(card) {
+            if (card.getAttribute('data-category') === tabId) {
+              var clone = card.cloneNode(true);
+              targetTab.appendChild(clone);
+            }
+          });
+
+          // 添加更新信息
+          if (updateInfo) {
+            var updateClone = updateInfo.cloneNode(true);
+            targetTab.appendChild(updateClone);
+          }
+        });
+      });
+    })();
+
+    // 层级折叠面板切换
+    function toggleLevels(btn) {
+      var panel = btn.nextElementSibling;
+      var arrow = btn.querySelector('.arrow');
+      var isOpen = panel.classList.contains('open');
+
+      if (isOpen) {
+        panel.classList.remove('open');
+        btn.classList.remove('expanded');
+        btn.querySelector('span:first-child').textContent = '查看5级难度';
+      } else {
+        panel.classList.add('open');
+        btn.classList.add('expanded');
+        btn.querySelector('span:first-child').textContent = '收起5级难度';
+      }
+    }
+  </script>
 </body>
 </html>

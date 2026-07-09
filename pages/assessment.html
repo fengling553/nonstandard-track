@@ -4,8 +4,596 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>学科测评 - 非标赛道</title>
-  <meta name="description" content="AI驱动的学科能力评估，精准定位你的学科水平和发展方向">
+  <meta name="description" content="5分钟自测定水平，测完推荐对应层级训练资源">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* ===== 测评页面专用样式 ===== */
+
+    /* Intro区 */
+    .assessment-intro {
+      padding: calc(var(--nav-height) + 40px) 20px 48px;
+      text-align: center;
+      background: linear-gradient(135deg, #38A169 0%, #48BB78 50%, #2F855A 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .assessment-intro::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .assessment-intro h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+    .assessment-intro .intro-text {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.9);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.75;
+      position: relative;
+      z-index: 1;
+    }
+    @media (min-width: 768px) {
+      .assessment-intro { padding: calc(var(--nav-height) + 60px) 20px 60px; }
+      .assessment-intro h1 { font-size: 2.4rem; }
+    }
+
+    /* 主内容区 */
+    .assessment-main {
+      padding: 40px 20px 60px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ========== 学科选择 ========== */
+    .subject-select-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 8px;
+    }
+    @media (min-width: 540px) {
+      .subject-select-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .subject-select-card {
+      background: var(--color-bg-card);
+      border-radius: var(--radius-md);
+      padding: 36px 28px;
+      box-shadow: var(--shadow-sm);
+      border: 2px solid var(--color-border-light);
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition);
+      position: relative;
+    }
+    .subject-select-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-green);
+    }
+    .subject-select-card:active {
+      transform: translateY(-2px);
+    }
+    .subject-select-card .card-emoji {
+      font-size: 3rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .subject-select-card h3 {
+      font-size: 1.35rem;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+    .subject-select-card .card-sub {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 14px;
+    }
+    .subject-select-card .card-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+    .subject-select-card .card-badge.live {
+      background: #F0FFF4;
+      color: var(--color-green-dark);
+    }
+    .subject-select-card.coming-soon {
+      opacity: 0.55;
+      cursor: default;
+      pointer-events: none;
+    }
+    .subject-select-card.coming-soon:hover {
+      transform: none;
+      box-shadow: var(--shadow-sm);
+      border-color: var(--color-border-light);
+    }
+    .subject-select-card.coming-soon .card-badge {
+      background: #FFF5EB;
+      color: var(--color-orange-dark);
+    }
+
+    /* ========== 做题区 ========== */
+    .quiz-section { display: none; }
+    .quiz-section.active { display: block; }
+
+    .quiz-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .quiz-subject-label {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .quiz-progress-text {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      font-weight: 600;
+    }
+    .quiz-back-btn {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      cursor: pointer;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: color var(--transition);
+      padding: 4px 0;
+    }
+    .quiz-back-btn:hover { color: var(--color-orange); }
+
+    /* 进度条 */
+    .quiz-progress-bar {
+      width: 100%;
+      height: 8px;
+      background: var(--color-border-light);
+      border-radius: 4px;
+      margin-bottom: 28px;
+      overflow: hidden;
+    }
+    .quiz-progress-bar .fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--color-green), var(--color-green-light));
+      border-radius: 4px;
+      transition: width 0.4s ease;
+    }
+
+    /* 层级标签 */
+    .quiz-level-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      background: #EBF8FF;
+      color: #2B6CB0;
+    }
+
+    /* 题目 */
+    .quiz-question {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--color-text);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    @media (min-width: 768px) {
+      .quiz-question { font-size: 1.35rem; }
+    }
+
+    /* 选项 */
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .quiz-option {
+      padding: 16px 20px;
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      background: var(--color-bg-white);
+      font-size: 1.05rem;
+      color: var(--color-text);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: left;
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .quiz-option:hover:not(.disabled) {
+      border-color: var(--color-green);
+      background: #F0FFF4;
+    }
+    .quiz-option .option-letter {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+    .quiz-option:hover:not(.disabled) .option-letter {
+      background: var(--color-green);
+      color: #fff;
+    }
+    .quiz-option.selected-correct {
+      border-color: var(--color-green);
+      background: #F0FFF4;
+    }
+    .quiz-option.selected-correct .option-letter {
+      background: var(--color-green);
+      color: #fff;
+    }
+    .quiz-option.selected-wrong {
+      border-color: #E53E3E;
+      background: #FFF5F5;
+    }
+    .quiz-option.selected-wrong .option-letter {
+      background: #E53E3E;
+      color: #fff;
+    }
+    .quiz-option.show-correct {
+      border-color: var(--color-green);
+      background: #F0FFF4;
+    }
+    .quiz-option.show-correct .option-letter {
+      background: var(--color-green);
+      color: #fff;
+    }
+    .quiz-option.disabled {
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* ========== 结果区 ========== */
+    .result-section { display: none; }
+    .result-section.active { display: block; }
+
+    .result-hero {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .result-hero .result-emoji {
+      font-size: 3.5rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .result-hero h2 {
+      font-size: 1.6rem;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+    .result-hero .result-subtitle {
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+    }
+
+    /* 层级进度条 */
+    .level-bars {
+      margin-bottom: 32px;
+    }
+    .level-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .level-bar-item .level-label {
+      width: 56px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--color-text-secondary);
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .level-bar-item .level-bar-track {
+      flex: 1;
+      height: 28px;
+      background: var(--color-border-light);
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+    }
+    .level-bar-item .level-bar-fill {
+      height: 100%;
+      border-radius: 14px;
+      transition: width 0.8s ease;
+      min-width: 0;
+    }
+    .level-bar-item .level-bar-fill.fill-gray {
+      background: linear-gradient(90deg, #A0AEC0, #CBD5E0);
+    }
+    .level-bar-item .level-bar-fill.fill-green {
+      background: linear-gradient(90deg, #38A169, #48BB78);
+    }
+    .level-bar-item .level-bar-fill.fill-highlight {
+      background: linear-gradient(90deg, #38A169, #68D391);
+      box-shadow: 0 2px 8px rgba(56,161,105,0.4);
+    }
+    .level-bar-item .level-bar-text {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    .level-bar-item .level-bar-text.text-outside {
+      position: static;
+      color: var(--color-text-secondary);
+      text-shadow: none;
+      font-size: 0.8rem;
+      margin-left: 8px;
+      flex-shrink: 0;
+      width: 60px;
+    }
+    .level-bar-item.is-current .level-label {
+      color: var(--color-green-dark);
+      font-size: 1rem;
+    }
+    .level-bar-item.is-current .level-bar-track {
+      height: 36px;
+      border-radius: 18px;
+      border: 2px solid var(--color-green);
+    }
+    .level-bar-item.is-current .level-bar-fill {
+      border-radius: 16px;
+    }
+
+    /* 层级说明 */
+    .level-summary {
+      background: linear-gradient(135deg, #F0FFF4, #EBF8FF);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 28px;
+      border: 1px solid #C6F6D5;
+    }
+    .level-summary h3 {
+      font-size: 1.2rem;
+      color: var(--color-green-dark);
+      margin-bottom: 8px;
+    }
+    .level-summary p {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 统计 */
+    .result-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .result-stat-card {
+      background: var(--color-bg-white);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      text-align: center;
+      border: 1px solid var(--color-border-light);
+      box-shadow: var(--shadow-sm);
+    }
+    .result-stat-card .stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-green);
+      line-height: 1.2;
+    }
+    .result-stat-card .stat-label {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-top: 4px;
+    }
+
+    /* 推荐资源区 */
+    .result-recommend {
+      margin-top: 32px;
+    }
+    .result-recommend h3 {
+      font-size: 1.2rem;
+      color: var(--color-primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .recommend-resources {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    @media (min-width: 540px) {
+      .recommend-resources { grid-template-columns: 1fr 1fr; }
+    }
+    .recommend-resource-item {
+      background: var(--color-bg-white);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      border: 1px solid var(--color-border-light);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+    }
+    .recommend-resource-item:hover {
+      border-color: var(--color-green);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .recommend-resource-item .rr-type {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+    .recommend-resource-item .rr-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 4px;
+    }
+    .recommend-resource-item .rr-desc {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+    .recommend-resource-item .rr-price {
+      font-size: 0.8rem;
+      color: var(--color-orange-dark);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* 推荐训练场链接 */
+    .recommend-training-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--color-green);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all var(--transition);
+      margin-top: 8px;
+    }
+    .recommend-training-link:hover {
+      background: var(--color-green-dark);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* 重做按钮 */
+    .result-actions {
+      text-align: center;
+      margin-top: 24px;
+    }
+    .btn-restart {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 24px;
+      background: transparent;
+      color: var(--color-text-secondary);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .btn-restart:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    /* 答题详情折叠 */
+    .answer-detail-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: transparent;
+      color: var(--color-text-light);
+      border: 1px solid var(--color-border-light);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all var(--transition);
+      margin-top: 16px;
+    }
+    .answer-detail-toggle:hover {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+    .answer-detail {
+      display: none;
+      margin-top: 16px;
+    }
+    .answer-detail.active { display: block; }
+    .answer-detail-item {
+      padding: 14px 18px;
+      background: var(--color-bg-white);
+      border-radius: var(--radius-sm);
+      margin-bottom: 8px;
+      border: 1px solid var(--color-border-light);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .answer-detail-item .q-text {
+      color: var(--color-text);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .answer-detail-item .q-result {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .answer-detail-item .q-result.correct { color: var(--color-green-dark); }
+    .answer-detail-item .q-result.wrong { color: #E53E3E; }
+    .answer-detail-item .q-answer {
+      color: var(--color-text-light);
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+
+    /* 动画 */
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-up {
+      animation: slideUp 0.4s ease;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .pulse-once {
+      animation: pulse 0.4s ease;
+    }
+  </style>
 </head>
 <body>
 
@@ -24,8 +612,8 @@
         <li><a href="parent-growth.html">家长认知提升</a></li>
         <li><a href="projects.html">项目化学习</a></li>
         <li><a href="ai-tools.html">AI工具箱</a></li>
-        <li><a href="underlying-logic.html">底层逻辑</a>
-        <li><a href="innovative-schools.html">创新学校</a>
+        <li><a href="underlying-logic.html">底层逻辑</a></li>
+        <li><a href="innovative-schools.html">创新学校</a></li>
         <li><a href="shenzhen-local.html">深圳生活</a></li>
       </ul>
       <button class="navbar-toggle" aria-label="菜单">
@@ -47,50 +635,102 @@
     <a href="shenzhen-local.html">🏠 深圳生活</a>
   </div>
 
-  <main class="page-content">
-    <div class="container">
-      <div class="breadcrumb">
-        <a href="../index.html">首页</a>
-        <span class="separator">›</span>
-        <span class="current">学科测评</span>
+  <!-- Intro区域 -->
+  <section class="assessment-intro">
+    <h1>🎯 学科水平自测</h1>
+    <p class="intro-text" id="intro-text">不知道自己什么水平？做5分钟自测就知道了。测完自动推荐对应层级的训练资源，不用盲目刷题。</p>
+  </section>
+
+  <!-- 主内容区 -->
+  <div class="assessment-main">
+
+    <!-- ===== Step 1: 学科选择 ===== -->
+    <div id="step-select" class="step-section">
+      <div class="section-header" style="margin-bottom:24px;">
+        <h2>选择测评学科</h2>
+        <p>每科10道题，5分钟完成，测完自动推荐对应层级资源</p>
       </div>
-
-      <div class="placeholder-page">
-        <div class="placeholder-icon">🎯</div>
-        <h2>学科测评 · 二期上线</h2>
-        <p>AI驱动的学科能力评估系统正在开发中。上线后，你可以通过智能测评精准定位自己的学科水平和发展方向。</p>
-
-        <div class="feature-preview">
-          <div class="feature-item">
-            <span class="feature-icon">📊</span>
-            <span class="feature-text">智能诊断学科优势与短板</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">🎯</span>
-            <span class="feature-text">精准匹配训练场层级</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">🗺️</span>
-            <span class="feature-text">推荐最适合的教育路径</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">📈</span>
-            <span class="feature-text">定期追踪能力成长曲线</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">🤖</span>
-            <span class="feature-text">AI对话式测评，自然交互</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">📋</span>
-            <span class="feature-text">生成个性化学习报告</span>
-          </div>
+      <div class="subject-select-grid">
+        <div class="subject-select-card" onclick="startQuiz('math')">
+          <span class="card-emoji">📐</span>
+          <h3>数学</h3>
+          <p class="card-sub">测测你的数学思维在哪个层级</p>
+          <span class="card-badge live">10题 · 约5分钟</span>
         </div>
-
-        <a href="training.html" class="btn-primary">先去训练场看看 →</a>
+        <div class="subject-select-card" onclick="startQuiz('chinese')">
+          <span class="card-emoji">📖</span>
+          <h3>语文</h3>
+          <p class="card-sub">测测你的阅读写作在哪个层级</p>
+          <span class="card-badge live">10题 · 约5分钟</span>
+        </div>
+        <div class="subject-select-card coming-soon">
+          <span class="card-emoji">🔬</span>
+          <h3>物理</h3>
+          <p class="card-sub">即将上线</p>
+          <span class="card-badge">即将上线</span>
+        </div>
+        <div class="subject-select-card coming-soon">
+          <span class="card-emoji">🌍</span>
+          <h3>英语</h3>
+          <p class="card-sub">即将上线</p>
+          <span class="card-badge">即将上线</span>
+        </div>
       </div>
     </div>
-  </main>
+
+    <!-- ===== Step 2: 做题 ===== -->
+    <div id="step-quiz" class="quiz-section">
+      <div class="quiz-header">
+        <div class="quiz-subject-label" id="quiz-subject-label"></div>
+        <span class="quiz-progress-text" id="quiz-progress-text"></span>
+        <button class="quiz-back-btn" onclick="backToSelect()">← 返回重选学科</button>
+      </div>
+      <div class="quiz-progress-bar">
+        <div class="fill" id="quiz-progress-fill"></div>
+      </div>
+      <div id="quiz-level-tag" class="quiz-level-tag"></div>
+      <div class="quiz-question" id="quiz-question"></div>
+      <div class="quiz-options" id="quiz-options"></div>
+    </div>
+
+    <!-- ===== Step 3: 结果 ===== -->
+    <div id="step-result" class="result-section">
+      <div class="result-hero animate-slide-up">
+        <span class="result-emoji" id="result-emoji"></span>
+        <h2 id="result-title"></h2>
+        <p class="result-subtitle" id="result-subtitle"></p>
+      </div>
+
+      <!-- 层级进度条 -->
+      <div class="level-bars" id="level-bars"></div>
+
+      <!-- 层级说明 -->
+      <div class="level-summary" id="level-summary"></div>
+
+      <!-- 统计 -->
+      <div class="result-stats" id="result-stats"></div>
+
+      <!-- 推荐资源 -->
+      <div class="result-recommend">
+        <h3>🎁 推荐训练资源</h3>
+        <div class="recommend-resources" id="recommend-resources"></div>
+        <a id="recommend-training-link" class="recommend-training-link" href="#">进入训练场 →</a>
+      </div>
+
+      <!-- 答题详情 -->
+      <div style="text-align:center;">
+        <button class="answer-detail-toggle" onclick="toggleAnswerDetail()">📋 查看答题详情</button>
+      </div>
+      <div class="answer-detail" id="answer-detail"></div>
+
+      <!-- 操作 -->
+      <div class="result-actions">
+        <button class="btn-restart" onclick="restartQuiz()">🔄 重新测评</button>
+        <a class="btn-restart" href="../index.html" style="margin-left:12px;text-decoration:none;">🏠 返回首页</a>
+      </div>
+    </div>
+
+  </div>
 
   <footer class="footer">
     <div class="footer-inner">
@@ -117,7 +757,7 @@
     </div>
     <div class="footer-source">
       <strong>📊 数据来源说明</strong><br>
-      学科测评系统正在开发中，上线后将在本区域标注数据来源。
+      学科测评题目由教育专家编写，覆盖L1-L5五个层级，每层级2题。测评结果仅供参考，建议结合实际学习情况综合判断。
     </div>
     <div class="footer-bottom">© 2026 非标赛道 · 仅供教育参考，不构成升学建议</div>
   </footer>
@@ -126,5 +766,382 @@
   <div class="ai-fab-tooltip"><strong>AI教育顾问</strong><br>即将上线！届时可实时咨询教育路径问题。</div>
 
   <script src="../js/main.js"></script>
+  <script>
+    /* ==========================================
+       学科测评 - 交互逻辑
+       ========================================== */
+
+    // ===== 题目数据（内嵌，无需加载外部文件）=====
+    var ASSESSMENT_DATA = {
+      "intro": "不知道自己什么水平？做5分钟自测就知道了。测完自动推荐对应层级的训练资源，不用盲目刷题。",
+      "subjects": [
+        {
+          "id": "math",
+          "name": "数学",
+          "icon": "📐",
+          "questions": [
+            {"id":"m1","text":"小明有12颗糖，小红比小明多5颗，小红有几颗糖？","options":["15颗","17颗","7颗","12颗"],"correct":1,"level":"L1","skill":"基础运算"},
+            {"id":"m2","text":"一个长方形花园，长8米宽5米，如果要在周围围一圈篱笆，需要多少米篱笆？","options":["40米","26米","13米","80米"],"correct":1,"level":"L1","skill":"周长计算"},
+            {"id":"m3","text":"甲乙两车同时从A地出发去B地，甲车每小时60km，乙车每小时80km。2小时后两车相距多远？","options":["40km","20km","160km","120km"],"correct":0,"level":"L2","skill":"行程问题"},
+            {"id":"m4","text":"若3x+7=22，则x等于多少？","options":["5","7","3","15"],"correct":0,"level":"L2","skill":"方程求解"},
+            {"id":"m5","text":"证明：根号2是无理数。这个证明用到了什么方法？","options":["数学归纳法","反证法","构造法","穷举法"],"correct":1,"level":"L3","skill":"证明方法"},
+            {"id":"m6","text":"方程x²-5x+6=0的两个根之和等于多少？","options":["5","-5","6","-6"],"correct":0,"level":"L3","skill":"韦达定理"},
+            {"id":"m7","text":"已知数列{an}满足a₁=1, aₙ₊₁=2aₙ+1，求aₙ的通项公式。这需要什么方法？","options":["待定系数法构造等比数列","数学归纳法","裂项相消","倒序相加"],"correct":0,"level":"L4","skill":"递推数列"},
+            {"id":"m8","text":"在△ABC中，若sin²A+sin²B=sin²C，则△ABC一定是：","options":["等腰三角形","直角三角形","锐角三角形","钝角三角形"],"correct":1,"level":"L4","skill":"三角函数"},
+            {"id":"m9","text":"集合论中的"连续统假设"说的是什么？","options":["偶数和整数一样多","不存在介于可数和连续之间的基数","所有无穷大都相等","实数集是可数的"],"correct":1,"level":"L5","skill":"数学哲学"},
+            {"id":"m10","text":"哪个数学猜想至今未被证明，被克雷数学研究所列为七大千禧年难题之一？","options":["费马大定理","哥德巴赫猜想","P=NP问题","黎曼猜想"],"correct":3,"level":"L5","skill":"数学前沿"}
+          ]
+        },
+        {
+          "id": "chinese",
+          "name": "语文",
+          "icon": "📖",
+          "questions": [
+            {"id":"c1","text":"'春天来了，小草从地里钻出来了。'这句话中'钻'字好在哪里？","options":["只是普通的动词","写出了小草破土而出的生命力","说明土很硬","表示小草在躲藏"],"correct":1,"level":"L1","skill":"词语品析"},
+            {"id":"c2","text":"看图写话：小朋友在公园放风筝。下面哪种写法最好？","options":["小朋友放风筝。","春天到了，公园里草绿花红，小明开心地放着蝴蝶风筝，风筝越飞越高。","风筝飞了。","小明在公园。"],"correct":1,"level":"L1","skill":"看图写话"},
+            {"id":"c3","text":"阅读一段话后，'这段话主要写了什么'属于什么层次的阅读能力？","options":["只需要找到原句抄下来","需要概括段落大意，提炼核心信息","需要评价写得好不好","需要背诵原文"],"correct":1,"level":"L2","skill":"概括能力"},
+            {"id":"c4","text":"'蝉则一唱百和，顷刻成阵'这句话用了什么修辞手法？","options":["比喻","拟人","夸张","对偶"],"correct":2,"level":"L2","skill":"修辞手法"},
+            {"id":"c5","text":"读完《草船借箭》，你认为诸葛亮成功的根本原因是什么？","options":["运气好，正好有大雾","了解曹操多疑的性格，精准预判了对方行为","鲁肃帮了他","箭很多"],"correct":1,"level":"L3","skill":"人物分析"},
+            {"id":"c6","text":"'先天下之忧而忧，后天下之乐而乐'出自哪篇古文？表达了什么？","options":["《醉翁亭记》，表达山水之乐","《岳阳楼记》，表达忧国忧民的情怀","《出师表》，表达忠君之心","《爱莲说》，表达洁身自好"],"correct":1,"level":"L3","skill":"古文理解"},
+            {"id":"c7","text":"考场作文'以小见大'的写法，核心逻辑是什么？","options":["把小事编成大事","通过具体的个人经历揭示普遍的社会现象或人性规律","写很多小故事拼凑字数","只写小事不需要有深意"],"correct":1,"level":"L4","skill":"写作逻辑"},
+            {"id":"c8","text":"'吾日三省吾身'中'三'的含义是？","options":["恰好三次","多次（虚指）","三个人","第三天"],"correct":1,"level":"L4","skill":"文言实词"},
+            {"id":"c9","text":"鲁迅在《祝福》中让'我'作为叙述者，而不是用全知视角，这种叙事策略的深层效果是？","options":["只是作者随意选择","制造叙事距离，让读者在'旁观者无力'的困境中反思社会结构","因为鲁迅不会写全知视角","方便写短一点"],"correct":1,"level":"L5","skill":"叙事学分析"},
+            {"id":"c10","text":"萨特在《什么是文学》中提出的核心命题是什么？","options":["文学应该追求美","写作是对读者的召唤，作者通过文本吁求读者参与自由","文学不需要承担社会责任","文学只是娱乐"],"correct":1,"level":"L5","skill":"文学理论"}
+          ]
+        }
+      ]
+    };
+
+    // 训练场资源数据
+    var RESOURCE_DATA = {
+      "math": {
+        "levels": {
+          "L1": {"name":"基础运算","description":"小学1-4年级，建立数感与基本运算能力","ageRange":"6-10岁","resources":[
+            {"title":"《数学帮帮忙》系列","type":"book","description":"用故事讲数学概念，低龄友好","price":"约30元/册"},
+            {"title":"洋葱学院小学版","type":"online","description":"动画式数学讲解，覆盖小学全年级","price":"基础免费，会员299元/年"},
+            {"title":"火花思维线下中心（深圳）","type":"local","description":"游戏化数学思维训练，适合低龄儿童","price":"150-300元/课时"}
+          ]},
+          "L2": {"name":"逻辑建立","description":"小学5-6年级，从算术思维过渡到代数思维","ageRange":"10-12岁","resources":[
+            {"title":"《数学思维训练》","type":"book","description":"系统训练数学思维方法，衔接小升初","price":"约40元/册"},
+            {"title":"深圳少年宫数学思维班","type":"local","description":"少年宫公益性质的数学思维训练课程","price":"50-100元/课时"},
+            {"title":"可汗学院","type":"online","description":"全球最大的免费在线教育平台","price":"免费"}
+          ]},
+          "L3": {"name":"体系搭建","description":"初中水平，建立完整数学知识体系","ageRange":"12-15岁","resources":[
+            {"title":"《初等数论》（陈景润）","type":"book","description":"数论入门经典，陈景润先生著作","price":"约35元"},
+            {"title":"Brilliant.org","type":"online","description":"全球最好的互动数学学习平台","price":"约$25/月"},
+            {"title":"深圳中学竞赛集训营","type":"local","description":"深圳最顶尖的中学竞赛培训体系","price":"校内免费"}
+          ]},
+          "L4": {"name":"竞赛突破","description":"高中竞赛水平，冲击省一等奖及以上","ageRange":"15-18岁","resources":[
+            {"title":"《数学奥林匹克小丛书》","type":"book","description":"华东师大出版社，竞赛生人手一套","price":"约20元/册"},
+            {"title":"AoPS竞赛课程","type":"online","description":"从AMC到USAMO的完整竞赛课程体系","price":"约$300-$800/门"},
+            {"title":"深圳中学/深圳外国语竞赛班","type":"local","description":"深圳两大顶尖中学的竞赛培养体系","price":"校内免费"}
+          ]},
+          "L5": {"name":"拓展前沿","description":"超出课标，接触数学前沿与跨学科应用","ageRange":"16岁+","resources":[
+            {"title":"《什么是数学》（柯朗）","type":"book","description":"数学大师柯朗的数学哲学入门","price":"约50元"},
+            {"title":"MIT OCW数学系课程","type":"online","description":"MIT数学系本科+研究生课程全部免费开放","price":"免费"},
+            {"title":"丘成桐讲座","type":"course","description":"菲尔兹奖得主的系列讲座，展示数学之美","price":"免费"}
+          ]}
+        }
+      },
+      "chinese": {
+        "levels": {
+          "L1": {"name":"识字阅读启蒙","description":"1-2年级，从识字到自主阅读起步","ageRange":"6-8岁","resources":[
+            {"title":"《日有所诵》（1-2年级）","type":"book","description":"亲近母语出品，每天一首儿歌童谣，培养语感","price":"约25元/册"},
+            {"title":"亲近母语·小步读书会","type":"online","description":"0-12岁中文分级阅读体系","price":"免费基础版/会员约200元/年"},
+            {"title":"深圳少年宫·读写启蒙班","type":"local","description":"少年宫官方读写启蒙课程","price":"约800元/学期"}
+          ]},
+          "L2": {"name":"阅读理解+写话进阶","description":"3-4年级，从读图到读文，从写话到写段","ageRange":"8-10岁","resources":[
+            {"title":"《读写之桥》（小学中年级）","type":"book","description":"商务印书馆出品，在'读'与'写'之间架起桥梁","price":"约22元"},
+            {"title":"深圳图书馆·暑期阅读训练营","type":"local","description":"深图每年暑期公益课程","price":"免费"},
+            {"title":"未泱中文阅读营（L3级）","type":"online","description":"L0-L5六级科学分级体系","price":"约2000元/学期"}
+          ]},
+          "L3": {"name":"深度阅读+写作体系","description":"5-6年级，整本书阅读+结构化写作+文言文入门","ageRange":"10-12岁","resources":[
+            {"title":"《快乐读书吧》丛书（5-6年级版）","type":"book","description":"人教版官方，与语文课堂教学同步的整本书阅读","price":"约30元/册"},
+            {"title":"学语中文素养·L5-L6课程","type":"online","description":"4-8人精品小班，IPO输入-信息处理-输出闭环","price":"约3000元/学期"},
+            {"title":"深圳青少年活动中心·文学创作营","type":"local","description":"公益文学创作课程，寒暑假研学营","price":"公益免费/低价"}
+          ]},
+          "L4": {"name":"文言文+现代文+考场作文","description":"初中水平，文言文阅读+现代文深度分析+考场作文体系","ageRange":"12-15岁","resources":[
+            {"title":"《古文观止》精选注译版","type":"book","description":"文言文必读经典，222篇精华","price":"约40元"},
+            {"title":"一课APP·初中语文读写体系","type":"online","description":"中考教研中心出品，文言文+现代文+作文三线并进","price":"约155-165元/节"},
+            {"title":"果冉语文·初高中读写精进班","type":"local","description":"文言文+现代文阅读+考场作文专项","price":"约4000元/学期"}
+          ]},
+          "L5": {"name":"人文素养+学术写作","description":"高中及以上，深度思辨+学术表达+文学研究","ageRange":"15岁+","resources":[
+            {"title":"《什么是文学》萨特","type":"book","description":"存在主义文学理论经典，重新理解'写作'","price":"约35元"},
+            {"title":"杨宁·文学理论课（西竹书院）","type":"online","description":"打通审美与批评的任督二脉","price":"免费(B站)"},
+            {"title":"孙绍振·文本细读方法论","type":"course","description":"著名文艺理论家，文本细读的学术方法论","price":"免费(中国大学MOOC)"}
+          ]}
+        }
+      }
+    };
+
+    // 层级描述映射
+    var LEVEL_NAMES = {
+      "math": {"L1":"基础运算","L2":"逻辑建立","L3":"体系搭建","L4":"竞赛突破","L5":"拓展前沿"},
+      "chinese": {"L1":"识字阅读启蒙","L2":"阅读理解+写话进阶","L3":"深度阅读+写作体系","L4":"文言文+现代文+考场作文","L5":"人文素养+学术写作"}
+    };
+
+    var LEVEL_EMOJIS = {"L1":"🌱","L2":"🌿","L3":"🌳","L4":"🏔️","L5":"🌌"};
+    var LEVEL_DESCS = {
+      "math": {
+        "L1":"小学1-4年级水平，建立数感与基本运算能力",
+        "L2":"小学5-6年级水平，从算术思维过渡到代数思维",
+        "L3":"初中水平，建立完整数学知识体系",
+        "L4":"高中竞赛水平，冲击省一等奖及以上",
+        "L5":"超出课标，接触数学前沿与跨学科应用"
+      },
+      "chinese": {
+        "L1":"1-2年级水平，从识字到自主阅读起步",
+        "L2":"3-4年级水平，从读图到读文，从写话到写段",
+        "L3":"5-6年级水平，整本书阅读+结构化写作+文言文入门",
+        "L4":"初中水平，文言文阅读+现代文深度分析+考场作文体系",
+        "L5":"高中及以上，深度思辨+学术表达+文学研究"
+      }
+    };
+
+    // ===== 状态变量 =====
+    var currentSubject = null;
+    var currentQuestions = [];
+    var currentQuestionIndex = 0;
+    var answers = []; // {questionId, selectedOption, isCorrect, level}
+
+    // ===== 学科选择 → 开始做题 =====
+    function startQuiz(subjectId) {
+      currentSubject = subjectId;
+      var subject = ASSESSMENT_DATA.subjects.filter(function(s){ return s.id === subjectId; })[0];
+      if (!subject) return;
+
+      currentQuestions = subject.questions.slice(); // 按原顺序（L1→L5）
+      currentQuestionIndex = 0;
+      answers = [];
+
+      // 更新UI
+      document.getElementById('step-select').style.display = 'none';
+      document.getElementById('step-quiz').classList.add('active');
+      document.getElementById('step-result').classList.remove('active');
+
+      var label = document.getElementById('quiz-subject-label');
+      label.innerHTML = subject.icon + ' ' + subject.name + '测评';
+
+      renderQuestion();
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    // ===== 渲染题目 =====
+    function renderQuestion() {
+      var q = currentQuestions[currentQuestionIndex];
+      var total = currentQuestions.length;
+
+      // 进度
+      document.getElementById('quiz-progress-text').textContent = '第 ' + (currentQuestionIndex + 1) + ' / ' + total + ' 题';
+      document.getElementById('quiz-progress-fill').style.width = ((currentQuestionIndex + 1) / total * 100) + '%';
+
+      // 层级标签
+      document.getElementById('quiz-level-tag').textContent = q.level + ' · ' + q.skill;
+
+      // 题目
+      document.getElementById('quiz-question').textContent = q.text;
+
+      // 选项
+      var letters = ['A', 'B', 'C', 'D'];
+      var optionsHtml = '';
+      q.options.forEach(function(opt, i) {
+        optionsHtml += '<button class="quiz-option" onclick="selectOption(' + i + ')" id="option-' + i + '">';
+        optionsHtml += '<span class="option-letter">' + letters[i] + '</span>';
+        optionsHtml += '<span>' + opt + '</span>';
+        optionsHtml += '</button>';
+      });
+      document.getElementById('quiz-options').innerHTML = optionsHtml;
+    }
+
+    // ===== 选择选项 =====
+    function selectOption(index) {
+      var q = currentQuestions[currentQuestionIndex];
+      var isCorrect = (index === q.correct);
+
+      // 记录答案
+      answers.push({
+        questionId: q.id,
+        selectedOption: index,
+        isCorrect: isCorrect,
+        level: q.level,
+        text: q.text,
+        skill: q.skill,
+        correctOption: q.correct,
+        options: q.options
+      });
+
+      // 高亮选中项
+      var allOptions = document.querySelectorAll('.quiz-option');
+      allOptions.forEach(function(opt, i) {
+        opt.classList.add('disabled');
+        if (i === index) {
+          opt.classList.add(isCorrect ? 'selected-correct' : 'selected-wrong');
+        }
+        if (!isCorrect && i === q.correct) {
+          opt.classList.add('show-correct');
+        }
+      });
+
+      // 延迟跳下一题
+      setTimeout(function() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < currentQuestions.length) {
+          renderQuestion();
+        } else {
+          showResult();
+        }
+      }, 1000);
+    }
+
+    // ===== 返回重选学科 =====
+    function backToSelect() {
+      document.getElementById('step-select').style.display = '';
+      document.getElementById('step-quiz').classList.remove('active');
+      document.getElementById('step-result').classList.remove('active');
+      currentSubject = null;
+      currentQuestions = [];
+      currentQuestionIndex = 0;
+      answers = [];
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    // ===== 显示结果 =====
+    function showResult() {
+      document.getElementById('step-quiz').classList.remove('active');
+      document.getElementById('step-result').classList.add('active');
+
+      // 计算每个层级的正确率
+      var levelStats = {};
+      var levels = ['L1','L2','L3','L4','L5'];
+      levels.forEach(function(lv) {
+        levelStats[lv] = {correct: 0, total: 0};
+      });
+      answers.forEach(function(a) {
+        levelStats[a.level].total++;
+        if (a.isCorrect) levelStats[a.level].correct++;
+      });
+
+      // 定位逻辑：找到答对≥1题的最高层级
+      var currentLevel = null;
+      for (var i = levels.length - 1; i >= 0; i--) {
+        if (levelStats[levels[i]].correct >= 1) {
+          currentLevel = levels[i];
+          break;
+        }
+      }
+      if (!currentLevel) currentLevel = 'L1'; // 全错=尚未入门，推荐L1
+
+      // 计算总正确率
+      var totalCorrect = 0;
+      answers.forEach(function(a) { if (a.isCorrect) totalCorrect++; });
+      var totalRate = Math.round(totalCorrect / answers.length * 100);
+
+      // 结果标题和emoji
+      var emoji = LEVEL_EMOJIS[currentLevel];
+      var subjectData = ASSESSMENT_DATA.subjects.filter(function(s){ return s.id === currentSubject; })[0];
+      var levelName = LEVEL_NAMES[currentSubject][currentLevel];
+
+      document.getElementById('result-emoji').textContent = emoji;
+      document.getElementById('result-title').textContent = '你的' + subjectData.name + '水平：' + currentLevel + ' ' + levelName;
+      document.getElementById('result-subtitle').textContent = LEVEL_DESCS[currentSubject][currentLevel];
+
+      // 层级进度条
+      var barsHtml = '';
+      levels.forEach(function(lv) {
+        var stat = levelStats[lv];
+        var pct = stat.total > 0 ? Math.round(stat.correct / stat.total * 100) : 0;
+        var isCurrent = (lv === currentLevel);
+        var fillClass = 'fill-gray';
+        if (pct >= 50) fillClass = 'fill-green';
+        if (isCurrent) fillClass = 'fill-highlight';
+
+        var barPct = Math.max(pct, 5); // 最小5%让标签可见
+        barsHtml += '<div class="level-bar-item' + (isCurrent ? ' is-current' : '') + '">';
+        barsHtml += '<span class="level-label">' + lv + '</span>';
+        barsHtml += '<div class="level-bar-track">';
+        barsHtml += '<div class="level-bar-fill ' + fillClass + '" style="width:' + barPct + '%;">';
+        if (pct >= 15) {
+          barsHtml += '<span class="level-bar-text">' + stat.correct + '/' + stat.total + '</span>';
+        }
+        barsHtml += '</div></div>';
+        if (pct < 15) {
+          barsHtml += '<span class="level-bar-text text-outside">' + stat.correct + '/' + stat.total + '</span>';
+        }
+        barsHtml += '</div>';
+      });
+      document.getElementById('level-bars').innerHTML = barsHtml;
+
+      // 层级说明
+      var summaryHtml = '<h3>' + emoji + ' ' + currentLevel + ' · ' + levelName + '</h3>';
+      summaryHtml += '<p>' + LEVEL_DESCS[currentSubject][currentLevel] + '</p>';
+      document.getElementById('level-summary').innerHTML = summaryHtml;
+
+      // 统计
+      var statsHtml = '';
+      statsHtml += '<div class="result-stat-card"><div class="stat-value">' + totalRate + '%</div><div class="stat-label">总正确率</div></div>';
+      statsHtml += '<div class="result-stat-card"><div class="stat-value">' + totalCorrect + '/' + answers.length + '</div><div class="stat-label">答对题数</div></div>';
+      document.getElementById('result-stats').innerHTML = statsHtml;
+
+      // 推荐资源（当前层级 + 下一层级）
+      var recommendLevels = [currentLevel];
+      var nextIdx = levels.indexOf(currentLevel) + 1;
+      if (nextIdx < levels.length) recommendLevels.push(levels[nextIdx]);
+
+      var resHtml = '';
+      var typeIcons = {"book":"📚","local":"📍","online":"💻","course":"🎓"};
+      var typeNames = {"book":"书籍","local":"深圳本地","online":"线上","course":"名师课程"};
+
+      recommendLevels.forEach(function(lv) {
+        var lvData = RESOURCE_DATA[currentSubject].levels[lv];
+        if (!lvData) return;
+        resHtml += '<div style="grid-column:1/-1;font-size:0.9rem;font-weight:700;color:var(--color-primary);margin-top:4px;">' + lv + ' · ' + lvData.name + '（' + lvData.ageRange + '）</div>';
+        lvData.resources.forEach(function(r) {
+          var tagClass = (r.price && r.price.indexOf('免费') >= 0) ? 'tag-free' : 'tag-paid';
+          resHtml += '<div class="recommend-resource-item">';
+          resHtml += '<span class="rr-type ' + tagClass + '">' + typeIcons[r.type] + ' ' + typeNames[r.type] + '</span>';
+          resHtml += '<div class="rr-title">' + r.title + '</div>';
+          resHtml += '<div class="rr-desc">' + r.description + '</div>';
+          resHtml += '<div class="rr-price">' + r.price + '</div>';
+          resHtml += '</div>';
+        });
+      });
+      document.getElementById('recommend-resources').innerHTML = resHtml;
+
+      // 训练场链接
+      var trainingPage = currentSubject === 'math' ? 'math-training.html' : 'chinese-training.html';
+      var trainingLink = document.getElementById('recommend-training-link');
+      trainingLink.href = trainingPage;
+      trainingLink.innerHTML = '进入' + subjectData.name + '训练场 →';
+
+      // 答题详情
+      var detailHtml = '';
+      answers.forEach(function(a, i) {
+        var letters = ['A','B','C','D'];
+        var resultClass = a.isCorrect ? 'correct' : 'wrong';
+        var resultIcon = a.isCorrect ? '✅' : '❌';
+        detailHtml += '<div class="answer-detail-item">';
+        detailHtml += '<div class="q-text">' + (i+1) + '. [' + a.level + '] ' + a.text + '</div>';
+        detailHtml += '<div class="q-result ' + resultClass + '">' + resultIcon + ' 你的答案：' + letters[a.selectedOption] + '. ' + a.options[a.selectedOption] + '</div>';
+        if (!a.isCorrect) {
+          detailHtml += '<div class="q-answer">正确答案：' + letters[a.correctOption] + '. ' + a.options[a.correctOption] + '</div>';
+        }
+        detailHtml += '</div>';
+      });
+      document.getElementById('answer-detail').innerHTML = detailHtml;
+
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    // ===== 切换答题详情 =====
+    function toggleAnswerDetail() {
+      var detail = document.getElementById('answer-detail');
+      detail.classList.toggle('active');
+    }
+
+    // ===== 重新测评 =====
+    function restartQuiz() {
+      backToSelect();
+    }
+  </script>
 </body>
 </html>

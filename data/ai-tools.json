@@ -1,0 +1,188 @@
+{
+  "updatedAt": "2026-07-09",
+  "intro": "不是用AI代写作业，而是让AI成为你的超级杠杆。这里精选的工具，每一个都经过验证：免费或低价、入门门槛低、真正能提升学习效率和创作能力。",
+  "categories": [
+    {
+      "id": "learning",
+      "name": "学习助手",
+      "icon": "📚",
+      "description": "用AI加速理解、拆解知识、辅助练习",
+      "tools": [
+        {
+          "name": "Khan Academy (可汗学院)",
+          "description": "免费全科学习平台，AI助手Khanmigo可苏格拉底式提问引导思考",
+          "detail": "覆盖数学/科学/编程/人文等学科，Khanmigo不会直接给答案而是通过追问帮学生自己想明白，符合'教人钓鱼'而非'给人鱼'的理念。全免费，无需注册即可浏览",
+          "price": "免费",
+          "ageRange": "6-18岁",
+          "difficulty": "零基础可用",
+          "url": "https://www.khanacademy.org/",
+          "tags": ["免费", "全科", "AI导学"]
+        },
+        {
+          "name": "扣子(Coze)",
+          "description": "搭建自己的AI智能体，零代码创建学习助手",
+          "detail": "可以按自己的学习需求创建专属AI助手——比如数学错题分析、英语对话练习、古诗文解读。免费版即可使用，个人旗舰版199元/月提供更多积分。你的'舜舜阅读与感想小助手'就是用扣子做的",
+          "price": "免费基础版/199元月旗舰版",
+          "ageRange": "10岁+",
+          "difficulty": "初级（拖拽式操作）",
+          "url": "https://www.coze.cn/",
+          "tags": ["免费起步", "自定义AI", "零代码"]
+        },
+        {
+          "name": "DeepSeek",
+          "description": "国产大模型，数学推理和代码能力突出，免费额度充足",
+          "detail": "DeepSeek-R1推理模型在数学和编程任务上表现接近GPT-4级别，且完全免费。适合用来：理解复杂概念、验证解题思路、学习编程。中文理解能力强，不需要翻墙",
+          "price": "免费",
+          "ageRange": "10岁+",
+          "difficulty": "零基础可用",
+          "url": "https://www.deepseek.com/",
+          "tags": ["免费", "推理强", "国产"]
+        },
+        {
+          "name": "Quizlet + AI",
+          "description": "AI自动生成闪卡和练习题，高效记忆和复习",
+          "detail": "输入学习内容，AI自动生成闪卡、练习题和测试。支持多种学习模式（闪卡/拼写/测试/配对），AI还能根据错误模式推荐薄弱点练习，适合背诵类学科",
+          "price": "免费基础版/35元月Plus版",
+          "ageRange": "8-18岁",
+          "difficulty": "零基础可用",
+          "url": "https://www.quizlet.com/",
+          "tags": ["免费起步", "记忆辅助", "AI出题"]
+        }
+      ]
+    },
+    {
+      "id": "creative",
+      "name": "创作工具",
+      "icon": "🎨",
+      "description": "用AI绘画、写作、做视频，释放创造力",
+      "tools": [
+        {
+          "name": "Leonardo AI",
+          "description": "免费AI绘画平台，每天150积分，作品质量高",
+          "detail": "被公认最适合青少年的AI绘画入门工具。免费版每天150积分够画5-10张图，界面友好，有预设风格模板，无需复杂提示词即可出图。适合做PPT配图、公众号插图、创意表达",
+          "price": "免费（每天150积分）",
+          "ageRange": "8岁+",
+          "difficulty": "初级",
+          "url": "https://leonardo.ai/",
+          "tags": ["免费", "绘画", "易上手"]
+        },
+        {
+          "name": "Canva AI",
+          "description": "设计+AI一体化，海报/课件/PPT一站式创作",
+          "detail": "不是专业设计工具，而是'普通人也能做好看的东西'的工具。AI功能可一键生成海报、PPT、社交媒体图片，中文界面友好，免费版功能已够日常使用",
+          "price": "免费基础版",
+          "ageRange": "10岁+",
+          "difficulty": "初级",
+          "url": "https://www.canva.com/",
+          "tags": ["免费", "设计", "中文"]
+        },
+        {
+          "name": "即梦AI",
+          "description": "字节跳动出品，中文AI绘画+视频生成",
+          "detail": "国内使用最方便的AI绘画工具之一，中文提示词效果好，支持图片和短视频生成。免费额度每日更新，适合做创意海报和短视频素材",
+          "price": "免费（每日额度）",
+          "ageRange": "10岁+",
+          "difficulty": "初级",
+          "url": "https://jimeng.jianying.com/",
+          "tags": ["免费", "中文", "绘画+视频"]
+        },
+        {
+          "name": "灵光",
+          "description": "专注创意头脑风暴，批量生成选题和故事框架",
+          "detail": "单一对话内可批量生成数十个选题、故事框架、设计构思，交互轻量化，零基础无需复杂提示词。适合写作卡壳时打破思维僵局，免费额度满足日常短篇创作",
+          "price": "免费额度",
+          "ageRange": "12岁+",
+          "difficulty": "初级",
+          "url": "",
+          "tags": ["免费", "创意", "头脑风暴"]
+        }
+      ]
+    },
+    {
+      "id": "coding",
+      "name": "编程开发",
+      "icon": "💻",
+      "description": "从图形化编程到Python，AI辅助编程学习",
+      "tools": [
+        {
+          "name": "Scratch",
+          "description": "MIT开发的图形化编程，7岁+零基础入门首选",
+          "detail": "全球最成熟的少儿编程平台，拖拽彩色代码块创建互动故事、游戏和动画，教授基本编程概念。免费、无需安装、中文界面完整，社区有数百万项目可参考。虽然不是AI工具，但它是所有AI编程学习的必备基础",
+          "price": "免费",
+          "ageRange": "7-12岁",
+          "difficulty": "零基础",
+          "url": "https://scratch.mit.edu/",
+          "tags": ["免费", "图形化", "入门必备"]
+        },
+        {
+          "name": "扣子编程(Coze Code)",
+          "description": "AI辅助编程环境，描述需求就能生成网页应用",
+          "detail": "扣子旗下AI编程平台，用自然语言描述需求就能生成可运行的网页应用。适合已有Python/HTML基础的学生快速做出实际作品，无需从零写每一行代码。免费版有充足额度",
+          "price": "免费基础版",
+          "ageRange": "12岁+",
+          "difficulty": "中级（需基本编程概念）",
+          "url": "https://code.coze.cn/",
+          "tags": ["免费", "AI编程", "网页应用"]
+        },
+        {
+          "name": "Python + AI助手",
+          "description": "学Python的最佳方式：自己写+AI实时指导",
+          "detail": "不是让AI替你写代码，而是用AI当编程导师：写代码时遇到bug问AI、理解不了的概念让AI解释、做完项目让AI审查代码质量。推荐组合：VS Code + Codeium/Copilot免费版 + DeepSeek。10岁左右从Scratch过渡到Python正好",
+          "price": "免费（VS Code + Codeium）",
+          "ageRange": "10岁+",
+          "difficulty": "中级",
+          "url": "https://codeium.com/",
+          "tags": ["免费", "Python", "AI辅助"]
+        },
+        {
+          "name": "西瓜创客",
+          "description": "Scratch→Python→C++全链路少儿编程课程",
+          "detail": "从图形化创意编程（7-12岁）到Python代码编程再到C++算法竞赛，课程体系完整。有AI辅助学习功能，适合需要系统学习路径而非自学的学生",
+          "price": "约3000元/学期",
+          "ageRange": "7-15岁",
+          "difficulty": "零基础到进阶",
+          "url": "https://www.xiguacity.cn/",
+          "tags": ["体系课", "全链路", "付费"]
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "name": "研究分析",
+      "icon": "🔬",
+      "description": "AI驱动的学术搜索、文献分析和知识管理",
+      "tools": [
+        {
+          "name": "Semantic Scholar",
+          "description": "免费学术搜索引擎，AI自动生成论文摘要",
+          "detail": "由Allen AI研究所开发，完全免费的学术搜索工具。AI自动提取论文核心发现、方法、引用关系，比Google Scholar多了智能摘要和语义关联推荐。高中以上做研究性学习必备",
+          "price": "免费",
+          "ageRange": "15岁+",
+          "difficulty": "中级",
+          "url": "https://www.semanticscholar.org/",
+          "tags": ["免费", "学术搜索", "AI摘要"]
+        },
+        {
+          "name": "Elicit",
+          "description": "AI研究助理，用自然语言搜索论文并提取关键信息",
+          "detail": "用自然语言描述研究问题，自动搜索相关论文并提取方法、结果、结论等结构化信息。免费版每天有额度限制，适合做研究性学习和文献综述入门",
+          "price": "免费（每天额度）",
+          "ageRange": "15岁+",
+          "difficulty": "中级",
+          "url": "https://elicit.com/",
+          "tags": ["免费起步", "文献分析", "研究辅助"]
+        },
+        {
+          "name": "Consensus",
+          "description": "AI学术搜索引擎，直接回答'研究表明了什么'",
+          "detail": "不同于关键词搜索，Consensus用AI直接回答研究问题（如'冥想对焦虑有效吗'），给出yes/no/possibly结论并附上支持论文。适合快速了解某个问题的研究现状",
+          "price": "免费基础版",
+          "ageRange": "15岁+",
+          "difficulty": "中级",
+          "url": "https://consensus.app/",
+          "tags": ["免费起步", "AI问答", "循证"]
+        }
+      ]
+    }
+  ]
+}
