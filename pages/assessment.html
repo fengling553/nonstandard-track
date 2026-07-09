@@ -648,7 +648,7 @@
     <div id="step-select" class="step-section">
       <div class="section-header" style="margin-bottom:24px;">
         <h2>选择测评学科</h2>
-        <p>9学科可测，每科10道题，5分钟完成，测完自动推荐对应层级资源</p>
+        <p>10学科可测，每科10道题，5分钟完成，测完自动推荐对应层级资源</p>
       </div>
       <div class="subject-select-grid">
         <div class="subject-select-card" onclick="startQuiz('math')">
@@ -706,17 +706,11 @@
           <p class="card-sub">从身边规则到社会运行逻辑</p>
           <span class="card-badge live">10题 · 约5分钟</span>
         </div>
-        <div class="subject-select-card coming-soon">
+        <div class="subject-select-card" onclick="startQuiz('physics')">
           <span class="card-emoji">🔬</span>
           <h3>物理</h3>
-          <p class="card-sub">即将上线</p>
-          <span class="card-badge">即将上线</span>
-        </div>
-        <div class="subject-select-card coming-soon">
-          <span class="card-emoji">🌍</span>
-          <h3>英语</h3>
-          <p class="card-sub">即将上线</p>
-          <span class="card-badge">即将上线</span>
+          <p class="card-sub">从力学现象到量子世界的探索</p>
+          <span class="card-badge live">10题 · 约5分钟</span>
         </div>
       </div>
     </div>
@@ -2053,71 +2047,430 @@
           "skill": "发展理论"
         }
       ]
+    },
+    {
+      "id": "physics",
+      "name": "物理",
+      "icon": "🔬",
+      "levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5"
+      ],
+      "questions": [
+        {
+          "q": "以下哪种现象属于光的折射？",
+          "options": [
+            "水中筷子看起来弯折",
+            "镜子中看到自己",
+            "树荫下的光斑",
+            "日食现象"
+          ],
+          "correct": 0,
+          "level": "L1",
+          "skill": "光学基础"
+        },
+        {
+          "q": "声音在真空中能传播吗？",
+          "options": [
+            "能，声音无处不在",
+            "不能，声音需要介质",
+            "只能传播很弱的声音",
+            "取决于声音频率"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "声学基础"
+        },
+        {
+          "q": "一个物体放在光滑水平面上，受到两个互成90度的力，分别为3N和4N，合力大小是？",
+          "options": [
+            "1N",
+            "5N",
+            "7N",
+            "12N"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "力的合成"
+        },
+        {
+          "q": "关于惯性的理解，以下哪个说法正确？",
+          "options": [
+            "物体速度越大惯性越大",
+            "惯性是物体固有属性与速度无关",
+            "只有运动物体才有惯性",
+            "惯性力是真实存在的力"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "牛顿定律"
+        },
+        {
+          "q": "两个电阻R1=6Ω和R2=3Ω并联，总电阻是？",
+          "options": [
+            "9Ω",
+            "2Ω",
+            "3Ω",
+            "4.5Ω"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "电路分析"
+        },
+        {
+          "q": "一个物体做匀速圆周运动，以下哪个说法正确？",
+          "options": [
+            "速度不变",
+            "加速度为零",
+            "合力指向圆心",
+            "动能不断变化"
+          ],
+          "correct": 2,
+          "level": "L3",
+          "skill": "圆周运动"
+        },
+        {
+          "q": "在光电效应实验中，增大入射光的频率但降低光强，以下哪个说法正确？",
+          "options": [
+            "光电子最大初动能增大",
+            "光电子数量增加",
+            "截止频率降低",
+            "遏止电压减小"
+          ],
+          "correct": 0,
+          "level": "L4",
+          "skill": "光电效应"
+        },
+        {
+          "q": "关于狭义相对论的时间膨胀效应，以下哪个说法正确？",
+          "options": [
+            "运动的钟走得更快",
+            "观测者看运动的钟走得慢",
+            "时间膨胀是错觉",
+            "只有接近光速才有明显效应"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "相对论"
+        },
+        {
+          "q": "麦克斯韦方程组统一了哪两种看似不同的物理现象？",
+          "options": [
+            "引力和电磁力",
+            "电现象和磁现象",
+            "波动性和粒子性",
+            "时间和空间"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "电磁学"
+        },
+        {
+          "q": "量子力学中的测量问题核心争议是什么？",
+          "options": [
+            "测量工具不够精密",
+            "波函数坍缩是否是真实的物理过程",
+            "量子理论是否正确",
+            "粒子是否真的存在"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "量子力学"
+        }
+      ]
     }
   ]
 };
 
     // 训练场资源数据
     var RESOURCE_DATA = {
-      "math": {
-        "levels": {
-          "L1": {"name":"基础运算","description":"小学1-4年级，建立数感与基本运算能力","ageRange":"6-10岁","resources":[
-            {"title":"《数学帮帮忙》系列","type":"book","description":"用故事讲数学概念，低龄友好","price":"约30元/册"},
-            {"title":"洋葱学院小学版","type":"online","description":"动画式数学讲解，覆盖小学全年级","price":"基础免费，会员299元/年"},
-            {"title":"火花思维线下中心（深圳）","type":"local","description":"游戏化数学思维训练，适合低龄儿童","price":"150-300元/课时"}
-          ]},
-          "L2": {"name":"逻辑建立","description":"小学5-6年级，从算术思维过渡到代数思维","ageRange":"10-12岁","resources":[
-            {"title":"《数学思维训练》","type":"book","description":"系统训练数学思维方法，衔接小升初","price":"约40元/册"},
-            {"title":"深圳少年宫数学思维班","type":"local","description":"少年宫公益性质的数学思维训练课程","price":"50-100元/课时"},
-            {"title":"可汗学院","type":"online","description":"全球最大的免费在线教育平台","price":"免费"}
-          ]},
-          "L3": {"name":"体系搭建","description":"初中水平，建立完整数学知识体系","ageRange":"12-15岁","resources":[
-            {"title":"《初等数论》（陈景润）","type":"book","description":"数论入门经典，陈景润先生著作","price":"约35元"},
-            {"title":"Brilliant.org","type":"online","description":"全球最好的互动数学学习平台","price":"约$25/月"},
-            {"title":"深圳中学竞赛集训营","type":"local","description":"深圳最顶尖的中学竞赛培训体系","price":"校内免费"}
-          ]},
-          "L4": {"name":"竞赛突破","description":"高中竞赛水平，冲击省一等奖及以上","ageRange":"15-18岁","resources":[
-            {"title":"《数学奥林匹克小丛书》","type":"book","description":"华东师大出版社，竞赛生人手一套","price":"约20元/册"},
-            {"title":"AoPS竞赛课程","type":"online","description":"从AMC到USAMO的完整竞赛课程体系","price":"约$300-$800/门"},
-            {"title":"深圳中学/深圳外国语竞赛班","type":"local","description":"深圳两大顶尖中学的竞赛培养体系","price":"校内免费"}
-          ]},
-          "L5": {"name":"拓展前沿","description":"超出课标，接触数学前沿与跨学科应用","ageRange":"16岁+","resources":[
-            {"title":"《什么是数学》（柯朗）","type":"book","description":"数学大师柯朗的数学哲学入门","price":"约50元"},
-            {"title":"MIT OCW数学系课程","type":"online","description":"MIT数学系本科+研究生课程全部免费开放","price":"免费"},
-            {"title":"丘成桐讲座","type":"course","description":"菲尔兹奖得主的系列讲座，展示数学之美","price":"免费"}
-          ]}
-        }
+  "math": {
+    "levels": {
+      "L1": {
+        "name": "基础运算",
+        "description": "小学1-4年级，建立数感与基本运算能力",
+        "ageRange": "6-10岁",
+        "resources": [
+          {
+            "title": "《数学帮帮忙》系列",
+            "type": "book",
+            "description": "用故事讲数学概念，低龄友好",
+            "price": "约30元/册"
+          },
+          {
+            "title": "洋葱学院小学版",
+            "type": "online",
+            "description": "动画式数学讲解，覆盖小学全年级",
+            "price": "基础免费，会员299元/年"
+          },
+          {
+            "title": "火花思维线下中心（深圳）",
+            "type": "local",
+            "description": "游戏化数学思维训练，适合低龄儿童",
+            "price": "150-300元/课时"
+          }
+        ]
       },
-      "chinese": {
-        "levels": {
-          "L1": {"name":"识字阅读启蒙","description":"1-2年级，从识字到自主阅读起步","ageRange":"6-8岁","resources":[
-            {"title":"《日有所诵》（1-2年级）","type":"book","description":"亲近母语出品，每天一首儿歌童谣，培养语感","price":"约25元/册"},
-            {"title":"亲近母语·小步读书会","type":"online","description":"0-12岁中文分级阅读体系","price":"免费基础版/会员约200元/年"},
-            {"title":"深圳少年宫·读写启蒙班","type":"local","description":"少年宫官方读写启蒙课程","price":"约800元/学期"}
-          ]},
-          "L2": {"name":"阅读理解+写话进阶","description":"3-4年级，从读图到读文，从写话到写段","ageRange":"8-10岁","resources":[
-            {"title":"《读写之桥》（小学中年级）","type":"book","description":"商务印书馆出品，在'读'与'写'之间架起桥梁","price":"约22元"},
-            {"title":"深圳图书馆·暑期阅读训练营","type":"local","description":"深图每年暑期公益课程","price":"免费"},
-            {"title":"未泱中文阅读营（L3级）","type":"online","description":"L0-L5六级科学分级体系","price":"约2000元/学期"}
-          ]},
-          "L3": {"name":"深度阅读+写作体系","description":"5-6年级，整本书阅读+结构化写作+文言文入门","ageRange":"10-12岁","resources":[
-            {"title":"《快乐读书吧》丛书（5-6年级版）","type":"book","description":"人教版官方，与语文课堂教学同步的整本书阅读","price":"约30元/册"},
-            {"title":"学语中文素养·L5-L6课程","type":"online","description":"4-8人精品小班，IPO输入-信息处理-输出闭环","price":"约3000元/学期"},
-            {"title":"深圳青少年活动中心·文学创作营","type":"local","description":"公益文学创作课程，寒暑假研学营","price":"公益免费/低价"}
-          ]},
-          "L4": {"name":"文言文+现代文+考场作文","description":"初中水平，文言文阅读+现代文深度分析+考场作文体系","ageRange":"12-15岁","resources":[
-            {"title":"《古文观止》精选注译版","type":"book","description":"文言文必读经典，222篇精华","price":"约40元"},
-            {"title":"一课APP·初中语文读写体系","type":"online","description":"中考教研中心出品，文言文+现代文+作文三线并进","price":"约155-165元/节"},
-            {"title":"果冉语文·初高中读写精进班","type":"local","description":"文言文+现代文阅读+考场作文专项","price":"约4000元/学期"}
-          ]},
-          "L5": {"name":"人文素养+学术写作","description":"高中及以上，深度思辨+学术表达+文学研究","ageRange":"15岁+","resources":[
-            {"title":"《什么是文学》萨特","type":"book","description":"存在主义文学理论经典，重新理解'写作'","price":"约35元"},
-            {"title":"杨宁·文学理论课（西竹书院）","type":"online","description":"打通审美与批评的任督二脉","price":"免费(B站)"},
-            {"title":"孙绍振·文本细读方法论","type":"course","description":"著名文艺理论家，文本细读的学术方法论","price":"免费(中国大学MOOC)"}
-          ]}
-        }
+      "L2": {
+        "name": "逻辑建立",
+        "description": "小学5-6年级，从算术思维过渡到代数思维",
+        "ageRange": "10-12岁",
+        "resources": [
+          {
+            "title": "《数学思维训练》",
+            "type": "book",
+            "description": "系统训练数学思维方法，衔接小升初",
+            "price": "约40元/册"
+          },
+          {
+            "title": "深圳少年宫数学思维班",
+            "type": "local",
+            "description": "少年宫公益性质的数学思维训练课程",
+            "price": "50-100元/课时"
+          },
+          {
+            "title": "可汗学院",
+            "type": "online",
+            "description": "全球最大的免费在线教育平台",
+            "price": "免费"
+          }
+        ]
+      },
+      "L3": {
+        "name": "体系搭建",
+        "description": "初中水平，建立完整数学知识体系",
+        "ageRange": "12-15岁",
+        "resources": [
+          {
+            "title": "《初等数论》（陈景润）",
+            "type": "book",
+            "description": "数论入门经典，陈景润先生著作",
+            "price": "约35元"
+          },
+          {
+            "title": "Brilliant.org",
+            "type": "online",
+            "description": "全球最好的互动数学学习平台",
+            "price": "约$25/月"
+          },
+          {
+            "title": "深圳中学竞赛集训营",
+            "type": "local",
+            "description": "深圳最顶尖的中学竞赛培训体系",
+            "price": "校内免费"
+          }
+        ]
+      },
+      "L4": {
+        "name": "竞赛突破",
+        "description": "高中竞赛水平，冲击省一等奖及以上",
+        "ageRange": "15-18岁",
+        "resources": [
+          {
+            "title": "《数学奥林匹克小丛书》",
+            "type": "book",
+            "description": "华东师大出版社，竞赛生人手一套",
+            "price": "约20元/册"
+          },
+          {
+            "title": "AoPS竞赛课程",
+            "type": "online",
+            "description": "从AMC到USAMO的完整竞赛课程体系",
+            "price": "约$300-$800/门"
+          },
+          {
+            "title": "深圳中学/深圳外国语竞赛班",
+            "type": "local",
+            "description": "深圳两大顶尖中学的竞赛培养体系",
+            "price": "校内免费"
+          }
+        ]
+      },
+      "L5": {
+        "name": "拓展前沿",
+        "description": "超出课标，接触数学前沿与跨学科应用",
+        "ageRange": "16岁+",
+        "resources": [
+          {
+            "title": "《什么是数学》（柯朗）",
+            "type": "book",
+            "description": "数学大师柯朗的数学哲学入门",
+            "price": "约50元"
+          },
+          {
+            "title": "MIT OCW数学系课程",
+            "type": "online",
+            "description": "MIT数学系本科+研究生课程全部免费开放",
+            "price": "免费"
+          },
+          {
+            "title": "丘成桐讲座",
+            "type": "course",
+            "description": "菲尔兹奖得主的系列讲座，展示数学之美",
+            "price": "免费"
+          }
+        ]
       }
-    };
+    }
+  },
+  "chinese": {
+    "levels": {
+      "L1": {
+        "name": "识字阅读启蒙",
+        "description": "1-2年级，从识字到自主阅读起步",
+        "ageRange": "6-8岁",
+        "resources": [
+          {
+            "title": "《日有所诵》（1-2年级）",
+            "type": "book",
+            "description": "亲近母语出品，每天一首儿歌童谣，培养语感",
+            "price": "约25元/册"
+          },
+          {
+            "title": "亲近母语·小步读书会",
+            "type": "online",
+            "description": "0-12岁中文分级阅读体系",
+            "price": "免费基础版/会员约200元/年"
+          },
+          {
+            "title": "深圳少年宫·读写启蒙班",
+            "type": "local",
+            "description": "少年宫官方读写启蒙课程",
+            "price": "约800元/学期"
+          }
+        ]
+      },
+      "L2": {
+        "name": "阅读理解+写话进阶",
+        "description": "3-4年级，从读图到读文，从写话到写段",
+        "ageRange": "8-10岁",
+        "resources": [
+          {
+            "title": "《读写之桥》（小学中年级）",
+            "type": "book",
+            "description": "商务印书馆出品，在'读'与'写'之间架起桥梁",
+            "price": "约22元"
+          },
+          {
+            "title": "深圳图书馆·暑期阅读训练营",
+            "type": "local",
+            "description": "深图每年暑期公益课程",
+            "price": "免费"
+          },
+          {
+            "title": "未泱中文阅读营（L3级）",
+            "type": "online",
+            "description": "L0-L5六级科学分级体系",
+            "price": "约2000元/学期"
+          }
+        ]
+      },
+      "L3": {
+        "name": "深度阅读+写作体系",
+        "description": "5-6年级，整本书阅读+结构化写作+文言文入门",
+        "ageRange": "10-12岁",
+        "resources": [
+          {
+            "title": "《快乐读书吧》丛书（5-6年级版）",
+            "type": "book",
+            "description": "人教版官方，与语文课堂教学同步的整本书阅读",
+            "price": "约30元/册"
+          },
+          {
+            "title": "学语中文素养·L5-L6课程",
+            "type": "online",
+            "description": "4-8人精品小班，IPO输入-信息处理-输出闭环",
+            "price": "约3000元/学期"
+          },
+          {
+            "title": "深圳青少年活动中心·文学创作营",
+            "type": "local",
+            "description": "公益文学创作课程，寒暑假研学营",
+            "price": "公益免费/低价"
+          }
+        ]
+      },
+      "L4": {
+        "name": "文言文+现代文+考场作文",
+        "description": "初中水平，文言文阅读+现代文深度分析+考场作文体系",
+        "ageRange": "12-15岁",
+        "resources": [
+          {
+            "title": "《古文观止》精选注译版",
+            "type": "book",
+            "description": "文言文必读经典，222篇精华",
+            "price": "约40元"
+          },
+          {
+            "title": "一课APP·初中语文读写体系",
+            "type": "online",
+            "description": "中考教研中心出品，文言文+现代文+作文三线并进",
+            "price": "约155-165元/节"
+          },
+          {
+            "title": "果冉语文·初高中读写精进班",
+            "type": "local",
+            "description": "文言文+现代文阅读+考场作文专项",
+            "price": "约4000元/学期"
+          }
+        ]
+      },
+      "L5": {
+        "name": "人文素养+学术写作",
+        "description": "高中及以上，深度思辨+学术表达+文学研究",
+        "ageRange": "15岁+",
+        "resources": [
+          {
+            "title": "《什么是文学》萨特",
+            "type": "book",
+            "description": "存在主义文学理论经典，重新理解'写作'",
+            "price": "约35元"
+          },
+          {
+            "title": "杨宁·文学理论课（西竹书院）",
+            "type": "online",
+            "description": "打通审美与批评的任督二脉",
+            "price": "免费(B站)"
+          },
+          {
+            "title": "孙绍振·文本细读方法论",
+            "type": "course",
+            "description": "著名文艺理论家，文本细读的学术方法论",
+            "price": "免费(中国大学MOOC)"
+          }
+        ]
+      }
+    }
+  },
+  "physics": {
+    "trainingUrl": "physics-training.html",
+    "levels": {
+      "L1": [
+        "物理启蒙书籍",
+        "科学馆体验"
+      ],
+      "L2": [
+        "物理入门书籍",
+        "少年宫物理班"
+      ],
+      "L3": [
+        "物理体系书籍",
+        "竞赛预备班"
+      ],
+      "L4": [
+        "物理竞赛书籍",
+        "竞赛集训营"
+      ],
+      "L5": [
+        "物理前沿书籍",
+        "大学物理课程"
+      ]
+    }
+  }
+};
 
 
     // 新增7学科资源数据
@@ -3025,13 +3378,65 @@
             }
         }
     }
+})
+
+    Object.assign(RESOURCE_DATA, {
+    "physics": {
+        "levels": {
+            "L1": {
+                "name": "基础入门",
+                "description": "小学低年级，观察身边的物理现象",
+                "resources": ["物理启蒙书籍", "科学馆体验"]
+            },
+            "L2": {
+                "name": "逻辑建立",
+                "description": "小学高年级，从直观到抽象的思维过渡",
+                "resources": ["物理入门书籍", "少年宫物理班"]
+            },
+            "L3": {
+                "name": "体系搭建",
+                "description": "初中水平，建立完整的物理知识框架",
+                "resources": ["物理体系书籍", "竞赛预备班"]
+            },
+            "L4": {
+                "name": "竞赛突破",
+                "description": "高中竞赛水平，冲击省一等奖及以上",
+                "resources": ["物理竞赛书籍", "竞赛集训营"]
+            },
+            "L5": {
+                "name": "拓展前沿",
+                "description": "超出课标，接触物理前沿与跨学科应用",
+                "resources": ["物理前沿书籍", "大学物理课程"]
+            }
+        }
+    }
 });
+;
 
     // 层级描述映射
     var LEVEL_NAMES = {
-      "math": {"L1":"基础运算","L2":"逻辑建立","L3":"体系搭建","L4":"竞赛突破","L5":"拓展前沿"},
-      "chinese": {"L1":"识字阅读启蒙","L2":"阅读理解+写话进阶","L3":"深度阅读+写作体系","L4":"文言文+现代文+考场作文","L5":"人文素养+学术写作"}
-    };
+  "math": {
+    "L1": "基础运算",
+    "L2": "逻辑建立",
+    "L3": "体系搭建",
+    "L4": "竞赛突破",
+    "L5": "拓展前沿"
+  },
+  "chinese": {
+    "L1": "识字阅读启蒙",
+    "L2": "阅读理解+写话进阶",
+    "L3": "深度阅读+写作体系",
+    "L4": "文言文+现代文+考场作文",
+    "L5": "人文素养+学术写作"
+  },
+  "physics": [
+    "基础入门",
+    "逻辑建立",
+    "体系搭建",
+    "竞赛突破",
+    "拓展前沿"
+  ]
+};
 
 
     Object.assign(LEVEL_NAMES, {
@@ -3084,25 +3489,43 @@
         "L4": "专业研究",
         "L5": "思想前沿"
     }
+})
+
+    Object.assign(LEVEL_NAMES, {
+    "physics": {
+        "L1": "基础入门",
+        "L2": "逻辑建立",
+        "L3": "体系搭建",
+        "L4": "竞赛突破",
+        "L5": "拓展前沿"
+    }
 });
+;
 
     var LEVEL_EMOJIS = {"L1":"🌱","L2":"🌿","L3":"🌳","L4":"🏔️","L5":"🌌"};
     var LEVEL_DESCS = {
-      "math": {
-        "L1":"小学1-4年级水平，建立数感与基本运算能力",
-        "L2":"小学5-6年级水平，从算术思维过渡到代数思维",
-        "L3":"初中水平，建立完整数学知识体系",
-        "L4":"高中竞赛水平，冲击省一等奖及以上",
-        "L5":"超出课标，接触数学前沿与跨学科应用"
-      },
-      "chinese": {
-        "L1":"1-2年级水平，从识字到自主阅读起步",
-        "L2":"3-4年级水平，从读图到读文，从写话到写段",
-        "L3":"5-6年级水平，整本书阅读+结构化写作+文言文入门",
-        "L4":"初中水平，文言文阅读+现代文深度分析+考场作文体系",
-        "L5":"高中及以上，深度思辨+学术表达+文学研究"
-      }
-    };
+  "math": {
+    "L1": "小学1-4年级水平，建立数感与基本运算能力",
+    "L2": "小学5-6年级水平，从算术思维过渡到代数思维",
+    "L3": "初中水平，建立完整数学知识体系",
+    "L4": "高中竞赛水平，冲击省一等奖及以上",
+    "L5": "超出课标，接触数学前沿与跨学科应用"
+  },
+  "chinese": {
+    "L1": "1-2年级水平，从识字到自主阅读起步",
+    "L2": "3-4年级水平，从读图到读文，从写话到写段",
+    "L3": "5-6年级水平，整本书阅读+结构化写作+文言文入门",
+    "L4": "初中水平，文言文阅读+现代文深度分析+考场作文体系",
+    "L5": "高中及以上，深度思辨+学术表达+文学研究"
+  },
+  "physics": [
+    "小学低年级，观察身边的物理现象",
+    "小学高年级，从直观到抽象的思维过渡",
+    "初中水平，建立完整的物理知识框架",
+    "高中竞赛水平，冲击省一等奖及以上",
+    "超出课标，接触物理前沿与跨学科应用"
+  ]
+};
 
 
     Object.assign(LEVEL_DESCS, {
@@ -3155,7 +3578,18 @@
         "L4": "大学水平，掌握政治学/经济学/法学研究方法，16-18岁",
         "L5": "超越学科，用政治思维理解时代大问题，16岁+"
     }
+})
+
+    Object.assign(LEVEL_DESCS, {
+    "physics": {
+        "L1": "小学低年级，观察身边的物理现象",
+        "L2": "小学高年级，从直观到抽象的思维过渡",
+        "L3": "初中水平，建立完整的物理知识框架",
+        "L4": "高中竞赛水平，冲击省一等奖及以上",
+        "L5": "超出课标，接触物理前沿与跨学科应用"
+    }
 });
+;
 
     // ===== 状态变量 =====
     var currentSubject = null;
