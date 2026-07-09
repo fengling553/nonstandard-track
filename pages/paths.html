@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>路径情报站 - 非标赛道</title>
+  <meta name="description" content="五条非标教育路径的完整情报：竞赛通道、大厂直招、政策追踪、海外替代、创业路径">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">🧭</span>
+        <span>非标赛道</span>
+      </a>
+      <ul class="navbar-links">
+        <li><a href="paths.html" class="active">路径情报站</a></li>
+        <li><a href="training.html">全科训练场</a></li>
+        <li><a href="assessment.html">学科测评</a></li>
+        <li><a href="projects.html">项目化学习</a></li>
+        <li><a href="ai-tools.html">AI工具箱</a></li>
+        <li><a href="assessment.html" class="btn-primary" style="padding:8px 16px;font-size:0.85rem;">开始测评</a></li>
+      </ul>
+      <button class="navbar-toggle" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 移动端菜单 -->
+  <div class="mobile-menu">
+    <a href="paths.html">🗺️ 路径情报站</a>
+    <a href="training.html">💪 全科训练场</a>
+    <a href="assessment.html">🎯 学科测评</a>
+    <a href="projects.html">🚀 项目化学习</a>
+    <a href="ai-tools.html">🤖 AI工具箱</a>
+  </div>
+
+  <!-- 页面内容 -->
+  <main class="page-content">
+    <div class="container">
+      <!-- 面包屑 -->
+      <div class="breadcrumb">
+        <a href="../index.html">首页</a>
+        <span class="separator">›</span>
+        <span class="current">路径情报站</span>
+      </div>
+
+      <!-- 页面标题 -->
+      <div class="page-title">
+        <h1>🗺️ 路径情报站</h1>
+        <p>五条非标教育路径的完整情报：适合谁、怎么走、需要注意什么</p>
+      </div>
+
+      <!-- Tab导航 -->
+      <div class="tab-nav" id="paths-tab-nav">
+        <button class="tab-btn active" data-tab="competition">🏆 竞赛通道</button>
+        <button class="tab-btn" data-tab="corporate">🏢 大厂直招</button>
+        <button class="tab-btn" data-tab="policy">📋 政策追踪</button>
+        <button class="tab-btn" data-tab="overseas">🌏 海外替代</button>
+        <button class="tab-btn" data-tab="startup">🚀 创业路径</button>
+      </div>
+
+      <!-- Tab内容（由JS动态渲染） -->
+      <div id="paths-content">
+        <!-- 竞赛通道 -->
+        <div class="tab-content active" id="tab-competition">
+          <div class="path-overview">
+            <h3>🏆 竞赛通道</h3>
+            <p>学科竞赛是传统升学加速器，但并非所有竞赛都需要学籍。五大学科竞赛门槛高，而白名单科创竞赛、CTF和Kaggle等提供了更多可能性。</p>
+            <div class="path-meta">
+              <div class="path-meta-item"><div class="meta-label">适合谁</div><div class="meta-value">有学科特长、逻辑思维强、能承受高强度训练的学生</div></div>
+              <div class="path-meta-item"><div class="meta-label">核心门槛</div><div class="meta-value">五大学科竞赛需在读高中生学籍；白名单科创/CTF/Kaggle无学籍要求</div></div>
+              <div class="path-meta-item"><div class="meta-label">关键时间线</div><div class="meta-value">预赛3-5月 → 省级赛9-10月 → 国赛11-12月 → 国际赛次年7月</div></div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📅 关键节点</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="time-label">3-5月</div>
+                <div class="time-event">五大学科竞赛预赛报名</div>
+                <div class="time-detail">需通过所在高中统一报名，社会考生无学籍无法参加</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">9-10月</div>
+                <div class="time-event">省级赛区选拔</div>
+                <div class="time-detail">省级一等奖及以上可获得强基计划破格资格（政策收紧中）</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">11-12月</div>
+                <div class="time-event">全国决赛（CMO/CChO/CPhO/CBO/NOI）</div>
+                <div class="time-detail">国家集训队成员可获保送资格</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">全年</div>
+                <div class="time-event">白名单科创竞赛</div>
+                <div class="time-detail">教育部认证47项，部分允许个人/机构报名</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">全年</div>
+                <div class="time-event">CTF/Kaggle竞赛</div>
+                <div class="time-detail">无需学籍，线上参与，以实际能力说话</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 五大学科竞赛</h3>
+            <div class="item-card">
+              <h4>数学奥林匹克（CMO）</h4>
+              <div class="item-highlight">💡 国家级金牌以上可保送，省级一等奖可破格入围强基计划</div>
+              <div class="item-desc">含金量最高的学科竞赛，国家级奖项可保送清北</div>
+              <div class="item-requirement">📋 报名条件：在读高中生，通过学校统一报名</div>
+            </div>
+            <div class="item-card">
+              <h4>物理奥林匹克（CPhO）</h4>
+              <div class="item-highlight">💡 省级一等奖及以上可破格入围强基计划</div>
+              <div class="item-desc">实验与理论并重，对物理直觉要求极高</div>
+              <div class="item-requirement">📋 报名条件：在读高中生，通过学校统一报名</div>
+            </div>
+            <div class="item-card">
+              <h4>化学奥林匹克（CChO）</h4>
+              <div class="item-highlight">💡 2026年北师大、华工已取消竞赛破格通道</div>
+              <div class="item-desc">有机/无机/分析/物化四方向，实验操作占比大</div>
+              <div class="item-requirement">📋 报名条件：在读高中生，通过学校统一报名</div>
+            </div>
+            <div class="item-card">
+              <h4>生物学奥林匹克（CBO）</h4>
+              <div class="item-highlight">💡 省级赛区竞争相对较小，适合生物爱好者</div>
+              <div class="item-desc">从微观分子到宏观生态，知识面要求广</div>
+              <div class="item-requirement">📋 报名条件：在读高中生，通过学校统一报名</div>
+            </div>
+            <div class="item-card">
+              <h4>信息学奥林匹克（NOI）</h4>
+              <div class="item-highlight">💡 国家级奖项可保送清北，技术能力可直通大厂</div>
+              <div class="item-desc">算法与编程的巅峰对决，技术导向最强</div>
+              <div class="item-requirement">📋 报名条件：在读高中生，通过学校统一报名</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 白名单科创竞赛</h3>
+            <div class="item-card">
+              <h4>教育部白名单科创竞赛（47项）</h4>
+              <div class="item-highlight">💡 无需学籍，部分赛事含金量高，可助力综合素质评价</div>
+              <div class="item-desc">教育部认证的面向中小学生的全国性竞赛活动，覆盖科技创新、机器人、人工智能等领域</div>
+              <div class="item-requirement">📋 报名条件：部分允许个人或机构报名，不强制要求学校组织</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 无学籍竞赛</h3>
+            <div class="item-card">
+              <h4>CTF网络安全竞赛</h4>
+              <div class="item-highlight">💡 能力导向，获奖可直接获得安全公司和大厂青睐</div>
+              <div class="item-desc">攻防实战型竞赛，考察网络安全技术与漏洞挖掘能力</div>
+              <div class="item-requirement">📋 报名条件：无学籍要求，线上组队即可参赛</div>
+            </div>
+            <div class="item-card">
+              <h4>Kaggle数据科学竞赛</h4>
+              <div class="item-highlight">💡 金牌/银牌在业界高度认可，可直接证明技术实力</div>
+              <div class="item-desc">全球最大数据科学竞赛平台，涵盖机器学习、数据分析等</div>
+              <div class="item-requirement">📋 报名条件：无学籍要求，个人注册即可参赛</div>
+              <div class="item-url"><a href="https://www.kaggle.com/competitions" target="_blank" rel="noopener">访问链接 ↗</a></div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>👤 真实案例</h3>
+            <div class="case-card">
+              <div class="case-name">小明（化名）</div>
+              <div class="case-age">年龄：17岁</div>
+              <div class="case-story">信息学奥赛省一等奖，通过强基计划破格入围，最终录取某985计算机专业</div>
+              <div class="case-result">✅ 强基计划破格录取</div>
+            </div>
+          </div>
+
+          <div class="starter-guide">
+            <h3>🎯 入门指南</h3>
+            <ol>
+              <li>确认所在学校是否有竞赛教练和报名渠道</li>
+              <li>如无学籍，优先考虑白名单科创竞赛和CTF/Kaggle</li>
+              <li>从省赛级别的难度开始训练，逐步提升</li>
+              <li>关注每年3-5月的预赛报名时间窗口</li>
+            </ol>
+          </div>
+
+          <div class="resource-links">
+            <h3>🔗 相关资源</h3>
+            <div class="resource-link-item">
+              <span class="link-icon">🌐</span>
+              <span class="link-name"><a href="https://www.zizhuan.net/" target="_blank" rel="noopener">自主选拔在线</a></span>
+              <span class="link-desc">竞赛政策与报名信息汇总</span>
+            </div>
+            <div class="resource-link-item">
+              <span class="link-icon">🌐</span>
+              <span class="link-name"><a href="https://artofproblemsolving.com/" target="_blank" rel="noopener">Art of Problem Solving</a></span>
+              <span class="link-desc">数学竞赛社区与在线课程</span>
+            </div>
+            <div class="resource-link-item">
+              <span class="link-icon">🌐</span>
+              <span class="link-name"><a href="https://www.kaggle.com/" target="_blank" rel="noopener">Kaggle</a></span>
+              <span class="link-desc">数据科学竞赛平台</span>
+            </div>
+          </div>
+
+          <div class="update-info">📅 最近更新：2026-07-08</div>
+        </div>
+
+        <!-- 大厂直招 -->
+        <div class="tab-content" id="tab-corporate">
+          <div class="path-overview">
+            <h3>🏢 大厂直招</h3>
+            <p>头部科技企业正在开辟人才选拔新通道，不看高考分数、不要求大学学历，直接以能力评估录取并提供顶级培养资源。但需注意：所有大厂青少年培养项目都不排斥、不替代大学教育。</p>
+            <div class="path-meta">
+              <div class="path-meta-item"><div class="meta-label">适合谁</div><div class="meta-value">技术能力突出、有自驱力、能独立完成项目的学生</div></div>
+              <div class="path-meta-item"><div class="meta-label">核心门槛</div><div class="meta-value">技术能力评估为主，部分项目有年龄限制，不要求学籍</div></div>
+              <div class="path-meta-item"><div class="meta-label">关键时间线</div><div class="meta-value">各项目招募周期不同，多为每年1-2次集中招募</div></div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📅 关键节点</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="time-label">每年3月</div>
+                <div class="time-event">吉利跨时代跃迁计划招募</div>
+                <div class="time-detail">面向高中毕业生，CEO+首席科学家+AI专家三导师</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">每年夏季</div>
+                <div class="time-event">腾讯青科实训营</div>
+                <div class="time-detail">13-18岁，全国200人报名录10人，录取率5%</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">全年滚动</div>
+                <div class="time-event">字节Top Seed</div>
+                <div class="time-detail">每年30名16-18岁全职预备研究员</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">长期合作</div>
+                <div class="time-event">华为天才少年（中学延伸）</div>
+                <div class="time-detail">提前联合培养模式，主力仍是博士</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 重点企业项目</h3>
+            <div class="item-card">
+              <h4>吉利「跨时代跃迁人才培养计划」</h4>
+              <div class="item-highlight">💡 年薪30-50万，2026年3月启动，三导师制培养</div>
+              <div class="item-desc">面向高中毕业生的顶尖培养计划，不看高考分数，CEO+首席科学家+AI专家三导师制</div>
+              <div class="item-requirement">📋 报名条件：高中毕业生，通过能力评估选拔</div>
+            </div>
+            <div class="item-card">
+              <h4>腾讯「青科实训营」</h4>
+              <div class="item-highlight">💡 全国200人报名录10人，录取率5%，腾讯专家一对一指导</div>
+              <div class="item-desc">面向13-18岁中学生的科技创新训练营，录取率极低</div>
+              <div class="item-requirement">📋 报名条件：13-18岁在校中学生</div>
+            </div>
+            <div class="item-card">
+              <h4>字节跳动「Top Seed」</h4>
+              <div class="item-highlight">💡 每年30名，全职预备研究员，接触前沿AI研究</div>
+              <div class="item-desc">面向16-18岁超尖子生的全职预备研究员计划</div>
+              <div class="item-requirement">📋 报名条件：16-18岁，技术能力突出</div>
+            </div>
+            <div class="item-card">
+              <h4>华为「天才少年」（中学延伸）</h4>
+              <div class="item-highlight">💡 提前联合培养，非独立项目，需与学校教育并行</div>
+              <div class="item-desc">华为顶级人才计划的中学延伸版，采用提前联合培养模式</div>
+              <div class="item-requirement">📋 报名条件：当前主力仍面向博士，中学版为提前联合培养</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>👤 真实案例</h3>
+            <div class="case-card">
+              <div class="case-name">吉利计划学员</div>
+              <div class="case-age">年龄：18岁</div>
+              <div class="case-story">高中毕业后直接加入吉利跃迁计划，获得三导师指导，年薪30万起</div>
+              <div class="case-result">✅ 在读学员，技术能力快速提升</div>
+            </div>
+          </div>
+
+          <div class="starter-guide">
+            <h3>🎯 入门指南</h3>
+            <ol>
+              <li>关注各大厂官方公众号获取招募信息</li>
+              <li>提前准备个人技术项目作品集</li>
+              <li>练习技术面试和表达能力</li>
+              <li>重要：这些项目不替代大学教育，可考虑并行推进</li>
+            </ol>
+          </div>
+
+          <div class="update-info">📅 最近更新：2026-07-08</div>
+        </div>
+
+        <!-- 政策追踪 -->
+        <div class="tab-content" id="tab-policy">
+          <div class="path-overview">
+            <h3>📋 政策追踪</h3>
+            <p>强基计划、保送政策、单科破格……升学政策每年都在调整。2026年最大的变化是竞赛破格通道大幅收紧，但高考单科成绩破格入围成为新趋势。</p>
+            <div class="path-meta">
+              <div class="path-meta-item"><div class="meta-label">适合谁</div><div class="meta-value">所有关注升学政策变化的家庭</div></div>
+              <div class="path-meta-item"><div class="meta-label">核心门槛</div><div class="meta-value">需要持续关注政策更新，提前规划</div></div>
+              <div class="path-meta-item"><div class="meta-label">关键时间线</div><div class="meta-value">4月强基简章 → 5月报名 → 6月高考 → 7月校测 → 8月录取</div></div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📅 关键节点</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="time-label">4月</div>
+                <div class="time-event">强基计划招生简章发布</div>
+                <div class="time-detail">各高校破格条件差异大，需逐校研究</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">5月</div>
+                <div class="time-event">强基计划报名</div>
+                <div class="time-detail">限报1所高校，破格资格需提前确认</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">6月</div>
+                <div class="time-event">高考</div>
+                <div class="time-detail">强基综合成绩=高考85%+校测15%</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">7月</div>
+                <div class="time-event">强基校测</div>
+                <div class="time-detail">笔试+面试，部分学校有体测</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">8月</div>
+                <div class="time-event">录取公示</div>
+                <div class="time-detail">强基录取在提前批之前，不影响常规志愿</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 强基计划2026最新变化</h3>
+            <div class="item-card">
+              <h4>竞赛破格通道大幅收紧</h4>
+              <div class="item-highlight">💡 2026年多所985高校收紧竞赛破格，省级一等奖含金量下降</div>
+              <div class="item-desc">北师大、华南理工取消竞赛破格通道；西安交大、同济仅金牌破格</div>
+              <div class="item-requirement">📋 省级一等奖不再普遍获得破格资格</div>
+            </div>
+            <div class="item-card">
+              <h4>高考单科成绩破格入围</h4>
+              <div class="item-highlight">💡 新趋势！单科高分可弥补总分不足，对数学特长生利好</div>
+              <div class="item-desc">数学145+可破格入围强基校测（华南理工、中山大学等）</div>
+              <div class="item-requirement">📋 高考数学145分以上（满分150分制）</div>
+            </div>
+            <div class="item-card">
+              <h4>综合成绩计算方式</h4>
+              <div class="item-highlight">💡 校测15%的杠杆效应大，校测满分可弥补高考约10-15分差距</div>
+              <div class="item-desc">强基综合成绩=高考85%+校测15%</div>
+              <div class="item-requirement">📋 高考成绩仍是绝对主体</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 保送政策</h3>
+            <div class="item-card">
+              <h4>五大学科竞赛国家集训队保送</h4>
+              <div class="item-highlight">💡 含金量最高但竞争极激烈，每年仅约260人</div>
+              <div class="item-desc">进入国家集训队（约260人/年）可直接保送清华北大</div>
+              <div class="item-requirement">📋 五大学科竞赛全国前50-60名</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>👤 真实案例</h3>
+            <div class="case-card">
+              <div class="case-name">某考生</div>
+              <div class="case-age">年龄：18岁</div>
+              <div class="case-story">高考数学148分，总分未达985线，但凭数学单科破格入围中山大学强基校测，最终录取</div>
+              <div class="case-result">✅ 强基计划录取中山大学</div>
+            </div>
+          </div>
+
+          <div class="starter-guide">
+            <h3>🎯 入门指南</h3>
+            <ol>
+              <li>关注4月各高校强基计划简章，逐校核对破格条件</li>
+              <li>如有竞赛奖项，确认是否仍满足目标院校破格要求</li>
+              <li>数学特长生关注「单科破格」新通道</li>
+              <li>校测准备不可忽视，15%权重杠杆效应大</li>
+            </ol>
+          </div>
+
+          <div class="resource-links">
+            <h3>🔗 相关资源</h3>
+            <div class="resource-link-item">
+              <span class="link-icon">🌐</span>
+              <span class="link-name"><a href="https://gaokao.chsi.com.cn/" target="_blank" rel="noopener">阳光高考信息平台</a></span>
+              <span class="link-desc">强基计划官方报名入口</span>
+            </div>
+            <div class="resource-link-item">
+              <span class="link-icon">🌐</span>
+              <span class="link-name"><a href="https://www.zizhuan.net/" target="_blank" rel="noopener">自主选拔在线</a></span>
+              <span class="link-desc">强基政策解读与院校对比</span>
+            </div>
+          </div>
+
+          <div class="update-info">📅 最近更新：2026-07-08</div>
+        </div>
+
+        <!-- 海外替代 -->
+        <div class="tab-content" id="tab-overseas">
+          <div class="path-overview">
+            <h3>🌏 海外替代</h3>
+            <p>对于不走国内高考赛道的学生，海外路径提供了多样化选择：社区大学转学、海外竞赛、在线学位项目等，成本和门槛各不相同。</p>
+            <div class="path-meta">
+              <div class="path-meta-item"><div class="meta-label">适合谁</div><div class="meta-value">不走国内高考路线、家庭有一定经济基础、或追求国际化学术发展的学生</div></div>
+              <div class="path-meta-item"><div class="meta-label">核心门槛</div><div class="meta-value">英语能力+经济基础+自我管理能力，不同路径门槛差异大</div></div>
+              <div class="path-meta-item"><div class="meta-label">关键时间线</div><div class="meta-value">因路径不同而异，社区大学全年可申请，竞赛按赛季，在线学位滚动招生</div></div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📅 关键节点</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="time-label">全年</div>
+                <div class="time-event">社区大学申请</div>
+                <div class="time-detail">无需高考/托福，高中毕业即可申请，2年后转学四年制大学</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">按赛季</div>
+                <div class="time-event">海外竞赛（AMC/AIME/USACO等）</div>
+                <div class="time-detail">不要求学籍，任何人均可注册参赛</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">滚动招生</div>
+                <div class="time-event">在线学位项目</div>
+                <div class="time-detail">如Minerva大学、University of the People等</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 社区大学转学路径</h3>
+            <div class="item-card">
+              <h4>美国社区大学转学（2+2）</h4>
+              <div class="item-highlight">💡 性价比最高的海外留学路径，转学至UC Berkeley等名校比例不低</div>
+              <div class="item-desc">先入读社区大学（低门槛、低学费），2年后转学至四年制大学，获得与直录生相同的学位</div>
+              <div class="item-requirement">📋 报名条件：高中毕业/同等学历，部分学校无需托福</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 海外竞赛</h3>
+            <div class="item-card">
+              <h4>AMC/AIME（美国数学竞赛）</h4>
+              <div class="item-highlight">💡 AMC成绩全球大学认可，AIME高分可显著提升申请竞争力</div>
+              <div class="item-desc">全球最具影响力的数学竞赛之一，AMC 10/12成绩优异者晋级AIME</div>
+              <div class="item-requirement">📋 无学籍要求，个人可在官网注册</div>
+              <div class="item-url"><a href="https://www.maa.org/math-competitions" target="_blank" rel="noopener">访问链接 ↗</a></div>
+            </div>
+            <div class="item-card">
+              <h4>USACO（美国计算机奥林匹克）</h4>
+              <div class="item-highlight">💡 Platinum级别在申请顶尖CS项目时极具说服力</div>
+              <div class="item-desc">在线算法竞赛，分Bronze/Silver/Gold/Platinum四个级别</div>
+              <div class="item-requirement">📋 无学籍要求，个人在线参赛</div>
+              <div class="item-url"><a href="https://usaco.org/" target="_blank" rel="noopener">访问链接 ↗</a></div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 在线学位项目</h3>
+            <div class="item-card">
+              <h4>Minerva大学</h4>
+              <div class="item-highlight">💡 录取率低于2%，但创新教育模式全球领先</div>
+              <div class="item-desc">全球创新型大学，四年七城游学，在线研讨式教学</div>
+              <div class="item-requirement">📋 在线申请，不要求标准化考试成绩</div>
+              <div class="item-url"><a href="https://www.minerva.edu/" target="_blank" rel="noopener">访问链接 ↗</a></div>
+            </div>
+            <div class="item-card">
+              <h4>University of the People</h4>
+              <div class="item-highlight">💡 全球唯一免学费的认证在线大学，适合经济受限家庭</div>
+              <div class="item-desc">免学费在线大学，提供计算机科学、商学等学位</div>
+              <div class="item-requirement">📋 高中毕业即可申请，仅需少量考试费</div>
+              <div class="item-url"><a href="https://www.uopeople.edu/" target="_blank" rel="noopener">访问链接 ↗</a></div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>👤 真实案例</h3>
+            <div class="case-card">
+              <div class="case-name">社区大学转学案例</div>
+              <div class="case-age">年龄：20岁</div>
+              <div class="case-story">高考失利后申请加州社区大学，2年后GPA 3.8转入UC Davis计算机专业</div>
+              <div class="case-result">✅ 成功转学至UC Davis</div>
+            </div>
+          </div>
+
+          <div class="starter-guide">
+            <h3>🎯 入门指南</h3>
+            <ol>
+              <li>评估英语水平和经济预算</li>
+              <li>如预算有限，优先考虑社区大学2+2路径</li>
+              <li>如数学/编程能力强，先参加AMC/USACO积累成绩</li>
+              <li>在线学位适合自律性极强的学生</li>
+            </ol>
+          </div>
+
+          <div class="resource-links">
+            <h3>🔗 相关资源</h3>
+            <div class="resource-link-item">
+              <span class="link-icon">🌐</span>
+              <span class="link-name"><a href="https://www.maa.org/math-competitions" target="_blank" rel="noopener">AMC官网</a></span>
+              <span class="link-desc">美国数学竞赛报名与信息</span>
+            </div>
+            <div class="resource-link-item">
+              <span class="link-icon">🌐</span>
+              <span class="link-name"><a href="https://usaco.org/" target="_blank" rel="noopener">USACO官网</a></span>
+              <span class="link-desc">美国计算机奥林匹克</span>
+            </div>
+            <div class="resource-link-item">
+              <span class="link-icon">🌐</span>
+              <span class="link-name"><a href="https://www.commonapp.org/" target="_blank" rel="noopener">Common App</a></span>
+              <span class="link-desc">美国大学通用申请系统</span>
+            </div>
+          </div>
+
+          <div class="update-info">📅 最近更新：2026-07-08</div>
+        </div>
+
+        <!-- 创业路径 -->
+        <div class="tab-content" id="tab-startup">
+          <div class="path-overview">
+            <h3>🚀 创业路径</h3>
+            <p>创业是高风险高回报的路径。Cognition AI的案例令人振奋——三位IOI金牌创始人估值百亿美元，但数据告诉我们：追踪18000名奥赛天才25年，只有5%选择创业，几乎全部读了大学。创业可以作为目标，但大学教育仍是重要基石。</p>
+            <div class="path-meta">
+              <div class="path-meta-item"><div class="meta-label">适合谁</div><div class="meta-value">有技术能力、创新思维、抗压能力强的学生</div></div>
+              <div class="path-meta-item"><div class="meta-label">核心门槛</div><div class="meta-value">需要可验证的技术能力或产品，而非空想</div></div>
+              <div class="path-meta-item"><div class="meta-label">关键时间线</div><div class="meta-value">无固定时间线，但建议先积累技术/人脉再启动</div></div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📅 关键节点</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="time-label">阶段一</div>
+                <div class="time-event">技术积累期</div>
+                <div class="time-detail">在竞赛/项目中磨练技术，建立个人能力标签</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">阶段二</div>
+                <div class="time-event">项目验证期</div>
+                <div class="time-detail">开发MVP，获取真实用户反馈</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">阶段三</div>
+                <div class="time-event">资源对接期</div>
+                <div class="time-detail">参加创业大赛/孵化器，获取启动资金</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">持续</div>
+                <div class="time-event">成长迭代</div>
+                <div class="time-detail">持续产品迭代，拓展用户和市场</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 真实案例</h3>
+            <div class="item-card">
+              <h4>Cognition AI</h4>
+              <div class="item-highlight">💡 三位创始人均有顶级竞赛背景，但也都经历了大学教育阶段</div>
+              <div class="item-desc">三位IOI金牌创始人创立，估值百亿美元，打造AI编程助手Devin</div>
+              <div class="item-requirement">📋 IOI金牌级别的算法能力 + 工程实现能力</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 数据真相</h3>
+            <div class="item-card">
+              <h4>奥赛天才25年追踪研究</h4>
+              <div class="item-highlight">💡 创业不是竞赛的延伸，需要完全不同的能力组合</div>
+              <div class="item-desc">追踪18000名奥赛天才25年，只有5%选择创业，且几乎全部读了大学</div>
+              <div class="item-requirement">📋 理性认知：竞赛能力≠创业能力</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 青少年创业资源</h3>
+            <div class="item-card">
+              <h4>各类创业大赛与孵化器</h4>
+              <div class="item-highlight">💡 参与创业大赛本身是极好的学习经历，即使未获奖</div>
+              <div class="item-desc">面向青少年的创业大赛和早期孵化器，提供指导和小额启动资金</div>
+              <div class="item-requirement">📋 有可展示的项目原型或MVP</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>👤 真实案例</h3>
+            <div class="case-card">
+              <div class="case-name">Cognition AI创始团队</div>
+              <div class="case-age">年龄：25岁</div>
+              <div class="case-story">三位IOI金牌得主，先完成大学学业，后联合创立Cognition AI，估值百亿美元</div>
+              <div class="case-result">✅ 全球最炙手可热的AI创业公司之一</div>
+            </div>
+          </div>
+
+          <div class="starter-guide">
+            <h3>🎯 入门指南</h3>
+            <ol>
+              <li>先打磨核心技术能力（编程/算法/产品）</li>
+              <li>大学期间是创业试错的最佳时期</li>
+              <li>从小项目开始，获取真实用户比获奖更重要</li>
+              <li>理性看待成功案例——幸存者偏差严重</li>
+            </ol>
+          </div>
+
+          <div class="resource-links">
+            <h3>🔗 相关资源</h3>
+            <div class="resource-link-item">
+              <span class="link-icon">🌐</span>
+              <span class="link-name"><a href="https://www.ycombinator.com/" target="_blank" rel="noopener">Y Combinator</a></span>
+              <span class="link-desc">全球顶级创业孵化器</span>
+            </div>
+            <div class="resource-link-item">
+              <span class="link-icon">🌐</span>
+              <span class="link-name"><a href="https://www.miracleplus.com/" target="_blank" rel="noopener">奇绩创坛</a></span>
+              <span class="link-desc">中国版YC，陆奇博士创办</span>
+            </div>
+          </div>
+
+          <div class="update-info">📅 最近更新：2026-07-08</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>🧭 非标赛道</h3>
+        <p>面向创新型学校1-12年级学生家庭的综合教育导航平台。</p>
+      </div>
+      <div class="footer-links">
+        <h4>核心模块</h4>
+        <a href="paths.html">路径情报站</a>
+        <a href="training.html">全科训练场</a>
+        <a href="assessment.html">学科测评</a>
+      </div>
+      <div class="footer-links">
+        <h4>关于我们</h4>
+        <a href="#">关于非标赛道</a>
+        <a href="#">联系方式</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 非标赛道 · 仅供教育参考，不构成升学建议
+    </div>
+  </footer>
+
+  <!-- AI浮动按钮 -->
+  <button class="ai-fab" aria-label="AI教育顾问">🤖</button>
+  <div class="ai-fab-tooltip">
+    <strong>AI教育顾问</strong><br>
+    即将上线！届时可实时咨询教育路径问题。
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // 初始化Tab切换
+    initTabs('#paths-tab-nav', 'tab-');
+  </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+*.db
+reports/
+PROJECT_SPEC.md
+nonstandard-track-deploy.*

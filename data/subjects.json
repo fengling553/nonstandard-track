@@ -1,0 +1,103 @@
+{
+  "updatedAt": "2026-07-08",
+  "subjects": [
+    {
+      "id": "math",
+      "name": "数学",
+      "icon": "📐",
+      "description": "从基础运算到竞赛突破，五级进阶体系",
+      "available": true,
+      "levels": 5,
+      "resourceCount": 20
+    },
+    {
+      "id": "physics",
+      "name": "物理",
+      "icon": "⚛️",
+      "description": "从现象好奇到前沿拓展，五级进阶体系",
+      "available": true,
+      "levels": 5,
+      "resourceCount": 20
+    },
+    {
+      "id": "chemistry",
+      "name": "化学",
+      "icon": "🧪",
+      "description": "元素世界与化学反应的奥秘探索",
+      "available": false,
+      "comingSoon": "即将上线"
+    },
+    {
+      "id": "biology",
+      "name": "生物",
+      "icon": "🧬",
+      "description": "从微观细胞到宏观生态的生命科学",
+      "available": false,
+      "comingSoon": "即将上线"
+    },
+    {
+      "id": "informatics",
+      "name": "信息学",
+      "icon": "💻",
+      "description": "编程思维与算法竞赛的完整路径",
+      "available": false,
+      "comingSoon": "即将上线"
+    },
+    {
+      "id": "chinese",
+      "name": "语文",
+      "icon": "📖",
+      "description": "阅读写作与人文素养的深度培养",
+      "available": false,
+      "comingSoon": "即将上线"
+    },
+    {
+      "id": "english",
+      "name": "英语",
+      "icon": "🌍",
+      "description": "语言能力与国际视野的双向拓展",
+      "available": false,
+      "comingSoon": "即将上线"
+    },
+    {
+      "id": "history",
+      "name": "历史",
+      "icon": "🏛️",
+      "description": "以史为鉴，培养批判性思维",
+      "available": false,
+      "comingSoon": "即将上线"
+    },
+    {
+      "id": "geography",
+      "name": "地理",
+      "icon": "🗺️",
+      "description": "认识世界，理解人地关系",
+      "available": false,
+      "comingSoon": "即将上线"
+    },
+    {
+      "id": "politics",
+      "name": "政治",
+      "icon": "⚖️",
+      "description": "公民素养与社会认知的培养",
+      "available": false,
+      "comingSoon": "即将上线"
+    },
+    {
+      "id": "art",
+      "name": "美术",
+      "icon": "🎨",
+      "description": "审美能力与创意表达的训练",
+      "available": false,
+      "comingSoon": "即将上线"
+    },
+    {
+      "id": "pe",
+      "name": "体育",
+      "icon": "🏃",
+      "description": "体能基础与专项运动的发展",
+      "available": false,
+      "comingSoon": "即将上线"
+    }
+  ]
+}

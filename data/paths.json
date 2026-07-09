@@ -1,0 +1,416 @@
+{
+  "updatedAt": "2026-07-08",
+  "tabs": [
+    {
+      "id": "competition",
+      "name": "竞赛通道",
+      "icon": "🏆",
+      "overview": "学科竞赛是传统升学加速器，但并非所有竞赛都需要学籍。五大学科竞赛门槛高，而白名单科创竞赛、CTF和Kaggle等提供了更多可能性。",
+      "suitableFor": "有学科特长、逻辑思维强、能承受高强度训练的学生",
+      "coreThreshold": "五大学科竞赛需在读高中生学籍；白名单科创/CTF/Kaggle无学籍要求",
+      "timeline": "预赛3-5月 → 省级赛9-10月 → 国赛11-12月 → 国际赛次年7月",
+      "keyNodes": [
+        {"time": "3-5月", "event": "五大学科竞赛预赛报名", "detail": "需通过所在高中统一报名，社会考生无学籍无法参加"},
+        {"time": "9-10月", "event": "省级赛区选拔", "detail": "省级一等奖及以上可获得强基计划破格资格（政策收紧中）"},
+        {"time": "11-12月", "event": "全国决赛（CMO/CChO/CPhO/CBO/NOI）", "detail": "国家集训队成员可获保送资格"},
+        {"time": "全年", "event": "白名单科创竞赛", "detail": "教育部认证47项，部分允许个人/机构报名"},
+        {"time": "全年", "event": "CTF/Kaggle竞赛", "detail": "无需学籍，线上参与，以实际能力说话"}
+      ],
+      "sections": [
+        {
+          "title": "五大学科竞赛",
+          "items": [
+            {
+              "name": "数学奥林匹克（CMO）",
+              "description": "含金量最高的学科竞赛，国家级奖项可保送清北",
+              "requirement": "在读高中生，通过学校统一报名",
+              "highlight": "国家级金牌以上可保送，省级一等奖可破格入围强基计划",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "物理奥林匹克（CPhO）",
+              "description": "实验与理论并重，对物理直觉要求极高",
+              "requirement": "在读高中生，通过学校统一报名",
+              "highlight": "省级一等奖及以上可破格入围强基计划",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "化学奥林匹克（CChO）",
+              "description": "有机/无机/分析/物化四方向，实验操作占比大",
+              "requirement": "在读高中生，通过学校统一报名",
+              "highlight": "2026年北师大、华工已取消竞赛破格通道",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "生物学奥林匹克（CBO）",
+              "description": "从微观分子到宏观生态，知识面要求广",
+              "requirement": "在读高中生，通过学校统一报名",
+              "highlight": "省级赛区竞争相对较小，适合生物爱好者",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "信息学奥林匹克（NOI）",
+              "description": "算法与编程的巅峰对决，技术导向最强",
+              "requirement": "在读高中生，通过学校统一报名",
+              "highlight": "国家级奖项可保送清北，技术能力可直通大厂",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        },
+        {
+          "title": "白名单科创竞赛",
+          "items": [
+            {
+              "name": "教育部白名单科创竞赛（47项）",
+              "description": "教育部认证的面向中小学生的全国性竞赛活动，覆盖科技创新、机器人、人工智能等领域",
+              "requirement": "部分允许个人或机构报名，不强制要求学校组织",
+              "highlight": "无需学籍，部分赛事含金量高，可助力综合素质评价",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        },
+        {
+          "title": "无学籍竞赛",
+          "items": [
+            {
+              "name": "CTF网络安全竞赛",
+              "description": "攻防实战型竞赛，考察网络安全技术与漏洞挖掘能力",
+              "requirement": "无学籍要求，线上组队即可参赛",
+              "highlight": "能力导向，获奖可直接获得安全公司和大厂青睐",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "Kaggle数据科学竞赛",
+              "description": "全球最大数据科学竞赛平台，涵盖机器学习、数据分析等",
+              "requirement": "无学籍要求，个人注册即可参赛",
+              "highlight": "金牌/银牌在业界高度认可，可直接证明技术实力",
+              "url": "https://www.kaggle.com/competitions",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "name": "小明（化名）",
+          "age": 17,
+          "story": "信息学奥赛省一等奖，通过强基计划破格入围，最终录取某985计算机专业",
+          "result": "强基计划破格录取",
+          "updatedAt": "2026-07-08"
+        }
+      ],
+      "starterGuide": "1. 确认所在学校是否有竞赛教练和报名渠道\n2. 如无学籍，优先考虑白名单科创竞赛和CTF/Kaggle\n3. 从省赛级别的难度开始训练，逐步提升\n4. 关注每年3-5月的预赛报名时间窗口",
+      "resources": [
+        {"name": "自主选拔在线", "url": "https://www.zizhuan.net/", "description": "竞赛政策与报名信息汇总"},
+        {"name": "Art of Problem Solving", "url": "https://artofproblemsolving.com/", "description": "数学竞赛社区与在线课程"},
+        {"name": "Kaggle", "url": "https://www.kaggle.com/", "description": "数据科学竞赛平台"}
+      ]
+    },
+    {
+      "id": "corporate",
+      "name": "大厂直招",
+      "icon": "🏢",
+      "overview": "头部科技企业正在开辟人才选拔新通道，不看高考分数、不要求大学学历，直接以能力评估录取并提供顶级培养资源。但需注意：所有大厂青少年培养项目都不排斥、不替代大学教育。",
+      "suitableFor": "技术能力突出、有自驱力、能独立完成项目的学生",
+      "coreThreshold": "技术能力评估为主，部分项目有年龄限制，不要求学籍",
+      "timeline": "各项目招募周期不同，多为每年1-2次集中招募",
+      "keyNodes": [
+        {"time": "每年3月", "event": "吉利跨时代跃迁计划招募", "detail": "面向高中毕业生，CEO+首席科学家+AI专家三导师"},
+        {"time": "每年夏季", "event": "腾讯青科实训营", "detail": "13-18岁，全国200人报名录10人，录取率5%"},
+        {"time": "全年滚动", "event": "字节Top Seed", "detail": "每年30名16-18岁全职预备研究员"},
+        {"time": "长期合作", "event": "华为天才少年（中学延伸）", "detail": "提前联合培养模式，主力仍是博士"}
+      ],
+      "sections": [
+        {
+          "title": "重点企业项目",
+          "items": [
+            {
+              "name": "吉利「跨时代跃迁人才培养计划」",
+              "description": "面向高中毕业生的顶尖培养计划，不看高考分数，CEO+首席科学家+AI专家三导师制",
+              "requirement": "高中毕业生，通过能力评估选拔",
+              "highlight": "年薪30-50万，2026年3月启动，三导师制培养",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "腾讯「青科实训营」",
+              "description": "面向13-18岁中学生的科技创新训练营，录取率极低",
+              "requirement": "13-18岁在校中学生",
+              "highlight": "全国200人报名录10人，录取率5%，腾讯专家一对一指导",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "字节跳动「Top Seed」",
+              "description": "面向16-18岁超尖子生的全职预备研究员计划",
+              "requirement": "16-18岁，技术能力突出",
+              "highlight": "每年30名，全职预备研究员，接触前沿AI研究",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "华为「天才少年」（中学延伸）",
+              "description": "华为顶级人才计划的中学延伸版，采用提前联合培养模式",
+              "requirement": "当前主力仍面向博士，中学版为提前联合培养",
+              "highlight": "提前联合培养，非独立项目，需与学校教育并行",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "name": "吉利计划学员",
+          "age": 18,
+          "story": "高中毕业后直接加入吉利跃迁计划，获得三导师指导，年薪30万起",
+          "result": "在读学员，技术能力快速提升",
+          "updatedAt": "2026-07-08"
+        }
+      ],
+      "starterGuide": "1. 关注各大厂官方公众号获取招募信息\n2. 提前准备个人技术项目作品集\n3. 练习技术面试和表达能力\n4. 重要：这些项目不替代大学教育，可考虑并行推进",
+      "resources": [
+        {"name": "吉利汽车官方", "url": "", "description": "跃迁人才培养计划信息发布"},
+        {"name": "腾讯青少年科技", "url": "", "description": "青科实训营招募信息"},
+        {"name": "字节跳动招聘", "url": "", "description": "Top Seed计划信息"}
+      ]
+    },
+    {
+      "id": "policy",
+      "name": "政策追踪",
+      "icon": "📋",
+      "overview": "强基计划、保送政策、单科破格……升学政策每年都在调整。2026年最大的变化是竞赛破格通道大幅收紧，但高考单科成绩破格入围成为新趋势。",
+      "suitableFor": "所有关注升学政策变化的家庭",
+      "coreThreshold": "需要持续关注政策更新，提前规划",
+      "timeline": "4月强基计划简章发布 → 5月报名 → 6月高考 → 7月校测 → 8月录取",
+      "keyNodes": [
+        {"time": "4月", "event": "强基计划招生简章发布", "detail": "各高校破格条件差异大，需逐校研究"},
+        {"time": "5月", "event": "强基计划报名", "detail": "限报1所高校，破格资格需提前确认"},
+        {"time": "6月", "event": "高考", "detail": "强基综合成绩=高考85%+校测15%"},
+        {"time": "7月", "event": "强基校测", "detail": "笔试+面试，部分学校有体测"},
+        {"time": "8月", "event": "录取公示", "detail": "强基录取在提前批之前，不影响常规志愿"}
+      ],
+      "sections": [
+        {
+          "title": "强基计划2026最新变化",
+          "items": [
+            {
+              "name": "竞赛破格通道大幅收紧",
+              "description": "北师大、华南理工取消竞赛破格通道；西安交大、同济仅金牌破格",
+              "requirement": "省级一等奖不再普遍获得破格资格",
+              "highlight": "2026年多所985高校收紧竞赛破格，省级一等奖含金量下降",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "高考单科成绩破格入围",
+              "description": "数学145+可破格入围强基校测（华南理工、中山大学等）",
+              "requirement": "高考数学145分以上（满分150分制）",
+              "highlight": "新趋势！单科高分可弥补总分不足，对数学特长生利好",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "综合成绩计算方式",
+              "description": "强基综合成绩=高考85%+校测15%",
+              "requirement": "高考成绩仍是绝对主体",
+              "highlight": "校测15%的杠杆效应大，校测满分可弥补高考约10-15分差距",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        },
+        {
+          "title": "保送政策",
+          "items": [
+            {
+              "name": "五大学科竞赛国家集训队保送",
+              "description": "进入国家集训队（约260人/年）可直接保送清华北大",
+              "requirement": "五大学科竞赛全国前50-60名",
+              "highlight": "含金量最高但竞争极激烈，每年仅约260人",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "name": "某考生",
+          "age": 18,
+          "story": "高考数学148分，总分未达985线，但凭数学单科破格入围中山大学强基校测，最终录取",
+          "result": "强基计划录取中山大学",
+          "updatedAt": "2026-07-08"
+        }
+      ],
+      "starterGuide": "1. 关注4月各高校强基计划简章，逐校核对破格条件\n2. 如有竞赛奖项，确认是否仍满足目标院校破格要求\n3. 数学特长生关注「单科破格」新通道\n4. 校测准备不可忽视，15%权重杠杆效应大",
+      "resources": [
+        {"name": "阳光高考信息平台", "url": "https://gaokao.chsi.com.cn/", "description": "强基计划官方报名入口"},
+        {"name": "自主选拔在线", "url": "https://www.zizhuan.net/", "description": "强基政策解读与院校对比"}
+      ]
+    },
+    {
+      "id": "overseas",
+      "name": "海外替代",
+      "icon": "🌏",
+      "overview": "对于不走国内高考赛道的学生，海外路径提供了多样化选择：社区大学转学、海外竞赛、在线学位项目等，成本和门槛各不相同。",
+      "suitableFor": "不走国内高考路线、家庭有一定经济基础、或追求国际化学术发展的学生",
+      "coreThreshold": "英语能力+经济基础+自我管理能力，不同路径门槛差异大",
+      "timeline": "因路径不同而异，社区大学全年可申请，竞赛按赛季，在线学位滚动招生",
+      "keyNodes": [
+        {"time": "全年", "event": "社区大学申请", "detail": "无需高考/托福，高中毕业即可申请，2年后转学四年制大学"},
+        {"time": "按赛季", "event": "海外竞赛（AMC/AIME/USACO等）", "detail": "不要求学籍，任何人均可注册参赛"},
+        {"time": "滚动招生", "event": "在线学位项目", "detail": "如Minerva大学、University of the People等"}
+      ],
+      "sections": [
+        {
+          "title": "社区大学转学路径",
+          "items": [
+            {
+              "name": "美国社区大学转学（2+2）",
+              "description": "先入读社区大学（低门槛、低学费），2年后转学至四年制大学，获得与直录生相同的学位",
+              "requirement": "高中毕业/同等学历，部分学校无需托福",
+              "highlight": "性价比最高的海外留学路径，转学至UC Berkeley等名校比例不低",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        },
+        {
+          "title": "海外竞赛",
+          "items": [
+            {
+              "name": "AMC/AIME（美国数学竞赛）",
+              "description": "全球最具影响力的数学竞赛之一，AMC 10/12成绩优异者晋级AIME",
+              "requirement": "无学籍要求，个人可在官网注册",
+              "highlight": "AMC成绩全球大学认可，AIME高分可显著提升申请竞争力",
+              "url": "https://www.maa.org/math-competitions",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "USACO（美国计算机奥林匹克）",
+              "description": "在线算法竞赛，分Bronze/Silver/Gold/Platinum四个级别",
+              "requirement": "无学籍要求，个人在线参赛",
+              "highlight": "Platinum级别在申请顶尖CS项目时极具说服力",
+              "url": "https://usaco.org/",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        },
+        {
+          "title": "在线学位项目",
+          "items": [
+            {
+              "name": "Minerva大学",
+              "description": "全球创新型大学，四年七城游学，在线研讨式教学",
+              "requirement": "在线申请，不要求标准化考试成绩",
+              "highlight": "录取率低于2%，但创新教育模式全球领先",
+              "url": "https://www.minerva.edu/",
+              "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "University of the People",
+              "description": "免学费在线大学，提供计算机科学、商学等学位",
+              "requirement": "高中毕业即可申请，仅需少量考试费",
+              "highlight": "全球唯一免学费的认证在线大学，适合经济受限家庭",
+              "url": "https://www.uopeople.edu/",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "name": "社区大学转学案例",
+          "age": 20,
+          "story": "高考失利后申请加州社区大学，2年后GPA 3.8转入UC Davis计算机专业",
+          "result": "成功转学至UC Davis",
+          "updatedAt": "2026-07-08"
+        }
+      ],
+      "starterGuide": "1. 评估英语水平和经济预算\n2. 如预算有限，优先考虑社区大学2+2路径\n3. 如数学/编程能力强，先参加AMC/USACO积累成绩\n4. 在线学位适合自律性极强的学生",
+      "resources": [
+        {"name": "AMC官网", "url": "https://www.maa.org/math-competitions", "description": "美国数学竞赛报名与信息"},
+        {"name": "USACO官网", "url": "https://usaco.org/", "description": "美国计算机奥林匹克"},
+        {"name": "Common App", "url": "https://www.commonapp.org/", "description": "美国大学通用申请系统"}
+      ]
+    },
+    {
+      "id": "startup",
+      "name": "创业路径",
+      "icon": "🚀",
+      "overview": "创业是高风险高回报的路径。Cognition AI的案例令人振奋——三位IOI金牌创始人估值百亿美元，但数据告诉我们：追踪18000名奥赛天才25年，只有5%选择创业，几乎全部读了大学。创业可以作为目标，但大学教育仍是重要基石。",
+      "suitableFor": "有技术能力、创新思维、抗压能力强的学生",
+      "coreThreshold": "需要可验证的技术能力或产品，而非空想",
+      "timeline": "无固定时间线，但建议先积累技术/人脉再启动",
+      "keyNodes": [
+        {"time": "阶段一", "event": "技术积累期", "detail": "在竞赛/项目中磨练技术，建立个人能力标签"},
+        {"time": "阶段二", "event": "项目验证期", "detail": "开发MVP，获取真实用户反馈"},
+        {"time": "阶段三", "event": "资源对接期", "detail": "参加创业大赛/孵化器，获取启动资金"},
+        {"time": "持续", "event": "成长迭代", "detail": "持续产品迭代，拓展用户和市场"}
+      ],
+      "sections": [
+        {
+          "title": "真实案例",
+          "items": [
+            {
+              "name": "Cognition AI",
+              "description": "三位IOI金牌创始人创立，估值百亿美元，打造AI编程助手Devin",
+              "requirement": "IOI金牌级别的算法能力 + 工程实现能力",
+              "highlight": "三位创始人均有顶级竞赛背景，但也都经历了大学教育阶段",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        },
+        {
+          "title": "数据真相",
+          "items": [
+            {
+              "name": "奥赛天才25年追踪研究",
+              "description": "追踪18000名奥赛天才25年，只有5%选择创业，且几乎全部读了大学",
+              "requirement": "理性认知：竞赛能力≠创业能力",
+              "highlight": "创业不是竞赛的延伸，需要完全不同的能力组合",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        },
+        {
+          "title": "青少年创业资源",
+          "items": [
+            {
+              "name": "各类创业大赛与孵化器",
+              "description": "面向青少年的创业大赛和早期孵化器，提供指导和小额启动资金",
+              "requirement": "有可展示的项目原型或MVP",
+              "highlight": "参与创业大赛本身是极好的学习经历，即使未获奖",
+              "url": "",
+              "updatedAt": "2026-07-08"
+            }
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "name": "Cognition AI创始团队",
+          "age": 25,
+          "story": "三位IOI金牌得主，先完成大学学业，后联合创立Cognition AI，估值百亿美元",
+          "result": "全球最炙手可热的AI创业公司之一",
+          "updatedAt": "2026-07-08"
+        }
+      ],
+      "starterGuide": "1. 先打磨核心技术能力（编程/算法/产品）\n2. 大学期间是创业试错的最佳时期\n3. 从小项目开始，获取真实用户比获奖更重要\n4. 理性看待成功案例——幸存者偏差严重",
+      "resources": [
+        {"name": "Y Combinator", "url": "https://www.ycombinator.com/", "description": "全球顶级创业孵化器"},
+        {"name": "奇绩创坛", "url": "https://www.miracleplus.com/", "description": "中国版YC，陆奇博士创办"}
+      ]
+    }
+  ]
+}
