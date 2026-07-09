@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>职高赛道 - 非标赛道</title>
+  <meta name="description" content="职业教育不是退路，是另一条升学的路。升学路径、深圳职高学校、报考指南">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">🧭</span>
+        <span>非标赛道</span>
+      </a>
+      <ul class="navbar-links">
+        <li><a href="paths.html">路径情报站</a></li>
+        <li><a href="training.html">全科训练场</a></li>
+        <li><a href="vocational.html" class="active">职高赛道</a></li>
+        <li><a href="assessment.html">学科测评</a></li>
+        <li><a href="parent-growth.html">家长认知提升</a></li>
+        <li><a href="projects.html">项目化学习</a></li>
+        <li><a href="ai-tools.html">AI工具箱</a></li>
+        <li><a href="assessment.html" class="btn-primary" style="padding:8px 16px;font-size:0.85rem;">开始测评</a></li>
+      </ul>
+      <button class="navbar-toggle" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 移动端菜单 -->
+  <div class="mobile-menu">
+    <a href="paths.html">🗺️ 路径情报站</a>
+    <a href="training.html">💪 全科训练场</a>
+    <a href="vocational.html">🏭 职高赛道</a>
+    <a href="assessment.html">🎯 学科测评</a>
+    <a href="parent-growth.html">🧠 家长认知提升</a>
+    <a href="projects.html">🚀 项目化学习</a>
+    <a href="ai-tools.html">🤖 AI工具箱</a>
+    <a href="assessment.html" style="color:var(--color-green);font-weight:600;">开始测评</a>
+  </div>
+
+  <!-- 页面内容 -->
+  <main class="page-content">
+    <div class="container">
+      <!-- 面包屑 -->
+      <div class="breadcrumb">
+        <a href="../index.html">首页</a>
+        <span class="separator">›</span>
+        <span class="current">职高赛道</span>
+      </div>
+
+      <!-- 页面标题 -->
+      <div class="page-title">
+        <h1>🏭 职高赛道</h1>
+        <p>职业教育不是退路，是另一条升学的路</p>
+      </div>
+
+      <!-- Tab导航 -->
+      <div class="tab-nav" id="vocational-tab-nav">
+        <button class="tab-btn active" data-tab="pathways">🛤️ 升学路径</button>
+        <button class="tab-btn" data-tab="schools">🏫 深圳职高学校</button>
+        <button class="tab-btn" data-tab="guide">📋 报考指南</button>
+      </div>
+
+      <!-- Tab内容 -->
+      <div id="vocational-content">
+
+        <!-- Tab1: 升学路径 -->
+        <div class="tab-content active" id="tab-pathways">
+          <div class="path-overview">
+            <h3>🛤️ 升学路径</h3>
+            <p>职高不是终点，而是另一条升学通道的起点。三条主流升学路线各有特点，选择适合自己的才是最好的。</p>
+          </div>
+
+          <div class="section-group">
+            <h3>📌 三条升学路线对比</h3>
+
+            <div class="item-card">
+              <h4>3+2 三二分段</h4>
+              <div class="item-highlight">💡 通过率95%+，是最稳妥的升学路径</div>
+              <div class="item-desc">中职3年+高职2年，第三年需参加转段考核（通过率95%+），毕业拿全日制大专文凭</div>
+              <div class="item-detail">
+                <ul>
+                  <li>中职阶段3年，高职阶段2年</li>
+                  <li>第三年需参加转段考核，通过率95%以上</li>
+                  <li>毕业获得全日制大专文凭，与普通高考录取的大专文凭完全一致</li>
+                  <li>合作院校多为省级以上示范性高职院校</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <h4>五年一贯制</h4>
+              <div class="item-highlight">⚠️ 2026广东仅12所院校获批，深职大未获批</div>
+              <div class="item-desc">5年全程在同一高职院校就读，无转段淘汰</div>
+              <div class="item-detail">
+                <ul>
+                  <li>5年全程在同一高职院校就读</li>
+                  <li>无需转段考核，无淘汰压力</li>
+                  <li>2026年广东省仅12所高职院校获批</li>
+                  <li>深圳职业技术大学（深职大）未获批五年一贯制</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <h4>3+证书 职教高考</h4>
+              <div class="item-highlight">💡 文化课难度低，竞争范围窄，是职高生的专属高考</div>
+              <div class="item-desc">中职3年→参加全省统一职教高考→可报大专和本科，文化课难度仅初中+高一水平，竞争人群仅限中职生</div>
+              <div class="item-detail">
+                <ul>
+                  <li>中职3年后参加全省统一职教高考</li>
+                  <li>可报考大专和本科院校</li>
+                  <li>文化课考试难度仅初中+高一水平</li>
+                  <li>竞争人群仅限中职生，不与普高生竞争</li>
+                  <li>需要获得相应职业技能证书</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>🔥 中本贯通 3+4 专项</h3>
+            <div class="item-card">
+              <h4>中本贯通 3+4</h4>
+              <div class="item-highlight">💡 录取门槛高、名额极少，中考分数接近普高线可关注</div>
+              <div class="item-desc">3年中职→4年职业本科，毕业拿全日制本科文凭</div>
+              <div class="item-requirement">📋 中本贯通录取分数线通常接近当地普高线，适合分数在普高线边缘徘徊的学生重点关注</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>⭐ 深职大三二分段亮点</h3>
+            <div class="item-card" style="border-left:4px solid var(--color-orange);">
+              <h4>深职大 × 华南师范大学（211）</h4>
+              <div class="item-highlight">💡 职高生拿211大学全日制本科证，性价比极高</div>
+              <div class="item-desc">与华南师范大学（211）合作，转段通过率97%+，毕业拿华师全日制本科证</div>
+            </div>
+          </div>
+
+          <div class="update-info">📅 最近更新：2026-07-09</div>
+        </div>
+
+        <!-- Tab2: 深圳职高学校 -->
+        <div class="tab-content" id="tab-schools">
+          <div class="path-overview">
+            <h3>🏫 深圳职高学校</h3>
+            <p>深圳公办重点职高5所+民办职校3所，每所学校各有特色和优势专业。选择时务必关注转段率和升学率。</p>
+          </div>
+
+          <div class="section-group">
+            <h3>🏛️ 公办重点校（5所）</h3>
+
+            <div class="item-card">
+              <div class="card-header">
+                <h4>深圳市职业技术学校（深圳一职）</h4>
+                <span class="card-price" style="background:var(--color-green);color:#fff;padding:2px 10px;border-radius:4px;font-size:0.8rem;">公办</span>
+              </div>
+              <div class="item-highlight">💡 深圳职高的标杆学校，本科贯通培养试点校</div>
+              <div class="item-desc">市直属 · 福田区 · 国家中职改革示范校</div>
+              <div class="item-detail">
+                <ul>
+                  <li><strong>核心专业：</strong>电子与信息技术 / 计算机应用 / 财经商贸</li>
+                  <li><strong>特色：</strong>中职-本科贯通培养试点</li>
+                  <li><strong>转段率：</strong>96%+</li>
+                  <li><strong>联系电话：</strong>0755-83221666</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="card-header">
+                <h4>深圳市第二职业技术学校</h4>
+                <span class="card-price" style="background:var(--color-green);color:#fff;padding:2px 10px;border-radius:4px;font-size:0.8rem;">公办</span>
+              </div>
+              <div class="item-highlight">💡 新能源汽车方向与比亚迪特斯拉深度合作</div>
+              <div class="item-desc">市直属 · 光明区 · 产教融合标杆</div>
+              <div class="item-detail">
+                <ul>
+                  <li><strong>核心专业：</strong>新能源汽车 / 智能网联汽车</li>
+                  <li><strong>特色：</strong>与比亚迪、特斯拉深度合作，产教融合标杆</li>
+                  <li><strong>转段率：</strong>95%+</li>
+                  <li><strong>联系电话：</strong>0755-27108888</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="card-header">
+                <h4>深圳市宝安职业技术学校</h4>
+                <span class="card-price" style="background:var(--color-green);color:#fff;padding:2px 10px;border-radius:4px;font-size:0.8rem;">公办</span>
+              </div>
+              <div class="item-highlight">💡 宝安区龙头职校，现代学徒制特色突出</div>
+              <div class="item-desc">宝安区 · 区属 · 现代学徒制深入</div>
+              <div class="item-detail">
+                <ul>
+                  <li><strong>核心专业：</strong>数控技术 / 机电技术 / 现代物流</li>
+                  <li><strong>特色：</strong>现代学徒制深入，与深职大、深信院三二分段合作</li>
+                  <li><strong>转段率：</strong>94%+</li>
+                  <li><strong>联系电话：</strong>0755-27590338</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="card-header">
+                <h4>深圳市华强职业技术学校</h4>
+                <span class="card-price" style="background:var(--color-green);color:#fff;padding:2px 10px;border-radius:4px;font-size:0.8rem;">公办</span>
+              </div>
+              <div class="item-highlight">💡 商科和金融方向转段率深圳最高</div>
+              <div class="item-desc">福田区 · 区属 · 商科类深圳领先</div>
+              <div class="item-detail">
+                <ul>
+                  <li><strong>核心专业：</strong>金融事务 / 电子商务 / 动漫设计</li>
+                  <li><strong>特色：</strong>三二分段转段率98%+，商科类专业深圳领先</li>
+                  <li><strong>转段率：</strong>98%+</li>
+                  <li><strong>联系电话：</strong>0755-83991818</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="card-header">
+                <h4>深圳市龙岗职业技术学校</h4>
+                <span class="card-price" style="background:var(--color-green);color:#fff;padding:2px 10px;border-radius:4px;font-size:0.8rem;">公办</span>
+              </div>
+              <div class="item-highlight">💡 智能制造与新能源方向与比亚迪大疆深度合作</div>
+              <div class="item-desc">龙岗区 · 区属 · 智能制造实力强</div>
+              <div class="item-detail">
+                <ul>
+                  <li><strong>核心专业：</strong>智能制造 / 工业机器人 / 新能源汽车</li>
+                  <li><strong>特色：</strong>与比亚迪、大疆深度合作，智能制造方向实力强</li>
+                  <li><strong>转段率：</strong>93%+</li>
+                  <li><strong>联系电话：</strong>0755-28993366</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>🏢 民办校（3所）</h3>
+
+            <div class="item-card">
+              <div class="card-header">
+                <h4>深圳市中嘉职业技术学校</h4>
+                <span class="card-price" style="background:var(--color-orange);color:#fff;padding:2px 10px;border-radius:4px;font-size:0.8rem;">民办</span>
+              </div>
+              <div class="item-highlight">💡 民办职校中升学率最高的学校之一</div>
+              <div class="item-desc">宝安区 · 升学+就业+国际化三维体系</div>
+              <div class="item-detail">
+                <ul>
+                  <li><strong>核心专业：</strong>计算机 / 电子商务 / 会计</li>
+                  <li><strong>特色：</strong>3+证书高考上线率99%，升学+就业+国际化三维体系</li>
+                  <li><strong>3+证书上线率：</strong>99%</li>
+                  <li><strong>联系电话：</strong>0755-27446688</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="card-header">
+                <h4>深圳市奋达职业技术学校</h4>
+                <span class="card-price" style="background:var(--color-orange);color:#fff;padding:2px 10px;border-radius:4px;font-size:0.8rem;">民办</span>
+              </div>
+              <div class="item-highlight">💡 全封闭管理模式，适合需要强约束的学生</div>
+              <div class="item-desc">宝安区 · 全封闭准军事化管理</div>
+              <div class="item-detail">
+                <ul>
+                  <li><strong>核心专业：</strong>艺术教育 / 智能制造</li>
+                  <li><strong>特色：</strong>全封闭准军事化管理，艺术教育/智能制造强项</li>
+                  <li><strong>升学率：</strong>90%+</li>
+                  <li><strong>联系电话：</strong>0755-27348888</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="card-header">
+                <h4>深圳市科迪技工学校</h4>
+                <span class="card-price" style="background:var(--color-orange);color:#fff;padding:2px 10px;border-radius:4px;font-size:0.8rem;">民办</span>
+              </div>
+              <div class="item-highlight">💡 双师型教师占比高，实操能力强</div>
+              <div class="item-desc">龙岗区 · 双师型教师特色</div>
+              <div class="item-detail">
+                <ul>
+                  <li><strong>核心专业：</strong>电子信息 / 机电一体化</li>
+                  <li><strong>特色：</strong>双师型教师特色，理论与实操并重</li>
+                  <li><strong>升学率：</strong>88%+</li>
+                  <li><strong>联系电话：</strong>0755-89916666</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="update-info">📅 最近更新：2026-07-09</div>
+        </div>
+
+        <!-- Tab3: 报考指南 -->
+        <div class="tab-content" id="tab-guide">
+          <div class="path-overview">
+            <h3>📋 报考指南</h3>
+            <p>职高报考有明确的条件和时间窗口，提前了解、提前准备，才能抓住机会。以下是关键的报考信息和避坑指南。</p>
+          </div>
+
+          <div class="section-group">
+            <h3>📝 报考条件</h3>
+            <div class="item-card">
+              <h4>深圳户籍考生</h4>
+              <div class="item-desc">可直接报考公办中职学校</div>
+            </div>
+            <div class="item-card">
+              <h4>非深圳户籍考生</h4>
+              <div class="item-highlight">⚠️ 需满足三个条件</div>
+              <div class="item-detail">
+                <ul>
+                  <li>父母一方持有有效深圳居住证</li>
+                  <li>在深连续缴纳社保3年</li>
+                  <li>具有深圳初中学籍</li>
+                </ul>
+              </div>
+              <div class="item-requirement">📋 公办中职非户籍计划约25%，竞争相对激烈</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>📅 时间节点</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="time-label">中考后</div>
+                <div class="time-event">全市统一补录</div>
+                <div class="time-detail">窗口期仅1-3天，需提前锁定目标学校</div>
+              </div>
+            </div>
+            <div class="item-card" style="margin-top:16px;">
+              <div class="item-highlight">💡 建议中考成绩公布后立即联系目标学校招生办，了解补录名额和流程</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>🎯 选校四步法</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="time-label">第一步</div>
+                <div class="time-event">看办学资质</div>
+                <div class="time-detail">确认学校是否为教育部门批准设立的正规中职学校，可在市教育局官网查询</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">第二步</div>
+                <div class="time-event">看转段率/升学率</div>
+                <div class="time-detail">转段率和升学率是衡量学校教学质量的核心指标，建议选择转段率90%以上的学校</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">第三步</div>
+                <div class="time-event">实地考察2-3所</div>
+                <div class="time-detail">亲自到校了解教学环境、实训设备、师资力量，与在校生和家长交流</div>
+              </div>
+              <div class="timeline-item">
+                <div class="time-label">第四步</div>
+                <div class="time-event">核验学籍文凭政策</div>
+                <div class="time-detail">确认学籍注册方式、毕业文凭类型（全日制/成人/函授），避免被误导</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>🚫 避坑指南</h3>
+            <div class="item-card" style="border-left:4px solid #E53E3E;">
+              <h4>⚠️ 承诺"不用考试直接拿全日制本科"全部违规骗局</h4>
+              <div class="item-desc">全日制本科必须通过高考或职教高考等正规途径获取，任何承诺免考直本的均为虚假宣传</div>
+            </div>
+            <div class="item-card" style="border-left:4px solid #E53E3E;">
+              <h4>⚠️ 深职大未获批五年一贯制，声称可报的均为虚假宣传</h4>
+              <div class="item-desc">2026年深职大仅获批三二分段和职教高考招生，五年一贯制名额为零</div>
+            </div>
+          </div>
+
+          <div class="section-group">
+            <h3>💼 职教毕业生就业真相</h3>
+            <div class="item-card" style="border-left:4px solid var(--color-green);">
+              <h4>2026深圳人社局数据</h4>
+              <div class="item-detail">
+                <ul>
+                  <li><strong>高就业专业：</strong>智能制造 / 新能源 / 计算机 / 护理类职教大专就业率<strong>96%+</strong></li>
+                  <li><strong>起薪：</strong>5000+</li>
+                  <li><strong>发展前景：</strong>积累2-3年后薪资涨幅明显，技术类岗位晋升通道清晰</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="update-info">📅 最近更新：2026-07-09</div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>🧭 非标赛道</h3>
+        <p>面向创新型学校1-12年级学生家庭的综合教育导航平台。</p>
+      </div>
+      <div class="footer-links">
+        <h4>核心模块</h4>
+        <a href="paths.html">路径情报站</a>
+        <a href="training.html">全科训练场</a>
+        <a href="vocational.html">职高赛道</a>
+        <a href="assessment.html">学科测评</a>
+        <a href="parent-growth.html">家长认知提升</a>
+      </div>
+      <div class="footer-links">
+        <h4>更多模块</h4>
+        <a href="projects.html">项目化学习</a>
+        <a href="ai-tools.html">AI工具箱</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 非标赛道 · 仅供教育参考，不构成升学建议
+    </div>
+  </footer>
+
+  <!-- AI浮动按钮 -->
+  <button class="ai-fab" aria-label="AI教育顾问">🤖</button>
+  <div class="ai-fab-tooltip">
+    <strong>AI教育顾问</strong><br>
+    即将上线！届时可实时咨询教育路径问题。
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // 初始化Tab切换
+    initTabs('#vocational-tab-nav', 'tab-');
+  </script>
+</body>
+</html>
