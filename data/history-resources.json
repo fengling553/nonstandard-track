@@ -1,0 +1,650 @@
+{
+  "updatedAt": "2026-07-09",
+  "subject": "历史",
+  "subjectId": "history",
+  "intro": "从故事到思辨，五级体系带你理解历史的脉络与逻辑",
+  "levels": [
+    {
+      "id": "L1",
+      "name": "故事入门",
+      "description": "小学低年级，通过故事建立对历史的兴趣",
+      "ageRange": "6-9岁",
+      "resources": [
+        {
+          "title": "《写给儿童的中国历史》",
+          "type": "book",
+          "level": "L1",
+          "subject": "history",
+          "tags": [
+            "故事化",
+            "系统"
+          ],
+          "description": "陈卫平著，中国儿童历史启蒙首选",
+          "detail": "14册覆盖上下五千年",
+          "price": "约280元/套",
+          "url": "https://book.douban.com/subject/25873978/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《写给儿童的世界历史》",
+          "type": "book",
+          "level": "L1",
+          "subject": "history",
+          "tags": [
+            "故事化",
+            "系统"
+          ],
+          "description": "陈卫平著，世界历史启蒙配套",
+          "detail": "16册，全球视野",
+          "price": "约320元/套",
+          "url": "https://book.douban.com/subject/25873979/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳博物馆历史活动",
+          "type": "local",
+          "level": "L1",
+          "subject": "history",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳博物馆定期历史教育活动",
+          "detail": "在真实文物中感受历史",
+          "price": "免费",
+          "url": "https://www.shenzhenmuseum.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳南山博物馆",
+          "type": "local",
+          "level": "L1",
+          "subject": "history",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "南山博物馆特色展览和教育活动",
+          "detail": "经常有高质量特展",
+          "price": "免费",
+          "url": "https://www.nanshanmuseum.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Crash Course Kids世界史",
+          "type": "online",
+          "level": "L1",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "动画",
+            "英文"
+          ],
+          "description": "Crash Course儿童版世界历史",
+          "detail": "动画讲解，适合小学",
+          "price": "免费",
+          "url": "https://www.youtube.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "混知历史漫画",
+          "type": "online",
+          "level": "L1",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "漫画",
+            "中文"
+          ],
+          "description": "用漫画讲历史，轻松入门",
+          "detail": "微信公众号+图书",
+          "price": "基础免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "如果历史是一群喵",
+          "type": "course",
+          "level": "L1",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "漫画",
+            "动画"
+          ],
+          "description": "用猫咪角色讲中国历史",
+          "detail": "B站动画+漫画书",
+          "price": "免费（B站）",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "脉络建立",
+      "description": "小学高年级至初中，建立历史的时间线框架",
+      "ageRange": "9-13岁",
+      "resources": [
+        {
+          "title": "《半小时漫画中国史》",
+          "type": "book",
+          "level": "L2",
+          "subject": "history",
+          "tags": [
+            "漫画",
+            "入门"
+          ],
+          "description": "用漫画理清中国历史大脉络",
+          "detail": "五千年浓缩为关键节点",
+          "price": "约35元/册",
+          "url": "https://book.douban.com/subject/26850125/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《全球通史》（斯塔夫里阿诺斯）",
+          "type": "book",
+          "level": "L2",
+          "subject": "history",
+          "tags": [
+            "经典",
+            "全球视野"
+          ],
+          "description": "全球视角看人类文明发展",
+          "detail": "从史前到21世纪",
+          "price": "约60元",
+          "url": "https://book.douban.com/subject/1884584/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳博物馆常设展",
+          "type": "local",
+          "level": "L2",
+          "subject": "history",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳博物馆古代深圳/近代深圳常设展",
+          "detail": "了解深圳从渔村到特区的变迁",
+          "price": "免费",
+          "url": "https://www.shenzhenmuseum.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "大鹏所城历史研学",
+          "type": "local",
+          "level": "L2",
+          "subject": "history",
+          "tags": [
+            "线下",
+            "深圳",
+            "研学"
+          ],
+          "description": "深圳最重要的明清军事遗址",
+          "detail": "在真实历史场景中理解海防和贸易",
+          "price": "免费（遗址开放）",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Crash Course世界史",
+          "type": "online",
+          "level": "L2",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "John Green主讲的世界历史速成",
+          "detail": "42集，覆盖全球主要文明",
+          "price": "免费",
+          "url": "https://www.youtube.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "B站历史纪录片合集",
+          "type": "online",
+          "level": "L2",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "纪录片",
+            "中文"
+          ],
+          "description": "B站精选历史纪录片",
+          "detail": "从中国通史到世界文明",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "历史老师王金鑫",
+          "type": "course",
+          "level": "L2",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "系统",
+            "中文"
+          ],
+          "description": "B站知名历史教学UP主",
+          "detail": "初中历史系统讲解",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "深度理解",
+      "description": "高中水平，从记忆史实到理解历史逻辑",
+      "ageRange": "14-16岁",
+      "resources": [
+        {
+          "title": "《万历十五年》",
+          "type": "book",
+          "level": "L3",
+          "subject": "history",
+          "tags": [
+            "经典",
+            "深度"
+          ],
+          "description": "黄仁宇著，从一年看透明朝体制",
+          "detail": "大历史观的代表作",
+          "price": "约30元",
+          "url": "https://book.douban.com/subject/1884585/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《枪炮、病菌与钢铁》",
+          "type": "book",
+          "level": "L3",
+          "subject": "history",
+          "tags": [
+            "经典",
+            "思辨"
+          ],
+          "description": "理解文明差异的终极之问",
+          "detail": "地理决定论的代表作",
+          "price": "约50元",
+          "url": "https://book.douban.com/subject/1884586/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳改革开放展览馆",
+          "type": "local",
+          "level": "L3",
+          "subject": "history",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳改革开放40年展览",
+          "detail": "理解中国现代化进程的活教材",
+          "price": "免费",
+          "url": "https://www.szmuem.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳党史馆",
+          "type": "local",
+          "level": "L3",
+          "subject": "history",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳党史和革命历史教育",
+          "detail": "理解深圳在中国革命中的特殊角色",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT OCW历史课程",
+          "type": "online",
+          "level": "L3",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "大学课程",
+            "英文"
+          ],
+          "description": "MIT历史系课程开放",
+          "detail": "全球史、中国史等",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/courses/history/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Crash Course美国史",
+          "type": "online",
+          "level": "L3",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "Crash Course美国历史系列",
+          "detail": "理解美国历史，同时提升英语",
+          "price": "免费",
+          "url": "https://www.youtube.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "沈志华冷战史讲座",
+          "type": "course",
+          "level": "L3",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "深度",
+            "中文"
+          ],
+          "description": "华东师大沈志华教授冷战史讲座",
+          "detail": "用一手档案还原冷战历史",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "复旦大学中国史公开课",
+          "type": "course",
+          "level": "L3",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "系统",
+            "中文"
+          ],
+          "description": "复旦大学中国通史公开课",
+          "detail": "学术视角的中国史",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "学术研究",
+      "description": "大学水平，掌握历史研究方法和学术写作",
+      "ageRange": "16-18岁",
+      "resources": [
+        {
+          "title": "《历史学是什么》",
+          "type": "book",
+          "level": "L4",
+          "subject": "history",
+          "tags": [
+            "方法论",
+            "入门"
+          ],
+          "description": "葛剑雄著，理解历史学的本质",
+          "detail": "什么是历史？历史学家如何工作？",
+          "price": "约30元",
+          "url": "https://book.douban.com/subject/1884587/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《史学概论》",
+          "type": "book",
+          "level": "L4",
+          "subject": "history",
+          "tags": [
+            "教材",
+            "方法论"
+          ],
+          "description": "历史学入门教材",
+          "detail": "从史料批判到历史解释",
+          "price": "约40元",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳档案馆专题研究",
+          "type": "local",
+          "level": "L4",
+          "subject": "history",
+          "tags": [
+            "线下",
+            "研究",
+            "深圳"
+          ],
+          "description": "深圳市档案馆开放史料",
+          "detail": "利用一手档案做历史研究",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳地方史研究小组",
+          "type": "local",
+          "level": "L4",
+          "subject": "history",
+          "tags": [
+            "线下",
+            "研究",
+            "深圳"
+          ],
+          "description": "深圳本土历史研究社群",
+          "detail": "研究深圳历史转型",
+          "price": "公益性质",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Yale历史系公开课",
+          "type": "online",
+          "level": "L4",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "大学课程",
+            "英文"
+          ],
+          "description": "耶鲁大学历史系课程开放",
+          "detail": "欧洲文明、美国革命等",
+          "price": "免费",
+          "url": "https://oyc.yale.edu/history",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Stanford历史系课程",
+          "type": "online",
+          "level": "L4",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "研究方法",
+            "英文"
+          ],
+          "description": "斯坦福历史系研究方法课程",
+          "detail": "数字人文、全球史等",
+          "price": "免费",
+          "url": "https://history.stanford.edu/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "中国知网历史论文",
+          "type": "online",
+          "level": "L4",
+          "subject": "history",
+          "tags": [
+            "付费",
+            "学术",
+            "中文"
+          ],
+          "description": "中国最大的学术数据库",
+          "detail": "查找历史学论文",
+          "price": "机构免费/个人付费",
+          "url": "https://www.cnki.net/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "国家社科基金历史项目",
+          "type": "course",
+          "level": "L4",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "前沿",
+            "中文"
+          ],
+          "description": "国家社科基金历史学项目成果",
+          "detail": "了解中国历史学最前沿研究方向",
+          "price": "免费",
+          "url": "https://www.nopss.gov.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "思辨前沿",
+      "description": "超越学科，用历史思维理解当下和未来",
+      "ageRange": "16岁+",
+      "resources": [
+        {
+          "title": "《人类简史》",
+          "type": "book",
+          "level": "L5",
+          "subject": "history",
+          "tags": [
+            "思想",
+            "跨学科"
+          ],
+          "description": "尤瓦尔·赫拉利著，重新理解人类",
+          "detail": "从认知革命到人工智能",
+          "price": "约50元",
+          "url": "https://book.douban.com/subject/25985021/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《历史的教训》",
+          "type": "book",
+          "level": "L5",
+          "subject": "history",
+          "tags": [
+            "思想",
+            "经典"
+          ],
+          "description": "威尔·杜兰特著，从5000年历史提炼智慧",
+          "detail": "薄薄一本，浓缩历史学的核心洞察",
+          "price": "约25元",
+          "url": "https://book.douban.com/subject/1884588/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Harvard历史系研究生课程",
+          "type": "online",
+          "level": "L5",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "研究生级别",
+            "英文"
+          ],
+          "description": "哈佛历史系研究生课程开放",
+          "detail": "全球史、思想史等前沿",
+          "price": "免费",
+          "url": "https://hist.fas.harvard.edu/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "数字人文前沿课程",
+          "type": "online",
+          "level": "L5",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "跨学科",
+            "英文"
+          ],
+          "description": "数字人文方法在历史研究中的应用",
+          "detail": "用大数据和AI做历史研究",
+          "price": "免费",
+          "url": "https://digitalhumanities.stanford.edu/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "许倬云大历史讲座",
+          "type": "course",
+          "level": "L5",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "大师",
+            "中文"
+          ],
+          "description": "史学大家许倬云的大历史观讲座",
+          "detail": "从中国看世界，从历史看未来",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "复旦大学历史地理研究中心讲座",
+          "type": "course",
+          "level": "L5",
+          "subject": "history",
+          "tags": [
+            "免费",
+            "前沿",
+            "中文"
+          ],
+          "description": "复旦史地所公开学术讲座",
+          "detail": "历史地理学、环境史等前沿",
+          "price": "免费",
+          "url": "https://ihns.fudan.edu.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    }
+  ]
+}

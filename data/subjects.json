@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08",
+  "updatedAt": "2026-07-09",
   "subjects": [
     {
       "id": "math",
@@ -24,24 +24,27 @@
       "name": "化学",
       "icon": "🧪",
       "description": "元素世界与化学反应的奥秘探索",
-      "available": false,
-      "comingSoon": "即将上线"
+      "available": true,
+      "levels": 5,
+      "resourceCount": 36
     },
     {
       "id": "biology",
       "name": "生物",
       "icon": "🧬",
       "description": "从微观细胞到宏观生态的生命科学",
-      "available": false,
-      "comingSoon": "即将上线"
+      "available": true,
+      "levels": 5,
+      "resourceCount": 36
     },
     {
       "id": "informatics",
       "name": "信息学",
       "icon": "💻",
       "description": "编程思维与算法竞赛的完整路径",
-      "available": false,
-      "comingSoon": "即将上线"
+      "available": true,
+      "levels": 5,
+      "resourceCount": 36
     },
     {
       "id": "chinese",
@@ -57,32 +60,36 @@
       "name": "英语",
       "icon": "🌍",
       "description": "语言能力与国际视野的双向拓展",
-      "available": false,
-      "comingSoon": "即将上线"
+      "available": true,
+      "levels": 5,
+      "resourceCount": 36
     },
     {
       "id": "history",
       "name": "历史",
       "icon": "🏛️",
       "description": "以史为鉴，培养批判性思维",
-      "available": false,
-      "comingSoon": "即将上线"
+      "available": true,
+      "levels": 5,
+      "resourceCount": 36
     },
     {
       "id": "geography",
       "name": "地理",
       "icon": "🗺️",
       "description": "认识世界，理解人地关系",
-      "available": false,
-      "comingSoon": "即将上线"
+      "available": true,
+      "levels": 5,
+      "resourceCount": 36
     },
     {
       "id": "politics",
       "name": "政治",
       "icon": "⚖️",
       "description": "公民素养与社会认知的培养",
-      "available": false,
-      "comingSoon": "即将上线"
+      "available": true,
+      "levels": 5,
+      "resourceCount": 36
     },
     {
       "id": "art",

@@ -1,0 +1,650 @@
+{
+  "updatedAt": "2026-07-09",
+  "subject": "地理",
+  "subjectId": "geography",
+  "intro": "从脚下土地到全球视野，五级体系带你理解人地关系",
+  "levels": [
+    {
+      "id": "L1",
+      "name": "身边地理",
+      "description": "小学低年级，认识身边的环境和方向",
+      "ageRange": "6-9岁",
+      "resources": [
+        {
+          "title": "《我的第一本地理启蒙书》",
+          "type": "book",
+          "level": "L1",
+          "subject": "geography",
+          "tags": [
+            "启蒙",
+            "图解"
+          ],
+          "description": "从身边出发认识地理",
+          "detail": "从家到学校到城市",
+          "price": "约30元",
+          "url": "https://book.douban.com/subject/1884589/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《DK儿童地理百科》",
+          "type": "book",
+          "level": "L1",
+          "subject": "geography",
+          "tags": [
+            "图鉴",
+            "百科"
+          ],
+          "description": "DK经典地理百科全书",
+          "detail": "从地球结构到各国文化",
+          "price": "约150元",
+          "url": "https://book.douban.com/subject/25854857/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳仙湖植物园地理课",
+          "type": "local",
+          "level": "L1",
+          "subject": "geography",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "仙湖植物园地形和植物观察",
+          "detail": "在真实环境中认识地形和气候",
+          "price": "免费-30元",
+          "url": "https://www.szbg.ac.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳湾公园观景",
+          "type": "local",
+          "level": "L1",
+          "subject": "geography",
+          "tags": [
+            "线下",
+            "免费",
+            "深圳"
+          ],
+          "description": "深圳湾观海+候鸟观察",
+          "detail": "理解海洋、湿地和城市的关系",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Google Earth",
+          "type": "online",
+          "level": "L1",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "交互",
+            "中文/英文"
+          ],
+          "description": "用卫星视角看世界",
+          "detail": "从太空看地球",
+          "price": "免费",
+          "url": "https://earth.google.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "国家地理少儿版",
+          "type": "online",
+          "level": "L1",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "图片",
+            "英文"
+          ],
+          "description": "National Geographic Kids",
+          "detail": "精美图片+趣闻",
+          "price": "基础免费",
+          "url": "https://kids.nationalgeographic.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "地理老师小明",
+          "type": "course",
+          "level": "L1",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "趣味",
+            "中文"
+          ],
+          "description": "B站趣味地理频道",
+          "detail": "用动画和故事讲地理",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "区域认知",
+      "description": "小学高年级至初中，认识中国和世界的地理格局",
+      "ageRange": "9-13岁",
+      "resources": [
+        {
+          "title": "《给孩子的中国地理》",
+          "type": "book",
+          "level": "L2",
+          "subject": "geography",
+          "tags": [
+            "系统",
+            "中国"
+          ],
+          "description": "刘兴诗著，中国地理经典读物",
+          "detail": "按区域讲述中国地理",
+          "price": "约50元",
+          "url": "https://book.douban.com/subject/1884590/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《房龙地理》",
+          "type": "book",
+          "level": "L2",
+          "subject": "geography",
+          "tags": [
+            "经典",
+            "世界"
+          ],
+          "description": "房龙著，世界地理启蒙经典",
+          "detail": "用文学笔法写地理",
+          "price": "约35元",
+          "url": "https://book.douban.com/subject/1884591/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳城市规划展",
+          "type": "local",
+          "level": "L2",
+          "subject": "geography",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳当代艺术与城市规划馆",
+          "detail": "理解城市规划如何塑造城市地理",
+          "price": "免费",
+          "url": "https://www.szmoca.org.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "梧桐山地理研学",
+          "type": "local",
+          "level": "L2",
+          "subject": "geography",
+          "tags": [
+            "线下",
+            "深圳",
+            "研学"
+          ],
+          "description": "深圳最高峰的地理考察",
+          "detail": "观察山地地形、植被垂直分布",
+          "price": "免费（登山）",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Crash Course地理",
+          "type": "online",
+          "level": "L2",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "Crash Course地理系列",
+          "detail": "人文地理+自然地理",
+          "price": "免费",
+          "url": "https://www.youtube.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "地球脉动纪录片",
+          "type": "online",
+          "level": "L2",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "纪录片",
+            "中文/英文"
+          ],
+          "description": "BBC地球脉动系列",
+          "detail": "从沙漠到冰川",
+          "price": "免费（B站）",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "地理老师张艳平",
+          "type": "course",
+          "level": "L2",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "系统",
+            "中文"
+          ],
+          "description": "B站初中地理系统讲解",
+          "detail": "覆盖初中地理全册",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "系统理解",
+      "description": "高中水平，建立自然地理和人文地理知识体系",
+      "ageRange": "14-16岁",
+      "resources": [
+        {
+          "title": "《自然地理学》（伍光和）",
+          "type": "book",
+          "level": "L3",
+          "subject": "geography",
+          "tags": [
+            "教材",
+            "系统"
+          ],
+          "description": "高校自然地理学经典教材",
+          "detail": "从地球运动到气候系统",
+          "price": "约55元",
+          "url": "https://book.douban.com/subject/1884592/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《人文地理学》",
+          "type": "book",
+          "level": "L3",
+          "subject": "geography",
+          "tags": [
+            "教材",
+            "人文"
+          ],
+          "description": "理解人类活动与地理环境的关系",
+          "detail": "从人口到城市到文化",
+          "price": "约45元",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳气象局参观",
+          "type": "local",
+          "level": "L3",
+          "subject": "geography",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳气象局开放日",
+          "detail": "了解气象观测和天气预报",
+          "price": "免费",
+          "url": "https://www.szmb.gov.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳大鹏半岛地质公园",
+          "type": "local",
+          "level": "L3",
+          "subject": "geography",
+          "tags": [
+            "线下",
+            "深圳",
+            "研学"
+          ],
+          "description": "国家地质公园地质考察",
+          "detail": "观察火山地质、海岸地貌",
+          "price": "免费",
+          "url": "https://www.dapenggeopark.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT OCW地球科学",
+          "type": "online",
+          "level": "L3",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "大学课程",
+            "英文"
+          ],
+          "description": "MIT地球大气和行星科学课程",
+          "detail": "气候系统、地质学等",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/courses/earth-atmospheric-and-planetary-sciences/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "NASA Earth Observatory",
+          "type": "online",
+          "level": "L3",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "卫星",
+            "英文"
+          ],
+          "description": "NASA地球观测数据可视化",
+          "detail": "用卫星数据理解地球系统",
+          "price": "免费",
+          "url": "https://earthobservatory.nasa.gov/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "高中地理系统课",
+          "type": "course",
+          "level": "L3",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "系统",
+            "中文"
+          ],
+          "description": "B站高中地理系统讲解",
+          "detail": "覆盖高中地理必修+选修",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "张艳平高中地理",
+          "type": "course",
+          "level": "L3",
+          "subject": "geography",
+          "tags": [
+            "付费",
+            "系统",
+            "中文"
+          ],
+          "description": "知名地理教师系统课",
+          "detail": "重难点突破+真题分析",
+          "price": "约1000元/期",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "专业深化",
+      "description": "大学水平，掌握地理学专业方法和工具",
+      "ageRange": "16-18岁",
+      "resources": [
+        {
+          "title": "《经济地理学》",
+          "type": "book",
+          "level": "L4",
+          "subject": "geography",
+          "tags": [
+            "教材",
+            "专业"
+          ],
+          "description": "理解经济活动的空间分布",
+          "detail": "产业集群、城市体系、全球化",
+          "price": "约50元",
+          "url": "https://book.douban.com/subject/1884593/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《GIS原理与应用》",
+          "type": "book",
+          "level": "L4",
+          "subject": "geography",
+          "tags": [
+            "技术",
+            "专业"
+          ],
+          "description": "地理信息系统核心教材",
+          "detail": "从空间数据到地图制图",
+          "price": "约60元",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳大学地理空间信息实验室",
+          "type": "local",
+          "level": "L4",
+          "subject": "geography",
+          "tags": [
+            "线下",
+            "研究",
+            "深圳"
+          ],
+          "description": "深大地理信息实验室开放活动",
+          "detail": "GIS和遥感技术实践",
+          "price": "免费/低价",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳规划国土委数据开放",
+          "type": "local",
+          "level": "L4",
+          "subject": "geography",
+          "tags": [
+            "线下",
+            "数据",
+            "深圳"
+          ],
+          "description": "深圳市规划和国土资源数据开放",
+          "detail": "获取深圳地理空间数据做研究",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "QGIS开源地理信息系统",
+          "type": "online",
+          "level": "L4",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "工具",
+            "中文/英文"
+          ],
+          "description": "全球最好的开源GIS软件",
+          "detail": "免费替代ArcGIS",
+          "price": "免费",
+          "url": "https://qgis.org/",
+          "language": "中文/英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Coursera GIS专项",
+          "type": "online",
+          "level": "L4",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "专业",
+            "英文"
+          ],
+          "description": "加州大学戴维斯分校GIS专项课程",
+          "detail": "从数据获取到空间分析",
+          "price": "免费旁听",
+          "url": "https://www.coursera.org/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "ArcGIS学习资源",
+          "type": "course",
+          "level": "L4",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "工具",
+            "中文"
+          ],
+          "description": "Esri官方ArcGIS学习资源",
+          "detail": "GIS行业标准软件的学习资料",
+          "price": "免费",
+          "url": "https://learn.arcgis.com/",
+          "language": "中文/英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "中科院地理所公开讲座",
+          "type": "course",
+          "level": "L4",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "前沿",
+            "中文"
+          ],
+          "description": "中科院地理科学与资源研究所讲座",
+          "detail": "城市化、气候变化等前沿",
+          "price": "免费",
+          "url": "https://www.igsnrr.cas.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "前沿应用",
+      "description": "超出学科，用地理思维解决现实问题",
+      "ageRange": "16岁+",
+      "resources": [
+        {
+          "title": "《地理学与生活》",
+          "type": "book",
+          "level": "L5",
+          "subject": "geography",
+          "tags": [
+            "经典",
+            "通识"
+          ],
+          "description": "理解地理学如何影响日常生活",
+          "detail": "从天气预报到城市规划",
+          "price": "约80元",
+          "url": "https://book.douban.com/subject/1884594/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《气候变化的故事》",
+          "type": "book",
+          "level": "L5",
+          "subject": "geography",
+          "tags": [
+            "前沿",
+            "跨学科"
+          ],
+          "description": "理解气候变化这个时代最大挑战",
+          "detail": "从科学到政策",
+          "price": "约50元",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT地球系统科学研究生课程",
+          "type": "online",
+          "level": "L5",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "研究生级别",
+            "英文"
+          ],
+          "description": "MIT地球大气和行星科学研究生课程",
+          "detail": "气候建模、碳循环等前沿",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Google Earth Engine",
+          "type": "online",
+          "level": "L5",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "工具",
+            "英文"
+          ],
+          "description": "谷歌地球引擎，全球地理大数据分析",
+          "detail": "用卫星数据做全球尺度的地理研究",
+          "price": "免费（学术）",
+          "url": "https://earthengine.google.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "联合国可持续发展目标课程",
+          "type": "course",
+          "level": "L5",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "全球",
+            "中文/英文"
+          ],
+          "description": "SDGs相关在线课程",
+          "detail": "用地理视角理解全球可持续发展挑战",
+          "price": "免费",
+          "url": "https://sdgacademy.org/",
+          "language": "中文/英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "数字地球前沿讲座",
+          "type": "course",
+          "level": "L5",
+          "subject": "geography",
+          "tags": [
+            "免费",
+            "前沿",
+            "中文"
+          ],
+          "description": "中科院数字地球实验室讲座",
+          "detail": "遥感大数据、数字孪生城市",
+          "price": "免费",
+          "url": "https://www.radi.cas.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,650 @@
+{
+  "updatedAt": "2026-07-09",
+  "subject": "生物",
+  "subjectId": "biology",
+  "intro": "从微观细胞到宏观生态，五级体系带你探索生命的奥秘",
+  "levels": [
+    {
+      "id": "L1",
+      "name": "自然好奇",
+      "description": "小学阶段，观察身边的动植物，建立生命科学好奇心",
+      "ageRange": "6-10岁",
+      "resources": [
+        {
+          "title": "《法布尔昆虫记》",
+          "type": "book",
+          "level": "L1",
+          "subject": "biology",
+          "tags": [
+            "经典",
+            "故事化"
+          ],
+          "description": "世界最著名的昆虫观察记录",
+          "detail": "用文学笔法写科学观察",
+          "price": "约30元/册",
+          "url": "https://book.douban.com/subject/1884566/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《DK儿童百科·自然》",
+          "type": "book",
+          "level": "L1",
+          "subject": "biology",
+          "tags": [
+            "图鉴",
+            "百科"
+          ],
+          "description": "DK经典视觉百科全书",
+          "detail": "从微生物到哺乳动物，高清图片+简洁文字",
+          "price": "约150元",
+          "url": "https://book.douban.com/subject/25854856/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳仙湖植物园自然课堂",
+          "type": "local",
+          "level": "L1",
+          "subject": "biology",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "仙湖植物园定期开设的自然教育活动",
+          "detail": "在真实生态中观察植物",
+          "price": "免费-30元",
+          "url": "https://www.szbg.ac.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳红树林自然保护区观鸟",
+          "type": "local",
+          "level": "L1",
+          "subject": "biology",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳湾红树林观鸟活动",
+          "detail": "候鸟季观察迁徙鸟类",
+          "price": "免费",
+          "url": "https://www.szmbps.org/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "可汗学院生物学基础",
+          "type": "online",
+          "level": "L1",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "可汗学院生命科学入门课程",
+          "detail": "从细胞到生态，动画讲解+练习",
+          "price": "免费",
+          "url": "https://www.khanacademy.org/science/biology",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "BBC地球系列纪录片",
+          "type": "online",
+          "level": "L1",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "纪录片",
+            "视觉"
+          ],
+          "description": "BBC地球系列纪录片",
+          "detail": "Planet Earth/Blue Planet等",
+          "price": "免费（B站）",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "无穷小亮的科普日常",
+          "type": "course",
+          "level": "L1",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "短视频",
+            "中文"
+          ],
+          "description": "B站知名科普UP主",
+          "detail": "幽默风趣讲身边生物",
+          "price": "免费",
+          "url": "https://space.bilibili.com/44779741",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "基础入门",
+      "description": "初中水平，系统学习生物基本概念和实验方法",
+      "ageRange": "11-14岁",
+      "resources": [
+        {
+          "title": "《自私的基因》",
+          "type": "book",
+          "level": "L2",
+          "subject": "biology",
+          "tags": [
+            "经典",
+            "思想"
+          ],
+          "description": "理查德·道金斯经典，从基因视角理解生命",
+          "detail": "改变无数人生命观的著作",
+          "price": "约45元",
+          "url": "https://book.douban.com/subject/1884567/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《物种起源》青少年版",
+          "type": "book",
+          "level": "L2",
+          "subject": "biology",
+          "tags": [
+            "经典",
+            "入门"
+          ],
+          "description": "达尔文进化论的青少年改编版",
+          "detail": "用简化语言讲述进化论核心思想",
+          "price": "约30元",
+          "url": "https://book.douban.com/subject/1884568/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳野生动物园生物课堂",
+          "type": "local",
+          "level": "L2",
+          "subject": "biology",
+          "tags": [
+            "线下",
+            "深圳",
+            "体验"
+          ],
+          "description": "深圳野生动物园的教育项目",
+          "detail": "近距离观察动物行为",
+          "price": "门票约240元",
+          "url": "https://www.szzoo.net/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳大学生物实验室开放日",
+          "type": "local",
+          "level": "L2",
+          "subject": "biology",
+          "tags": [
+            "线下",
+            "公益",
+            "大学"
+          ],
+          "description": "深圳大学定期举办的生物实验室开放活动",
+          "detail": "参观大学实验室，做简单实验",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "可汗学院初中生物",
+          "type": "online",
+          "level": "L2",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "覆盖初中生物全册的在线课程",
+          "detail": "细胞、遗传、生态等模块",
+          "price": "免费",
+          "url": "https://www.khanacademy.org/science/biology",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "洋葱学院初中生物",
+          "type": "online",
+          "level": "L2",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "动画",
+            "中文"
+          ],
+          "description": "贴合初中生物课标的动画课程",
+          "detail": "覆盖人教版全册",
+          "price": "基础免费，会员299元/年",
+          "url": "https://www.yangcong345.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "李永乐老师生物专题",
+          "type": "course",
+          "level": "L2",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "科普",
+            "中文"
+          ],
+          "description": "人大附中名师讲生物专题",
+          "detail": "用数学和物理视角解读生物现象",
+          "price": "免费",
+          "url": "https://space.bilibili.com/94575520",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "体系构建",
+      "description": "高中必修水平，建立完整的生物学知识体系",
+      "ageRange": "14-16岁",
+      "resources": [
+        {
+          "title": "《普通生物学》（陈阅增）",
+          "type": "book",
+          "level": "L3",
+          "subject": "biology",
+          "tags": [
+            "教材",
+            "系统"
+          ],
+          "description": "北京师范大学经典教材",
+          "detail": "从分子到生态，系统全面",
+          "price": "约70元",
+          "url": "https://book.douban.com/subject/1884569/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《高中生物重难点手册》",
+          "type": "book",
+          "level": "L3",
+          "subject": "biology",
+          "tags": [
+            "教辅",
+            "重难点"
+          ],
+          "description": "高中生物知识体系梳理",
+          "detail": "按模块编排，重难点突出",
+          "price": "约40元",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳中学生物竞赛预备班",
+          "type": "local",
+          "level": "L3",
+          "subject": "biology",
+          "tags": [
+            "线下",
+            "竞赛",
+            "选拔"
+          ],
+          "description": "深圳顶尖中学生物竞赛培养体系",
+          "detail": "需校内选拔，系统学习竞赛生物",
+          "price": "校内免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳仙湖植物园植物学实习",
+          "type": "local",
+          "level": "L3",
+          "subject": "biology",
+          "tags": [
+            "线下",
+            "深圳",
+            "实习"
+          ],
+          "description": "仙湖植物园植物分类学实习",
+          "detail": "在专业指导下进行植物分类",
+          "price": "50-100元/次",
+          "url": "https://www.szbg.ac.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Crash Course Biology",
+          "type": "online",
+          "level": "L3",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "全球最受欢迎的生物速成课程",
+          "detail": "40集覆盖高中生物全部主题",
+          "price": "免费",
+          "url": "https://www.youtube.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT OCW生物学入门",
+          "type": "online",
+          "level": "L3",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "大学课程",
+            "英文"
+          ],
+          "description": "MIT本科生物学课程",
+          "detail": "7.012入门课程",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/courses/biology/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "高中生物老师系统课",
+          "type": "course",
+          "level": "L3",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "系统",
+            "高中"
+          ],
+          "description": "B站高中生物系统讲解",
+          "detail": "覆盖高中生物必修+选修",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "iBiology视频讲座",
+          "type": "course",
+          "level": "L3",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "前沿",
+            "英文"
+          ],
+          "description": "全球顶尖生物学家的视频讲座",
+          "detail": "由一线研究者讲述自己的研究成果",
+          "price": "免费",
+          "url": "https://www.ibiology.org/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "竞赛突破",
+      "description": "高中竞赛水平，冲击省一等奖及以上",
+      "ageRange": "15-18岁",
+      "resources": [
+        {
+          "title": "《植物学》（陆时万）",
+          "type": "book",
+          "level": "L4",
+          "subject": "biology",
+          "tags": [
+            "教材",
+            "竞赛"
+          ],
+          "description": "植物学经典教材",
+          "detail": "从细胞到器官，系统讲解",
+          "price": "约50元",
+          "url": "https://book.douban.com/subject/1884570/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《动物学》（刘凌云）",
+          "type": "book",
+          "level": "L4",
+          "subject": "biology",
+          "tags": [
+            "教材",
+            "竞赛"
+          ],
+          "description": "动物学经典教材",
+          "detail": "从原生动物到哺乳动物",
+          "price": "约55元",
+          "url": "https://book.douban.com/subject/1884571/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳中学/深实验生物竞赛班",
+          "type": "local",
+          "level": "L4",
+          "subject": "biology",
+          "tags": [
+            "线下",
+            "竞赛",
+            "顶尖"
+          ],
+          "description": "深圳顶尖中学生物竞赛培养体系",
+          "detail": "需校内选拔，配备专业竞赛教练",
+          "price": "校内免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "广东省生物竞赛集训营",
+          "type": "local",
+          "level": "L4",
+          "subject": "biology",
+          "tags": [
+            "线下",
+            "集训",
+            "竞赛"
+          ],
+          "description": "广东省组织的生物竞赛集训",
+          "detail": "邀请专家授课",
+          "price": "公益性质",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "BioInteractive（HHMI）",
+          "type": "online",
+          "level": "L4",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "虚拟实验",
+            "英文"
+          ],
+          "description": "霍华德·休斯医学研究所的教育资源",
+          "detail": "虚拟实验、动画、讲座",
+          "price": "免费",
+          "url": "https://www.biointeractive.org/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT生物学实验课程",
+          "type": "online",
+          "level": "L4",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "大学实验",
+            "英文"
+          ],
+          "description": "MIT生物学实验课程",
+          "detail": "分子生物学、遗传学实验",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/courses/biology/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "生物竞赛教练线上课",
+          "type": "course",
+          "level": "L4",
+          "subject": "biology",
+          "tags": [
+            "付费",
+            "竞赛",
+            "线上"
+          ],
+          "description": "各地顶级生物竞赛教练线上课程",
+          "detail": "覆盖植物动物遗传生化生态五大板块",
+          "price": "3000-8000元/期",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "全国中学生生物学联赛真题",
+          "type": "course",
+          "level": "L4",
+          "subject": "biology",
+          "tags": [
+            "官方",
+            "竞赛",
+            "免费"
+          ],
+          "description": "全国生物学联赛官方真题资源",
+          "detail": "历年真题+解析",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "前沿拓展",
+      "description": "超出课标，接触生命科学前沿与跨学科应用",
+      "ageRange": "16岁+",
+      "resources": [
+        {
+          "title": "《基因传》",
+          "type": "book",
+          "level": "L5",
+          "subject": "biology",
+          "tags": [
+            "历史",
+            "思想"
+          ],
+          "description": "悉达多·穆克吉著，基因科学的完整叙事",
+          "detail": "从孟德尔到CRISPR",
+          "price": "约60元",
+          "url": "https://book.douban.com/subject/27180507/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《生命是什么》",
+          "type": "book",
+          "level": "L5",
+          "subject": "biology",
+          "tags": [
+            "经典",
+            "跨学科"
+          ],
+          "description": "薛定谔的经典之作",
+          "detail": "从物理学角度理解生命的本质",
+          "price": "约30元",
+          "url": "https://book.douban.com/subject/1884572/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT生物学研究生课程",
+          "type": "online",
+          "level": "L5",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "研究生级别",
+            "英文"
+          ],
+          "description": "MIT生物学研究生课程开放",
+          "detail": "基因组学、系统生物学等前沿",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/courses/biology/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Coursera生物信息学专项",
+          "type": "online",
+          "level": "L5",
+          "subject": "biology",
+          "tags": [
+            "付费",
+            "跨学科",
+            "英文"
+          ],
+          "description": "生物+计算机交叉领域",
+          "detail": "基因组分析、蛋白质结构预测",
+          "price": "免费旁听，证书约$49/月",
+          "url": "https://www.coursera.org/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "中科院生物物理所公开讲座",
+          "type": "course",
+          "level": "L5",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "前沿",
+            "中文"
+          ],
+          "description": "中科院生物物理研究所公开学术讲座",
+          "detail": "结构生物学、计算生物学等方向",
+          "price": "免费",
+          "url": "https://www.ibp.cas.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Kurzgesagt生命科学系列",
+          "type": "course",
+          "level": "L5",
+          "subject": "biology",
+          "tags": [
+            "免费",
+            "视觉化",
+            "跨学科"
+          ],
+          "description": "YouTube最精美的科学动画频道",
+          "detail": "从细胞到宇宙，视觉化讲解生命科学前沿",
+          "price": "免费",
+          "url": "https://www.youtube.com/@kurzgesagt",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    }
+  ]
+}

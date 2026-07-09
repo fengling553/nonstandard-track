@@ -1,0 +1,652 @@
+{
+  "updatedAt": "2026-07-09",
+  "subject": "化学",
+  "subjectId": "chemistry",
+  "intro": "从身边的化学反应到分子世界的奥秘，五级体系带你从好奇到专业",
+  "levels": [
+    {
+      "id": "L1",
+      "name": "物质好奇",
+      "description": "小学阶段，观察身边的物质现象，建立科学好奇心",
+      "ageRange": "6-10岁",
+      "resources": [
+        {
+          "title": "《可怕的科学·化学系列》",
+          "type": "book",
+          "level": "L1",
+          "subject": "chemistry",
+          "tags": [
+            "趣味",
+            "科普"
+          ],
+          "description": "用搞笑漫画和夸张故事讲化学，孩子爱看",
+          "detail": "英国经典科普系列，幽默风格让小学生轻松接触化学概念",
+          "price": "约25元/册",
+          "url": "https://book.douban.com/subject/25849433/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《这就是化学》",
+          "type": "book",
+          "level": "L1",
+          "subject": "chemistry",
+          "tags": [
+            "漫画",
+            "启蒙"
+          ],
+          "description": "中国原创化学漫画科普，8册覆盖核心概念",
+          "detail": "从分子原子到酸碱盐，用故事+漫画讲解",
+          "price": "约120元/套",
+          "url": "https://book.douban.com/subject/35227758/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳科学馆化学实验体验",
+          "type": "local",
+          "level": "L1",
+          "subject": "chemistry",
+          "tags": [
+            "线下",
+            "公益",
+            "实验"
+          ],
+          "description": "深圳科学馆定期开设的亲子化学实验活动",
+          "detail": "专业指导下做安全实验，激发兴趣",
+          "price": "免费-50元",
+          "url": "https://www.szstm.org/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "魔法科学家实验盒子",
+          "type": "local",
+          "level": "L1",
+          "subject": "chemistry",
+          "tags": [
+            "线下",
+            "深圳",
+            "实验盒"
+          ],
+          "description": "深圳本地科学教育品牌，家庭实验套件",
+          "detail": "每月寄送实验材料+视频指导",
+          "price": "199元/月",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "YouTube SciShow Kids",
+          "type": "online",
+          "level": "L1",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "英文",
+            "视频"
+          ],
+          "description": "全球最受欢迎的儿童科学频道之一",
+          "detail": "用简单实验解释化学现象",
+          "price": "免费",
+          "url": "https://www.youtube.com/@SciShowKids",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "洋葱学院小学科学",
+          "type": "online",
+          "level": "L1",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "动画",
+            "中文"
+          ],
+          "description": "动画式科学课程，含物质变化章节",
+          "detail": "免费基础课，动画讲解生动",
+          "price": "基础免费，会员299元/年",
+          "url": "https://www.yangcong345.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "真真老师科学实验课",
+          "type": "course",
+          "level": "L1",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "B站",
+            "实验"
+          ],
+          "description": "B站知名儿童科学实验频道",
+          "detail": "用厨房材料做安全化学实验",
+          "price": "免费",
+          "url": "https://space.bilibili.com/398990532",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "基础入门",
+      "description": "初中水平，系统学习化学基本概念和实验方法",
+      "ageRange": "11-14岁",
+      "resources": [
+        {
+          "title": "《化学是什么》",
+          "type": "book",
+          "level": "L2",
+          "subject": "chemistry",
+          "tags": [
+            "入门",
+            "科普"
+          ],
+          "description": "从日常现象理解化学本质",
+          "detail": "用生活案例讲化学原理",
+          "price": "约40元",
+          "url": "https://book.douban.com/subject/30456234/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《元素的故事》",
+          "type": "book",
+          "level": "L2",
+          "subject": "chemistry",
+          "tags": [
+            "经典",
+            "故事化"
+          ],
+          "description": "苏联经典科普名著，讲述化学元素发现史",
+          "detail": "从磷到放射性元素，每个元素背后都有精彩故事",
+          "price": "约20元",
+          "url": "https://book.douban.com/subject/20427157/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳少年宫化学兴趣班",
+          "type": "local",
+          "level": "L2",
+          "subject": "chemistry",
+          "tags": [
+            "线下",
+            "公益",
+            "实验"
+          ],
+          "description": "少年宫开设的初中化学实验兴趣课程",
+          "detail": "价格亲民，有专业实验设备",
+          "price": "50-100元/课时",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "学而思科学课（深圳）",
+          "type": "local",
+          "level": "L2",
+          "subject": "chemistry",
+          "tags": [
+            "线下",
+            "系统",
+            "小班"
+          ],
+          "description": "学而思科学素养课，含化学实验模块",
+          "detail": "深圳多校区，小班教学",
+          "price": "200-400元/课时",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "可汗学院化学",
+          "type": "online",
+          "level": "L2",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "全球最完整的免费化学课程",
+          "detail": "从原子结构到化学反应，视频+练习",
+          "price": "免费",
+          "url": "https://www.khanacademy.org/science/chemistry",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "洋葱学院初中化学",
+          "type": "online",
+          "level": "L2",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "动画",
+            "中文"
+          ],
+          "description": "贴合初中化学课标的动画课程",
+          "detail": "覆盖人教版初中化学全册",
+          "price": "基础免费，会员299元/年",
+          "url": "https://www.yangcong345.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "美丽化学B站",
+          "type": "course",
+          "level": "L2",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "视觉化",
+            "中文"
+          ],
+          "description": "中国科学技术大学制作的化学之美视频",
+          "detail": "用微距摄影展现化学反应的视觉之美",
+          "price": "免费",
+          "url": "https://space.bilibili.com/285204908",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "体系构建",
+      "description": "高中必修水平，建立完整的化学知识体系",
+      "ageRange": "14-16岁",
+      "resources": [
+        {
+          "title": "《普通化学原理》（华彤文）",
+          "type": "book",
+          "level": "L3",
+          "subject": "chemistry",
+          "tags": [
+            "教材",
+            "系统"
+          ],
+          "description": "北京大学化学系经典教材",
+          "detail": "从原子结构到化学平衡，系统严谨",
+          "price": "约60元",
+          "url": "https://book.douban.com/subject/1884561/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《高中化学重难点手册》",
+          "type": "book",
+          "level": "L3",
+          "subject": "chemistry",
+          "tags": [
+            "教辅",
+            "重难点"
+          ],
+          "description": "高中化学知识体系梳理",
+          "detail": "按模块编排，重难点突出",
+          "price": "约40元",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳中学化学竞赛预备班",
+          "type": "local",
+          "level": "L3",
+          "subject": "chemistry",
+          "tags": [
+            "线下",
+            "竞赛",
+            "选拔"
+          ],
+          "description": "深圳顶尖中学的化学竞赛培养体系",
+          "detail": "需校内选拔，由竞赛教练带队",
+          "price": "校内免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳科学馆化学实验营",
+          "type": "local",
+          "level": "L3",
+          "subject": "chemistry",
+          "tags": [
+            "线下",
+            "实验",
+            "深度"
+          ],
+          "description": "面向中学生的深度化学实验体验",
+          "detail": "专业实验室做大学级别实验",
+          "price": "100-200元/次",
+          "url": "https://www.szstm.org/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Crash Course Chemistry",
+          "type": "online",
+          "level": "L3",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "全球最受欢迎的化学速成课程",
+          "detail": "46集覆盖高中化学全部主题",
+          "price": "免费",
+          "url": "https://www.youtube.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT OCW化学入门",
+          "type": "online",
+          "level": "L3",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "大学课程",
+            "英文"
+          ],
+          "description": "MIT本科化学课程免费开放",
+          "detail": "5.111原理课程",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/courses/chemistry/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "化学老师张梅B站",
+          "type": "course",
+          "level": "L3",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "系统",
+            "高中"
+          ],
+          "description": "高中化学系统讲解",
+          "detail": "覆盖高中化学必修+选修",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "美丽化学深度版",
+          "type": "course",
+          "level": "L3",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "视觉化",
+            "科普"
+          ],
+          "description": "从宏观到微观的化学反应视觉呈现",
+          "detail": "用影像展现化学反应全过程",
+          "price": "免费",
+          "url": "https://www.beautifulchemistry.net/",
+          "language": "中文/英文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "竞赛突破",
+      "description": "高中竞赛水平，冲击省一等奖及以上",
+      "ageRange": "15-18岁",
+      "resources": [
+        {
+          "title": "《无机化学》（武汉大学）",
+          "type": "book",
+          "level": "L4",
+          "subject": "chemistry",
+          "tags": [
+            "教材",
+            "竞赛",
+            "经典"
+          ],
+          "description": "武汉大学编，化学竞赛核心参考书",
+          "detail": "上下两册，竞赛生必读",
+          "price": "约80元/套",
+          "url": "https://book.douban.com/subject/1884563/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《有机化学》（邢其毅）",
+          "type": "book",
+          "level": "L4",
+          "subject": "chemistry",
+          "tags": [
+            "教材",
+            "竞赛",
+            "经典"
+          ],
+          "description": "北京大学邢其毅教授编著，有机化学圣经",
+          "detail": "国内最权威的有机化学教材",
+          "price": "约90元",
+          "url": "https://book.douban.com/subject/1884564/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳中学/深实验化学竞赛班",
+          "type": "local",
+          "level": "L4",
+          "subject": "chemistry",
+          "tags": [
+            "线下",
+            "竞赛",
+            "顶尖"
+          ],
+          "description": "深圳顶尖中学化学竞赛培养体系",
+          "detail": "需校内选拔，配备专业竞赛教练",
+          "price": "校内免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳化学竞赛冬令营",
+          "type": "local",
+          "level": "L4",
+          "subject": "chemistry",
+          "tags": [
+            "线下",
+            "集训",
+            "竞赛"
+          ],
+          "description": "深圳市化学会组织的竞赛集训",
+          "detail": "邀请竞赛专家授课",
+          "price": "公益性质",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "ChemCollective",
+          "type": "online",
+          "level": "L4",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "虚拟实验",
+            "英文"
+          ],
+          "description": "卡内基梅隆大学虚拟化学实验室",
+          "detail": "在线模拟真实化学实验",
+          "price": "免费",
+          "url": "http://chemcollective.org/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT化学实验课程",
+          "type": "online",
+          "level": "L4",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "大学实验",
+            "英文"
+          ],
+          "description": "MIT化学实验课程视频和资料",
+          "detail": "5.301实验课程",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/courses/chemistry/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "化学竞赛教练线上课",
+          "type": "course",
+          "level": "L4",
+          "subject": "chemistry",
+          "tags": [
+            "付费",
+            "竞赛",
+            "线上"
+          ],
+          "description": "各地顶级化学竞赛教练线上课程",
+          "detail": "覆盖无机有机分析物化四大板块",
+          "price": "3000-8000元/期",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "中国化学会竞赛资源",
+          "type": "course",
+          "level": "L4",
+          "subject": "chemistry",
+          "tags": [
+            "官方",
+            "竞赛",
+            "免费"
+          ],
+          "description": "中国化学会官方竞赛信息和资源",
+          "detail": "竞赛大纲、历年真题",
+          "price": "免费",
+          "url": "https://www.chemsoc.org.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "前沿拓展",
+      "description": "超出课标，接触化学前沿与跨学科应用",
+      "ageRange": "16岁+",
+      "resources": [
+        {
+          "title": "《化学的本质》",
+          "type": "book",
+          "level": "L5",
+          "subject": "chemistry",
+          "tags": [
+            "思想",
+            "经典"
+          ],
+          "description": "Linus Pauling经典之作，重新理解化学键",
+          "detail": "诺贝尔奖得主的化学思想精华",
+          "price": "约60元",
+          "url": "https://book.douban.com/subject/1884565/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《化学简史》",
+          "type": "book",
+          "level": "L5",
+          "subject": "chemistry",
+          "tags": [
+            "历史",
+            "思想"
+          ],
+          "description": "从炼金术到量子化学",
+          "detail": "通过化学史理解每个理论诞生的逻辑",
+          "price": "约45元",
+          "url": "https://book.douban.com/subject/26349620/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT化学系研究生课程",
+          "type": "online",
+          "level": "L5",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "研究生级别",
+            "英文"
+          ],
+          "description": "MIT化学系研究生课程开放",
+          "detail": "量子化学、统计力学等前沿",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/courses/chemistry/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Coursera化学专项",
+          "type": "online",
+          "level": "L5",
+          "subject": "chemistry",
+          "tags": [
+            "付费",
+            "体系化",
+            "英文"
+          ],
+          "description": "全球顶尖大学化学专项课程",
+          "detail": "化学工程、材料化学等",
+          "price": "免费旁听，证书约$49/月",
+          "url": "https://www.coursera.org/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "中科院化学所公开讲座",
+          "type": "course",
+          "level": "L5",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "前沿",
+            "中文"
+          ],
+          "description": "中科院化学研究所公开学术讲座",
+          "detail": "纳米化学、绿色化学等方向",
+          "price": "免费",
+          "url": "https://iccas.cas.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "3Blue1Brown量子力学系列",
+          "type": "course",
+          "level": "L5",
+          "subject": "chemistry",
+          "tags": [
+            "免费",
+            "视觉化",
+            "跨学科"
+          ],
+          "description": "量子力学可视化，理解化学键的数学本质",
+          "detail": "线性代数和量子力学的可视化讲解",
+          "price": "免费",
+          "url": "https://www.3blue1brown.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    }
+  ]
+}

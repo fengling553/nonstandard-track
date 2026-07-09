@@ -1,0 +1,650 @@
+{
+  "updatedAt": "2026-07-09",
+  "subject": "政治",
+  "subjectId": "politics",
+  "intro": "从身边规则到社会运行，五级体系培养公民素养和批判思维",
+  "levels": [
+    {
+      "id": "L1",
+      "name": "规则意识",
+      "description": "小学低年级，理解身边的规则和为什么要遵守",
+      "ageRange": "6-9岁",
+      "resources": [
+        {
+          "title": "《儿童哲学智慧书》",
+          "type": "book",
+          "level": "L1",
+          "subject": "politics",
+          "tags": [
+            "哲学",
+            "思辨"
+          ],
+          "description": "用提问引导孩子思考规则和公平",
+          "detail": "从为什么要有规则到什么是公平",
+          "price": "约30元/册",
+          "url": "https://book.douban.com/subject/1884595/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《写给孩子的哲学启蒙书》",
+          "type": "book",
+          "level": "L1",
+          "subject": "politics",
+          "tags": [
+            "启蒙",
+            "法国"
+          ],
+          "description": "法国经典儿童哲学启蒙",
+          "detail": "8册覆盖自由/公正/平等/财富等核心概念",
+          "price": "约150元/套",
+          "url": "https://book.douban.com/subject/1884596/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳少年宫公民教育课",
+          "type": "local",
+          "level": "L1",
+          "subject": "politics",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "少年宫开设的公民教育体验课",
+          "detail": "通过角色扮演和讨论理解规则",
+          "price": "50-100元/课时",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳社区志愿服务",
+          "type": "local",
+          "level": "L1",
+          "subject": "politics",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "社区志愿服务体验",
+          "detail": "在实践中理解公民责任",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "联合国儿童基金会教育资源",
+          "type": "online",
+          "level": "L1",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "全球",
+            "中文/英文"
+          ],
+          "description": "UNICEF儿童权利教育材料",
+          "detail": "从儿童权利角度理解社会规则",
+          "price": "免费",
+          "url": "https://www.unicef.org/",
+          "language": "中文/英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "TED-Ed思辨动画",
+          "type": "online",
+          "level": "L1",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "动画",
+            "英文"
+          ],
+          "description": "TED教育频道的思辨类动画",
+          "detail": "用5分钟动画讲一个哲学/社会概念",
+          "price": "免费",
+          "url": "https://ed.ted.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "半分钟哲学",
+          "type": "course",
+          "level": "L1",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "动画",
+            "中文"
+          ],
+          "description": "B站哲学启蒙动画",
+          "detail": "用短动画讲哲学概念",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "社会认知",
+      "description": "小学高年级至初中，理解社会运行的基本逻辑",
+      "ageRange": "9-13岁",
+      "resources": [
+        {
+          "title": "《少年读马克思》",
+          "type": "book",
+          "level": "L2",
+          "subject": "politics",
+          "tags": [
+            "入门",
+            "思辨"
+          ],
+          "description": "用少年能懂的方式讲马克思思想",
+          "detail": "理解资本、劳动、价值等核心概念",
+          "price": "约35元",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《经济为什么会崩溃》",
+          "type": "book",
+          "level": "L2",
+          "subject": "politics",
+          "tags": [
+            "经济学",
+            "寓言"
+          ],
+          "description": "用寓言讲经济学核心原理",
+          "detail": "从捕鱼到货币，理解经济运行的基本逻辑",
+          "price": "约35元",
+          "url": "https://book.douban.com/subject/1884597/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳人大开放日",
+          "type": "local",
+          "level": "L2",
+          "subject": "politics",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳市人大常委会开放日",
+          "detail": "了解人大代表如何履职",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳法院开放日",
+          "type": "local",
+          "level": "L2",
+          "subject": "politics",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳法院公众开放日活动",
+          "detail": "了解司法如何运行",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "可汗学院经济学",
+          "type": "online",
+          "level": "L2",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "可汗学院经济学和公民学课程",
+          "detail": "微观/宏观经济学+公民教育",
+          "price": "免费",
+          "url": "https://www.khanacademy.org/economics-finance-domain",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Crash Course政府与政治",
+          "type": "online",
+          "level": "L2",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "Crash Course美国政府与政治系列",
+          "detail": "理解政府运作、选举、宪法",
+          "price": "免费",
+          "url": "https://www.youtube.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "薛兆丰经济学讲义（音频版）",
+          "type": "course",
+          "level": "L2",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "通俗",
+            "中文"
+          ],
+          "description": "北大经济学教授的通俗经济学课",
+          "detail": "用生活案例讲经济学原理",
+          "price": "免费（得到APP部分章节）",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "体系理解",
+      "description": "高中水平，理解政治经济文化的系统运作",
+      "ageRange": "14-16岁",
+      "resources": [
+        {
+          "title": "《政治学十五讲》",
+          "type": "book",
+          "level": "L3",
+          "subject": "politics",
+          "tags": [
+            "教材",
+            "入门"
+          ],
+          "description": "燕继荣著，政治学入门经典教材",
+          "detail": "从权力到国家到民主",
+          "price": "约35元",
+          "url": "https://book.douban.com/subject/1884598/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《经济学原理》（曼昆）",
+          "type": "book",
+          "level": "L3",
+          "subject": "politics",
+          "tags": [
+            "经典",
+            "入门"
+          ],
+          "description": "全球最畅销的经济学入门教材",
+          "detail": "微观+宏观",
+          "price": "约100元",
+          "url": "https://book.douban.com/subject/1884599/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳市民中心政策解读活动",
+          "type": "local",
+          "level": "L3",
+          "subject": "politics",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳市民中心政策解读公开活动",
+          "detail": "了解政策如何制定和执行",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "模拟联合国深圳分会",
+          "type": "local",
+          "level": "L3",
+          "subject": "politics",
+          "tags": [
+            "线下",
+            "体验",
+            "深圳"
+          ],
+          "description": "模拟联合国深圳区域活动",
+          "detail": "扮演各国代表讨论全球议题",
+          "price": "200-500元/次",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Crash Course经济学",
+          "type": "online",
+          "level": "L3",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "Crash Course经济学系列",
+          "detail": "微观+宏观",
+          "price": "免费",
+          "url": "https://www.youtube.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Yale政治哲学公开课",
+          "type": "online",
+          "level": "L3",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "深度",
+            "英文"
+          ],
+          "description": "耶鲁大学政治哲学公开课",
+          "detail": "从柏拉图到罗尔斯",
+          "price": "免费",
+          "url": "https://oyc.yale.edu/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "高中政治系统课",
+          "type": "course",
+          "level": "L3",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "系统",
+            "中文"
+          ],
+          "description": "B站高中政治系统讲解",
+          "detail": "覆盖高中政治必修+选修",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "法学入门公开课",
+          "type": "course",
+          "level": "L3",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "入门",
+            "中文"
+          ],
+          "description": "中国大学MOOC法学入门课程",
+          "detail": "理解法律如何运行",
+          "price": "免费",
+          "url": "https://www.icourse163.org/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "专业研究",
+      "description": "大学水平，掌握政治学/经济学/法学研究方法",
+      "ageRange": "16-18岁",
+      "resources": [
+        {
+          "title": "《论自由》",
+          "type": "book",
+          "level": "L4",
+          "subject": "politics",
+          "tags": [
+            "经典",
+            "政治哲学"
+          ],
+          "description": "密尔著，自由主义的经典之作",
+          "detail": "理解个人自由与社会权力的边界",
+          "price": "约20元",
+          "url": "https://book.douban.com/subject/1884600/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《国富论》",
+          "type": "book",
+          "level": "L4",
+          "subject": "politics",
+          "tags": [
+            "经典",
+            "经济学"
+          ],
+          "description": "亚当·斯密著，现代经济学奠基之作",
+          "detail": "理解市场经济的逻辑起点",
+          "price": "约50元",
+          "url": "https://book.douban.com/subject/1884601/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳大学法学实践",
+          "type": "local",
+          "level": "L4",
+          "subject": "politics",
+          "tags": [
+            "线下",
+            "实践",
+            "深圳"
+          ],
+          "description": "深大法学院法律援助中心",
+          "detail": "参与真实法律援助案例",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳国际仲裁院旁听",
+          "type": "local",
+          "level": "L4",
+          "subject": "politics",
+          "tags": [
+            "线下",
+            "体验",
+            "深圳"
+          ],
+          "description": "深圳国际仲裁院公开审理旁听",
+          "detail": "了解国际商事仲裁如何运作",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Harvard正义课",
+          "type": "online",
+          "level": "L4",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "哲学",
+            "英文"
+          ],
+          "description": "Michael Sandel的正义课",
+          "detail": "全球最受欢迎的哲学课",
+          "price": "免费",
+          "url": "https://www.justiceharvard.org/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT政治学课程",
+          "type": "online",
+          "level": "L4",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "大学课程",
+            "英文"
+          ],
+          "description": "MIT政治学系课程开放",
+          "detail": "比较政治、国际关系等",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/courses/political-science/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "中国大学MOOC政治学课程",
+          "type": "online",
+          "level": "L4",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "系统",
+            "中文"
+          ],
+          "description": "国内大学政治学精品课程",
+          "detail": "政治学原理、国际政治等",
+          "price": "免费",
+          "url": "https://www.icourse163.org/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "北大国家发展研究院公开课",
+          "type": "course",
+          "level": "L4",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "前沿",
+            "中文"
+          ],
+          "description": "北大国发院经济学公开讲座",
+          "detail": "中国经济问题的学术分析",
+          "price": "免费",
+          "url": "https://www.nsd.pku.edu.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "思想前沿",
+      "description": "超越学科，用政治思维理解时代大问题",
+      "ageRange": "16岁+",
+      "resources": [
+        {
+          "title": "《公正》",
+          "type": "book",
+          "level": "L5",
+          "subject": "politics",
+          "tags": [
+            "思想",
+            "哲学"
+          ],
+          "description": "桑德尔著，理解正义的多重维度",
+          "detail": "从功利主义到自由主义到共同体主义",
+          "price": "约45元",
+          "url": "https://book.douban.com/subject/1884602/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《21世纪资本论》",
+          "type": "book",
+          "level": "L5",
+          "subject": "politics",
+          "tags": [
+            "前沿",
+            "经济学"
+          ],
+          "description": "皮凯蒂著，理解不平等的根源",
+          "detail": "用数据揭示资本回报率>经济增长率",
+          "price": "约70元",
+          "url": "https://book.douban.com/subject/25847240/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Stanford政治学研究生课程",
+          "type": "online",
+          "level": "L5",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "研究生级别",
+            "英文"
+          ],
+          "description": "斯坦福政治学系研究生课程",
+          "detail": "民主理论、政治经济学等前沿",
+          "price": "免费",
+          "url": "https://politicalscience.stanford.edu/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "edX公共治理课程",
+          "type": "online",
+          "level": "L5",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "专业",
+            "英文"
+          ],
+          "description": "哈佛/清华公共治理课程",
+          "detail": "公共政策、全球治理等",
+          "price": "免费旁听",
+          "url": "https://www.edx.org/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "清华公共管理学院讲座",
+          "type": "course",
+          "level": "L5",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "前沿",
+            "中文"
+          ],
+          "description": "清华公管学院公开学术讲座",
+          "detail": "公共治理、政策分析等前沿",
+          "price": "免费",
+          "url": "https://www.sppm.tsinghua.edu.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "北大法学院公开讲座",
+          "type": "course",
+          "level": "L5",
+          "subject": "politics",
+          "tags": [
+            "免费",
+            "前沿",
+            "中文"
+          ],
+          "description": "北大法学院学术讲座",
+          "detail": "宪法学、法理学等前沿方向",
+          "price": "免费",
+          "url": "https://www.law.pku.edu.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    }
+  ]
+}

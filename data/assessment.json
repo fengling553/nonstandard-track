@@ -277,6 +277,965 @@
           "skill": "文学理论"
         }
       ]
+    },
+    {
+      "id": "chemistry",
+      "name": "化学",
+      "icon": "🧪",
+      "questions": [
+        {
+          "id": "c1",
+          "text": "把糖放入水中，糖消失了，这个过程叫什么？",
+          "options": [
+            "蒸发",
+            "溶解",
+            "燃烧",
+            "凝固"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "物质变化"
+        },
+        {
+          "id": "c2",
+          "text": "以下哪个是气体的特征？",
+          "options": [
+            "有固定形状",
+            "有固定体积",
+            "能充满整个容器",
+            "不能被压缩"
+          ],
+          "correct": 2,
+          "level": "L1",
+          "skill": "物质状态"
+        },
+        {
+          "id": "c3",
+          "text": "化学方程式2H₂+O₂→2H₂O中，反应物是什么？",
+          "options": [
+            "只有H₂",
+            "只有O₂",
+            "H₂和O₂",
+            "H₂O"
+          ],
+          "correct": 2,
+          "level": "L2",
+          "skill": "化学方程式"
+        },
+        {
+          "id": "c4",
+          "text": "酸溶液能使石蕊试液变成什么颜色？",
+          "options": [
+            "蓝色",
+            "红色",
+            "无色",
+            "绿色"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "酸碱性质"
+        },
+        {
+          "id": "c5",
+          "text": "原子核由什么组成？",
+          "options": [
+            "质子和电子",
+            "质子和中子",
+            "中子和电子",
+            "只有质子"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "原子结构"
+        },
+        {
+          "id": "c6",
+          "text": "下列哪个是氧化还原反应？",
+          "options": [
+            "NaCl溶于水",
+            "H₂+Cl₂→2HCl",
+            "冰融化成水",
+            "NaOH+HCl→NaCl+H₂O"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "氧化还原"
+        },
+        {
+          "id": "c7",
+          "text": "有机化学中，苯的分子式是什么？",
+          "options": [
+            "C₆H₆",
+            "C₆H₁₂",
+            "CH₄",
+            "C₂H₄"
+          ],
+          "correct": 0,
+          "level": "L4",
+          "skill": "有机化学"
+        },
+        {
+          "id": "c8",
+          "text": "勒夏特列原理说的是什么？",
+          "options": [
+            "反应速率与浓度成正比",
+            "平衡向减弱外界改变的方向移动",
+            "所有反应都是可逆的",
+            "催化剂改变平衡位置"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "化学平衡"
+        },
+        {
+          "id": "c9",
+          "text": "氢键的本质是什么？",
+          "options": [
+            "共价键",
+            "离子键",
+            "分子间作用力",
+            "金属键"
+          ],
+          "correct": 2,
+          "level": "L5",
+          "skill": "化学键理论"
+        },
+        {
+          "id": "c10",
+          "text": "绿色化学的核心原则是什么？",
+          "options": [
+            "提高反应速率",
+            "增加产品产量",
+            "从源头减少有害物质的使用和产生",
+            "降低生产成本"
+          ],
+          "correct": 2,
+          "level": "L5",
+          "skill": "绿色化学"
+        }
+      ]
+    },
+    {
+      "id": "biology",
+      "name": "生物",
+      "icon": "🧬",
+      "questions": [
+        {
+          "id": "b1",
+          "text": "植物通过什么过程把阳光转化为食物？",
+          "options": [
+            "呼吸作用",
+            "光合作用",
+            "蒸腾作用",
+            "消化作用"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "生命过程"
+        },
+        {
+          "id": "b2",
+          "text": "人的心脏有几个心室？",
+          "options": [
+            "1个",
+            "2个",
+            "3个",
+            "4个"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "人体结构"
+        },
+        {
+          "id": "b3",
+          "text": "DNA的双螺旋结构是由谁发现的？",
+          "options": [
+            "达尔文",
+            "孟德尔",
+            "沃森和克里克",
+            "巴斯德"
+          ],
+          "correct": 2,
+          "level": "L3",
+          "skill": "遗传学"
+        },
+        {
+          "id": "b4",
+          "text": "有丝分裂和减数分裂的主要区别是什么？",
+          "options": [
+            "有丝分裂产生2个细胞，减数分裂产生4个细胞",
+            "减数分裂有同源染色体配对和分离",
+            "有丝分裂只发生在生殖细胞中",
+            "减数分裂不需要纺锤体"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "细胞分裂"
+        },
+        {
+          "id": "b5",
+          "text": "下列哪种物质是蛋白质？",
+          "options": [
+            "纤维素",
+            "胰岛素",
+            "淀粉",
+            "胆固醇"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "生物大分子"
+        },
+        {
+          "id": "b6",
+          "text": "内环境稳态的维持主要依靠什么机制？",
+          "options": [
+            "正反馈调节",
+            "负反馈调节",
+            "神经调节",
+            "免疫调节"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "稳态调节"
+        },
+        {
+          "id": "b7",
+          "text": "CRISPR-Cas9技术的核心原理是什么？",
+          "options": [
+            "RNA干扰",
+            "碱基类似物替换",
+            "向导RNA引导Cas9核酸酶定点切割DNA",
+            "质粒转化"
+          ],
+          "correct": 2,
+          "level": "L5",
+          "skill": "基因编辑"
+        },
+        {
+          "id": "b8",
+          "text": "生态学中的r-选择和K-选择的本质区别是什么？",
+          "options": [
+            "繁殖策略不同：r-选择倾向数量，K-选择倾向质量",
+            "食性不同",
+            "栖息地不同",
+            "体型大小不同"
+          ],
+          "correct": 0,
+          "level": "L5",
+          "skill": "生态策略"
+        },
+        {
+          "id": "b9",
+          "text": "以下哪个不是原核生物？",
+          "options": [
+            "大肠杆菌",
+            "蓝藻",
+            "酵母菌",
+            "支原体"
+          ],
+          "correct": 2,
+          "level": "L2",
+          "skill": "细胞类型"
+        },
+        {
+          "id": "b10",
+          "text": "达尔文进化论的核心机制是什么？",
+          "options": [
+            "用进废退",
+            "自然选择",
+            "基因突变",
+            "环境诱导"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "进化论"
+        }
+      ]
+    },
+    {
+      "id": "informatics",
+      "name": "信息学",
+      "icon": "💻",
+      "questions": [
+        {
+          "id": "i1",
+          "text": "计算机用0和1来存储信息，这叫什么制？",
+          "options": [
+            "十进制",
+            "八进制",
+            "二进制",
+            "十六进制"
+          ],
+          "correct": 2,
+          "level": "L1",
+          "skill": "数制基础"
+        },
+        {
+          "id": "i2",
+          "text": "Scratch中，让角色移动10步应该用哪个积木？",
+          "options": [
+            "移动10步",
+            "旋转10度",
+            "等待10秒",
+            "说10"
+          ],
+          "correct": 0,
+          "level": "L1",
+          "skill": "图形化编程"
+        },
+        {
+          "id": "i3",
+          "text": "二分查找一个有序数组的时间复杂度是？",
+          "options": [
+            "O(n)",
+            "O(log n)",
+            "O(n²)",
+            "O(1)"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "算法基础"
+        },
+        {
+          "id": "i4",
+          "text": "Python中，range(5)会生成哪些数字？",
+          "options": [
+            "1,2,3,4,5",
+            "0,1,2,3,4",
+            "0,1,2,3,4,5",
+            "1,2,3,4"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "编程基础"
+        },
+        {
+          "id": "i5",
+          "text": "栈这种数据结构的特点是什么？",
+          "options": [
+            "先进先出",
+            "先进后出",
+            "随机访问",
+            "双端操作"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "数据结构"
+        },
+        {
+          "id": "i6",
+          "text": "快速排序的平均时间复杂度是？",
+          "options": [
+            "O(n)",
+            "O(n log n)",
+            "O(n²)",
+            "O(log n)"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "排序算法"
+        },
+        {
+          "id": "i7",
+          "text": "动态规划与贪心算法的本质区别是什么？",
+          "options": [
+            "动态规划更快",
+            "贪心只考虑局部最优，动态规划考虑全局最优",
+            "动态规划不能处理最优化问题",
+            "贪心算法更复杂"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "算法策略"
+        },
+        {
+          "id": "i8",
+          "text": "图的最短路径算法中，Dijkstra算法不能处理什么情况？",
+          "options": [
+            "有向图",
+            "稀疏图",
+            "负权边",
+            "稠密图"
+          ],
+          "correct": 2,
+          "level": "L4",
+          "skill": "图论算法"
+        },
+        {
+          "id": "i9",
+          "text": "P vs NP问题的本质是什么？",
+          "options": [
+            "P问题是否等于NP问题，即能否在多项式时间内验证的解也能在多项式时间内找到",
+            "P和NP哪种更快",
+            "如何设计NP完全算法",
+            "并行计算能否加速P问题"
+          ],
+          "correct": 0,
+          "level": "L5",
+          "skill": "计算理论"
+        },
+        {
+          "id": "i10",
+          "text": "在信息学竞赛中，NOI的全程是什么？",
+          "options": [
+            "全国青少年信息学奥林匹克",
+            "全国计算机等级考试",
+            "全国软件设计大赛",
+            "全国数学建模竞赛"
+          ],
+          "correct": 0,
+          "level": "L4",
+          "skill": "竞赛常识"
+        }
+      ]
+    },
+    {
+      "id": "english",
+      "name": "英语",
+      "icon": "🌍",
+      "questions": [
+        {
+          "id": "e1",
+          "text": "What is the past tense of 'go'? ",
+          "options": [
+            "goed",
+            "went",
+            "gone",
+            "going"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "基础语法"
+        },
+        {
+          "id": "e2",
+          "text": "Choose the correct sentence: ",
+          "options": [
+            "She don't like apples.",
+            "She doesn't likes apples.",
+            "She doesn't like apples.",
+            "She not like apples."
+          ],
+          "correct": 2,
+          "level": "L1",
+          "skill": "基础语法"
+        },
+        {
+          "id": "e3",
+          "text": "What does 'ubiquitous' mean? ",
+          "options": [
+            "rare",
+            "present everywhere",
+            "dangerous",
+            "beautiful"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "词汇理解"
+        },
+        {
+          "id": "e4",
+          "text": "Which is a conditional sentence? ",
+          "options": [
+            "I went to school.",
+            "If it rains, I will stay home.",
+            "She is reading a book.",
+            "They have finished."
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "语法结构"
+        },
+        {
+          "id": "e5",
+          "text": "In academic writing, 'furthermore' is used to: ",
+          "options": [
+            "show contrast",
+            "add information",
+            "show cause",
+            "show time"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "学术写作"
+        },
+        {
+          "id": "e6",
+          "text": "What is the main difference between 'affect' and 'effect'? ",
+          "options": [
+            "They mean the same thing.",
+            "'Affect' is usually a verb, 'effect' is usually a noun.",
+            "'Affect' is formal, 'effect' is informal.",
+            "No difference in usage"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "词义辨析"
+        },
+        {
+          "id": "e7",
+          "text": "In IELTS Writing Task 2, what is the minimum word count? ",
+          "options": [
+            "150 words",
+            "200 words",
+            "250 words",
+            "300 words"
+          ],
+          "correct": 2,
+          "level": "L4",
+          "skill": "雅思考试"
+        },
+        {
+          "id": "e8",
+          "text": "What does 'peer-reviewed journal' mean? ",
+          "options": [
+            "A journal anyone can publish in",
+            "A journal where articles are evaluated by other scholars before publication",
+            "A journal only for professors",
+            "A free online journal"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "学术规范"
+        },
+        {
+          "id": "e9",
+          "text": "What is the Sapir-Whorf hypothesis about? ",
+          "options": [
+            "Language learning methods",
+            "Language influences thought and perception",
+            "Grammar rules across languages",
+            "Translation techniques"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "语言学理论"
+        },
+        {
+          "id": "e10",
+          "text": "In corpus linguistics, what does 'collocation' refer to? ",
+          "options": [
+            "Grammar rules",
+            "Words that frequently occur together",
+            "Pronunciation patterns",
+            "Sentence structures"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "语料库语言学"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "name": "历史",
+      "icon": "🏛️",
+      "questions": [
+        {
+          "id": "h1",
+          "text": "秦始皇统一中国是在哪一年？",
+          "options": [
+            "公元前221年",
+            "公元前206年",
+            "公元前256年",
+            "公元前202年"
+          ],
+          "correct": 0,
+          "level": "L1",
+          "skill": "中国史"
+        },
+        {
+          "id": "h2",
+          "text": "文艺复兴最早起源于哪个国家？",
+          "options": [
+            "英国",
+            "法国",
+            "意大利",
+            "德国"
+          ],
+          "correct": 2,
+          "level": "L1",
+          "skill": "世界史"
+        },
+        {
+          "id": "h3",
+          "text": "唐朝实行的是什么行政制度？",
+          "options": [
+            "分封制",
+            "郡县制",
+            "三省六部制",
+            "行省制"
+          ],
+          "correct": 2,
+          "level": "L2",
+          "skill": "政治制度"
+        },
+        {
+          "id": "h4",
+          "text": "工业革命最先发生在哪个国家？",
+          "options": [
+            "法国",
+            "英国",
+            "美国",
+            "德国"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "近代史"
+        },
+        {
+          "id": "h5",
+          "text": "黄仁宇在《万历十五年》中提出的核心观点是什么？",
+          "options": [
+            "明朝因万历怠政而亡",
+            "中国传统体制存在结构性困境",
+            "张居正改革是成功的",
+            "明朝经济高度发达"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "史学观点"
+        },
+        {
+          "id": "h6",
+          "text": "《枪炮、病菌与钢铁》主要讨论什么问题？",
+          "options": [
+            "欧洲军事技术优势",
+            "为什么不同大陆的文明发展速度不同",
+            "疾病如何影响历史",
+            "钢铁工业的发展"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "全球史观"
+        },
+        {
+          "id": "h7",
+          "text": "历史学中的'史料批判'指的是什么？",
+          "options": [
+            "批评历史人物",
+            "对史料的真实性、可靠性和局限性进行系统审查",
+            "否定历史事实",
+            "只相信官方史料"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "史学方法"
+        },
+        {
+          "id": "h8",
+          "text": "年鉴学派的核心方法论是什么？",
+          "options": [
+            "以政治事件为中心",
+            "长时段、多学科交叉的总体史研究",
+            "只研究经济史",
+            "以伟人传记为主"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "史学流派"
+        },
+        {
+          "id": "h9",
+          "text": "大历史观（Big History）的核心特征是什么？",
+          "options": [
+            "只研究中国历史",
+            "从宇宙大爆炸到人类未来的跨学科叙事",
+            "强调帝王将相的作用",
+            "以民族国家为分析单位"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "史学前沿"
+        },
+        {
+          "id": "h10",
+          "text": "后现代史学对传统史学的主要挑战是什么？",
+          "options": [
+            "认为历史完全不可知",
+            "质疑宏大叙事和客观性，强调话语和权力",
+            "主张回到传统编年史",
+            "否定一切史料"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "史学理论"
+        }
+      ]
+    },
+    {
+      "id": "geography",
+      "name": "地理",
+      "icon": "🗺️",
+      "questions": [
+        {
+          "id": "g1",
+          "text": "地球自转一周大约需要多长时间？",
+          "options": [
+            "12小时",
+            "24小时",
+            "365天",
+            "30天"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "地球运动"
+        },
+        {
+          "id": "g2",
+          "text": "世界上面积最大的大洲是哪个？",
+          "options": [
+            "非洲",
+            "北美洲",
+            "亚洲",
+            "欧洲"
+          ],
+          "correct": 2,
+          "level": "L1",
+          "skill": "世界地理"
+        },
+        {
+          "id": "g3",
+          "text": "形成降水的三个必要条件是什么？",
+          "options": [
+            "高温、低压、大风",
+            "充足水汽、上升运动、凝结核",
+            "低温、高压、静风",
+            "太阳辐射、洋流、地形"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "气象基础"
+        },
+        {
+          "id": "g4",
+          "text": "板块构造学说认为地球表面由几大板块组成？",
+          "options": [
+            "3大板块",
+            "6大板块",
+            "7大板块",
+            "10大板块"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "地质基础"
+        },
+        {
+          "id": "g5",
+          "text": "厄尔尼诺现象的本质是什么？",
+          "options": [
+            "海水温度异常升高",
+            "赤道太平洋东部海水异常升温的现象",
+            "南极冰盖融化",
+            "北极海冰减少"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "气候系统"
+        },
+        {
+          "id": "g6",
+          "text": "城市热岛效应的主要成因是什么？",
+          "options": [
+            "城市绿化太多",
+            "城市建筑和人类活动导致城区气温高于郊区",
+            "城市海拔低",
+            "城市靠近海洋"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "城市地理"
+        },
+        {
+          "id": "g7",
+          "text": "GIS中的空间分析主要包括什么？",
+          "options": [
+            "只做地图",
+            "叠置分析、缓冲区分析、网络分析等空间运算",
+            "文字处理",
+            "数据存储"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "GIS技术"
+        },
+        {
+          "id": "g8",
+          "text": "克里斯塔勒的中心地理论的核心观点是什么？",
+          "options": [
+            "城市越大越好",
+            "聚落按等级和功能形成六边形空间结构",
+            "所有城市功能相同",
+            "城市应该均匀分布"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "地理理论"
+        },
+        {
+          "id": "g9",
+          "text": "可持续发展三大支柱是什么？",
+          "options": [
+            "经济、军事、文化",
+            "经济增长、社会公平、环境保护",
+            "工业、农业、服务业",
+            "科技、教育、医疗"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "可持续发展"
+        },
+        {
+          "id": "g10",
+          "text": "数字地球的核心技术基础是什么？",
+          "options": [
+            "纸质地图",
+            "遥感、GIS、GPS、大数据和虚拟现实的集成",
+            "人工测绘",
+            "传统统计"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "地理信息前沿"
+        }
+      ]
+    },
+    {
+      "id": "politics",
+      "name": "政治",
+      "icon": "⚖️",
+      "questions": [
+        {
+          "id": "p1",
+          "text": "中国的根本政治制度是什么？",
+          "options": [
+            "多党制",
+            "人民代表大会制度",
+            "总统制",
+            "联邦制"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "中国政治"
+        },
+        {
+          "id": "p2",
+          "text": "什么是法律？",
+          "options": [
+            "只有刑法",
+            "由国家制定或认可、靠国家强制力保证实施的行为规范",
+            "只有宪法",
+            "道德规范的总和"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "法律基础"
+        },
+        {
+          "id": "p3",
+          "text": "市场经济与计划经济的本质区别是什么？",
+          "options": [
+            "发展速度不同",
+            "资源配置方式不同：市场靠价格机制，计划靠行政指令",
+            "技术水平不同",
+            "人口多少不同"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "经济制度"
+        },
+        {
+          "id": "p4",
+          "text": "公民的基本权利和义务的关系是什么？",
+          "options": [
+            "只有权利没有义务",
+            "只有义务没有权利",
+            "权利和义务相统一，没有无义务的权利也没有无权利的义务",
+            "权利比义务重要"
+          ],
+          "correct": 2,
+          "level": "L2",
+          "skill": "公民素养"
+        },
+        {
+          "id": "p5",
+          "text": "三权分立理论最早由谁系统提出？",
+          "options": [
+            "洛克",
+            "孟德斯鸠",
+            "卢梭",
+            "霍布斯"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "政治理论"
+        },
+        {
+          "id": "p6",
+          "text": "GDP和GNP的主要区别是什么？",
+          "options": [
+            "没有区别",
+            "GDP按地域原则统计，GNP按国民原则统计",
+            "GDP更大",
+            "GNP只算服务业"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "经济学基础"
+        },
+        {
+          "id": "p7",
+          "text": "罗尔斯在《正义论》中提出的核心原则是什么？",
+          "options": [
+            "效率优先",
+            "差异原则和公平的机会平等原则",
+            "自由市场原则",
+            "功利主义原则"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "政治哲学"
+        },
+        {
+          "id": "p8",
+          "text": "什么是'公地悲剧'？",
+          "options": [
+            "公共建筑倒塌",
+            "公共资源因个体理性选择而被过度使用导致枯竭",
+            "自然灾害",
+            "公共预算不足"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "公共治理"
+        },
+        {
+          "id": "p9",
+          "text": "福柯'权力/知识'理论的核心观点是什么？",
+          "options": [
+            "权力和知识完全无关",
+            "权力生产知识，知识也行使权力，两者相互构成",
+            "知识就是力量",
+            "权力只来自武力"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "政治理论前沿"
+        },
+        {
+          "id": "p10",
+          "text": "阿玛蒂亚·森的'可行能力方法'对贫困的定义是什么？",
+          "options": [
+            "收入低于某个标准",
+            "贫困是可行能力的剥夺，不仅仅是收入不足",
+            "失业就是贫困",
+            "没有房子住就是贫困"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "发展理论"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,650 @@
+{
+  "updatedAt": "2026-07-09",
+  "subject": "英语",
+  "subjectId": "english",
+  "intro": "从听说启蒙到学术英语，五级体系带你建立真正的语言能力",
+  "levels": [
+    {
+      "id": "L1",
+      "name": "听说启蒙",
+      "description": "学前至小学低年级，建立英语语音敏感度",
+      "ageRange": "4-8岁",
+      "resources": [
+        {
+          "title": "《牛津阅读树》",
+          "type": "book",
+          "level": "L1",
+          "subject": "english",
+          "tags": [
+            "分级阅读",
+            "经典"
+          ],
+          "description": "全球最畅销的英语分级读物",
+          "detail": "从自然拼读到简单故事，1-9级进阶",
+          "price": "约200元/套",
+          "url": "https://book.douban.com/subject/1884576/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《RAZ分级阅读》",
+          "type": "book",
+          "level": "L1",
+          "subject": "english",
+          "tags": [
+            "分级阅读",
+            "系统"
+          ],
+          "description": "从aa到Z2共29级的超完整分级体系",
+          "detail": "美国1/3学校在用",
+          "price": "约150元/年（线上）",
+          "url": "https://www.raz-kids.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳图书馆英文绘本活动",
+          "type": "local",
+          "level": "L1",
+          "subject": "english",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳图书馆定期英文绘本阅读活动",
+          "detail": "专业老师带读英文绘本",
+          "price": "免费",
+          "url": "https://www.szlib.org.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "EF英孚少儿英语（深圳）",
+          "type": "local",
+          "level": "L1",
+          "subject": "english",
+          "tags": [
+            "线下",
+            "系统",
+            "深圳"
+          ],
+          "description": "全球知名英语培训机构深圳校区",
+          "detail": "外教小班，体系完整",
+          "price": "200-400元/课时",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Starfall",
+          "type": "online",
+          "level": "L1",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "自然拼读",
+            "英文"
+          ],
+          "description": "美国最知名的免费自然拼读学习网站",
+          "detail": "从字母认知到拼读规则",
+          "price": "基础免费",
+          "url": "https://www.starfall.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Khan Academy Kids",
+          "type": "online",
+          "level": "L1",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "综合",
+            "英文"
+          ],
+          "description": "可汗学院幼儿版，含英语阅读模块",
+          "detail": "完全免费",
+          "price": "免费",
+          "url": "https://learn.khanacademy.org/khan-academy-kids/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Peppa Pig英文版",
+          "type": "course",
+          "level": "L1",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "动画",
+            "英文"
+          ],
+          "description": "全球最适合英语启蒙的动画片",
+          "detail": "语速慢、重复高、日常词汇",
+          "price": "免费（B站）",
+          "url": "英文",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "读写进阶",
+      "description": "小学中高年级，从听说过渡到读写",
+      "ageRange": "8-12岁",
+      "resources": [
+        {
+          "title": "《书虫》系列",
+          "type": "book",
+          "level": "L2",
+          "subject": "english",
+          "tags": [
+            "分级阅读",
+            "经典"
+          ],
+          "description": "牛津大学出版社入门级英语读物",
+          "detail": "从入门级到六级",
+          "price": "约20元/册",
+          "url": "https://book.douban.com/subject/1884577/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《国家地理少儿版》",
+          "type": "book",
+          "level": "L2",
+          "subject": "english",
+          "tags": [
+            "科普",
+            "分级"
+          ],
+          "description": "用真实世界的内容学英语",
+          "detail": "图文并茂",
+          "price": "约30元/册",
+          "url": "https://book.douban.com/subject/1884578/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳外国语学校附属英语班",
+          "type": "local",
+          "level": "L2",
+          "subject": "english",
+          "tags": [
+            "线下",
+            "系统",
+            "深圳"
+          ],
+          "description": "深圳外国语体系英语课程",
+          "detail": "深圳英语教学标杆",
+          "price": "校内免费/校外300-500元/课时",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳图书馆英语角",
+          "type": "local",
+          "level": "L2",
+          "subject": "english",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "深圳图书馆定期英语角活动",
+          "detail": "免费练口语",
+          "price": "免费",
+          "url": "https://www.szlib.org.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Duolingo",
+          "type": "online",
+          "level": "L2",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "游戏化",
+            "中文/英文"
+          ],
+          "description": "全球最流行的语言学习APP",
+          "detail": "游戏化学习，每天15分钟",
+          "price": "基础免费",
+          "url": "https://www.duolingo.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Newsela",
+          "type": "online",
+          "level": "L2",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "阅读",
+            "英文"
+          ],
+          "description": "根据阅读水平自动调整难度的新闻阅读平台",
+          "detail": "Lexile分级",
+          "price": "基础免费",
+          "url": "https://newsela.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "English with Lucy",
+          "type": "course",
+          "level": "L2",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "YouTube最受欢迎的英语教学频道之一",
+          "detail": "英国老师，讲解清晰",
+          "price": "免费",
+          "url": "https://www.youtube.com/@EnglishwithLucy",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "学术基础",
+      "description": "初中水平，建立学术英语的读写听说能力",
+      "ageRange": "12-15岁",
+      "resources": [
+        {
+          "title": "《剑桥中级英语语法》",
+          "type": "book",
+          "level": "L3",
+          "subject": "english",
+          "tags": [
+            "语法",
+            "系统"
+          ],
+          "description": "剑桥英语语法红蓝绿系列的中级版",
+          "detail": "从语法到用法，系统全面",
+          "price": "约50元",
+          "url": "https://book.douban.com/subject/1884579/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《Word Power Made Easy》",
+          "type": "book",
+          "level": "L3",
+          "subject": "english",
+          "tags": [
+            "词汇",
+            "经典"
+          ],
+          "description": "全球最经典的英语词汇构建书",
+          "detail": "不是背单词，而是理解词根词源",
+          "price": "约40元",
+          "url": "https://book.douban.com/subject/1884580/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "新东方雅思基础班（深圳）",
+          "type": "local",
+          "level": "L3",
+          "subject": "english",
+          "tags": [
+            "线下",
+            "考试",
+            "深圳"
+          ],
+          "description": "新东方深圳校区雅思基础课程",
+          "detail": "从词汇语法到听说读写",
+          "price": "5000-8000元/期",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳大学语言中心",
+          "type": "local",
+          "level": "L3",
+          "subject": "english",
+          "tags": [
+            "线下",
+            "公益",
+            "大学"
+          ],
+          "description": "深圳大学语言中心对外开放的英语活动",
+          "detail": "英语角、文化讲座",
+          "price": "免费/低价",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "TED Talks",
+          "type": "online",
+          "level": "L3",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "听力",
+            "英文"
+          ],
+          "description": "全球最好的英语听力素材",
+          "detail": "各领域专家18分钟演讲",
+          "price": "免费",
+          "url": "https://www.ted.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "BBC Learning English",
+          "type": "online",
+          "level": "L3",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "综合",
+            "英文"
+          ],
+          "description": "BBC官方英语学习平台",
+          "detail": "从初级到高级",
+          "price": "免费",
+          "url": "https://www.bbc.co.uk/learningenglish",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Crash Course英语文学",
+          "type": "course",
+          "level": "L3",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "文学",
+            "英文"
+          ],
+          "description": "用趣味动画讲英语文学经典",
+          "detail": "覆盖莎士比亚到现代文学",
+          "price": "免费",
+          "url": "https://www.youtube.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "雅思哥",
+          "type": "online",
+          "level": "L3",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "考试",
+            "中文"
+          ],
+          "description": "中国最知名的雅思备考社区",
+          "detail": "真题回忆+备考经验",
+          "price": "免费",
+          "url": "https://www.ieltsbro.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "考试突破",
+      "description": "高中/雅思/托福水平，达到学术英语要求",
+      "ageRange": "15-18岁",
+      "resources": [
+        {
+          "title": "《剑桥雅思真题集》",
+          "type": "book",
+          "level": "L4",
+          "subject": "english",
+          "tags": [
+            "雅思",
+            "真题"
+          ],
+          "description": "剑桥官方雅思真题，备考必备",
+          "detail": "每年一本，含4套完整真题",
+          "price": "约60元/本",
+          "url": "https://book.douban.com/subject/1884581/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《托福官方指南》",
+          "type": "book",
+          "level": "L4",
+          "subject": "english",
+          "tags": [
+            "托福",
+            "官方"
+          ],
+          "description": "ETS官方托福备考指南",
+          "detail": "最权威的托福备考资料",
+          "price": "约120元",
+          "url": "https://book.douban.com/subject/1884582/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "环球雅思/新航道（深圳）",
+          "type": "local",
+          "level": "L4",
+          "subject": "english",
+          "tags": [
+            "线下",
+            "考试",
+            "深圳"
+          ],
+          "description": "深圳两大雅思托福培训机构",
+          "detail": "系统备考课程",
+          "price": "5000-15000元/期",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳外国语学校雅思课程",
+          "type": "local",
+          "level": "L4",
+          "subject": "english",
+          "tags": [
+            "线下",
+            "考试",
+            "深圳"
+          ],
+          "description": "深外校内雅思备考课程",
+          "detail": "师资强",
+          "price": "校内费用低",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Coursera学术英语专项",
+          "type": "online",
+          "level": "L4",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "学术",
+            "英文"
+          ],
+          "description": "加州大学尔湾分校学术英语专项",
+          "detail": "学术写作、研究方法",
+          "price": "免费旁听",
+          "url": "https://www.coursera.org/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "edX IELTS备考课",
+          "type": "online",
+          "level": "L4",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "考试",
+            "英文"
+          ],
+          "description": "edX上的雅思备考课程",
+          "detail": "由雅思出题方IDP提供",
+          "price": "免费旁听",
+          "url": "https://www.edx.org/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "顾家北写作课",
+          "type": "course",
+          "level": "L4",
+          "subject": "english",
+          "tags": [
+            "付费",
+            "写作",
+            "中文"
+          ],
+          "description": "中国最知名的雅思写作教学",
+          "detail": "从逻辑到表达，系统提升",
+          "price": "约2000元/期",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Simon雅思课",
+          "type": "course",
+          "level": "L4",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "系统",
+            "英文"
+          ],
+          "description": "前雅思考官Simon的免费雅思课程",
+          "detail": "从考官视角讲解评分标准",
+          "price": "免费",
+          "url": "https://ielts-simon.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "学术前沿",
+      "description": "学术英语+跨文化理解，为留学和研究做准备",
+      "ageRange": "16岁+",
+      "resources": [
+        {
+          "title": "《The Elements of Style》",
+          "type": "book",
+          "level": "L5",
+          "subject": "english",
+          "tags": [
+            "写作",
+            "经典"
+          ],
+          "description": "英语写作的圣经级指南",
+          "detail": "薄薄一本，英语写作必读",
+          "price": "约30元",
+          "url": "https://book.douban.com/subject/1884583/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《Academic Writing》",
+          "type": "book",
+          "level": "L5",
+          "subject": "english",
+          "tags": [
+            "学术写作",
+            "系统"
+          ],
+          "description": "系统学习学术论文写作",
+          "detail": "从论文结构到引用规范",
+          "price": "约80元",
+          "url": "",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT学术写作课程",
+          "type": "online",
+          "level": "L5",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "学术",
+            "英文"
+          ],
+          "description": "MIT写作与人文中心课程",
+          "detail": "学术写作、科技写作",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/courses/writing-and-humanistic-studies/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Coursera学术写作专项",
+          "type": "online",
+          "level": "L5",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "学术",
+            "英文"
+          ],
+          "description": "斯坦福/密歇根大学学术写作课程",
+          "detail": "论文写作、文献综述",
+          "price": "免费旁听",
+          "url": "https://www.coursera.org/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "LSE学术英语讲座",
+          "type": "course",
+          "level": "L5",
+          "subject": "english",
+          "tags": [
+            "免费",
+            "学术",
+            "英文"
+          ],
+          "description": "伦敦政经学院学术英语资源",
+          "detail": "学术讨论、批判性阅读",
+          "price": "免费",
+          "url": "https://www.lse.ac.uk/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "The Economist阅读",
+          "type": "online",
+          "level": "L5",
+          "subject": "english",
+          "tags": [
+            "付费",
+            "阅读",
+            "英文"
+          ],
+          "description": "经济学人杂志",
+          "detail": "高质量写作+深度分析",
+          "price": "订阅约$20/月",
+          "url": "https://www.economist.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    }
+  ]
+}

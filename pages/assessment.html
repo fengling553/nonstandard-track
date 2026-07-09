@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>学科测评 - 非标赛道</title>
+  <title>学科测评 - 9学科可测 - 非标赛道</title>
   <meta name="description" content="5分钟自测定水平，测完推荐对应层级训练资源">
   <link rel="stylesheet" href="../css/style.css">
   <style>
@@ -648,7 +648,7 @@
     <div id="step-select" class="step-section">
       <div class="section-header" style="margin-bottom:24px;">
         <h2>选择测评学科</h2>
-        <p>每科10道题，5分钟完成，测完自动推荐对应层级资源</p>
+        <p>9学科可测，每科10道题，5分钟完成，测完自动推荐对应层级资源</p>
       </div>
       <div class="subject-select-grid">
         <div class="subject-select-card" onclick="startQuiz('math')">
@@ -661,6 +661,49 @@
           <span class="card-emoji">📖</span>
           <h3>语文</h3>
           <p class="card-sub">测测你的阅读写作在哪个层级</p>
+          <span class="card-badge live">10题 · 约5分钟</span>
+        </div>
+
+        <div class="subject-select-card" onclick="startQuiz('chemistry')">
+          <span class="card-emoji">🧪</span>
+          <h3>化学</h3>
+          <p class="card-sub">从身边的化学反应到分子世界的奥秘</p>
+          <span class="card-badge live">10题 · 约5分钟</span>
+        </div>
+        <div class="subject-select-card" onclick="startQuiz('biology')">
+          <span class="card-emoji">🧬</span>
+          <h3>生物</h3>
+          <p class="card-sub">从微观细胞到宏观生态的生命科学</p>
+          <span class="card-badge live">10题 · 约5分钟</span>
+        </div>
+        <div class="subject-select-card" onclick="startQuiz('informatics')">
+          <span class="card-emoji">💻</span>
+          <h3>信息学</h3>
+          <p class="card-sub">从图形化编程到算法竞赛</p>
+          <span class="card-badge live">10题 · 约5分钟</span>
+        </div>
+        <div class="subject-select-card" onclick="startQuiz('english')">
+          <span class="card-emoji">🌍</span>
+          <h3>英语</h3>
+          <p class="card-sub">从听说启蒙到学术英语</p>
+          <span class="card-badge live">10题 · 约5分钟</span>
+        </div>
+        <div class="subject-select-card" onclick="startQuiz('history')">
+          <span class="card-emoji">🏛️</span>
+          <h3>历史</h3>
+          <p class="card-sub">从故事到思辨，理解历史脉络</p>
+          <span class="card-badge live">10题 · 约5分钟</span>
+        </div>
+        <div class="subject-select-card" onclick="startQuiz('geography')">
+          <span class="card-emoji">🗺️</span>
+          <h3>地理</h3>
+          <p class="card-sub">从脚下土地到全球视野</p>
+          <span class="card-badge live">10题 · 约5分钟</span>
+        </div>
+        <div class="subject-select-card" onclick="startQuiz('politics')">
+          <span class="card-emoji">⚖️</span>
+          <h3>政治</h3>
+          <p class="card-sub">从身边规则到社会运行逻辑</p>
           <span class="card-badge live">10题 · 约5分钟</span>
         </div>
         <div class="subject-select-card coming-soon">
@@ -773,44 +816,1246 @@
 
     // ===== 题目数据（内嵌，无需加载外部文件）=====
     var ASSESSMENT_DATA = {
-      "intro": "不知道自己什么水平？做5分钟自测就知道了。测完自动推荐对应层级的训练资源，不用盲目刷题。",
-      "subjects": [
+  "updatedAt": "2026-07-09",
+  "intro": "不知道自己什么水平？做5分钟自测就知道了。测完自动推荐对应层级的训练资源，不用盲目刷题。",
+  "subjects": [
+    {
+      "id": "math",
+      "name": "数学",
+      "icon": "📐",
+      "description": "测测你的数学思维在哪个层级",
+      "questions": [
         {
-          "id": "math",
-          "name": "数学",
-          "icon": "📐",
-          "questions": [
-            {"id":"m1","text":"小明有12颗糖，小红比小明多5颗，小红有几颗糖？","options":["15颗","17颗","7颗","12颗"],"correct":1,"level":"L1","skill":"基础运算"},
-            {"id":"m2","text":"一个长方形花园，长8米宽5米，如果要在周围围一圈篱笆，需要多少米篱笆？","options":["40米","26米","13米","80米"],"correct":1,"level":"L1","skill":"周长计算"},
-            {"id":"m3","text":"甲乙两车同时从A地出发去B地，甲车每小时60km，乙车每小时80km。2小时后两车相距多远？","options":["40km","20km","160km","120km"],"correct":0,"level":"L2","skill":"行程问题"},
-            {"id":"m4","text":"若3x+7=22，则x等于多少？","options":["5","7","3","15"],"correct":0,"level":"L2","skill":"方程求解"},
-            {"id":"m5","text":"证明：根号2是无理数。这个证明用到了什么方法？","options":["数学归纳法","反证法","构造法","穷举法"],"correct":1,"level":"L3","skill":"证明方法"},
-            {"id":"m6","text":"方程x²-5x+6=0的两个根之和等于多少？","options":["5","-5","6","-6"],"correct":0,"level":"L3","skill":"韦达定理"},
-            {"id":"m7","text":"已知数列{an}满足a₁=1, aₙ₊₁=2aₙ+1，求aₙ的通项公式。这需要什么方法？","options":["待定系数法构造等比数列","数学归纳法","裂项相消","倒序相加"],"correct":0,"level":"L4","skill":"递推数列"},
-            {"id":"m8","text":"在△ABC中，若sin²A+sin²B=sin²C，则△ABC一定是：","options":["等腰三角形","直角三角形","锐角三角形","钝角三角形"],"correct":1,"level":"L4","skill":"三角函数"},
-            {"id":"m9","text":"集合论中的'连续统假设'说的是什么？","options":["偶数和整数一样多","不存在介于可数和连续之间的基数","所有无穷大都相等","实数集是可数的"],"correct":1,"level":"L5","skill":"数学哲学"},
-            {"id":"m10","text":"哪个数学猜想至今未被证明，被克雷数学研究所列为七大千禧年难题之一？","options":["费马大定理","哥德巴赫猜想","P=NP问题","黎曼猜想"],"correct":3,"level":"L5","skill":"数学前沿"}
-          ]
+          "id": "m1",
+          "text": "小明有12颗糖，小红比小明多5颗，小红有几颗糖？",
+          "options": [
+            "15颗",
+            "17颗",
+            "7颗",
+            "12颗"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "基础运算"
         },
         {
-          "id": "chinese",
-          "name": "语文",
-          "icon": "📖",
-          "questions": [
-            {"id":"c1","text":"'春天来了，小草从地里钻出来了。'这句话中'钻'字好在哪里？","options":["只是普通的动词","写出了小草破土而出的生命力","说明土很硬","表示小草在躲藏"],"correct":1,"level":"L1","skill":"词语品析"},
-            {"id":"c2","text":"看图写话：小朋友在公园放风筝。下面哪种写法最好？","options":["小朋友放风筝。","春天到了，公园里草绿花红，小明开心地放着蝴蝶风筝，风筝越飞越高。","风筝飞了。","小明在公园。"],"correct":1,"level":"L1","skill":"看图写话"},
-            {"id":"c3","text":"阅读一段话后，'这段话主要写了什么'属于什么层次的阅读能力？","options":["只需要找到原句抄下来","需要概括段落大意，提炼核心信息","需要评价写得好不好","需要背诵原文"],"correct":1,"level":"L2","skill":"概括能力"},
-            {"id":"c4","text":"'蝉则一唱百和，顷刻成阵'这句话用了什么修辞手法？","options":["比喻","拟人","夸张","对偶"],"correct":2,"level":"L2","skill":"修辞手法"},
-            {"id":"c5","text":"读完《草船借箭》，你认为诸葛亮成功的根本原因是什么？","options":["运气好，正好有大雾","了解曹操多疑的性格，精准预判了对方行为","鲁肃帮了他","箭很多"],"correct":1,"level":"L3","skill":"人物分析"},
-            {"id":"c6","text":"'先天下之忧而忧，后天下之乐而乐'出自哪篇古文？表达了什么？","options":["《醉翁亭记》，表达山水之乐","《岳阳楼记》，表达忧国忧民的情怀","《出师表》，表达忠君之心","《爱莲说》，表达洁身自好"],"correct":1,"level":"L3","skill":"古文理解"},
-            {"id":"c7","text":"考场作文'以小见大'的写法，核心逻辑是什么？","options":["把小事编成大事","通过具体的个人经历揭示普遍的社会现象或人性规律","写很多小故事拼凑字数","只写小事不需要有深意"],"correct":1,"level":"L4","skill":"写作逻辑"},
-            {"id":"c8","text":"'吾日三省吾身'中'三'的含义是？","options":["恰好三次","多次（虚指）","三个人","第三天"],"correct":1,"level":"L4","skill":"文言实词"},
-            {"id":"c9","text":"鲁迅在《祝福》中让'我'作为叙述者，而不是用全知视角，这种叙事策略的深层效果是？","options":["只是作者随意选择","制造叙事距离，让读者在'旁观者无力'的困境中反思社会结构","因为鲁迅不会写全知视角","方便写短一点"],"correct":1,"level":"L5","skill":"叙事学分析"},
-            {"id":"c10","text":"萨特在《什么是文学》中提出的核心命题是什么？","options":["文学应该追求美","写作是对读者的召唤，作者通过文本吁求读者参与自由","文学不需要承担社会责任","文学只是娱乐"],"correct":1,"level":"L5","skill":"文学理论"}
-          ]
+          "id": "m2",
+          "text": "一个长方形花园，长8米宽5米，如果要在周围围一圈篱笆，需要多少米篱笆？",
+          "options": [
+            "40米",
+            "26米",
+            "13米",
+            "80米"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "周长计算"
+        },
+        {
+          "id": "m3",
+          "text": "甲乙两车同时从A地出发去B地，甲车每小时60km，乙车每小时80km。2小时后两车相距多远？",
+          "options": [
+            "40km",
+            "20km",
+            "160km",
+            "120km"
+          ],
+          "correct": 0,
+          "level": "L2",
+          "skill": "行程问题"
+        },
+        {
+          "id": "m4",
+          "text": "若3x+7=22，则x等于多少？",
+          "options": [
+            "5",
+            "7",
+            "3",
+            "15"
+          ],
+          "correct": 0,
+          "level": "L2",
+          "skill": "方程求解"
+        },
+        {
+          "id": "m5",
+          "text": "证明：根号2是无理数。这个证明用到了什么方法？",
+          "options": [
+            "数学归纳法",
+            "反证法",
+            "构造法",
+            "穷举法"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "证明方法"
+        },
+        {
+          "id": "m6",
+          "text": "方程x²-5x+6=0的两个根之和等于多少？",
+          "options": [
+            "5",
+            "-5",
+            "6",
+            "-6"
+          ],
+          "correct": 0,
+          "level": "L3",
+          "skill": "韦达定理"
+        },
+        {
+          "id": "m7",
+          "text": "已知数列{an}满足a₁=1, aₙ₊₁=2aₙ+1，求aₙ的通项公式。这需要什么方法？",
+          "options": [
+            "待定系数法构造等比数列",
+            "数学归纳法",
+            "裂项相消",
+            "倒序相加"
+          ],
+          "correct": 0,
+          "level": "L4",
+          "skill": "递推数列"
+        },
+        {
+          "id": "m8",
+          "text": "在△ABC中，若sin²A+sin²B=sin²C，则△ABC一定是：",
+          "options": [
+            "等腰三角形",
+            "直角三角形",
+            "锐角三角形",
+            "钝角三角形"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "三角函数"
+        },
+        {
+          "id": "m9",
+          "text": "集合论中的'连续统假设'说的是什么？",
+          "options": [
+            "偶数和整数一样多",
+            "不存在介于可数和连续之间的基数",
+            "所有无穷大都相等",
+            "实数集是可数的"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "数学哲学"
+        },
+        {
+          "id": "m10",
+          "text": "哪个数学猜想至今未被证明，被克雷数学研究所列为七大千禧年难题之一？",
+          "options": [
+            "费马大定理",
+            "哥德巴赫猜想",
+            "P=NP问题",
+            "黎曼猜想"
+          ],
+          "correct": 3,
+          "level": "L5",
+          "skill": "数学前沿"
         }
       ]
-    };
+    },
+    {
+      "id": "chinese",
+      "name": "语文",
+      "icon": "📖",
+      "description": "测测你的阅读写作在哪个层级",
+      "questions": [
+        {
+          "id": "c1",
+          "text": "'春天来了，小草从地里钻出来了。'这句话中'钻'字好在哪里？",
+          "options": [
+            "只是普通的动词",
+            "写出了小草破土而出的生命力",
+            "说明土很硬",
+            "表示小草在躲藏"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "词语品析"
+        },
+        {
+          "id": "c2",
+          "text": "看图写话：小朋友在公园放风筝。下面哪种写法最好？",
+          "options": [
+            "小朋友放风筝。",
+            "春天到了，公园里草绿花红，小明开心地放着蝴蝶风筝，风筝越飞越高。",
+            "风筝飞了。",
+            "小明在公园。"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "看图写话"
+        },
+        {
+          "id": "c3",
+          "text": "阅读一段话后，'这段话主要写了什么'属于什么层次的阅读能力？",
+          "options": [
+            "只需要找到原句抄下来",
+            "需要概括段落大意，提炼核心信息",
+            "需要评价写得好不好",
+            "需要背诵原文"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "概括能力"
+        },
+        {
+          "id": "c4",
+          "text": "'蝉则一唱百和，顷刻成阵'这句话用了什么修辞手法？",
+          "options": [
+            "比喻",
+            "拟人",
+            "夸张",
+            "对偶"
+          ],
+          "correct": 2,
+          "level": "L2",
+          "skill": "修辞手法"
+        },
+        {
+          "id": "c5",
+          "text": "读完《草船借箭》，你认为诸葛亮成功的根本原因是什么？",
+          "options": [
+            "运气好，正好有大雾",
+            "了解曹操多疑的性格，精准预判了对方行为",
+            "鲁肃帮了他",
+            "箭很多"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "人物分析"
+        },
+        {
+          "id": "c6",
+          "text": "'先天下之忧而忧，后天下之乐而乐'出自哪篇古文？表达了什么？",
+          "options": [
+            "《醉翁亭记》，表达山水之乐",
+            "《岳阳楼记》，表达忧国忧民的情怀",
+            "《出师表》，表达忠君之心",
+            "《爱莲说》，表达洁身自好"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "古文理解"
+        },
+        {
+          "id": "c7",
+          "text": "考场作文'以小见大'的写法，核心逻辑是什么？",
+          "options": [
+            "把小事编成大事",
+            "通过具体的个人经历揭示普遍的社会现象或人性规律",
+            "写很多小故事拼凑字数",
+            "只写小事不需要有深意"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "写作逻辑"
+        },
+        {
+          "id": "c8",
+          "text": "'吾日三省吾身'中'三'的含义是？",
+          "options": [
+            "恰好三次",
+            "多次（虚指）",
+            "三个人",
+            "第三天"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "文言实词"
+        },
+        {
+          "id": "c9",
+          "text": "鲁迅在《祝福》中让'我'作为叙述者，而不是用全知视角，这种叙事策略的深层效果是？",
+          "options": [
+            "只是作者随意选择",
+            "制造叙事距离，让读者在'旁观者无力'的困境中反思社会结构",
+            "因为鲁迅不会写全知视角",
+            "方便写短一点"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "叙事学分析"
+        },
+        {
+          "id": "c10",
+          "text": "萨特在《什么是文学》中提出的核心命题是什么？",
+          "options": [
+            "文学应该追求美",
+            "写作是对读者的召唤，作者通过文本吁求读者参与自由",
+            "文学不需要承担社会责任",
+            "文学只是娱乐"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "文学理论"
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "化学",
+      "icon": "🧪",
+      "questions": [
+        {
+          "id": "c1",
+          "text": "把糖放入水中，糖消失了，这个过程叫什么？",
+          "options": [
+            "蒸发",
+            "溶解",
+            "燃烧",
+            "凝固"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "物质变化"
+        },
+        {
+          "id": "c2",
+          "text": "以下哪个是气体的特征？",
+          "options": [
+            "有固定形状",
+            "有固定体积",
+            "能充满整个容器",
+            "不能被压缩"
+          ],
+          "correct": 2,
+          "level": "L1",
+          "skill": "物质状态"
+        },
+        {
+          "id": "c3",
+          "text": "化学方程式2H₂+O₂→2H₂O中，反应物是什么？",
+          "options": [
+            "只有H₂",
+            "只有O₂",
+            "H₂和O₂",
+            "H₂O"
+          ],
+          "correct": 2,
+          "level": "L2",
+          "skill": "化学方程式"
+        },
+        {
+          "id": "c4",
+          "text": "酸溶液能使石蕊试液变成什么颜色？",
+          "options": [
+            "蓝色",
+            "红色",
+            "无色",
+            "绿色"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "酸碱性质"
+        },
+        {
+          "id": "c5",
+          "text": "原子核由什么组成？",
+          "options": [
+            "质子和电子",
+            "质子和中子",
+            "中子和电子",
+            "只有质子"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "原子结构"
+        },
+        {
+          "id": "c6",
+          "text": "下列哪个是氧化还原反应？",
+          "options": [
+            "NaCl溶于水",
+            "H₂+Cl₂→2HCl",
+            "冰融化成水",
+            "NaOH+HCl→NaCl+H₂O"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "氧化还原"
+        },
+        {
+          "id": "c7",
+          "text": "有机化学中，苯的分子式是什么？",
+          "options": [
+            "C₆H₆",
+            "C₆H₁₂",
+            "CH₄",
+            "C₂H₄"
+          ],
+          "correct": 0,
+          "level": "L4",
+          "skill": "有机化学"
+        },
+        {
+          "id": "c8",
+          "text": "勒夏特列原理说的是什么？",
+          "options": [
+            "反应速率与浓度成正比",
+            "平衡向减弱外界改变的方向移动",
+            "所有反应都是可逆的",
+            "催化剂改变平衡位置"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "化学平衡"
+        },
+        {
+          "id": "c9",
+          "text": "氢键的本质是什么？",
+          "options": [
+            "共价键",
+            "离子键",
+            "分子间作用力",
+            "金属键"
+          ],
+          "correct": 2,
+          "level": "L5",
+          "skill": "化学键理论"
+        },
+        {
+          "id": "c10",
+          "text": "绿色化学的核心原则是什么？",
+          "options": [
+            "提高反应速率",
+            "增加产品产量",
+            "从源头减少有害物质的使用和产生",
+            "降低生产成本"
+          ],
+          "correct": 2,
+          "level": "L5",
+          "skill": "绿色化学"
+        }
+      ]
+    },
+    {
+      "id": "biology",
+      "name": "生物",
+      "icon": "🧬",
+      "questions": [
+        {
+          "id": "b1",
+          "text": "植物通过什么过程把阳光转化为食物？",
+          "options": [
+            "呼吸作用",
+            "光合作用",
+            "蒸腾作用",
+            "消化作用"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "生命过程"
+        },
+        {
+          "id": "b2",
+          "text": "人的心脏有几个心室？",
+          "options": [
+            "1个",
+            "2个",
+            "3个",
+            "4个"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "人体结构"
+        },
+        {
+          "id": "b3",
+          "text": "DNA的双螺旋结构是由谁发现的？",
+          "options": [
+            "达尔文",
+            "孟德尔",
+            "沃森和克里克",
+            "巴斯德"
+          ],
+          "correct": 2,
+          "level": "L3",
+          "skill": "遗传学"
+        },
+        {
+          "id": "b4",
+          "text": "有丝分裂和减数分裂的主要区别是什么？",
+          "options": [
+            "有丝分裂产生2个细胞，减数分裂产生4个细胞",
+            "减数分裂有同源染色体配对和分离",
+            "有丝分裂只发生在生殖细胞中",
+            "减数分裂不需要纺锤体"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "细胞分裂"
+        },
+        {
+          "id": "b5",
+          "text": "下列哪种物质是蛋白质？",
+          "options": [
+            "纤维素",
+            "胰岛素",
+            "淀粉",
+            "胆固醇"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "生物大分子"
+        },
+        {
+          "id": "b6",
+          "text": "内环境稳态的维持主要依靠什么机制？",
+          "options": [
+            "正反馈调节",
+            "负反馈调节",
+            "神经调节",
+            "免疫调节"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "稳态调节"
+        },
+        {
+          "id": "b7",
+          "text": "CRISPR-Cas9技术的核心原理是什么？",
+          "options": [
+            "RNA干扰",
+            "碱基类似物替换",
+            "向导RNA引导Cas9核酸酶定点切割DNA",
+            "质粒转化"
+          ],
+          "correct": 2,
+          "level": "L5",
+          "skill": "基因编辑"
+        },
+        {
+          "id": "b8",
+          "text": "生态学中的r-选择和K-选择的本质区别是什么？",
+          "options": [
+            "繁殖策略不同：r-选择倾向数量，K-选择倾向质量",
+            "食性不同",
+            "栖息地不同",
+            "体型大小不同"
+          ],
+          "correct": 0,
+          "level": "L5",
+          "skill": "生态策略"
+        },
+        {
+          "id": "b9",
+          "text": "以下哪个不是原核生物？",
+          "options": [
+            "大肠杆菌",
+            "蓝藻",
+            "酵母菌",
+            "支原体"
+          ],
+          "correct": 2,
+          "level": "L2",
+          "skill": "细胞类型"
+        },
+        {
+          "id": "b10",
+          "text": "达尔文进化论的核心机制是什么？",
+          "options": [
+            "用进废退",
+            "自然选择",
+            "基因突变",
+            "环境诱导"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "进化论"
+        }
+      ]
+    },
+    {
+      "id": "informatics",
+      "name": "信息学",
+      "icon": "💻",
+      "questions": [
+        {
+          "id": "i1",
+          "text": "计算机用0和1来存储信息，这叫什么制？",
+          "options": [
+            "十进制",
+            "八进制",
+            "二进制",
+            "十六进制"
+          ],
+          "correct": 2,
+          "level": "L1",
+          "skill": "数制基础"
+        },
+        {
+          "id": "i2",
+          "text": "Scratch中，让角色移动10步应该用哪个积木？",
+          "options": [
+            "移动10步",
+            "旋转10度",
+            "等待10秒",
+            "说10"
+          ],
+          "correct": 0,
+          "level": "L1",
+          "skill": "图形化编程"
+        },
+        {
+          "id": "i3",
+          "text": "二分查找一个有序数组的时间复杂度是？",
+          "options": [
+            "O(n)",
+            "O(log n)",
+            "O(n²)",
+            "O(1)"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "算法基础"
+        },
+        {
+          "id": "i4",
+          "text": "Python中，range(5)会生成哪些数字？",
+          "options": [
+            "1,2,3,4,5",
+            "0,1,2,3,4",
+            "0,1,2,3,4,5",
+            "1,2,3,4"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "编程基础"
+        },
+        {
+          "id": "i5",
+          "text": "栈这种数据结构的特点是什么？",
+          "options": [
+            "先进先出",
+            "先进后出",
+            "随机访问",
+            "双端操作"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "数据结构"
+        },
+        {
+          "id": "i6",
+          "text": "快速排序的平均时间复杂度是？",
+          "options": [
+            "O(n)",
+            "O(n log n)",
+            "O(n²)",
+            "O(log n)"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "排序算法"
+        },
+        {
+          "id": "i7",
+          "text": "动态规划与贪心算法的本质区别是什么？",
+          "options": [
+            "动态规划更快",
+            "贪心只考虑局部最优，动态规划考虑全局最优",
+            "动态规划不能处理最优化问题",
+            "贪心算法更复杂"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "算法策略"
+        },
+        {
+          "id": "i8",
+          "text": "图的最短路径算法中，Dijkstra算法不能处理什么情况？",
+          "options": [
+            "有向图",
+            "稀疏图",
+            "负权边",
+            "稠密图"
+          ],
+          "correct": 2,
+          "level": "L4",
+          "skill": "图论算法"
+        },
+        {
+          "id": "i9",
+          "text": "P vs NP问题的本质是什么？",
+          "options": [
+            "P问题是否等于NP问题，即能否在多项式时间内验证的解也能在多项式时间内找到",
+            "P和NP哪种更快",
+            "如何设计NP完全算法",
+            "并行计算能否加速P问题"
+          ],
+          "correct": 0,
+          "level": "L5",
+          "skill": "计算理论"
+        },
+        {
+          "id": "i10",
+          "text": "在信息学竞赛中，NOI的全程是什么？",
+          "options": [
+            "全国青少年信息学奥林匹克",
+            "全国计算机等级考试",
+            "全国软件设计大赛",
+            "全国数学建模竞赛"
+          ],
+          "correct": 0,
+          "level": "L4",
+          "skill": "竞赛常识"
+        }
+      ]
+    },
+    {
+      "id": "english",
+      "name": "英语",
+      "icon": "🌍",
+      "questions": [
+        {
+          "id": "e1",
+          "text": "What is the past tense of 'go'? ",
+          "options": [
+            "goed",
+            "went",
+            "gone",
+            "going"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "基础语法"
+        },
+        {
+          "id": "e2",
+          "text": "Choose the correct sentence: ",
+          "options": [
+            "She don't like apples.",
+            "She doesn't likes apples.",
+            "She doesn't like apples.",
+            "She not like apples."
+          ],
+          "correct": 2,
+          "level": "L1",
+          "skill": "基础语法"
+        },
+        {
+          "id": "e3",
+          "text": "What does 'ubiquitous' mean? ",
+          "options": [
+            "rare",
+            "present everywhere",
+            "dangerous",
+            "beautiful"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "词汇理解"
+        },
+        {
+          "id": "e4",
+          "text": "Which is a conditional sentence? ",
+          "options": [
+            "I went to school.",
+            "If it rains, I will stay home.",
+            "She is reading a book.",
+            "They have finished."
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "语法结构"
+        },
+        {
+          "id": "e5",
+          "text": "In academic writing, 'furthermore' is used to: ",
+          "options": [
+            "show contrast",
+            "add information",
+            "show cause",
+            "show time"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "学术写作"
+        },
+        {
+          "id": "e6",
+          "text": "What is the main difference between 'affect' and 'effect'? ",
+          "options": [
+            "They mean the same thing.",
+            "'Affect' is usually a verb, 'effect' is usually a noun.",
+            "'Affect' is formal, 'effect' is informal.",
+            "No difference in usage"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "词义辨析"
+        },
+        {
+          "id": "e7",
+          "text": "In IELTS Writing Task 2, what is the minimum word count? ",
+          "options": [
+            "150 words",
+            "200 words",
+            "250 words",
+            "300 words"
+          ],
+          "correct": 2,
+          "level": "L4",
+          "skill": "雅思考试"
+        },
+        {
+          "id": "e8",
+          "text": "What does 'peer-reviewed journal' mean? ",
+          "options": [
+            "A journal anyone can publish in",
+            "A journal where articles are evaluated by other scholars before publication",
+            "A journal only for professors",
+            "A free online journal"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "学术规范"
+        },
+        {
+          "id": "e9",
+          "text": "What is the Sapir-Whorf hypothesis about? ",
+          "options": [
+            "Language learning methods",
+            "Language influences thought and perception",
+            "Grammar rules across languages",
+            "Translation techniques"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "语言学理论"
+        },
+        {
+          "id": "e10",
+          "text": "In corpus linguistics, what does 'collocation' refer to? ",
+          "options": [
+            "Grammar rules",
+            "Words that frequently occur together",
+            "Pronunciation patterns",
+            "Sentence structures"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "语料库语言学"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "name": "历史",
+      "icon": "🏛️",
+      "questions": [
+        {
+          "id": "h1",
+          "text": "秦始皇统一中国是在哪一年？",
+          "options": [
+            "公元前221年",
+            "公元前206年",
+            "公元前256年",
+            "公元前202年"
+          ],
+          "correct": 0,
+          "level": "L1",
+          "skill": "中国史"
+        },
+        {
+          "id": "h2",
+          "text": "文艺复兴最早起源于哪个国家？",
+          "options": [
+            "英国",
+            "法国",
+            "意大利",
+            "德国"
+          ],
+          "correct": 2,
+          "level": "L1",
+          "skill": "世界史"
+        },
+        {
+          "id": "h3",
+          "text": "唐朝实行的是什么行政制度？",
+          "options": [
+            "分封制",
+            "郡县制",
+            "三省六部制",
+            "行省制"
+          ],
+          "correct": 2,
+          "level": "L2",
+          "skill": "政治制度"
+        },
+        {
+          "id": "h4",
+          "text": "工业革命最先发生在哪个国家？",
+          "options": [
+            "法国",
+            "英国",
+            "美国",
+            "德国"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "近代史"
+        },
+        {
+          "id": "h5",
+          "text": "黄仁宇在《万历十五年》中提出的核心观点是什么？",
+          "options": [
+            "明朝因万历怠政而亡",
+            "中国传统体制存在结构性困境",
+            "张居正改革是成功的",
+            "明朝经济高度发达"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "史学观点"
+        },
+        {
+          "id": "h6",
+          "text": "《枪炮、病菌与钢铁》主要讨论什么问题？",
+          "options": [
+            "欧洲军事技术优势",
+            "为什么不同大陆的文明发展速度不同",
+            "疾病如何影响历史",
+            "钢铁工业的发展"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "全球史观"
+        },
+        {
+          "id": "h7",
+          "text": "历史学中的'史料批判'指的是什么？",
+          "options": [
+            "批评历史人物",
+            "对史料的真实性、可靠性和局限性进行系统审查",
+            "否定历史事实",
+            "只相信官方史料"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "史学方法"
+        },
+        {
+          "id": "h8",
+          "text": "年鉴学派的核心方法论是什么？",
+          "options": [
+            "以政治事件为中心",
+            "长时段、多学科交叉的总体史研究",
+            "只研究经济史",
+            "以伟人传记为主"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "史学流派"
+        },
+        {
+          "id": "h9",
+          "text": "大历史观（Big History）的核心特征是什么？",
+          "options": [
+            "只研究中国历史",
+            "从宇宙大爆炸到人类未来的跨学科叙事",
+            "强调帝王将相的作用",
+            "以民族国家为分析单位"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "史学前沿"
+        },
+        {
+          "id": "h10",
+          "text": "后现代史学对传统史学的主要挑战是什么？",
+          "options": [
+            "认为历史完全不可知",
+            "质疑宏大叙事和客观性，强调话语和权力",
+            "主张回到传统编年史",
+            "否定一切史料"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "史学理论"
+        }
+      ]
+    },
+    {
+      "id": "geography",
+      "name": "地理",
+      "icon": "🗺️",
+      "questions": [
+        {
+          "id": "g1",
+          "text": "地球自转一周大约需要多长时间？",
+          "options": [
+            "12小时",
+            "24小时",
+            "365天",
+            "30天"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "地球运动"
+        },
+        {
+          "id": "g2",
+          "text": "世界上面积最大的大洲是哪个？",
+          "options": [
+            "非洲",
+            "北美洲",
+            "亚洲",
+            "欧洲"
+          ],
+          "correct": 2,
+          "level": "L1",
+          "skill": "世界地理"
+        },
+        {
+          "id": "g3",
+          "text": "形成降水的三个必要条件是什么？",
+          "options": [
+            "高温、低压、大风",
+            "充足水汽、上升运动、凝结核",
+            "低温、高压、静风",
+            "太阳辐射、洋流、地形"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "气象基础"
+        },
+        {
+          "id": "g4",
+          "text": "板块构造学说认为地球表面由几大板块组成？",
+          "options": [
+            "3大板块",
+            "6大板块",
+            "7大板块",
+            "10大板块"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "地质基础"
+        },
+        {
+          "id": "g5",
+          "text": "厄尔尼诺现象的本质是什么？",
+          "options": [
+            "海水温度异常升高",
+            "赤道太平洋东部海水异常升温的现象",
+            "南极冰盖融化",
+            "北极海冰减少"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "气候系统"
+        },
+        {
+          "id": "g6",
+          "text": "城市热岛效应的主要成因是什么？",
+          "options": [
+            "城市绿化太多",
+            "城市建筑和人类活动导致城区气温高于郊区",
+            "城市海拔低",
+            "城市靠近海洋"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "城市地理"
+        },
+        {
+          "id": "g7",
+          "text": "GIS中的空间分析主要包括什么？",
+          "options": [
+            "只做地图",
+            "叠置分析、缓冲区分析、网络分析等空间运算",
+            "文字处理",
+            "数据存储"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "GIS技术"
+        },
+        {
+          "id": "g8",
+          "text": "克里斯塔勒的中心地理论的核心观点是什么？",
+          "options": [
+            "城市越大越好",
+            "聚落按等级和功能形成六边形空间结构",
+            "所有城市功能相同",
+            "城市应该均匀分布"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "地理理论"
+        },
+        {
+          "id": "g9",
+          "text": "可持续发展三大支柱是什么？",
+          "options": [
+            "经济、军事、文化",
+            "经济增长、社会公平、环境保护",
+            "工业、农业、服务业",
+            "科技、教育、医疗"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "可持续发展"
+        },
+        {
+          "id": "g10",
+          "text": "数字地球的核心技术基础是什么？",
+          "options": [
+            "纸质地图",
+            "遥感、GIS、GPS、大数据和虚拟现实的集成",
+            "人工测绘",
+            "传统统计"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "地理信息前沿"
+        }
+      ]
+    },
+    {
+      "id": "politics",
+      "name": "政治",
+      "icon": "⚖️",
+      "questions": [
+        {
+          "id": "p1",
+          "text": "中国的根本政治制度是什么？",
+          "options": [
+            "多党制",
+            "人民代表大会制度",
+            "总统制",
+            "联邦制"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "中国政治"
+        },
+        {
+          "id": "p2",
+          "text": "什么是法律？",
+          "options": [
+            "只有刑法",
+            "由国家制定或认可、靠国家强制力保证实施的行为规范",
+            "只有宪法",
+            "道德规范的总和"
+          ],
+          "correct": 1,
+          "level": "L1",
+          "skill": "法律基础"
+        },
+        {
+          "id": "p3",
+          "text": "市场经济与计划经济的本质区别是什么？",
+          "options": [
+            "发展速度不同",
+            "资源配置方式不同：市场靠价格机制，计划靠行政指令",
+            "技术水平不同",
+            "人口多少不同"
+          ],
+          "correct": 1,
+          "level": "L2",
+          "skill": "经济制度"
+        },
+        {
+          "id": "p4",
+          "text": "公民的基本权利和义务的关系是什么？",
+          "options": [
+            "只有权利没有义务",
+            "只有义务没有权利",
+            "权利和义务相统一，没有无义务的权利也没有无权利的义务",
+            "权利比义务重要"
+          ],
+          "correct": 2,
+          "level": "L2",
+          "skill": "公民素养"
+        },
+        {
+          "id": "p5",
+          "text": "三权分立理论最早由谁系统提出？",
+          "options": [
+            "洛克",
+            "孟德斯鸠",
+            "卢梭",
+            "霍布斯"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "政治理论"
+        },
+        {
+          "id": "p6",
+          "text": "GDP和GNP的主要区别是什么？",
+          "options": [
+            "没有区别",
+            "GDP按地域原则统计，GNP按国民原则统计",
+            "GDP更大",
+            "GNP只算服务业"
+          ],
+          "correct": 1,
+          "level": "L3",
+          "skill": "经济学基础"
+        },
+        {
+          "id": "p7",
+          "text": "罗尔斯在《正义论》中提出的核心原则是什么？",
+          "options": [
+            "效率优先",
+            "差异原则和公平的机会平等原则",
+            "自由市场原则",
+            "功利主义原则"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "政治哲学"
+        },
+        {
+          "id": "p8",
+          "text": "什么是'公地悲剧'？",
+          "options": [
+            "公共建筑倒塌",
+            "公共资源因个体理性选择而被过度使用导致枯竭",
+            "自然灾害",
+            "公共预算不足"
+          ],
+          "correct": 1,
+          "level": "L4",
+          "skill": "公共治理"
+        },
+        {
+          "id": "p9",
+          "text": "福柯'权力/知识'理论的核心观点是什么？",
+          "options": [
+            "权力和知识完全无关",
+            "权力生产知识，知识也行使权力，两者相互构成",
+            "知识就是力量",
+            "权力只来自武力"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "政治理论前沿"
+        },
+        {
+          "id": "p10",
+          "text": "阿玛蒂亚·森的'可行能力方法'对贫困的定义是什么？",
+          "options": [
+            "收入低于某个标准",
+            "贫困是可行能力的剥夺，不仅仅是收入不足",
+            "失业就是贫困",
+            "没有房子住就是贫困"
+          ],
+          "correct": 1,
+          "level": "L5",
+          "skill": "发展理论"
+        }
+      ]
+    }
+  ]
+};
 
     // 训练场资源数据
     var RESOURCE_DATA = {
@@ -874,11 +2119,972 @@
       }
     };
 
+
+    // 新增7学科资源数据
+    Object.assign(RESOURCE_DATA, {
+    "chemistry": {
+        "levels": {
+            "L1": {
+                "name": "物质好奇",
+                "description": "小学阶段，观察身边的物质现象，建立科学好奇心",
+                "ageRange": "6-10岁",
+                "resources": [
+                    {
+                        "title": "《可怕的科学·化学系列》",
+                        "type": "book",
+                        "description": "用搞笑漫画和夸张故事讲化学，孩子爱看",
+                        "price": "约25元/册"
+                    },
+                    {
+                        "title": "《这就是化学》",
+                        "type": "book",
+                        "description": "中国原创化学漫画科普，8册覆盖核心概念",
+                        "price": "约120元/套"
+                    },
+                    {
+                        "title": "深圳科学馆化学实验体验",
+                        "type": "local",
+                        "description": "深圳科学馆定期开设的亲子化学实验活动",
+                        "price": "免费-50元"
+                    }
+                ]
+            },
+            "L2": {
+                "name": "基础入门",
+                "description": "初中水平，系统学习化学基本概念和实验方法",
+                "ageRange": "11-14岁",
+                "resources": [
+                    {
+                        "title": "《化学是什么》",
+                        "type": "book",
+                        "description": "从日常现象理解化学本质",
+                        "price": "约40元"
+                    },
+                    {
+                        "title": "《元素的故事》",
+                        "type": "book",
+                        "description": "苏联经典科普名著，讲述化学元素发现史",
+                        "price": "约20元"
+                    },
+                    {
+                        "title": "深圳少年宫化学兴趣班",
+                        "type": "local",
+                        "description": "少年宫开设的初中化学实验兴趣课程",
+                        "price": "50-100元/课时"
+                    }
+                ]
+            },
+            "L3": {
+                "name": "体系构建",
+                "description": "高中必修水平，建立完整的化学知识体系",
+                "ageRange": "14-16岁",
+                "resources": [
+                    {
+                        "title": "《普通化学原理》（华彤文）",
+                        "type": "book",
+                        "description": "北京大学化学系经典教材",
+                        "price": "约60元"
+                    },
+                    {
+                        "title": "《高中化学重难点手册》",
+                        "type": "book",
+                        "description": "高中化学知识体系梳理",
+                        "price": "约40元"
+                    },
+                    {
+                        "title": "深圳中学化学竞赛预备班",
+                        "type": "local",
+                        "description": "深圳顶尖中学的化学竞赛培养体系",
+                        "price": "校内免费"
+                    }
+                ]
+            },
+            "L4": {
+                "name": "竞赛突破",
+                "description": "高中竞赛水平，冲击省一等奖及以上",
+                "ageRange": "15-18岁",
+                "resources": [
+                    {
+                        "title": "《无机化学》（武汉大学）",
+                        "type": "book",
+                        "description": "武汉大学编，化学竞赛核心参考书",
+                        "price": "约80元/套"
+                    },
+                    {
+                        "title": "《有机化学》（邢其毅）",
+                        "type": "book",
+                        "description": "北京大学邢其毅教授编著，有机化学圣经",
+                        "price": "约90元"
+                    },
+                    {
+                        "title": "深圳中学/深实验化学竞赛班",
+                        "type": "local",
+                        "description": "深圳顶尖中学化学竞赛培养体系",
+                        "price": "校内免费"
+                    }
+                ]
+            },
+            "L5": {
+                "name": "前沿拓展",
+                "description": "超出课标，接触化学前沿与跨学科应用",
+                "ageRange": "16岁+",
+                "resources": [
+                    {
+                        "title": "《化学的本质》",
+                        "type": "book",
+                        "description": "Linus Pauling经典之作，重新理解化学键",
+                        "price": "约60元"
+                    },
+                    {
+                        "title": "《化学简史》",
+                        "type": "book",
+                        "description": "从炼金术到量子化学",
+                        "price": "约45元"
+                    },
+                    {
+                        "title": "MIT化学系研究生课程",
+                        "type": "online",
+                        "description": "MIT化学系研究生课程开放",
+                        "price": "免费"
+                    }
+                ]
+            }
+        }
+    },
+    "biology": {
+        "levels": {
+            "L1": {
+                "name": "自然好奇",
+                "description": "小学阶段，观察身边的动植物，建立生命科学好奇心",
+                "ageRange": "6-10岁",
+                "resources": [
+                    {
+                        "title": "《法布尔昆虫记》",
+                        "type": "book",
+                        "description": "世界最著名的昆虫观察记录",
+                        "price": "约30元/册"
+                    },
+                    {
+                        "title": "《DK儿童百科·自然》",
+                        "type": "book",
+                        "description": "DK经典视觉百科全书",
+                        "price": "约150元"
+                    },
+                    {
+                        "title": "深圳仙湖植物园自然课堂",
+                        "type": "local",
+                        "description": "仙湖植物园定期开设的自然教育活动",
+                        "price": "免费-30元"
+                    }
+                ]
+            },
+            "L2": {
+                "name": "基础入门",
+                "description": "初中水平，系统学习生物基本概念和实验方法",
+                "ageRange": "11-14岁",
+                "resources": [
+                    {
+                        "title": "《自私的基因》",
+                        "type": "book",
+                        "description": "理查德·道金斯经典，从基因视角理解生命",
+                        "price": "约45元"
+                    },
+                    {
+                        "title": "《物种起源》青少年版",
+                        "type": "book",
+                        "description": "达尔文进化论的青少年改编版",
+                        "price": "约30元"
+                    },
+                    {
+                        "title": "深圳野生动物园生物课堂",
+                        "type": "local",
+                        "description": "深圳野生动物园的教育项目",
+                        "price": "门票约240元"
+                    }
+                ]
+            },
+            "L3": {
+                "name": "体系构建",
+                "description": "高中必修水平，建立完整的生物学知识体系",
+                "ageRange": "14-16岁",
+                "resources": [
+                    {
+                        "title": "《普通生物学》（陈阅增）",
+                        "type": "book",
+                        "description": "北京师范大学经典教材",
+                        "price": "约70元"
+                    },
+                    {
+                        "title": "《高中生物重难点手册》",
+                        "type": "book",
+                        "description": "高中生物知识体系梳理",
+                        "price": "约40元"
+                    },
+                    {
+                        "title": "深圳中学生物竞赛预备班",
+                        "type": "local",
+                        "description": "深圳顶尖中学生物竞赛培养体系",
+                        "price": "校内免费"
+                    }
+                ]
+            },
+            "L4": {
+                "name": "竞赛突破",
+                "description": "高中竞赛水平，冲击省一等奖及以上",
+                "ageRange": "15-18岁",
+                "resources": [
+                    {
+                        "title": "《植物学》（陆时万）",
+                        "type": "book",
+                        "description": "植物学经典教材",
+                        "price": "约50元"
+                    },
+                    {
+                        "title": "《动物学》（刘凌云）",
+                        "type": "book",
+                        "description": "动物学经典教材",
+                        "price": "约55元"
+                    },
+                    {
+                        "title": "深圳中学/深实验生物竞赛班",
+                        "type": "local",
+                        "description": "深圳顶尖中学生物竞赛培养体系",
+                        "price": "校内免费"
+                    }
+                ]
+            },
+            "L5": {
+                "name": "前沿拓展",
+                "description": "超出课标，接触生命科学前沿与跨学科应用",
+                "ageRange": "16岁+",
+                "resources": [
+                    {
+                        "title": "《基因传》",
+                        "type": "book",
+                        "description": "悉达多·穆克吉著，基因科学的完整叙事",
+                        "price": "约60元"
+                    },
+                    {
+                        "title": "《生命是什么》",
+                        "type": "book",
+                        "description": "薛定谔的经典之作",
+                        "price": "约30元"
+                    },
+                    {
+                        "title": "MIT生物学研究生课程",
+                        "type": "online",
+                        "description": "MIT生物学研究生课程开放",
+                        "price": "免费"
+                    }
+                ]
+            }
+        }
+    },
+    "informatics": {
+        "levels": {
+            "L1": {
+                "name": "编程启蒙",
+                "description": "小学1-3年级，用图形化工具理解编程逻辑",
+                "ageRange": "6-9岁",
+                "resources": [
+                    {
+                        "title": "《Hello Ruby儿童编程启蒙》",
+                        "type": "book",
+                        "description": "用故事讲编程思维",
+                        "price": "约40元"
+                    },
+                    {
+                        "title": "Scratch官方教程",
+                        "type": "online",
+                        "description": "MIT开发的图形化编程平台官方教程",
+                        "price": "免费"
+                    },
+                    {
+                        "title": "Code.org Hour of Code",
+                        "type": "online",
+                        "description": "全球最大的编程启蒙活动",
+                        "price": "免费"
+                    }
+                ]
+            },
+            "L2": {
+                "name": "代码入门",
+                "description": "小学4-6年级，从图形化过渡到文本编程",
+                "ageRange": "9-12岁",
+                "resources": [
+                    {
+                        "title": "《Python编程：从入门到实践》",
+                        "type": "book",
+                        "description": "全球最畅销的Python入门书",
+                        "price": "约70元"
+                    },
+                    {
+                        "title": "《算法图解》",
+                        "type": "book",
+                        "description": "用图解方式讲算法",
+                        "price": "约45元"
+                    },
+                    {
+                        "title": "深圳CSP-J/S培训",
+                        "type": "local",
+                        "description": "深圳多家机构开设CSP入门级培训",
+                        "price": "200-400元/课时"
+                    }
+                ]
+            },
+            "L3": {
+                "name": "算法体系",
+                "description": "初中水平，建立完整的算法与数据结构知识体系",
+                "ageRange": "12-15岁",
+                "resources": [
+                    {
+                        "title": "《算法竞赛入门经典》（刘汝佳）",
+                        "type": "book",
+                        "description": "国内信息学竞赛入门圣经",
+                        "price": "约50元"
+                    },
+                    {
+                        "title": "《数据结构与算法分析》",
+                        "type": "book",
+                        "description": "系统学习数据结构的经典教材",
+                        "price": "约60元"
+                    },
+                    {
+                        "title": "深圳NOIP/CSP提高级培训",
+                        "type": "local",
+                        "description": "深圳各机构CSP-S/NOIP提高级培训",
+                        "price": "200-500元/课时"
+                    }
+                ]
+            },
+            "L4": {
+                "name": "竞赛突破",
+                "description": "高中竞赛水平，冲击NOI及更高级别",
+                "ageRange": "15-18岁",
+                "resources": [
+                    {
+                        "title": "《算法竞赛进阶指南》（李煜东）",
+                        "type": "book",
+                        "description": "NOI级别竞赛选手的进阶宝典",
+                        "price": "约60元"
+                    },
+                    {
+                        "title": "《算法导论》",
+                        "type": "book",
+                        "description": "算法领域的圣经级教材",
+                        "price": "约130元"
+                    },
+                    {
+                        "title": "深圳中学/深实验信息学竞赛班",
+                        "type": "local",
+                        "description": "深圳顶尖中学信息学竞赛培养体系",
+                        "price": "校内免费"
+                    }
+                ]
+            },
+            "L5": {
+                "name": "前沿拓展",
+                "description": "超出竞赛，接触AI/系统/安全等计算机前沿",
+                "ageRange": "16岁+",
+                "resources": [
+                    {
+                        "title": "《深度学习》（花书）",
+                        "type": "book",
+                        "description": "Ian Goodfellow著，深度学习圣经",
+                        "price": "约130元"
+                    },
+                    {
+                        "title": "《计算机程序的构造和解释》",
+                        "type": "book",
+                        "description": "MIT经典教材SICP",
+                        "price": "约70元"
+                    },
+                    {
+                        "title": "MIT CS研究生课程",
+                        "type": "online",
+                        "description": "MIT计算机科学研究生课程",
+                        "price": "免费"
+                    }
+                ]
+            }
+        }
+    },
+    "english": {
+        "levels": {
+            "L1": {
+                "name": "听说启蒙",
+                "description": "学前至小学低年级，建立英语语音敏感度",
+                "ageRange": "4-8岁",
+                "resources": [
+                    {
+                        "title": "《牛津阅读树》",
+                        "type": "book",
+                        "description": "全球最畅销的英语分级读物",
+                        "price": "约200元/套"
+                    },
+                    {
+                        "title": "《RAZ分级阅读》",
+                        "type": "book",
+                        "description": "从aa到Z2共29级的超完整分级体系",
+                        "price": "约150元/年（线上）"
+                    },
+                    {
+                        "title": "深圳图书馆英文绘本活动",
+                        "type": "local",
+                        "description": "深圳图书馆定期英文绘本阅读活动",
+                        "price": "免费"
+                    }
+                ]
+            },
+            "L2": {
+                "name": "读写进阶",
+                "description": "小学中高年级，从听说过渡到读写",
+                "ageRange": "8-12岁",
+                "resources": [
+                    {
+                        "title": "《书虫》系列",
+                        "type": "book",
+                        "description": "牛津大学出版社入门级英语读物",
+                        "price": "约20元/册"
+                    },
+                    {
+                        "title": "《国家地理少儿版》",
+                        "type": "book",
+                        "description": "用真实世界的内容学英语",
+                        "price": "约30元/册"
+                    },
+                    {
+                        "title": "深圳外国语学校附属英语班",
+                        "type": "local",
+                        "description": "深圳外国语体系英语课程",
+                        "price": "校内免费/校外300-500元/课时"
+                    }
+                ]
+            },
+            "L3": {
+                "name": "学术基础",
+                "description": "初中水平，建立学术英语的读写听说能力",
+                "ageRange": "12-15岁",
+                "resources": [
+                    {
+                        "title": "《剑桥中级英语语法》",
+                        "type": "book",
+                        "description": "剑桥英语语法红蓝绿系列的中级版",
+                        "price": "约50元"
+                    },
+                    {
+                        "title": "《Word Power Made Easy》",
+                        "type": "book",
+                        "description": "全球最经典的英语词汇构建书",
+                        "price": "约40元"
+                    },
+                    {
+                        "title": "新东方雅思基础班（深圳）",
+                        "type": "local",
+                        "description": "新东方深圳校区雅思基础课程",
+                        "price": "5000-8000元/期"
+                    }
+                ]
+            },
+            "L4": {
+                "name": "考试突破",
+                "description": "高中/雅思/托福水平，达到学术英语要求",
+                "ageRange": "15-18岁",
+                "resources": [
+                    {
+                        "title": "《剑桥雅思真题集》",
+                        "type": "book",
+                        "description": "剑桥官方雅思真题，备考必备",
+                        "price": "约60元/本"
+                    },
+                    {
+                        "title": "《托福官方指南》",
+                        "type": "book",
+                        "description": "ETS官方托福备考指南",
+                        "price": "约120元"
+                    },
+                    {
+                        "title": "环球雅思/新航道（深圳）",
+                        "type": "local",
+                        "description": "深圳两大雅思托福培训机构",
+                        "price": "5000-15000元/期"
+                    }
+                ]
+            },
+            "L5": {
+                "name": "学术前沿",
+                "description": "学术英语+跨文化理解，为留学和研究做准备",
+                "ageRange": "16岁+",
+                "resources": [
+                    {
+                        "title": "《The Elements of Style》",
+                        "type": "book",
+                        "description": "英语写作的圣经级指南",
+                        "price": "约30元"
+                    },
+                    {
+                        "title": "《Academic Writing》",
+                        "type": "book",
+                        "description": "系统学习学术论文写作",
+                        "price": "约80元"
+                    },
+                    {
+                        "title": "MIT学术写作课程",
+                        "type": "online",
+                        "description": "MIT写作与人文中心课程",
+                        "price": "免费"
+                    }
+                ]
+            }
+        }
+    },
+    "history": {
+        "levels": {
+            "L1": {
+                "name": "故事入门",
+                "description": "小学低年级，通过故事建立对历史的兴趣",
+                "ageRange": "6-9岁",
+                "resources": [
+                    {
+                        "title": "《写给儿童的中国历史》",
+                        "type": "book",
+                        "description": "陈卫平著，中国儿童历史启蒙首选",
+                        "price": "约280元/套"
+                    },
+                    {
+                        "title": "《写给儿童的世界历史》",
+                        "type": "book",
+                        "description": "陈卫平著，世界历史启蒙配套",
+                        "price": "约320元/套"
+                    },
+                    {
+                        "title": "深圳博物馆历史活动",
+                        "type": "local",
+                        "description": "深圳博物馆定期历史教育活动",
+                        "price": "免费"
+                    }
+                ]
+            },
+            "L2": {
+                "name": "脉络建立",
+                "description": "小学高年级至初中，建立历史的时间线框架",
+                "ageRange": "9-13岁",
+                "resources": [
+                    {
+                        "title": "《半小时漫画中国史》",
+                        "type": "book",
+                        "description": "用漫画理清中国历史大脉络",
+                        "price": "约35元/册"
+                    },
+                    {
+                        "title": "《全球通史》（斯塔夫里阿诺斯）",
+                        "type": "book",
+                        "description": "全球视角看人类文明发展",
+                        "price": "约60元"
+                    },
+                    {
+                        "title": "深圳博物馆常设展",
+                        "type": "local",
+                        "description": "深圳博物馆古代深圳/近代深圳常设展",
+                        "price": "免费"
+                    }
+                ]
+            },
+            "L3": {
+                "name": "深度理解",
+                "description": "高中水平，从记忆史实到理解历史逻辑",
+                "ageRange": "14-16岁",
+                "resources": [
+                    {
+                        "title": "《万历十五年》",
+                        "type": "book",
+                        "description": "黄仁宇著，从一年看透明朝体制",
+                        "price": "约30元"
+                    },
+                    {
+                        "title": "《枪炮、病菌与钢铁》",
+                        "type": "book",
+                        "description": "理解文明差异的终极之问",
+                        "price": "约50元"
+                    },
+                    {
+                        "title": "深圳改革开放展览馆",
+                        "type": "local",
+                        "description": "深圳改革开放40年展览",
+                        "price": "免费"
+                    }
+                ]
+            },
+            "L4": {
+                "name": "学术研究",
+                "description": "大学水平，掌握历史研究方法和学术写作",
+                "ageRange": "16-18岁",
+                "resources": [
+                    {
+                        "title": "《历史学是什么》",
+                        "type": "book",
+                        "description": "葛剑雄著，理解历史学的本质",
+                        "price": "约30元"
+                    },
+                    {
+                        "title": "《史学概论》",
+                        "type": "book",
+                        "description": "历史学入门教材",
+                        "price": "约40元"
+                    },
+                    {
+                        "title": "深圳档案馆专题研究",
+                        "type": "local",
+                        "description": "深圳市档案馆开放史料",
+                        "price": "免费"
+                    }
+                ]
+            },
+            "L5": {
+                "name": "思辨前沿",
+                "description": "超越学科，用历史思维理解当下和未来",
+                "ageRange": "16岁+",
+                "resources": [
+                    {
+                        "title": "《人类简史》",
+                        "type": "book",
+                        "description": "尤瓦尔·赫拉利著，重新理解人类",
+                        "price": "约50元"
+                    },
+                    {
+                        "title": "《历史的教训》",
+                        "type": "book",
+                        "description": "威尔·杜兰特著，从5000年历史提炼智慧",
+                        "price": "约25元"
+                    },
+                    {
+                        "title": "Harvard历史系研究生课程",
+                        "type": "online",
+                        "description": "哈佛历史系研究生课程开放",
+                        "price": "免费"
+                    }
+                ]
+            }
+        }
+    },
+    "geography": {
+        "levels": {
+            "L1": {
+                "name": "身边地理",
+                "description": "小学低年级，认识身边的环境和方向",
+                "ageRange": "6-9岁",
+                "resources": [
+                    {
+                        "title": "《我的第一本地理启蒙书》",
+                        "type": "book",
+                        "description": "从身边出发认识地理",
+                        "price": "约30元"
+                    },
+                    {
+                        "title": "《DK儿童地理百科》",
+                        "type": "book",
+                        "description": "DK经典地理百科全书",
+                        "price": "约150元"
+                    },
+                    {
+                        "title": "深圳仙湖植物园地理课",
+                        "type": "local",
+                        "description": "仙湖植物园地形和植物观察",
+                        "price": "免费-30元"
+                    }
+                ]
+            },
+            "L2": {
+                "name": "区域认知",
+                "description": "小学高年级至初中，认识中国和世界的地理格局",
+                "ageRange": "9-13岁",
+                "resources": [
+                    {
+                        "title": "《给孩子的中国地理》",
+                        "type": "book",
+                        "description": "刘兴诗著，中国地理经典读物",
+                        "price": "约50元"
+                    },
+                    {
+                        "title": "《房龙地理》",
+                        "type": "book",
+                        "description": "房龙著，世界地理启蒙经典",
+                        "price": "约35元"
+                    },
+                    {
+                        "title": "深圳城市规划展",
+                        "type": "local",
+                        "description": "深圳当代艺术与城市规划馆",
+                        "price": "免费"
+                    }
+                ]
+            },
+            "L3": {
+                "name": "系统理解",
+                "description": "高中水平，建立自然地理和人文地理知识体系",
+                "ageRange": "14-16岁",
+                "resources": [
+                    {
+                        "title": "《自然地理学》（伍光和）",
+                        "type": "book",
+                        "description": "高校自然地理学经典教材",
+                        "price": "约55元"
+                    },
+                    {
+                        "title": "《人文地理学》",
+                        "type": "book",
+                        "description": "理解人类活动与地理环境的关系",
+                        "price": "约45元"
+                    },
+                    {
+                        "title": "深圳气象局参观",
+                        "type": "local",
+                        "description": "深圳气象局开放日",
+                        "price": "免费"
+                    }
+                ]
+            },
+            "L4": {
+                "name": "专业深化",
+                "description": "大学水平，掌握地理学专业方法和工具",
+                "ageRange": "16-18岁",
+                "resources": [
+                    {
+                        "title": "《经济地理学》",
+                        "type": "book",
+                        "description": "理解经济活动的空间分布",
+                        "price": "约50元"
+                    },
+                    {
+                        "title": "《GIS原理与应用》",
+                        "type": "book",
+                        "description": "地理信息系统核心教材",
+                        "price": "约60元"
+                    },
+                    {
+                        "title": "深圳大学地理空间信息实验室",
+                        "type": "local",
+                        "description": "深大地理信息实验室开放活动",
+                        "price": "免费/低价"
+                    }
+                ]
+            },
+            "L5": {
+                "name": "前沿应用",
+                "description": "超出学科，用地理思维解决现实问题",
+                "ageRange": "16岁+",
+                "resources": [
+                    {
+                        "title": "《地理学与生活》",
+                        "type": "book",
+                        "description": "理解地理学如何影响日常生活",
+                        "price": "约80元"
+                    },
+                    {
+                        "title": "《气候变化的故事》",
+                        "type": "book",
+                        "description": "理解气候变化这个时代最大挑战",
+                        "price": "约50元"
+                    },
+                    {
+                        "title": "MIT地球系统科学研究生课程",
+                        "type": "online",
+                        "description": "MIT地球大气和行星科学研究生课程",
+                        "price": "免费"
+                    }
+                ]
+            }
+        }
+    },
+    "politics": {
+        "levels": {
+            "L1": {
+                "name": "规则意识",
+                "description": "小学低年级，理解身边的规则和为什么要遵守",
+                "ageRange": "6-9岁",
+                "resources": [
+                    {
+                        "title": "《儿童哲学智慧书》",
+                        "type": "book",
+                        "description": "用提问引导孩子思考规则和公平",
+                        "price": "约30元/册"
+                    },
+                    {
+                        "title": "《写给孩子的哲学启蒙书》",
+                        "type": "book",
+                        "description": "法国经典儿童哲学启蒙",
+                        "price": "约150元/套"
+                    },
+                    {
+                        "title": "深圳少年宫公民教育课",
+                        "type": "local",
+                        "description": "少年宫开设的公民教育体验课",
+                        "price": "50-100元/课时"
+                    }
+                ]
+            },
+            "L2": {
+                "name": "社会认知",
+                "description": "小学高年级至初中，理解社会运行的基本逻辑",
+                "ageRange": "9-13岁",
+                "resources": [
+                    {
+                        "title": "《少年读马克思》",
+                        "type": "book",
+                        "description": "用少年能懂的方式讲马克思思想",
+                        "price": "约35元"
+                    },
+                    {
+                        "title": "《经济为什么会崩溃》",
+                        "type": "book",
+                        "description": "用寓言讲经济学核心原理",
+                        "price": "约35元"
+                    },
+                    {
+                        "title": "深圳人大开放日",
+                        "type": "local",
+                        "description": "深圳市人大常委会开放日",
+                        "price": "免费"
+                    }
+                ]
+            },
+            "L3": {
+                "name": "体系理解",
+                "description": "高中水平，理解政治经济文化的系统运作",
+                "ageRange": "14-16岁",
+                "resources": [
+                    {
+                        "title": "《政治学十五讲》",
+                        "type": "book",
+                        "description": "燕继荣著，政治学入门经典教材",
+                        "price": "约35元"
+                    },
+                    {
+                        "title": "《经济学原理》（曼昆）",
+                        "type": "book",
+                        "description": "全球最畅销的经济学入门教材",
+                        "price": "约100元"
+                    },
+                    {
+                        "title": "深圳市民中心政策解读活动",
+                        "type": "local",
+                        "description": "深圳市民中心政策解读公开活动",
+                        "price": "免费"
+                    }
+                ]
+            },
+            "L4": {
+                "name": "专业研究",
+                "description": "大学水平，掌握政治学/经济学/法学研究方法",
+                "ageRange": "16-18岁",
+                "resources": [
+                    {
+                        "title": "《论自由》",
+                        "type": "book",
+                        "description": "密尔著，自由主义的经典之作",
+                        "price": "约20元"
+                    },
+                    {
+                        "title": "《国富论》",
+                        "type": "book",
+                        "description": "亚当·斯密著，现代经济学奠基之作",
+                        "price": "约50元"
+                    },
+                    {
+                        "title": "深圳大学法学实践",
+                        "type": "local",
+                        "description": "深大法学院法律援助中心",
+                        "price": "免费"
+                    }
+                ]
+            },
+            "L5": {
+                "name": "思想前沿",
+                "description": "超越学科，用政治思维理解时代大问题",
+                "ageRange": "16岁+",
+                "resources": [
+                    {
+                        "title": "《公正》",
+                        "type": "book",
+                        "description": "桑德尔著，理解正义的多重维度",
+                        "price": "约45元"
+                    },
+                    {
+                        "title": "《21世纪资本论》",
+                        "type": "book",
+                        "description": "皮凯蒂著，理解不平等的根源",
+                        "price": "约70元"
+                    },
+                    {
+                        "title": "Stanford政治学研究生课程",
+                        "type": "online",
+                        "description": "斯坦福政治学系研究生课程",
+                        "price": "免费"
+                    }
+                ]
+            }
+        }
+    }
+});
+
     // 层级描述映射
     var LEVEL_NAMES = {
       "math": {"L1":"基础运算","L2":"逻辑建立","L3":"体系搭建","L4":"竞赛突破","L5":"拓展前沿"},
       "chinese": {"L1":"识字阅读启蒙","L2":"阅读理解+写话进阶","L3":"深度阅读+写作体系","L4":"文言文+现代文+考场作文","L5":"人文素养+学术写作"}
     };
+
+
+    Object.assign(LEVEL_NAMES, {
+    "chemistry": {
+        "L1": "物质好奇",
+        "L2": "基础入门",
+        "L3": "体系构建",
+        "L4": "竞赛突破",
+        "L5": "前沿拓展"
+    },
+    "biology": {
+        "L1": "自然好奇",
+        "L2": "基础入门",
+        "L3": "体系构建",
+        "L4": "竞赛突破",
+        "L5": "前沿拓展"
+    },
+    "informatics": {
+        "L1": "编程启蒙",
+        "L2": "代码入门",
+        "L3": "算法体系",
+        "L4": "竞赛突破",
+        "L5": "前沿拓展"
+    },
+    "english": {
+        "L1": "听说启蒙",
+        "L2": "读写进阶",
+        "L3": "学术基础",
+        "L4": "考试突破",
+        "L5": "学术前沿"
+    },
+    "history": {
+        "L1": "故事入门",
+        "L2": "脉络建立",
+        "L3": "深度理解",
+        "L4": "学术研究",
+        "L5": "思辨前沿"
+    },
+    "geography": {
+        "L1": "身边地理",
+        "L2": "区域认知",
+        "L3": "系统理解",
+        "L4": "专业深化",
+        "L5": "前沿应用"
+    },
+    "politics": {
+        "L1": "规则意识",
+        "L2": "社会认知",
+        "L3": "体系理解",
+        "L4": "专业研究",
+        "L5": "思想前沿"
+    }
+});
 
     var LEVEL_EMOJIS = {"L1":"🌱","L2":"🌿","L3":"🌳","L4":"🏔️","L5":"🌌"};
     var LEVEL_DESCS = {
@@ -897,6 +3103,59 @@
         "L5":"高中及以上，深度思辨+学术表达+文学研究"
       }
     };
+
+
+    Object.assign(LEVEL_DESCS, {
+    "chemistry": {
+        "L1": "小学阶段，观察身边的物质现象，建立科学好奇心，6-10岁",
+        "L2": "初中水平，系统学习化学基本概念和实验方法，11-14岁",
+        "L3": "高中必修水平，建立完整的化学知识体系，14-16岁",
+        "L4": "高中竞赛水平，冲击省一等奖及以上，15-18岁",
+        "L5": "超出课标，接触化学前沿与跨学科应用，16岁+"
+    },
+    "biology": {
+        "L1": "小学阶段，观察身边的动植物，建立生命科学好奇心，6-10岁",
+        "L2": "初中水平，系统学习生物基本概念和实验方法，11-14岁",
+        "L3": "高中必修水平，建立完整的生物学知识体系，14-16岁",
+        "L4": "高中竞赛水平，冲击省一等奖及以上，15-18岁",
+        "L5": "超出课标，接触生命科学前沿与跨学科应用，16岁+"
+    },
+    "informatics": {
+        "L1": "小学1-3年级，用图形化工具理解编程逻辑，6-9岁",
+        "L2": "小学4-6年级，从图形化过渡到文本编程，9-12岁",
+        "L3": "初中水平，建立完整的算法与数据结构知识体系，12-15岁",
+        "L4": "高中竞赛水平，冲击NOI及更高级别，15-18岁",
+        "L5": "超出竞赛，接触AI/系统/安全等计算机前沿，16岁+"
+    },
+    "english": {
+        "L1": "学前至小学低年级，建立英语语音敏感度，4-8岁",
+        "L2": "小学中高年级，从听说过渡到读写，8-12岁",
+        "L3": "初中水平，建立学术英语的读写听说能力，12-15岁",
+        "L4": "高中/雅思/托福水平，达到学术英语要求，15-18岁",
+        "L5": "学术英语+跨文化理解，为留学和研究做准备，16岁+"
+    },
+    "history": {
+        "L1": "小学低年级，通过故事建立对历史的兴趣，6-9岁",
+        "L2": "小学高年级至初中，建立历史的时间线框架，9-13岁",
+        "L3": "高中水平，从记忆史实到理解历史逻辑，14-16岁",
+        "L4": "大学水平，掌握历史研究方法和学术写作，16-18岁",
+        "L5": "超越学科，用历史思维理解当下和未来，16岁+"
+    },
+    "geography": {
+        "L1": "小学低年级，认识身边的环境和方向，6-9岁",
+        "L2": "小学高年级至初中，认识中国和世界的地理格局，9-13岁",
+        "L3": "高中水平，建立自然地理和人文地理知识体系，14-16岁",
+        "L4": "大学水平，掌握地理学专业方法和工具，16-18岁",
+        "L5": "超出学科，用地理思维解决现实问题，16岁+"
+    },
+    "politics": {
+        "L1": "小学低年级，理解身边的规则和为什么要遵守，6-9岁",
+        "L2": "小学高年级至初中，理解社会运行的基本逻辑，9-13岁",
+        "L3": "高中水平，理解政治经济文化的系统运作，14-16岁",
+        "L4": "大学水平，掌握政治学/经济学/法学研究方法，16-18岁",
+        "L5": "超越学科，用政治思维理解时代大问题，16岁+"
+    }
+});
 
     // ===== 状态变量 =====
     var currentSubject = null;
@@ -1108,7 +3367,8 @@
       document.getElementById('recommend-resources').innerHTML = resHtml;
 
       // 训练场链接
-      var trainingPage = currentSubject === 'math' ? 'math-training.html' : 'chinese-training.html';
+      var trainingPages = {'math':'math-training.html','physics':'physics-training.html','chemistry':'chemistry-training.html','biology':'biology-training.html','informatics':'informatics-training.html','chinese':'chinese-training.html','english':'english-training.html','history':'history-training.html','geography':'geography-training.html','politics':'politics-training.html'};
+      var trainingPage = trainingPages[currentSubject] || 'training.html';
       var trainingLink = document.getElementById('recommend-training-link');
       trainingLink.href = trainingPage;
       trainingLink.innerHTML = '进入' + subjectData.name + '训练场 →';

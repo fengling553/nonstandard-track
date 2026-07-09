@@ -1,0 +1,651 @@
+{
+  "updatedAt": "2026-07-09",
+  "subject": "信息学",
+  "subjectId": "informatics",
+  "intro": "从图形化编程到算法竞赛，五级体系带你掌握计算思维",
+  "levels": [
+    {
+      "id": "L1",
+      "name": "编程启蒙",
+      "description": "小学1-3年级，用图形化工具理解编程逻辑",
+      "ageRange": "6-9岁",
+      "resources": [
+        {
+          "title": "《Hello Ruby儿童编程启蒙》",
+          "type": "book",
+          "level": "L1",
+          "subject": "informatics",
+          "tags": [
+            "启蒙",
+            "故事化"
+          ],
+          "description": "用故事讲编程思维",
+          "detail": "芬兰编程教育经典",
+          "price": "约40元",
+          "url": "https://book.douban.com/subject/30169034/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Scratch官方教程",
+          "type": "online",
+          "level": "L1",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "图形化",
+            "入门"
+          ],
+          "description": "MIT开发的图形化编程平台官方教程",
+          "detail": "拖拽积木块编程，5岁就能上手",
+          "price": "免费",
+          "url": "https://scratch.mit.edu/ideas",
+          "language": "中文/英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Code.org Hour of Code",
+          "type": "online",
+          "level": "L1",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "游戏化",
+            "入门"
+          ],
+          "description": "全球最大的编程启蒙活动",
+          "detail": "用游戏方式学编程",
+          "price": "免费",
+          "url": "https://code.org/",
+          "language": "中文/英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳少年宫Scratch班",
+          "type": "local",
+          "level": "L1",
+          "subject": "informatics",
+          "tags": [
+            "线下",
+            "公益",
+            "深圳"
+          ],
+          "description": "少年宫Scratch编程兴趣班",
+          "detail": "价格亲民",
+          "price": "50-100元/课时",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "编程猫社区",
+          "type": "online",
+          "level": "L1",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "图形化",
+            "中文"
+          ],
+          "description": "中国最大的青少年编程社区",
+          "detail": "图形化编程+社区分享",
+          "price": "基础免费",
+          "url": "https://shequ.codemao.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "童程童美（深圳）",
+          "type": "local",
+          "level": "L1",
+          "subject": "informatics",
+          "tags": [
+            "线下",
+            "系统",
+            "深圳"
+          ],
+          "description": "达内旗下少儿编程品牌",
+          "detail": "Scratch入门到Python进阶",
+          "price": "150-300元/课时",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "小码王（深圳）",
+          "type": "local",
+          "level": "L1",
+          "subject": "informatics",
+          "tags": [
+            "线下",
+            "系统",
+            "深圳"
+          ],
+          "description": "深圳知名少儿编程机构",
+          "detail": "小班教学，从Scratch到C++",
+          "price": "150-300元/课时",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "代码入门",
+      "description": "小学4-6年级，从图形化过渡到文本编程",
+      "ageRange": "9-12岁",
+      "resources": [
+        {
+          "title": "《Python编程：从入门到实践》",
+          "type": "book",
+          "level": "L2",
+          "subject": "informatics",
+          "tags": [
+            "入门",
+            "自学"
+          ],
+          "description": "全球最畅销的Python入门书",
+          "detail": "从基础语法到项目实战",
+          "price": "约70元",
+          "url": "https://book.douban.com/subject/26829016/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《算法图解》",
+          "type": "book",
+          "level": "L2",
+          "subject": "informatics",
+          "tags": [
+            "算法",
+            "图解"
+          ],
+          "description": "用图解方式讲算法",
+          "detail": "覆盖二分查找、排序、动态规划等核心算法",
+          "price": "约45元",
+          "url": "https://book.douban.com/subject/26979890/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳CSP-J/S培训",
+          "type": "local",
+          "level": "L2",
+          "subject": "informatics",
+          "tags": [
+            "线下",
+            "竞赛入门",
+            "深圳"
+          ],
+          "description": "深圳多家机构开设CSP入门级培训",
+          "detail": "针对CSP-J考试的系统培训",
+          "price": "200-400元/课时",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "扣子编程",
+          "type": "online",
+          "level": "L2",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "可视化",
+            "中文"
+          ],
+          "description": "字节跳动旗下AI编程平台",
+          "detail": "拖拽式搭建AI应用",
+          "price": "免费",
+          "url": "https://www.coze.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "LeetCode初学者区",
+          "type": "online",
+          "level": "L2",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "刷题",
+            "中文/英文"
+          ],
+          "description": "全球最大的编程刷题平台",
+          "detail": "从Easy题开始",
+          "price": "基础免费",
+          "url": "https://leetcode.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Codeforces Div.3/4",
+          "type": "online",
+          "level": "L2",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "竞赛",
+            "英文"
+          ],
+          "description": "全球最活跃的算法竞赛平台",
+          "detail": "适合入门的Div.3/4比赛",
+          "price": "免费",
+          "url": "https://codeforces.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "黑马程序员Python教程",
+          "type": "course",
+          "level": "L2",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "系统",
+            "B站"
+          ],
+          "description": "B站最热门的Python系统教程",
+          "detail": "从零基础到项目实战",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "算法体系",
+      "description": "初中水平，建立完整的算法与数据结构知识体系",
+      "ageRange": "12-15岁",
+      "resources": [
+        {
+          "title": "《算法竞赛入门经典》（刘汝佳）",
+          "type": "book",
+          "level": "L3",
+          "subject": "informatics",
+          "tags": [
+            "竞赛",
+            "经典"
+          ],
+          "description": "国内信息学竞赛入门圣经",
+          "detail": "从C++基础到基础算法",
+          "price": "约50元",
+          "url": "https://book.douban.com/subject/25902102/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《数据结构与算法分析》",
+          "type": "book",
+          "level": "L3",
+          "subject": "informatics",
+          "tags": [
+            "数据结构",
+            "系统"
+          ],
+          "description": "系统学习数据结构的经典教材",
+          "detail": "从链表到图论",
+          "price": "约60元",
+          "url": "https://book.douban.com/subject/1884573/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳NOIP/CSP提高级培训",
+          "type": "local",
+          "level": "L3",
+          "subject": "informatics",
+          "tags": [
+            "线下",
+            "竞赛",
+            "深圳"
+          ],
+          "description": "深圳各机构CSP-S/NOIP提高级培训",
+          "detail": "针对省赛的系统培训",
+          "price": "200-500元/课时",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳中学信息学竞赛队",
+          "type": "local",
+          "level": "L3",
+          "subject": "informatics",
+          "tags": [
+            "线下",
+            "竞赛",
+            "选拔"
+          ],
+          "description": "深圳顶尖中学信息学竞赛培养体系",
+          "detail": "需校内选拔，有专业竞赛教练",
+          "price": "校内免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "洛谷OJ",
+          "type": "online",
+          "level": "L3",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "刷题",
+            "中文"
+          ],
+          "description": "中国最大的信息学刷题平台",
+          "detail": "海量题库+题解+社区",
+          "price": "免费",
+          "url": "https://www.luogu.com.cn/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "AtCoder Beginner Contest",
+          "type": "online",
+          "level": "L3",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "竞赛",
+            "英文"
+          ],
+          "description": "日本算法竞赛平台，题目质量高",
+          "detail": "每周一次比赛",
+          "price": "免费",
+          "url": "https://atcoder.jp/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "董晓算法B站",
+          "type": "course",
+          "level": "L3",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "系统",
+            "中文"
+          ],
+          "description": "B站知名算法教学频道",
+          "detail": "系统讲解竞赛算法",
+          "price": "免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "yxc基础算法课",
+          "type": "course",
+          "level": "L3",
+          "subject": "informatics",
+          "tags": [
+            "付费",
+            "系统",
+            "中文"
+          ],
+          "description": "AcWing创始人闫学灿的算法课",
+          "detail": "从基础到提高，体系完整",
+          "price": "约300元",
+          "url": "https://www.acwing.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "竞赛突破",
+      "description": "高中竞赛水平，冲击NOI及更高级别",
+      "ageRange": "15-18岁",
+      "resources": [
+        {
+          "title": "《算法竞赛进阶指南》（李煜东）",
+          "type": "book",
+          "level": "L4",
+          "subject": "informatics",
+          "tags": [
+            "竞赛",
+            "进阶"
+          ],
+          "description": "NOI级别竞赛选手的进阶宝典",
+          "detail": "从省选到NOI，覆盖所有高级算法",
+          "price": "约60元",
+          "url": "https://book.douban.com/subject/30108307/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《算法导论》",
+          "type": "book",
+          "level": "L4",
+          "subject": "informatics",
+          "tags": [
+            "经典",
+            "权威"
+          ],
+          "description": "算法领域的圣经级教材",
+          "detail": "MIT教材，覆盖算法设计与分析全领域",
+          "price": "约130元",
+          "url": "https://book.douban.com/subject/1884574/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "深圳中学/深实验信息学竞赛班",
+          "type": "local",
+          "level": "L4",
+          "subject": "informatics",
+          "tags": [
+            "线下",
+            "竞赛",
+            "顶尖"
+          ],
+          "description": "深圳顶尖中学信息学竞赛培养体系",
+          "detail": "需校内选拔，配备专业竞赛教练",
+          "price": "校内免费",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "全国NOI集训营",
+          "type": "local",
+          "level": "L4",
+          "subject": "informatics",
+          "tags": [
+            "线下",
+            "集训",
+            "国家级"
+          ],
+          "description": "中国计算机学会组织的NOI集训",
+          "detail": "邀请命题专家和金牌教练授课",
+          "price": "公益性质",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Codeforces Div.1/2",
+          "type": "online",
+          "level": "L4",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "竞赛",
+            "英文"
+          ],
+          "description": "全球最高水平的算法竞赛",
+          "detail": "Div.1适合NOI级别选手",
+          "price": "免费",
+          "url": "https://codeforces.com/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "USACO Training",
+          "type": "online",
+          "level": "L4",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "竞赛",
+            "英文"
+          ],
+          "description": "美国信息学奥林匹克训练平台",
+          "detail": "从Bronze到Platinum",
+          "price": "免费",
+          "url": "https://usaco.guide/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "AcWing提高课",
+          "type": "course",
+          "level": "L4",
+          "subject": "informatics",
+          "tags": [
+            "付费",
+            "竞赛",
+            "中文"
+          ],
+          "description": "AcWing竞赛算法提高课",
+          "detail": "覆盖省选+NOI核心算法",
+          "price": "约600元",
+          "url": "https://www.acwing.com/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "信息学竞赛教练一对一",
+          "type": "course",
+          "level": "L4",
+          "subject": "informatics",
+          "tags": [
+            "付费",
+            "竞赛",
+            "一对一"
+          ],
+          "description": "国家级教练一对一辅导",
+          "detail": "适合冲击NOI金牌",
+          "price": "500-2000元/课时",
+          "url": "",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "前沿拓展",
+      "description": "超出竞赛，接触AI/系统/安全等计算机前沿",
+      "ageRange": "16岁+",
+      "resources": [
+        {
+          "title": "《深度学习》（花书）",
+          "type": "book",
+          "level": "L5",
+          "subject": "informatics",
+          "tags": [
+            "AI",
+            "经典"
+          ],
+          "description": "Ian Goodfellow著，深度学习圣经",
+          "detail": "从数学基础到前沿模型",
+          "price": "约130元",
+          "url": "https://book.douban.com/subject/27087503/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "《计算机程序的构造和解释》",
+          "type": "book",
+          "level": "L5",
+          "subject": "informatics",
+          "tags": [
+            "经典",
+            "思想"
+          ],
+          "description": "MIT经典教材SICP",
+          "detail": "从编程到计算思维的升华",
+          "price": "约70元",
+          "url": "https://book.douban.com/subject/1884575/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "MIT CS研究生课程",
+          "type": "online",
+          "level": "L5",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "研究生级别",
+            "英文"
+          ],
+          "description": "MIT计算机科学研究生课程",
+          "detail": "6.824分布式系统等",
+          "price": "免费",
+          "url": "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "Stanford CS课程",
+          "type": "online",
+          "level": "L5",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "大学级别",
+            "英文"
+          ],
+          "description": "Stanford计算机科学课程开放",
+          "detail": "CS229机器学习等",
+          "price": "免费",
+          "url": "https://cs.stanford.edu/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "fast.ai深度学习课",
+          "type": "course",
+          "level": "L5",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "实战",
+            "英文"
+          ],
+          "description": "全球最好的免费深度学习实战课",
+          "detail": "自顶向下教学",
+          "price": "免费",
+          "url": "https://www.fast.ai/",
+          "language": "英文",
+          "updatedAt": "2026-07-09"
+        },
+        {
+          "title": "李沐动手学深度学习",
+          "type": "course",
+          "level": "L5",
+          "subject": "informatics",
+          "tags": [
+            "免费",
+            "实战",
+            "中文"
+          ],
+          "description": "亚马逊首席科学家李沐的深度学习课",
+          "detail": "代码+理论，中文讲解",
+          "price": "免费",
+          "url": "https://zh.d2l.ai/",
+          "language": "中文",
+          "updatedAt": "2026-07-09"
+        }
+      ]
+    }
+  ]
+}
