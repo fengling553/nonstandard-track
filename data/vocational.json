@@ -17,7 +17,9 @@
             "第三年需参加转段考核，通过率95%以上",
             "毕业获得全日制大专文凭，与普通高考录取的大专文凭完全一致",
             "合作院校多为省级以上示范性高职院校"
-          ]
+          ],
+          "source_url": "https://eea.gd.gov.cn/tzgg/content/post_4782368.html",
+          "source_name": "广东省教育考试院"
         },
         {
           "name": "五年一贯制",
@@ -28,7 +30,9 @@
             "无需转段考核，无淘汰压力",
             "2026年广东省仅12所高职院校获批",
             "深圳职业技术大学（深职大）未获批五年一贯制"
-          ]
+          ],
+          "source_url": "https://eea.gd.gov.cn/ptgk/content/post_4838521.html",
+          "source_name": "广东省教育考试院"
         },
         {
           "name": "3+证书职教高考",
@@ -40,7 +44,9 @@
             "文化课考试难度仅初中+高一水平",
             "竞争人群仅限中职生，不与普高生竞争",
             "需要获得相应职业技能证书"
-          ]
+          ],
+          "source_url": "https://eea.gd.gov.cn/tzgg/content/post_4782368.html",
+          "source_name": "广东省教育考试院"
         }
       ],
       "specialPathway": {
@@ -69,7 +75,8 @@
           "feature": "国家中职改革示范校，中职-本科贯通培养试点",
           "transferRate": "转段率96%+",
           "highlight": "深圳职高的标杆学校，本科贯通培养试点校",
-          "contact": "0755-83221666"
+          "contact": "0755-83221666",
+          "website": "https://www.sz1z.net.cn"
         },
         {
           "name": "深圳市第二职业技术学校",
@@ -80,7 +87,8 @@
           "feature": "与比亚迪、特斯拉深度合作，产教融合标杆",
           "transferRate": "转段率95%+",
           "highlight": "新能源汽车方向与比亚迪特斯拉深度合作",
-          "contact": "0755-27108888"
+          "contact": "0755-27108888",
+          "website": "https://www.szped.com"
         },
         {
           "name": "深圳市宝安职业技术学校",
@@ -125,7 +133,8 @@
           "feature": "3+证书高考上线率99%，升学+就业+国际化三维体系",
           "transferRate": "3+证书上线率99%",
           "highlight": "民办职校中升学率最高的学校之一",
-          "contact": "0755-27446688"
+          "contact": "0755-27446688",
+          "website": "https://www.szzjs.cn"
         },
         {
           "name": "深圳市奋达职业技术学校",
@@ -135,7 +144,8 @@
           "feature": "全封闭准军事化管理，艺术教育/智能制造强项",
           "transferRate": "升学率90%+",
           "highlight": "全封闭管理模式，适合需要强约束的学生",
-          "contact": "0755-27348888"
+          "contact": "0755-27348888",
+          "website": "http://www.szfdzx.com"
         },
         {
           "name": "深圳市科迪技工学校",
