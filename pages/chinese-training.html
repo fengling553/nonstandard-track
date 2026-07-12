@@ -6,6 +6,169 @@
   <title>语文训练场 - 个性化成长</title>
   <meta name="description" content="语文L1-L5五级进阶训练资源，精选书籍、深圳本地、线上、名师四类资源">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* 晨读板块 - 核心洞察 */
+    .morning-insight {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      margin: 40px 0 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .morning-insight::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .morning-insight .insight-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ffd700;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .morning-insight .insight-text {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
+    }
+    .morning-insight .insight-text strong {
+      color: #ffd700;
+    }
+
+    /* 晨读板块 - Tab */
+    .morning-section {
+      margin-top: 16px;
+    }
+    .morning-section .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--color-text);
+    }
+    .morning-section .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 24px;
+    }
+
+    /* 晨读卡片 */
+    .morning-card {
+      background: var(--color-bg-white);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid var(--color-border-light);
+      transition: all var(--transition);
+    }
+    .morning-card:hover {
+      border-color: var(--color-green);
+      box-shadow: var(--shadow-sm);
+    }
+    .morning-card .card-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .morning-card .card-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .morning-card h4 {
+      font-size: 1.15rem;
+      color: var(--color-text);
+      font-weight: 700;
+      margin: 0;
+    }
+    .morning-card .card-author {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin: 0;
+    }
+    .morning-card .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .morning-card .card-tags .tag-morning {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #f0edff;
+      color: #667eea;
+    }
+    .morning-card .card-text {
+      background: var(--color-bg);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin-bottom: 14px;
+      font-size: 1rem;
+      line-height: 2;
+      color: var(--color-text);
+      border-left: 3px solid #667eea;
+      white-space: pre-line;
+    }
+    .morning-card .card-guide {
+      margin-bottom: 12px;
+    }
+    .morning-card .guide-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .guide-title.emoji-mem { color: #e67e22; }
+    .guide-title.emoji-think { color: #8e44ad; }
+    .guide-title.emoji-why { color: #27ae60; }
+    .morning-card .guide-content {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+    }
+
+    /* 分组标题 */
+    .morning-group {
+      margin-bottom: 8px;
+    }
+    .morning-group-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 28px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--color-border);
+    }
+    .morning-group-header .group-icon {
+      font-size: 1.2rem;
+    }
+    .morning-group-header h3 {
+      font-size: 1.05rem;
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+  </style>
 </head>
 <body>
 
@@ -539,54 +702,41 @@
           <div class="update-info">📅 最近更新：2026-07-09</div>
         </div>
 
-      </div>
-    </div>
-  </main>
+      <!-- 🌅 晨读经典板块 -->
+      <div class="morning-section">
+        <div class="section-title">🌅 晨读经典</div>
+        <div class="section-subtitle">每天15分钟，用经典建立大脑内部模型</div>
 
-  <!-- 底部 -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <h3>🧭 个性化成长</h3>
-        <p>面向创新型学校1-12年级学生家庭的综合教育导航平台。</p>
-      </div>
-      <div class="footer-links">
-        <h4>核心模块</h4>
-        <a href="paths.html">路径情报站</a>
-        <a href="training.html">全科训练场</a>
-        <a href="vocational.html">职高赛道</a>
-        <a href="assessment.html">学科测评</a>
-        <a href="parent-growth.html">家长认知提升</a>
-        <a href="underlying-logic.html">底层逻辑</a>
-        <a href="innovative-schools.html">创新学校</a>
-        <a href="shenzhen-local.html">深圳生活</a>
-      </div>
-      <div class="footer-links">
-        <h4>关于我们</h4>
-        <a href="#">关于个性化成长</a>
-        <a href="#">联系方式</a>
-      </div>
-    </div>
-    <div class="footer-source">
-      <strong>📊 数据来源说明</strong><br>
-      语文训练资源信息来自各教材/课程官网、豆瓣等公开渠道，具体来源链接已在各资源卡片中标注。
-    </div>
-    <div class="footer-bottom">
-      © 2026 个性化成长 · 仅供教育参考，不构成升学建议
-    </div>
-  </footer>
+        <!-- 核心洞察 -->
+        <div class="morning-insight">
+          <div class="insight-label">🧠 脑科学支撑</div>
+          <div class="insight-text">
+            背诵不是死记硬背，是建立<strong>"大脑内部模型"</strong>的过程。<br>
+            出声诵读激活<strong>视觉+听觉+动觉</strong>多感官，比默读记忆效率高28%。<br>
+            睡前1小时背诵，海马体在睡眠中自动<strong>"刻盘"</strong>，将短期记忆转为长期记忆。<br>
+            每天坚持15-20分钟，<strong>神经可塑性</strong>会重塑大脑——诵读本质上是一场低成本、高回报的大脑升级。
+          </div>
+        </div>
 
-  <!-- AI浮动按钮 -->
-  <button class="ai-fab" aria-label="AI教育顾问">🤖</button>
-  <div class="ai-fab-tooltip">
-    <strong>AI教育顾问</strong><br>
-    即将上线！届时可实时咨询教育路径问题。
-  </div>
+        <!-- Tab导航 -->
+        <div class="tab-nav" id="morning-tab-nav">
+          <button class="tab-btn active" data-tab="girl9">🌸 9岁女孩（3-4年级）</button>
+          <button class="tab-btn" data-tab="boy13">🎮 13岁男孩（7-8年级）</button>
+        </div>
 
-  <script src="../js/main.js"></script>
-  <script>
-    // 初始化层级切换
-    initLevelNav('#chinese-level-nav', 'level-');
-  </script>
-</body>
-</html>
+        <!-- Tab内容 -->
+        <div class="tab-content-area">
+
+          <!-- 9岁女孩 -->
+          <div class="tab-content active" id="tab-girl9">
+
+            <!-- 古诗·画面感 -->
+            <div class="morning-group">
+              <div class="morning-group-header">
+                <span class="group-icon">🏔️</span>
+                <h3>古诗·画面感</h3>
+              </div>
+
+              <div class="morning-card">
+                <div class="card-top">
+       

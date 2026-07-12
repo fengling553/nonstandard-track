@@ -343,31 +343,7 @@ function renderTrainingResources(data) {
   container.innerHTML = html;
 }
 
-// ===== AI浮动按钮 =====
-(function() {
-  var fab = document.querySelector('.ai-fab');
-  var tooltip = document.querySelector('.ai-fab-tooltip');
-  if (!fab) return;
-  
-  fab.addEventListener('click', function() {
-    if (tooltip) {
-      tooltip.classList.toggle('show');
-      // 3秒后自动隐藏
-      setTimeout(function() {
-        if (tooltip.classList.contains('show')) {
-          tooltip.classList.remove('show');
-        }
-      }, 3000);
-    }
-  });
-  
-  // 点击其他地方隐藏
-  document.addEventListener('click', function(e) {
-    if (!fab.contains(e.target) && tooltip && !tooltip.contains(e.target)) {
-      tooltip.classList.remove('show');
-    }
-  });
-})();
+// ===== AI浮动按钮（已迁移至 ai-advisor.js）=====
 
 // ===== 平滑滚动到锚点 =====
 document.addEventListener('DOMContentLoaded', function() {
