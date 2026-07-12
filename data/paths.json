@@ -210,6 +210,67 @@
               "highlight": "提前联合培养，非独立项目，需与学校教育并行",
               "url": "",
               "updatedAt": "2026-07-08"
+            },
+            {
+              "name": "跨时代跃迁人才培养计划",
+              "requirement": "应届高三毕业生/高中生，看重技术热爱、创新思维和动手能力",
+              "updatedAt": "2026-07-12",
+              "url": "https://3g.china.com/act/news/10000169/20260706/49591522.html",
+              "description": "面向高中毕业生，不设高考分数与学历门槛，直接进入新能源、AI、低空飞行等前沿部门，由CEO级导师带教，学历由吉利学院兜底。",
+              "highlight": "CEO带教、年薪最高30万、吉利学院学历兜底、不看高考总分"
+            },
+            {
+              "highlight": "录取率极低、总监级带教、核心业务部门实战、覆盖深圳/广州三地",
+              "name": "青科实训营及暑期实践项目",
+              "requirement": "13-18岁中学生，不唯学历，看重小程序开发等实战经历",
+              "updatedAt": "2026-07-12",
+              "url": "https://c.m.163.com/news/a/L1KGCPOI0536W4EI.html",
+              "description": "面向全球13-18岁中学生开放，直接进入金融科技、微信小程序AI等核心业务部门实战，由总监级员工带教。"
+            },
+            {
+              "description": "Top Seed面向在校生，薪资突破600万；少年计划/ByteCamp面向13-18岁高中生提供日薪千元实训；知春创新中心每年招30名高中生全职研究员。",
+              "highlight": "Top Seed薪资破600万、高中生全职研究员、日薪千元实训",
+              "name": "Top Seed / 少年计划 / ByteCamp",
+              "requirement": "在校生或13-18岁高中生，具备科创天赋或实战能力",
+              "updatedAt": "2026-07-12",
+              "url": "https://news.ifeng.com/c/8uXxKHTUtll"
+            },
+            {
+              "highlight": "三不限、10%高中生名额、最高年薪201万、暑期短期实习",
+              "name": "天才少年计划及青少年暑期实习",
+              "requirement": "在数理化、计算机、AI等领域有硬核成果（论文、专利、竞赛）",
+              "updatedAt": "2026-07-12",
+              "url": "https://news.ifeng.com/c/8uXxKHTUtll",
+              "description": "实行“三不限”（不限院校、专业、学历），每年约10%名额给到高中生，最高档年薪201万；2026年暑假开放青少年短期实习。"
+            },
+            {
+              "description": "明确只招高中生，不允许申请大学。录用者多为有顶会一作加持的顶尖选手，转正年薪17万美元。",
+              "highlight": "只招高中生、转正年薪17万美元、录取率4.4%",
+              "name": "Palantir高中生直招计划",
+              "requirement": "高中生，具备顶会一作等顶尖AI科研成果",
+              "updatedAt": "2026-07-12",
+              "url": "https://news.ifeng.com/c/8uXxKHTUtll"
+            },
+            {
+              "name": "小米/阿里高中生及在校生招募",
+              "requirement": "具备突出技术潜力的高中生或顶尖在校生",
+              "updatedAt": "2026-07-12",
+              "url": "https://3g.china.com/act/news/10000169/20260706/49591522.html",
+              "description": "小米每年开放约10%名额给高中生；阿里“阿里星”面向本硕博及在校生招募。",
+              "highlight": "小米10%高中生专属名额、阿里星在校生通道"
+            }
+          ]
+        },
+        {
+          "title": "新增项目",
+          "items": [
+            {
+              "highlight": "全国仅遴选10人、4周沉浸式AI实战、有道AI团队带教",
+              "name": "图灵计划中学生暑期AI实践项目",
+              "requirement": "中学生，对AI研发或产品经理有浓厚兴趣及潜力",
+              "updatedAt": "2026-07-12",
+              "url": "https://c.m.163.com/news/a/L1KGCPOI0536W4EI.html",
+              "description": "面向全国遴选10位中学生加入有道AI团队，参与为期4周的AI研发或AI产品经理实践项目。"
             }
           ]
         }
