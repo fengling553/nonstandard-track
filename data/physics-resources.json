@@ -591,6 +591,23 @@
           "url": "",
           "language": "中文",
           "updatedAt": "2026-07-08"
+        },
+        {
+          "title": "《宇宙的另一种真相》",
+          "type": "book",
+          "updatedAt": "2026-07-12",
+          "language": "zh",
+          "level": "L4",
+          "price": "",
+          "subject": "physics",
+          "url": "https://m.sohu.com/a/1046902579_121106991/",
+          "description": "立足于凝聚态物理等前沿科技，梳理科研内容、研究方法和发展方向。",
+          "detail": "严伯钧 / 中信出版社",
+          "tags": [
+            "凝聚态物理",
+            "前沿科普",
+            "严伯钧"
+          ]
         }
       ]
     },

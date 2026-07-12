@@ -402,6 +402,74 @@
           "updatedAt": "2026-07-12",
           "url": "https://m.sohu.com/a/1046696814_355768/",
           "detail": "3天2晚免费（含食宿），面向14-15岁。含AI实验、航空模拟、无人机。7-8月分三期开营。"
+        },
+        {
+          "language": "zh",
+          "price": "",
+          "subject": "math",
+          "type": "book",
+          "updatedAt": "2026-07-12",
+          "description": "介绍数学史上攻克世界难题、趣题的逸闻以及重要转折点中的奇闻趣事。",
+          "level": "L3",
+          "tags": [
+            "数学史",
+            "数学家",
+            "科普"
+          ],
+          "title": "《数学的奇境》",
+          "url": "https://m.sohu.com/a/1048528842_121106884/",
+          "detail": "张远南, 冯惠英 / 清华大学出版社"
+        },
+        {
+          "description": "收录的100个问题蕴含了丰富的数学思想和技巧，体验数学发现的过程。",
+          "detail": "靳平 等 / 清华大学出版社",
+          "language": "zh",
+          "level": "L3",
+          "subject": "math",
+          "tags": [
+            "数学思想",
+            "基础问题",
+            "启发式"
+          ],
+          "title": "《数学的100个基本问题》",
+          "type": "book",
+          "price": "",
+          "updatedAt": "2026-07-12",
+          "url": "https://m.sohu.com/a/1048528842_121106884/"
+        },
+        {
+          "language": "zh",
+          "price": "",
+          "subject": "math",
+          "title": "《数学天方夜谭,形的山海经》",
+          "type": "book",
+          "url": "https://m.sohu.com/a/1048528842_121106884/",
+          "description": "从建筑、测量、图形游戏等角度讲述几何小故事，涉及直线形、圆、图论等主题。",
+          "level": "L3",
+          "tags": [
+            "几何学",
+            "科普故事",
+            "图论"
+          ],
+          "updatedAt": "2026-07-12",
+          "detail": "陈永明 等 / 清华大学出版社"
+        },
+        {
+          "url": "https://m.sohu.com/a/1048528842_121106884/",
+          "description": "探讨数学发现，涉及无穷大数字相加等问题，探讨数学是被发现还是被发明的本质。",
+          "detail": "(英) 约翰·大卫·巴罗 / 广东人民出版社",
+          "level": "L3",
+          "subject": "math",
+          "type": "book",
+          "language": "zh",
+          "price": "",
+          "tags": [
+            "数学思维",
+            "数学哲学",
+            "无穷大"
+          ],
+          "title": "《1+1不总等于2:有趣的数学思维》",
+          "updatedAt": "2026-07-12"
         }
       ]
     },
@@ -545,6 +613,74 @@
           "url": "",
           "language": "中文",
           "updatedAt": "2026-07-08"
+        },
+        {
+          "title": "《可变思考:数学与创造性思维》",
+          "type": "book",
+          "updatedAt": "2026-07-12",
+          "url": "https://m.sohu.com/a/1048528842_121106884/",
+          "language": "zh",
+          "subject": "math",
+          "tags": [
+            "创造性思维",
+            "数学研究",
+            "广中平祐"
+          ],
+          "description": "讲述作者在数学研究中总结出的“可变思考”模式，并对数学教育问题做了分析。",
+          "detail": "(日) 广中平祐 / 人民邮电出版社",
+          "level": "L4",
+          "price": ""
+        },
+        {
+          "updatedAt": "2026-07-12",
+          "url": "https://m.sohu.com/a/1048528842_121106884/",
+          "detail": "(澳) 约翰·史迪威 / 人民邮电出版社",
+          "language": "zh",
+          "level": "L4",
+          "price": "",
+          "tags": [
+            "数学证明",
+            "逻辑",
+            "数学大师"
+          ],
+          "type": "book",
+          "description": "讲述证明的演变及其在数学中的重要作用，涵盖代数、微积分、拓扑等分支中的证明故事。",
+          "subject": "math",
+          "title": "《证明的故事:从勾股定理到现代数学》"
+        },
+        {
+          "detail": "孙和军, 王海侠 / 电子工业出版社",
+          "language": "zh",
+          "level": "L4",
+          "title": "《数学之旅:数学的前世、今生与未来》",
+          "type": "book",
+          "updatedAt": "2026-07-12",
+          "description": "从数的起源到现代数学猜想，展望数学在第四次工业革命中的前景。",
+          "price": "",
+          "subject": "math",
+          "tags": [
+            "数学史",
+            "中国古代数学",
+            "未来展望"
+          ],
+          "url": "https://m.sohu.com/a/1048528842_121106884/"
+        },
+        {
+          "description": "探讨数学建模应用对学生数学素养培育的作用，针对中学数学教育改革提出建议。",
+          "detail": "刘春红 / 文化发展出版社",
+          "language": "zh",
+          "price": "",
+          "tags": [
+            "数学建模",
+            "教育改革",
+            "深度学习"
+          ],
+          "title": "《数学建模应用及探究》",
+          "level": "L4",
+          "subject": "math",
+          "type": "book",
+          "updatedAt": "2026-07-12",
+          "url": "https://m.sohu.com/a/1048528842_121106884/"
         }
       ]
     },
@@ -655,6 +791,74 @@
           "url": "https://www.3blue1brown.com/",
           "language": "英文（B站有中文字幕）",
           "updatedAt": "2026-07-08"
+        },
+        {
+          "level": "L5",
+          "tags": [
+            "离散数学",
+            "C/C++",
+            "编程实践"
+          ],
+          "title": "《离散数学及编程实践》",
+          "url": "https://m.sohu.com/a/1048528842_121106884/",
+          "language": "zh",
+          "price": "",
+          "subject": "math",
+          "type": "book",
+          "updatedAt": "2026-07-12",
+          "description": "采用问题驱动和案例式内容，利用C或C++编写程序代码，包括数理逻辑、图论等。",
+          "detail": "向秀桥 / 清华大学出版社"
+        },
+        {
+          "url": "https://m.sohu.com/a/1048528842_121106884/",
+          "detail": "苏维宜 / 清华大学出版社",
+          "language": "zh",
+          "price": "",
+          "tags": [
+            "应用数学",
+            "泛函分析",
+            "微分几何"
+          ],
+          "title": "《近代应用数学基础》",
+          "description": "介绍集合论、近世代数、点集拓扑、泛函分析等近代应用数学的基本内容及应用。",
+          "level": "L5",
+          "subject": "math",
+          "type": "book",
+          "updatedAt": "2026-07-12"
+        },
+        {
+          "detail": "Vаseк Chvátal / 高等教育出版社",
+          "language": "zh",
+          "tags": [
+            "离散数学",
+            "图论",
+            "Paul Erdos"
+          ],
+          "title": "《Paul Erdos:离散数学的魅力》",
+          "description": "通过提出引发Paul Erdos兴趣的问题及其处理方法，提供离散数学入门知识。",
+          "level": "L5",
+          "price": "",
+          "subject": "math",
+          "type": "book",
+          "updatedAt": "2026-07-12",
+          "url": "https://m.sohu.com/a/1048528842_121106884/"
+        },
+        {
+          "title": "《数学专业导论》",
+          "type": "book",
+          "updatedAt": "2026-07-12",
+          "description": "概述数学的发展、作用、各学科分支，包含重大猜想、数学危机等内容。",
+          "detail": "王明新 / 清华大学出版社",
+          "language": "zh",
+          "tags": [
+            "专业导论",
+            "数学史",
+            "希尔伯特问题"
+          ],
+          "url": "https://m.sohu.com/a/1048528842_121106884/",
+          "level": "L5",
+          "price": "",
+          "subject": "math"
         }
       ]
     }
